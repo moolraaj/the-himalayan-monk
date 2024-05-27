@@ -164,35 +164,30 @@ body{
     .tour_package:nth-child(3),
     .tour_package:nth-child(5),
     .tour_package:nth-child(6),
-    .tour_package:nth-child(7){
-        height: 220px !important;
+    .tour_package:nth-child(7) {
+      height: 220px !important;
     }
-
+  
     .tour_package:nth-child(2),
-    .tour_package:nth-child(4){
-        height: 420px !important;
+    .tour_package:nth-child(4) {
+      height: 420px !important;
     }
-
-
-
+  
     .tour_package:nth-child(1),
     .tour_package:nth-child(4) {
       grid-column: 1 / 2;
-      width: 100%;
     }
-
+  
     .tour_package:nth-child(2),
     .tour_package:nth-child(5) {
       grid-column: 2 / 3;
-      width: 100%;
     }
-  
   
     .tour_package:nth-child(3),
     .tour_package:nth-child(6),
     .tour_package:nth-child(7) {
       grid-column: 3 / 4;
-      width: 100%;
     }
   }
+
   
