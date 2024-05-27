@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-     <h1>this is our next js website</h1>
+     <h1>this is home page</h1>
   );
 }

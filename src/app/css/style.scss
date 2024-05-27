@@ -1,4 +1,6 @@
 @import "variables";
+@import "_mixins";
+@import "_extends";
 
 body{
     background-color: $background-color;
