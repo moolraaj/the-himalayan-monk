@@ -1,9 +1,11 @@
+const { default: FooterPage } = require("./component/footerPage");
+
  
 
 function Footer() {
   return (
     <>
-    <h1>this is footer</h1>
+    <FooterPage/>
     </>
   )
 }
