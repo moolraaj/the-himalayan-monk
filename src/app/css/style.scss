@@ -1,7 +1,31 @@
 @import "variables";
 @import "_mixins";
 @import "_extends";
+
 @import '@fortawesome/fontawesome-svg-core/styles.css';
+
+
+p{
+    font-size: $top_heading_desktop_p;
+    margin:0px;
+}
+h1{
+    font-size: $top_heading_desktop_h1;
+}
+h2{
+    font-size: $top_heading_desktop_h2;
+}
+h3{
+    font-size: $top_heading_desktop_h3;
+}
+
+ul li {
+    font-size: $top_heading_desktop_ul_li;
+}
+
+a{
+    font-size: 16px;
+}
 
 
 
@@ -25,6 +49,110 @@ body{
     padding: 0px;
     box-sizing: border-box;
 }
+
+
+.top_bar_details_inner_s a {
+    color: $white;
+    text-decoration: none;
+}
+.top_bar_notifications span {
+    color: $white;
+    font-size: 13px;
+}
+.top_bar_notifications p {
+    font-size: 13px;
+}
+
+
+.custom_navbar {
+    background: $black;
+}
+
+.top_bar_details_inner_s {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    margin: auto;
+}
+ul.social_icons_t {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+    margin: 5px 0px;
+}
+.top_bar_notifications span {
+    display: flex;
+    align-items: center;
+}
+
+ul.social_icons_t svg {
+    color: $dark_yellow;
+    font-size:14px;
+}
+
+ul.social_icons_t li {
+    list-style-type: none;
+    border: 1px solid $dark_yellow;
+    padding: 0px 3px;
+    border-radius: 30px;
+   
+}
+
+.top_bar_notifications p {
+    font-size: 13px;
+}
+
+.top_bar_mail a {
+    font-size: 14px;
+}
+
+
+.header_custom_main {
+    background: #ffffffbf;
+}
+
+.header_i_sec {
+   
+    margin: auto;
+    padding: 12px 0px;
+}
+
+.header_i_sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header_custom_main {
+    background: #ffffffbf;
+}
+
+.header_i_sec {
+    display: grid;
+    grid-template-columns: 200px 3fr 1fr;
+    align-items: center;
+}
+
+.navbar_c_section ul li {
+    list-style-type: none;
+}
+
+.navbar_c_section ul {
+    display: flex;
+    column-gap: 6%;
+    justify-content: center;
+}
+
+
+.enquiry_s_number {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header_number {
+    display: flex;
+}
+ 
 
 .hero_section_inner {
     @extend %inner-section_max_width;
@@ -74,7 +202,7 @@ body{
             background: unset;
             padding: 18px 52px;
             border-radius: 24px;
-            background: $primaryyellow;
+            background: $dark_yellow;
             font-family: $inter;
             text-transform: capitalize;
             font-weight: 500;
