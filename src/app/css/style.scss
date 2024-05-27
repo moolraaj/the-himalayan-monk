@@ -14,6 +14,10 @@
     font-family: 'josefin';
     src: url('../fonts/josefin-sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/inter/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
 
 
 body{
@@ -31,7 +35,27 @@ body{
     
     .hero_right_section {
         @include grid-property(grid,1fr 1fr,center,20px,20px);
+        .hero_destination_outer {
+            position: relative;
+            h1 {
+            margin: 0px;
+            font-size: 22px;
+            text-align: center;
+            background: $black;
+            position: absolute;
+            width: 100%;
+            color: $white;
+            font-family: $josifin;
+            padding: 8px 0px;
+            border-radius: 18px 0px 0px 0px;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
     }
+}
 
     .hero_left_section{
         h1 {
@@ -39,9 +63,34 @@ body{
             margin: 0px;
             font-family: $rubik;
         }
+        p {
+            font-family: $inter;
+            font-weight: 500;
+            font-size: $desktop-font;
+            line-height: 28px;
+        }
+        button {
+            border: unset;
+            background: unset;
+            padding: 18px 52px;
+            border-radius: 24px;
+            background: $primaryyellow;
+            font-family: $inter;
+            text-transform: capitalize;
+            font-weight: 500;
+            margin-top: 30px;
+            color:$white;
+            font-size: $desktop-font;
+        }
     }
     
 }
+
+ 
+ 
+
+
+ 
 
 
 
