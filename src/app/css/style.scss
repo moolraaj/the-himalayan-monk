@@ -1,8 +1,15 @@
 @import "variables";
 @import "_mixins";
 @import "_extends";
+@import '@fortawesome/fontawesome-svg-core/styles.css';
+
+
+
+
+
+
 
 body{
-    background-color: $background-color;
+    background-color:$white;
 } 
  

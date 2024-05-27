@@ -1,10 +1,14 @@
 import React from 'react'
+import Topbar from './component/top_bar'
+import Headercustom from './component/header_custom'
 
 function Header() {
   return (
     <>
-    <h1>this is header</h1>
-    </>
+   <Topbar></Topbar>
+
+ <Headercustom></Headercustom>
+       </>
   )
 }
 
