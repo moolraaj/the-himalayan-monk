@@ -14,7 +14,6 @@ function Headercustom() {
        <div className='header_i_sec'>
         <div className='logo_r_section'>
             <img src={logo.src}/>
-
         </div>
 
         <div className='navbar_c_section'>
@@ -42,9 +41,10 @@ function Headercustom() {
             </div>
         </div>
        </div>
-       </div> 
+       </div>      
 
      </div>
+     <div className='margin_custom'></div>
 
 
 
