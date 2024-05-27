@@ -1,7 +1,31 @@
 @import "variables";
 @import "_mixins";
 @import "_extends";
+
 @import '@fortawesome/fontawesome-svg-core/styles.css';
+
+
+p{
+    font-size: $top_heading_desktop_p;
+    margin:0px;
+}
+h1{
+    font-size: $top_heading_desktop_h1;
+}
+h2{
+    font-size: $top_heading_desktop_h2;
+}
+h3{
+    font-size: $top_heading_desktop_h3;
+}
+
+ul li {
+    font-size: $top_heading_desktop_ul_li;
+}
+
+a{
+    font-size: 16px;
+}
 
 
 
@@ -75,7 +99,7 @@ body{
             background: unset;
             padding: 18px 52px;
             border-radius: 24px;
-            background: $primaryyellow;
+            background: $dark_yellow;
             font-family: $inter;
             text-transform: capitalize;
             font-weight: 500;
