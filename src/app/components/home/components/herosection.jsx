@@ -5,6 +5,7 @@ import right2 from '@/app/assets/herosection/img5.png'
 import right3 from '@/app/assets/herosection/img6.png'
 import right4 from '@/app/assets/herosection/img7.png'
 import right1 from '@/app/assets/herosection/img8.png'
+import TourList from './tourList'
 
 
 function Herosection() {
@@ -50,10 +51,12 @@ function Herosection() {
 
 
                         </div>
+                        
                     </div>
                 </div>
 
             </div>
+            <TourList/>
         </>
     )
 }
