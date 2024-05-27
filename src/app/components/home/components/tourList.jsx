@@ -15,8 +15,8 @@ const tours = [
 
 function TourList() {
   return (
-    <div className="tourList_outer_section">
-      <div className="tourList_inner">
+    <div className="tourlist_outer_section">
+      <div className="tourlist_inner">
         <div className="tour_packages_wrapper">
           {tours.map((tour, index) => (
             <div className="tour_package" key={index}>
