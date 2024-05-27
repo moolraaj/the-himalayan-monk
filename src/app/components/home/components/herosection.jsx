@@ -8,22 +8,25 @@ import right1 from '@/app/assets/herosection/img8.png'
 
 
 function Herosection() {
-    const componentStyle = {
-        backgroundImage: `url(${heroimg})`,
-        height: '500px',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    };
+
     return (
         <>
-            <div className="hero_section_outer" style={componentStyle.src}>
+
+
+
+            <div className="hero_section_outer">
+                <div className="slider_wrapper">
+                    <img src={heroimg.src} alt="" />
+
+                </div>
                 <div className="hero_section_inner">
                     <div className="hero_wrapper">
+
                         <div className="hero_left_section">
                             <h1>Let’s Explore Your
-                                <span style={{color:'#F69625'}}> Holiday</span> Trip.</h1>
+                                <span style={{ color: '#F69625' }}> Holiday</span> Trip.</h1>
                             <p>This is the story of our travels. A travel blog with the moments that moved us, people we met and the destinations in which we lived these experiences. There is a huge world, come discover it with us!
-</p>
+                            </p>
                             <button type='button'>book a trip</button>
 
                         </div>
@@ -44,11 +47,12 @@ function Herosection() {
                                 <h1>Narkanda</h1>
                                 <img src={right4.src} alt="destination" />
                             </div>
-                            
+
 
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
