@@ -3,6 +3,19 @@
 @import "_extends";
 @import '@fortawesome/fontawesome-svg-core/styles.css';
 
+
+
+@font-face {
+    font-family: 'rubik';
+    src: url('../fonts/rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'josefin';
+    src: url('../fonts/josefin-sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+
 body{
     margin: 0px;
     padding: 0px;
@@ -12,6 +25,25 @@ body{
 .hero_section_inner {
     @extend %inner-section_max_width;
 }
+
+.hero_wrapper {
+    @include grid-property(grid,70% 1fr,center,20px);
+    
+    .hero_right_section {
+        @include grid-property(grid,1fr 1fr,center,20px,20px);
+    }
+
+    .hero_left_section{
+        h1 {
+            font-size: 5.313rem;
+            margin: 0px;
+            font-family: $rubik;
+        }
+    }
+    
+}
+
+
 
 
 
