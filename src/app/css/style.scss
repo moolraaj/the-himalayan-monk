@@ -120,104 +120,118 @@ body{
   
 .tour_packages_wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 110px;
+  }
   
-    .tour_package {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
+  .tour_package {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
   
-      &.tour_image {
-        width: 100%;
+    .tour_image {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .tour_package_info {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+  
+      .tour_info_inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         height: 100%;
-      }
+        padding: 20px;
   
-      .tour_package_info {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: rgba(0, 0, 0, 0.5);
-        color: white;
+        .tour_info_left {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
   
-        .tour_info_inner {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          height: 100%;
-          padding: 20px;
-  
-          .tour_info_left {
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-  
-            p {
-              margin: 0;
-              font-size: 1.2em;
-              font-weight: bold;
-              color: $light_red;
-            }
-  
-            h2 {
-              margin: 5px 0 0;
-              font-size: 2em;
-            }
+          p {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: $light_red;
           }
   
-          .tour_info_right {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
+          h2 {
+            margin: 5px 0 0;
+            font-size: 2em;
+          }
+        }
   
-            h4 {
-              margin: 0;
-              background: $dark_yellow;
-              padding: 5px 10px;
-              border-radius: 5px;
-            }
+        .tour_info_right {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+  
+          h4 {
+            margin: 0;
+            background: $dark_yellow;
+            padding: 5px 10px;
+            border-radius: 5px;
           }
         }
       }
     }
+  }
   
-    .tour_package:nth-child(1),
-    .tour_package:nth-child(3),
-    .tour_package:nth-child(5),
-    .tour_package:nth-child(6),
-    .tour_package:nth-child(7){
-        height: 220px !important;
-    }
-
-    .tour_package:nth-child(2),
-    .tour_package:nth-child(4){
-        height: 420px !important;
-    }
-
-
-
-    .tour_package:nth-child(1),
-    .tour_package:nth-child(4) {
-      grid-column: 1 / 2;
-      width: 100%;
-    }
-
-    .tour_package:nth-child(2),
-    .tour_package:nth-child(5) {
-      grid-column: 2 / 3;
-      width: 100%;
-    }
+  /* Specific heights and grid placements */
+  .tour_package:nth-child(1),
+  .tour_package:nth-child(3),
+  .tour_package:nth-child(5),
+  .tour_package:nth-child(6),
+  .tour_package:nth-child(7) {
+    height: 220px !important;
+  }
   
+  .tour_package:nth-child(2),
+  .tour_package:nth-child(4) {
+    height: 420px !important;
+  }
   
-    .tour_package:nth-child(3),
-    .tour_package:nth-child(6),
-    .tour_package:nth-child(7) {
-      grid-column: 3 / 4;
-      width: 100%;
-    }
+  .tour_package:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+  
+  .tour_package:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+  
+  .tour_package:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+  
+  .tour_package:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 3;
+  }
+  
+  .tour_package:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1;
+  }
+  
+  .tour_package:nth-child(6) {
+    grid-column: 3 / 4;
+    grid-row: 2;
+  }
+  
+  .tour_package:nth-child(7) {
+    grid-column: 3 / 4;
+    grid-row: 3;
   }
   
 
