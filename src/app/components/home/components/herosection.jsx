@@ -1,4 +1,5 @@
 import React from 'react'
+import TourList from './tourList'
 
 function Herosection() {
     return (
@@ -34,6 +35,7 @@ function Herosection() {
                             
 
                         </div>
+                        <TourList/>
                     </div>
                 </div>
             </div>

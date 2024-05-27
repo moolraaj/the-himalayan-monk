@@ -17,3 +17,27 @@ body{
 
 
 
+.tour_packages_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    .tour_package{
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+        .tour_package_info {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            .tour_info_inner {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 10px;
+                height: 100%;
+            }
+        }
+    }
+}
