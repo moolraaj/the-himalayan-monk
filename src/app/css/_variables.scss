@@ -5,6 +5,7 @@ $top_heading_desktop_h3:1.563rem;
 $top_heading_desktop_p:1rem;
 $top_heading_desktop_ul_li:1.125rem;
 $top_heading_desktop_button:1rem;
+$desktop-font:1.125rem;
 
 // mobile 
 
@@ -14,23 +15,25 @@ $top_heading_desktop_h3:1.125rem;
 $top_heading_desktop_p:0.875rem;
 $top_heading_desktop_ul_li:0.875rem;
 $top_heading_desktop_button:1.125rem;
+$mobile-font:1rem;
 
 
 // colors
 
 $black:#000000;
 $light_red:#D65228;
-$light_yellow:#F69625;
-$dark_yellow:#F69625;
+$primaryyellow:#F69625;
 $light-pink:#D65228;
-$faded_yellow:#F69625;
 $grey_black:#323232;
 $white:#fff;
 
+// font families
 
-//container
+$rubik:'rubik';
+$josifin:'josefin';
+$inter:'inter';
 
-$custom_container:1440px;
+
 
 
 
