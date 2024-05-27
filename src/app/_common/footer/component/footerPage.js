@@ -33,7 +33,6 @@ function FooterPage() {
                                 <li><a href="tel:+8894229191">+91 8894229191</a></li>
                                 <li><a href="tel:+8894229191">+91 9999999999</a></li>
                             </ul>
-
                         </div>
 
                         <div className="footer_second_third">
@@ -43,9 +42,7 @@ function FooterPage() {
                                 <li><a href="/">home</a> </li>
                                 <li><a href="/">home</a> </li>
                                 <li><a href="/">home</a> </li>
-
                             </ul>
-
                         </div>
 
 
@@ -57,7 +54,6 @@ function FooterPage() {
                                 <li><a href="/">services</a> </li>
                                 <li><a href="/">terms and conditions</a> </li>
                                 <li><a href="/">contact us</a> </li>
-
                             </ul>
 
                         </div>
@@ -79,7 +75,7 @@ function FooterPage() {
                             </ul>
                         </div>
                         <div className="footer_copywrite_second">
-                        <p>Designed & Developed by: Eligo CS</p>
+                            <p>Designed & Developed by: Eligo CS</p>
                         </div>
                     </div>
 

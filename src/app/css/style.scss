@@ -408,7 +408,7 @@ a.tel_header_c {
     position: fixed;
     width: 100%;
     z-index: 999;
-    top: 33px;
+    top: 30px;
 }
 .search_e {
     display: flex;
@@ -420,3 +420,7 @@ a.tel_header_c {
     height: 40px;
 }
  
+
+.footer_inner {
+    @extend %inner-section_max_width;
+}
