@@ -17,11 +17,11 @@ function TourList() {
   return (
     <div className="tourlist_outer_section">
       <div className="tourlist_inner">
-        <div className="tour_packages_wrapper">
+        <div className="tour_destination_wrapper">
           {tours.map((tour, index) => (
-            <div className="tour_package" key={index}>
-              <div className="tour_package_inner">
-                <div className="tour_package_info">
+            <div className="tour_destination" key={index}>
+              <div className="tour_destination_inner">
+                <div className="tour_destination_info">
                   <div className="tour_info_inner">
                     <div className="tour_info_left">
                       <p>Travel To</p>
