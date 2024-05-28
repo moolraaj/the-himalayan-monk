@@ -1,5 +1,5 @@
 import React from 'react';
-import { kulluTour, manaliTour, mandiTour, shimlaTour, spitiTour, lahaulTour, kangraTour } from '@/app/assets/images';
+import { kulluTour, manaliTour, mandiTour, shimlaTour, spitiTour, lahaulTour, kangraTour, bunjeeJumping ,airplane, speedometer ,location } from '@/app/assets/images';
 
 const tours = [
   {
@@ -96,22 +96,25 @@ function TourPackages() {
                 <div className="tour_package_info">
                   <h2>{tour.name}</h2>
                   <p className="tour_description">{tour.description}</p>
-                  <p className="tour_location">{tour.location}</p>
+                  <span> <img src={location.src} style={{ width: '25px' }} /> <p className="tour_location">{tour.location}</p></span>
                 </div>
+
+                <div  className='tour_b_c'>
                 <div className="tour_rating_duration_section">
                 <div className="tour_details">
                   <div className="tour_ratings">
                     <span>{tour.rating} ★ ({tour.reviews} reviews)</span>
                   </div>
                   
-                    <span>{tour.duration}</span>
+                    <span className='speedometer'><img style={{ width: '35px' }}src={speedometer.src}/>{tour.duration}</span>
 
                   </div>
                   
                 </div>
                 <div className="tour_price_book_section">
-                <span>{tour.price}</span>
-                <button className="book_button">Book a Trip</button>
+                <span className='price_tour'><p>From</p>{tour.price}</span>
+                <button className="book_button">Book a Trip <img src={airplane.src} alt="" style={{ width: '35px' }}/></button>
+                </div>
                 </div>
               </div>
             </div>

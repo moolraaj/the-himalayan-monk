@@ -5,6 +5,14 @@ import shimlaTour from '../assets/homepageAssets/shimla_tour.jpg';
 import spitiTour from '../assets/homepageAssets/spiti_tour.jpg';
 import lahaulTour from '../assets/homepageAssets/lahaul_tour.jpg';
 import kangraTour from '../assets/homepageAssets/kangra_tour.jpg';
+import airplane from '../assets/homepageAssets/airplane.gif';
+import bunjeeJumping from '../assets/homepageAssets/Bungee_Jumping.png';
+import speedometer from '../assets/homepageAssets/speedometer.png';
+import location from '../assets/homepageAssets/location.gif';
+
+
+
+
 
 
 
@@ -16,5 +24,9 @@ export {
     shimlaTour,
     spitiTour,
     lahaulTour,
-    kangraTour
+    kangraTour,
+    bunjeeJumping,
+    airplane,
+    speedometer,
+    location,
   };

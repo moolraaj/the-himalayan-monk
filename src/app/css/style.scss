@@ -169,8 +169,8 @@ body {
   
 .tour_destination_wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: 40% 1fr 32%;
+    gap: 30px;
 }
 
 .tour_destination {
@@ -206,14 +206,15 @@ body {
 
                 p {
                     margin: 0;
-                    font-size: 1.2em;
                     font-weight: bold;
-                    color: $light_red;
+                    color: #D65228;
+                    font-size: 16px;
+                    font-family: 'josefin';
                 }
 
                 h2 {
                     margin: 5px 0 0;
-                    font-size: 2em;
+                    font-size: 22px;
                 }
             }
 
@@ -227,13 +228,14 @@ body {
                     background: $dark_yellow;
                     padding: 5px 10px;
                     border-radius: 5px;
+                    font-size: 14px;
                 }
             }
         }
     }
 }
 
-/* Specific heights and grid placements */
+
 .tour_destination:nth-child(1),
 .tour_destination:nth-child(3),
 .tour_destination:nth-child(5),
@@ -291,6 +293,7 @@ body {
 .top_bar_notifications span {
     color: $white;
     font-size: 13px;
+    font-family: 'josefin';
 }
 .top_bar_notifications p {
     font-size: 13px;
@@ -323,7 +326,7 @@ body {
   .tour_packages_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
     margin-top: 110px;
   }
   
@@ -344,16 +347,27 @@ body {
   
   .tour_package_inner {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 42% 58%;
+}
+
+p.tour_location {
+    font-size: 14px;
+    color: $dark_yellow;
+}
+
+
+
+.tour_package_info p {
+    font-size: 16px;
 }
   .tour_image_wrapper {
     position: relative;
     width: 100%;
     background-color: $secondary_pink;
-    border-radius:0px 0px 180px 0px !important;
-    max-width: 177px;
+    border-radius: 6px 0px 172px 10px !important;
+    max-width: 200px;
     width: 100%;
-    height: 191px;
+    height: 188px;
   }
   
   .tour_image_wrapper img {
@@ -370,10 +384,37 @@ body {
     left: 10px;
     background-color: orange;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
+    padding: 7px 29px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: 'josefin';
   }
+
+  .tour_b_c {
+    display: flex;
+    justify-content: space-between;
+    width: 91%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 10px 20px;
+    padding-top: 0px;
+    align-items: center;
+}
+
+.tour_package_info span {
+    display: flex;
+    align-items: center;
+}
+
+.tour_ratings span {
+    display: flex;
+    align-items: center;
+}
+
+p.tour_location {
+    font-size: 14px;
+    color: $dark_yellow;
+}
   
   .tour_package_info {
     padding: 20px;
@@ -381,9 +422,11 @@ body {
   }
   
   .tour_package_info h2 {
-    font-size: 1.5em;
+    font-size: 25px;
     margin: 0 0 10px;
     color: #333;
+    font-family: 'rubik';
+
   }
   
   .tour_package_info p {
@@ -392,7 +435,6 @@ body {
   }
   
   .tour_details {
-    display: flex;
     justify-content: space-between;
     margin-top: 10px;
     color: #333;
@@ -403,18 +445,51 @@ body {
     color: #666;
     font-size: 0.9em;
   }
+
+  span.price_tour {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    font-family: 'josefin';
+}
+
+
+
+p.tour_location {
+    font-size: 14px;
+    color: $dark_yellow;
+}
+
+
+span.price_tour p {
+    color: #828282;
+}
+
+
+span.speedometer {
+    display: flex;
+    align-items: center;
+    font-family: 'josefin';
+    margin-top: 10px;
+    column-gap: 8px;
+}
   
   .book_button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: orange;
     color: white;
+    display: flex;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
     transition: background-color 0.3s;
+    column-gap: 5px;
+    align-items: center;
+    font-family: 'josefin';
+    font-size: 16px;
   }
   
   .book_button:hover {
