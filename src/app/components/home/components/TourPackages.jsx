@@ -113,7 +113,7 @@ function TourPackages() {
                 </div>
                 <div className="tour_price_book_section">
                 <span className='price_tour'><p>From</p>{tour.price}</span>
-                <button className="book_button">Book a Trip <img src={airplane.src} alt="" style={{ width: '35px' }}/></button>
+                <button className="book_button">Book a Trip <img src={airplane.src} alt="" style={{ width: '28px' }}/></button>
                 </div>
                 </div>
               </div>
