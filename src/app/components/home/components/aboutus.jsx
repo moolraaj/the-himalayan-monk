@@ -20,6 +20,7 @@ const AboutUs = () => {
           <img className="one_image_c" src={aboutone.src} alt="About Us 1" />
           <img className="two_image_c" src={abouttwo.src} alt="About Us 2" />
         </div>
+        <h1>this is a heading</h1>
         <div className="aboutus-text">
           <h2>It's a huge world out there. Come discover it with us.</h2>
           <p>
