@@ -1,5 +1,5 @@
 import React from 'react'
-import heroimg from '@/app/assets/herosection/hero_background.png'
+import heroimg from '../../../assets/herosection/hero_background.png'
 
 import right2 from '@/app/assets/herosection/img5.png'
 import right3 from '@/app/assets/herosection/img6.png'

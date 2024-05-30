@@ -2,7 +2,8 @@ import React from 'react';
 import search from '../../../assets/headerAssets/search.png';
 import call from '../../../assets/headerAssets/call.png';
 import logo from '../../../assets/headerAssets/logo.png';
-import window from '../../../assets/headerAssets/window.png';
+import window from '../../../assets/headerAssets/window.gif';
+import Link from 'next/link';
 
 
 
@@ -18,11 +19,16 @@ function Headercustom() {
 
         <div className='navbar_c_section'>
             <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Destination</li>
-                <li>Activities</li>
-                <li>Ways to Travel</li>
+                <li>
+                    <Link href='/'> Home</Link></li>
+                <li>
+                    <Link href='#about'> About Us</Link></li>
+                <li>
+                    <Link href='/destinations'> Destination</Link></li>
+                <li>
+                    <Link href='/activites'> Activities</Link></li>
+                <li>
+                    <Link href='/way-to-travels'> Ways to Travel</Link></li>
             </ul>
         </div>
 
@@ -33,7 +39,7 @@ function Headercustom() {
         </div>
         <div className='header_number'>
             <div className='number_header_c'>
-                <img src={call.src}></img>
+                <img src={call.src} style={{width:40 }}></img>
             </div>
             <div className='more_enquiery'>
                 <p>To More Inquiry</p>
