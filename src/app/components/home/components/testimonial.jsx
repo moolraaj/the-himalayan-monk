@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import triangle from '@/app/assets/homepageAssets/triangle.png' 
+import Image from "next/image";
 const testimonials = [
   {
     name: "Rakesh Sharma",
@@ -111,9 +112,9 @@ const Testimonials = () => {
               <div className="rating">
                 {"★".repeat(testimonial.rating) +
                   "☆".repeat(5 - testimonial.rating)}
-                  <img src={triangle.src} alt="image" />
+                  
               </div>
-
+              <img src={triangle.src} alt="image"/>
 
               <div className="user_infos">
                 <div className="avtar_outer">

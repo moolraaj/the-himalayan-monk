@@ -1,5 +1,5 @@
 import React from 'react';
-import galleryleh from '../../assets/homepageAssets/destinationleh.png'; // Adjust the path accordingly
+import galleryleh from '../../assets/homepageAssets/destinationleh.png'; 
 
 const DestinationBanner = () => {
   return (

@@ -6,6 +6,7 @@ import rafting from '../../../assets/homepageAssets/Rafting.png';
 import paragliding from '../../../assets/homepageAssets/Paragliding.png';
 import ski from '../../../assets/homepageAssets/Ski_Touring.png';
 import surfing from '../../../assets/homepageAssets/Surfing.png';
+ 
 
 const activities = [
   {
@@ -71,7 +72,7 @@ const Tabs = () => {
               className={`tab ${index === activeTab ? 'active' : ''}`}
               onClick={() => setActiveTab(index)}
             >
-              <img src={activity.icon.src} alt={`${activity.name} icon`} />
+              <img src={activity.icon.src} alt={`${activity.name} icon`} style={{width:'100%'}}/>
               <span>{activity.name}</span>
             </div>
           ))}
@@ -89,7 +90,7 @@ const Tabs = () => {
             <button>Check Availability</button>
           </div>
           <div className="images">
-            <img src={activities[activeTab].image} alt={activities[activeTab].name} />
+            <img src={activities[activeTab].image} alt={activities[activeTab].name} style={{width:'100%'}}/>
             {/* Add more images if needed */}
           </div>
         </div>

@@ -1,9 +1,13 @@
 import React from 'react'
+import ActivitiesPackages from './activitiesSlugInner'
 
-function ActivitesSlug() {
+function ActivitesSlug({id}) {
+
+  console.log(id)
+
   return (
      <>
-     <h1>this is detination slug page</h1>
+    <ActivitiesPackages id={id}/>
      </>
   )
 }

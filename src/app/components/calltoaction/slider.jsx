@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import kullu from '../../assets/homepageAssets/kangra_tour.jpg';
 import manali from '../../assets/homepageAssets/manali_tour.jpg';
 import lahul from '../../assets/homepageAssets/lahaul_tour.jpg';
+import Image from "next/image";
 
 const images = [kullu, manali, lahul];
 
@@ -34,6 +35,7 @@ const CallSlider = () => {
           <img
             id={`slide-${index}`}
             src={image.src}
+        
             alt={`Slide ${index}`}
           />
         </div>

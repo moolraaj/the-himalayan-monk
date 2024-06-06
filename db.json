@@ -1,0 +1,854 @@
+{
+    
+      "destinationsData": [
+        {
+          "id": 1,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Lama Monastery",
+          "tours": 5,
+          "name": "Lama Monastery",
+          "location": "Kangra"
+        },
+        {
+          "id": 2,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Bijli Mahadev",
+          "tours": 4,
+          "name": "Bijli Mahadev",
+          "location": "Kullu"
+        },
+        {
+          "id": 3,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Main Bazar",
+          "tours": 5,
+          "name": "Main Bazar",
+          "location": "Chamba"
+        },
+        {
+          "id": 4,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Ridge",
+          "tours": 3,
+          "name": "Ridge",
+          "location": "Shimla"
+        },
+        {
+          "id": 5,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Parvati Valley",
+          "tours": 5,
+          "name": "Parvati Valley",
+          "location": "Kasol"
+        },
+        {
+          "id": 6,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Mini Switzerland",
+          "tours": 5,
+          "name": "Mini Switzerland",
+          "location": "Kullu"
+        },
+        {
+          "id": 7,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Christ Church",
+          "tours": 5,
+          "name": "Christ Church",
+          "location": "Kasauli"
+        },
+        {
+          "id": 8,
+          "imgSrc": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+          "altText": "Rang Mahal",
+          "tours": 5,
+          "name": "Rang Mahal",
+          "location": "Kullu"
+        }
+      ] ,
+     
+     
+        "destinationInnerData": [
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Pangong Lake, Magnetic Hill, Nubra Valley",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "67.05",
+              "rating": "4.7",
+              "reviews": "(60k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 1
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Tso Moriri Lake, Lamayuru Monastery.",
+              "days": "07 Days",
+              "nights": "06 Nights",
+              "price": "60.05",
+              "rating": "4.0",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "Kullu",
+              "id": 2
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Tso Moriri Lake, Lamayuru Monastery",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "59.05",
+              "rating": "4.2",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 3
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Diskit Gompa, Shanti Stupa, Kargil",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "60.05",
+              "rating": "4.8",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 4
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Pangong Lake, Magnetic Hill, Nubra Valley",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "67.05",
+              "rating": "4.7",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 5
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Pangong Lake, Magnetic Hill, Nubra Valley",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "60.05",
+              "rating": "4.0",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 6
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Pangong Lake, Magnetic Hill, Nubra Valley",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "59.05",
+              "rating": "4.2",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 7
+            },
+            {
+              "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+              "title": "Pangong Lake. Magnetic Hill, Nubra Valley",
+              "days": "07 Days",
+              "nights": "08 Nights",
+              "price": "60.05",
+              "rating": "4.8",
+              "reviews": "(6.0k)",
+              "slug": "demo",
+              "location": "dddd",
+              "id": 8
+            }
+          ],
+          
+            "innerPage": [
+              {
+                "id": 1,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 4,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 6,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 7,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              },
+              {
+                "id": 8,
+                "price": 60.05,
+                "originalPrice": 70.05,
+                "duration": "1 Week",
+                "maxPeople": 40,
+                "description": "Tour and travel refer to the activities related to planning, organizing, and experiencing trips to various destinations for leisure, exploration, adventure, or relaxation. Choose your destination based on your interests and preferences, whether it’s a cultural experience, a natural adventure, historical exploration, or a beach vacation. Book suitable accommodation, which can range from hotels, resorts, hostels, vacation rentals, or even camping depending on your travel style and destination. Arrange transportation to and within your destination. This can include flights, trains, buses, rental cars, or even cruises.",
+                "included": [
+                  "Meal As Per Hotel Plan And Drinks Free Too.",
+                  "Return Airport And Round Trip Transfers.",
+                  "Accommodation On Twin Sharing Basis.",
+                  "The Above Rates Are On Per Day Disposal Basis.",
+                  "Enjoy Brussels Day Tours. Overnight Brussels."
+                ],
+                "excluded": [
+                  "Personal expenses such as laundry, phone calls, etc.",
+                  "Any kind of insurance.",
+                  "Optional tours."
+                ],
+                "itinerary": [
+                  {
+                    "day": "Day 01",
+                    "activity": "Admire Big Ben, Buckingham Palace And ST Paul's Cathedral",
+                    "description": "Visit some of London's most iconic landmarks, including Big Ben, Buckingham Palace, and St Paul's Cathedral. You'll have the chance to explore these historic sites and learn about their significance."
+                  },
+                  {
+                    "day": "Day 02",
+                    "activity": "Adventure Begins",
+                    "description": "Start your adventure with exciting activities such as hiking, biking, or a guided city tour. Enjoy the vibrant local culture and scenic views."
+                  },
+                  {
+                    "day": "Day 03",
+                    "activity": "Historical Tour",
+                    "description": "Discover the rich history of the area with a guided tour. Visit museums, historical sites, and landmarks that tell the story of the past."
+                  },
+                  {
+                    "day": "Day 04",
+                    "activity": "Rest & Tour",
+                    "description": "Take some time to relax and enjoy leisure activities. You can explore local markets, enjoy a spa day, or simply relax at your accommodation."
+                  },
+                  {
+                    "day": "Day 05",
+                    "activity": "Return",
+                    "description": "Prepare for your return journey. Reflect on your experiences and make the most of your last day with some final sightseeing or shopping."
+                  }
+                ]
+              }
+            ],
+
+             "activitiesPlacesData":[
+              {
+                "id": 1,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Lama Monastery",
+                "tours": 5,
+                "name": "Lama Monastery",
+                "location": "Kangra"
+              },
+              {
+                "id": 2,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Bijli Mahadev",
+                "tours": 4,
+                "name": "Bijli Mahadev",
+                "location": "Kullu"
+              },
+              {
+                "id": 3,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Main Bazar",
+                "tours": 5,
+                "name": "Main Bazar",
+                "location": "Chamba"
+              },
+              {
+                "id": 4,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Ridge",
+                "tours": 3,
+                "name": "Ridge",
+                "location": "Shimla"
+              },
+              {
+                "id": 5,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Parvati Valley",
+                "tours": 5,
+                "name": "Parvati Valley",
+                "location": "Kasol"
+              },
+              {
+                "id": 6,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Mini Switzerland",
+                "tours": 5,
+                "name": "Mini Switzerland",
+                "location": "Kullu"
+              },
+              {
+                "id": 7,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Christ Church",
+                "tours": 5,
+                "name": "Christ Church",
+                "location": "Kasauli"
+              },
+              {
+                "id": 8,
+                "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "altText": "Rang Mahal",
+                "tours": 5,
+                "name": "Rang Mahal",
+                "location": "Kullu"
+              }
+            ],
+             "tours" :[
+              { 
+                "id": 1, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Kullu", 
+                "tours": 5 
+              },
+              { 
+                "id": 2, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Manali", 
+                "tours": 4 
+              },
+              { 
+                "id": 3, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Mandi", 
+                "tours": 5 
+              },
+              { 
+                "id": 4, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Shimla", 
+                "tours": 3 
+              },
+              { 
+                "id": 5, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Spiti", 
+                "tours": 5 
+              },
+              { 
+                "id": 6, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Lahaul", 
+                "tours": 3 
+              },
+              { 
+                "id": 7, 
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613", 
+                "name": "Kangra", 
+                "tours": 5 
+              }
+            ],
+             "alltourspackages" : [
+              {
+                "id": 1,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹25,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.5,
+                "reviews": 10,
+                "tours": 5
+              },
+              {
+                "id": 2,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹28,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.0,
+                "reviews": 8,
+                "tours": 4
+              },
+              {
+                "id": 3,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹20,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.8,
+                "reviews": 15,
+                "tours": 5
+              },
+              {
+                "id": 4,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹30,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.7,
+                "reviews": 12,
+                "tours": 3
+              },
+              {
+                "id": 5,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹22,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.6,
+                "reviews": 9,
+                "tours": 5
+              },
+              {
+                "id": 6,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹23,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.9,
+                "reviews": 20,
+                "tours": 3
+              },
+              {
+                "id": 7,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹27,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.3,
+                "reviews": 11,
+                "tours": 5
+              }
+            ],
+            "allactivitiesTourpackages" : [
+              {
+                "id": 1,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹25,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.5,
+                "reviews": 10,
+                "tours": 5
+              },
+              {
+                "id": 2,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹28,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.0,
+                "reviews": 8,
+                "tours": 4
+              },
+              {
+                "id": 3,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹20,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.8,
+                "reviews": 15,
+                "tours": 5
+              },
+              {
+                "id": 4,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹30,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.7,
+                "reviews": 12,
+                "tours": 3
+              },
+              {
+                "id": 5,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹22,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.6,
+                "reviews": 9,
+                "tours": 5
+              },
+              {
+                "id": 6,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹23,000.00",
+                "duration": "5 Days / 4 Nights",
+                "rating": 4.9,
+                "reviews": 20,
+                "tours": 3
+              },
+              {
+                "id": 7,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹27,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.3,
+                "reviews": 11,
+                "tours": 5
+              },
+              {
+                "id": 8,
+                "img": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+                "name": "Shimla to Manali",
+                "description": "Exceptional Circuit of Shimla, Manali and Lahaul - Spiti",
+                "location": "Spiti, Himachal Pradesh, India",
+                "price": "₹27,000.00",
+                "duration": "8 Days / 7 Nights",
+                "rating": 4.3,
+                "reviews": 11,
+                "tours": 5
+              }
+            ]
+            
+
+
+            
+            
+          
+          
+          
+    }
+    
+  
+  

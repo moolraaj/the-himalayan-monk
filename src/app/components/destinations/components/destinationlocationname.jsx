@@ -1,5 +1,6 @@
 import React from 'react';
 import monastry from "../../../assets/homepageAssets/monastry.png";
+import Image from 'next/image';
 
 const placesData = [
   {
@@ -68,12 +69,13 @@ const placesData = [
   }
 ];
 
+
 const Places = () => {
   return (
     <div className="places-container">
       {placesData.map(place => (
         <div key={place.id} className="place">
-          <img src={place.imgSrc.src} alt={place.altText} />
+          <Image src={place.imgSrc.src} alt={place.altText} />
           <div className="place-info">
             <p>{place.tours} Tour{place.tours > 1 ? 's' : ''}</p>
              <span className='name_location'>

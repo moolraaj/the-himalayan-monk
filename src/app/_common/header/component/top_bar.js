@@ -12,7 +12,7 @@ function Topbar() {
       <div className='custom_navbar'>
         <div className='top_bar_details_inner_s'>
           <div className='top_bar_mail'>
-            <img src='#'></img>
+            <img src='#' alt='demo'/>
             <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
           </div>
 

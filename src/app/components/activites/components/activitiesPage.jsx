@@ -1,6 +1,8 @@
 import React from "react";
-import APlaces from "../../components/activites/components/activiteslocation";
-import DestinationBanner from "../../components/headertitlesection/bannersection";
+ 
+ 
+import APlaces from "./activiteslocation";
+import DestinationBanner from "../../headertitlesection/bannersection";
 
 function ActivitesPage() {
   return (

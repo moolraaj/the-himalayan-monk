@@ -1,10 +1,13 @@
 import React from 'react'
-import heroimg from '../../../assets/herosection/hero_background.png'
+ 
 
 import right2 from '@/app/assets/herosection/img5.png'
 import right3 from '@/app/assets/herosection/img6.png'
 import right4 from '@/app/assets/herosection/img7.png'
 import right1 from '@/app/assets/herosection/img8.png'
+import heroimg from '@/app/assets/herosection/hero_background.png'
+import Image from 'next/image'
+ 
 
 
 
@@ -17,7 +20,7 @@ function Herosection() {
 
             <div className="hero_section_outer">
                 <div className="slider_wrapper">
-                    <img src={heroimg.src} alt="" />
+                    <Image src={heroimg} alt="this is image"  style={{width:'100%', height:'100%'}}/>
 
                 </div>
                 <div className="hero_section_inner">
@@ -34,19 +37,19 @@ function Herosection() {
                         <div className="hero_right_section">
                             <div className="hero_destination_outer">
                                 <h1>leh ladakh</h1>
-                                <img src={right1.src} alt="destination" />
+                                <Image src={right1} alt="destination" style={{width:'100%', height:'100%'}}/>
                             </div>
                             <div className="hero_destination_outer">
                                 <h1>Manali</h1>
-                                <img src={right2.src} alt="destination" />
+                                <Image src={right2} alt="destination" style={{width:'100%', height:'100%'}}/>
                             </div>
                             <div className="hero_destination_outer">
                                 <h1>Kufri Shimla</h1>
-                                <img src={right3.src} alt="destination" />
+                                <Image src={right3} alt="destination" style={{width:'100%', height:'100%'}}/>
                             </div>
                             <div className="hero_destination_outer">
                                 <h1>Narkanda</h1>
-                                <img src={right4.src} alt="destination" />
+                                <Image src={right4} alt="destination" style={{width:'100%', height:'100%'}}/>
                             </div>
 
 

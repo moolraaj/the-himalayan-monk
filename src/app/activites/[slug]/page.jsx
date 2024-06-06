@@ -1,13 +1,32 @@
 import ActivitesSlug from '@/app/components/activites/components/activitiesSlug'
-import APlaces from '@/app/components/activites/components/activiteslocation'
 
-function page() {
+
+const loadActivitiesPlaces=async()=>{
+  let resp=await fetch(`http://localhost:4500/activitiesPlacesData`)
+  let data=await resp.json()
+  return data
+}
+
+
+ 
+function page({params}) {
+  let {slug}=params
+ 
   return (
      <>
-     <APlaces/>
-     <ActivitesSlug/>
+     <ActivitesSlug id={slug}/>
      </>
   )
 }
 
 export default page
+
+
+export async function generateStaticParams() {
+  let result = await loadActivitiesPlaces();
+  return result.map((ele) => {
+    return {
+      slug: ele.id.toString()
+    };
+  });
+}

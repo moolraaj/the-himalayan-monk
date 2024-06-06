@@ -1,10 +1,13 @@
-import DestinationPage from "../components/destinations/components/destinationPage"
+import DestinatinationPage from "./component/destinatinationPage";
+import DPlaces from "./component/destinationLocation";
 
-const Destinations=()=>{
-return(
+const Destinations = () => {
+  return (
     <>
-    <DestinationPage/>
+      <DestinatinationPage />
+      <DPlaces />
     </>
-)
-}
-export default Destinations
+  );
+};
+
+export default Destinations;

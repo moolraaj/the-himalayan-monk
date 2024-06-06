@@ -7,6 +7,7 @@ import himachal from '../../../assets/headerAssets/himachal.png';
 
 
 import Link from 'next/link';
+ 
 function FooterPage() {
     return (
         <>
@@ -22,12 +23,12 @@ function FooterPage() {
                             </div>
                             <div className="footer_hand-shake">
                                 <div className="footer_svg">
-                                    <img src={handshake.src} alt="" />
+                                    <img src={handshake.src} alt="demo" />
                                     <span>Tour With Monks</span>                                </div>                              
 
                             </div>
                             <div className="footer_shake_heading">
-                                <img src={himachal.src} alt="" />
+                                <img src={himachal.src} alt="demo" />
                                 </div>
                             <div className="footer_copywrite_first">
                             <p>The Himalayan Monks. All Right Reserved.</p>
