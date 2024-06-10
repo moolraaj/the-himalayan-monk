@@ -8,6 +8,7 @@ const loadInnerPage = async (id) => {
 };
 
 function TravelPackage({ id }) {
+  console.log(id)
   let [data, setData] = useState([]);
   const [activeDay, setActiveDay] = useState(null);
 

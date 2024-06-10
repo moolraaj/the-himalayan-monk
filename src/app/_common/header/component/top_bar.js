@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import vector from '../../../assets/headerAssets/Vector.png'
 
 
 
@@ -12,7 +13,7 @@ function Topbar() {
       <div className='custom_navbar'>
         <div className='top_bar_details_inner_s'>
           <div className='top_bar_mail'>
-            <img src='#' alt='demo'/>
+            <img src={vector.src} alt='demo' width={20}/>
             <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
           </div>
 

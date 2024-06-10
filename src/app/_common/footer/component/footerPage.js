@@ -66,10 +66,11 @@ function FooterPage() {
                         <div className="footer_second_fourth">
                             <h4>Other Links</h4>
                             <ul className='footer_client_section'>
-                                <li><a href="/">about</a> </li>
-                                <li><a href="/">services</a> </li>
-                                <li><a href="/">terms and conditions</a> </li>
-                                <li><a href="/">contact us</a> </li>
+                                <li><Link href="/about-us">about</Link> </li>
+                                <li><Link href="/">services</Link> </li>
+                                <li><Link href="/">terms and conditions</Link> </li>
+                                <li><Link href="/contact-us">contact us</Link> </li>
+                                
                             </ul>
 
                         </div>

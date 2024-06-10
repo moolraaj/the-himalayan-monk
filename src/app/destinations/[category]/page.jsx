@@ -8,7 +8,7 @@ const fetchAllDestinationsPackages = async () => {
 
 function Page({ params }) {
   let { category } = params;
-  console.log(category);
+  
   return (
     <>
       <CategorySlug category={category} />

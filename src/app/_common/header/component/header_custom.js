@@ -6,10 +6,21 @@ import logo from '../../../assets/headerAssets/logo.png';
 import window from '../../../assets/headerAssets/window.gif';
 import Link from 'next/link';
 import SliderForm from '../../slider-form/page';
+import arrow from '../../../assets/headerAssets/megamenu.png.gif'
+import PopupForm from '../../destinationpopup/popupForm';
  
 
 function Headercustom() {
   const [isShow, setIsShow] = useState(false);
+  const [ShowDestinations, setShowDestinations] = useState(false);
+
+  const openDestinations = () => {
+    setShowDestinations(true);
+  };
+
+  const closeDestinations = () => {
+    setShowDestinations(false);
+  };
 
   const openRightMenu = () => {
     setIsShow(true);
@@ -19,10 +30,19 @@ function Headercustom() {
     setIsShow(false);
   };
 
+
+  
+
+
+  
+
+
+
+
   return (
     <>
       <SliderForm closeRightMenu={closeRightMenu} isShow={isShow}/>
-
+      <PopupForm ShowDestinations={ShowDestinations} closeDestinations={closeDestinations} />
       <div className='header_custom_main'>
         <div className='header_i_sec'>
           <div className='logo_r_section'>
@@ -32,11 +52,13 @@ function Headercustom() {
           <div className='navbar_c_section'>
             <ul>
               <li><Link href='/'> Home</Link></li>
-              <li><Link href='#about'> About Us</Link></li>
+              <li><Link href='/about-us'> About Us</Link></li>
               <li><Link href='/destinations'> Destination</Link></li>
               <li><Link href='/activites'> Activities</Link></li>
-              <li><Link href='/way-to-travels'> Ways to Travel</Link></li>
+              <li><Link href='/ways-to-travel'> Ways to Travel</Link></li>
             </ul>
+            <span>        <img src={arrow.src} onClick={openDestinations} alt="arrow" />
+            </span>
           </div>
 
           <div className='enquiry_s_number'>

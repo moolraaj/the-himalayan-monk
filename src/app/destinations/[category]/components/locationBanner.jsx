@@ -8,12 +8,9 @@ import leh from '../../../assets/homepageAssets/lehroad.png';
 
 
 
-
-
-
-
 // Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
+
 
 
 const images = [

@@ -1,3 +1,8 @@
+const fetchAllActivitisPackages = async () => {
+    let data = await fetch(`http://localhost:4500/allactivitiesTourpackages`);
+    let resp = await data.json();
+    return resp;
+  };
 import React from 'react'
 
 function page({params}) {
@@ -10,3 +15,14 @@ function page({params}) {
 }
 
 export default page
+
+
+export async function generateStaticParams(){
+    let data=await fetchAllActivitisPackages()
+    return data.map((ele)=>{
+        return{
+            slug:ele.id.toString(),
+            id:ele.id.toString()
+        }
+    })
+}
