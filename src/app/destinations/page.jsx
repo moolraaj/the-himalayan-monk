@@ -1,7 +1,7 @@
 import DestinatinationPage from "./component/destinatinationPage";
 import DPlaces from "./component/destinationLocation";
 
-const Destinations = () => {
+const page = () => {
   return (
     <>
       <DestinatinationPage />
@@ -10,4 +10,4 @@ const Destinations = () => {
   );
 };
 
-export default Destinations;
+export default page;
