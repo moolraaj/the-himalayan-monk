@@ -14,13 +14,13 @@ import Link from 'next/link';
 
 async function DPlaces() {
    
-      const result = await fetchAllDestinations();
+  const result = await fetchAllDestinations();
       
       
 
   return (
     <div className="places-container">
-      {result && result.map(place => (
+      {result && result?.map(place => (
         <Link href={`/destinations/${place.id}`} key={place.id}>
           <div className="place">
             <img src={place.imgSrc} alt={place.imgSrc} />

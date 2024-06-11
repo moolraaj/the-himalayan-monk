@@ -1,10 +1,16 @@
 import React from 'react'
-import AboutPage from './component/aboutPage'
+import AboutTop from './component/aboutTop'
+import AboutTopbanner from '../components/headertitlesection/aboutTopbanner'
+import Traveller from './component/Traveller'
 
 function page() {
   return (
      <>
-     <AboutPage/>
+      <AboutTopbanner/>
+     <AboutTop/>
+     <Traveller/>
+    
+    
      </>
   )
 }

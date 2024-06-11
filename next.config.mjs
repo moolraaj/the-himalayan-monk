@@ -1,15 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   
+    basePath:'/docx',
     output:'export',
     images:{
         unoptimized:true
     },
-    // basePath:'/docx',
     trailingSlash:true,
-
-   
-    
 };
 
 export default nextConfig;

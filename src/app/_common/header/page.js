@@ -5,9 +5,9 @@ import Headercustom from './component/header_custom'
 function Header() {
   return (
     <>
-   <Topbar></Topbar>
+   <Topbar/>
 
- <Headercustom></Headercustom>
+ <Headercustom/>
        </>
   )
 }

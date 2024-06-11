@@ -310,6 +310,320 @@ body {
   align-items: center;
 }
 
+.contactuspage .enquiryForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactuspage .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactuspage .label {
+  margin-bottom: 5px;
+}
+
+.contactuspage .inputField, .textareaField {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contactuspage .textareaField {
+  height: 100px;
+}
+
+.detailItem span.text a {
+  font-size: 20px;
+}
+
+.about_traveller .stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 50px 40px;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+
+.both-v-l .stat-value {
+  color:$dark_yellow;
+}
+
+.about_traveller .stat-item {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  column-gap: 26px;
+}
+
+.about_traveller .stat-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about_traveller .stat-label {
+  font-size: 16px;
+  color: #757575;
+}
+
+.who-feature {
+  max-width: 1440px;
+  margin: auto;
+  text-align: left;
+  padding-top: 90px;
+}
+
+.stat-item img {
+  height: 58px;
+}
+
+.features-section {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.stat-item img {
+  height: 58px;
+}
+
+.about_traveller .who-we-are-section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.about_traveller .who-we-are-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.about_traveller .who-we-are-section p {
+  font-size: 16px;
+  color: #777;
+  margin: 0 auto;
+}
+
+.about_traveller .features-section {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 100px;
+}
+
+.feature-item:hover {
+  box-shadow: 2px 2px 10px #00000029;
+}
+
+.feature-item:hover .feature-icon {
+  background: rgb(246 148 37);
+}
+
+.about_traveller .feature-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  display: grid;
+  column-gap: 20px;
+  border: 1px solid #D9D9D9;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+.who-feature {
+  max-width: 1440px;
+  margin: auto;
+  text-align: left;
+}
+
+.who-we-are-section h2 {
+  font-size: 35px !important;
+  font-family: 'rubik';
+  color: #323232;
+}
+
+.who-we-are-section h4 {
+  font-size: 30px;
+  font-family: satisfy;
+  color: #D65228;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.about_traveller .feature-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  width: 113px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6942561;
+  border-radius: 85px;
+}
+
+.about_traveller .feature-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about_traveller .feature-description {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.contact_form_map {
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 65px;
+}
+
+.submit_custom {
+  text-align: left;
+  display: flex;
+}
+
+
+
+.contactuspage .submitButton {
+  padding: 16px 40px;
+    background-color: orange;
+    border: none;
+    border-radius: 37px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    float: right;
+    font-family: 'inter';
+    font-weight: 700;
+}
+
+.contactuspage .contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactuspage .detailItem {
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.contactuspage .icon {
+  font-size: 1.5em;
+}
+
+.contactuspage .text {
+  font-size: 1em;
+}
+
+.contactuspage .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.contactuspage .contactSection {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.contactuspage .formSection {
+  flex: 2;
+  padding-left: 20px;
+}
+
+.contact_both_sections {
+  display: grid;
+  max-width: 1440px;
+  justify-content: space-between;
+  margin: auto;
+  grid-template-columns: 1fr 62%;
+  column-gap: 7%;
+  margin-bottom: 60px;
+}
+
+form.enquiryForm input {
+  background: #F4F4F4;
+  border: none !important;
+}
+
+
+.both_middle_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 29px;
+}
+
+
+.formGroup textarea {
+  background: #f4f4f4;
+  border: none;
+}
+
+
+
+form.enquiryForm label {
+  color: orange;
+  font-family: 'inter';
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+
+
+.detailItem label {
+  position: absolute;
+  top: -11px;
+  font-size: 16px;
+  background: white;
+  padding: 0px 14px;
+  font-family: 'rubik';
+}
+
+.contact_both_sections h4 {
+  font-size: 40px;
+  width: 100% !important;
+  font-family: 'rubik';
+  font-weight: 500;
+}
+
+.contact_both_sections h4 {
+  font-size: 40px;
+  width: 100% !important;
+  font-family: 'rubik';
+  font-weight: 500;
+}
+
+.detailItem {
+  border: 1px solid #757575;
+  padding: 17px 19px;
+  border-radius: 14px;
+}
+
+.detailItem label {
+  position: absolute;
+  top: -11px;
+  font-size: 16px;
+  background: white;
+  padding: 0px 14px;
+  font-family: 'rubik';
+}
+
+.detailItem {
+  position: relative;
+}
 
 
 .custom_navbar {
@@ -318,6 +632,11 @@ body {
     width: 100%;
     top: 0;
     z-index: 999;
+}
+
+
+span.icon {
+  margin-right: 20px;
 }
 
 

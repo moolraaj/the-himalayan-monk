@@ -3,7 +3,7 @@ import WaysTravelPage from './component/waysTravelPage'
 
 function page() {
   return (
-    <>   
+    <>  
     <WaysTravelPage/>
     </>
   )
