@@ -7,6 +7,7 @@ import calender from '../../assets/homepageAssets/calendar.png';
 import medicine from '../../assets/homepageAssets/medicine.png';
 import spy from '../../assets/homepageAssets/spy.png';
 import flag from '../../assets/homepageAssets/white-flag.png';
+
 import Image from 'next/image';
 
 
