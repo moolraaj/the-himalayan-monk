@@ -17,12 +17,4 @@ function page({params}) {
 export default page
 
 
-export async function generateStaticParams(){
-    let data=await fetchAllActivitisPackages()
-    return data.map((ele)=>{
-        return{
-            slug:ele.id.toString(),
-            id:ele.id.toString()
-        }
-    })
-}
+ 

@@ -25,10 +25,4 @@ function Page({ params }) {
 
 export default Page;
 
-export async function generateStaticParams() {
-  let result = await fetchAllDestinations();
-  return result.map((ele) => ({
-    category: ele.id.toString(),
-    slug: ele.id.toString(), 
-  }));
-}
+ 

@@ -22,11 +22,4 @@ function page({params}) {
 export default page
 
 
-export async function generateStaticParams() {
-  let result = await loadActivitiesPlaces();
-  return result.map((ele) => {
-    return {
-      slug: ele.id.toString()
-    };
-  });
-}
+ 
