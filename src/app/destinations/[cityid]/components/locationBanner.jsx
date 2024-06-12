@@ -39,12 +39,13 @@ function LocationBanner({id}) {
           <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index} style={{ position: 'relative', width: '100%', height: '500px' }}>
-                <Image
+                <img
                   src={image.src}
                   alt={image.alt}
                   layout="fill"
                   objectFit="cover"
                   quality={80}
+                   
                 />
               </div>
             ))}

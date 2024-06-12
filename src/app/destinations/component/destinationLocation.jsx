@@ -37,7 +37,7 @@ import Image from 'next/image';
 
         return <Link href={`/destinations/${place.city_id}`} key={index}>
         <div className="place">
-          <Image src={place.image || empty.src} alt={place.name} />
+          <img src={place.image || empty.src} alt={place.name} />
           <div className="place-info">
             {/* <p>{place.tours} Tour{place.tours > 1 ? 's' : ''}</p> */}
             <span className='name_location'>

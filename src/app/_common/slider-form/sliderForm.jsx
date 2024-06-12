@@ -6,11 +6,18 @@ import tele from '../../assets/homepageAssets/tele.png'
 import empty from '../../assets/empty.jpg'
 import { ExportAllApis } from '@/utils/apis/apis'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-function SliderForm({ closeRightMenu, isShow }) {
+function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
+  let router=useRouter()
   let api = ExportAllApis()
   let [data, setData] = useState([])
-  let [showAll, setShowAll] = useState(false)
+
+  const GoToDestinatiosPages=()=>{
+    router.push('/destinations')
+    setIsShow(false)
+  }
+  
 
   let loadAllDestinations = async () => {
     let resp = await api.fetchAlldestinations()
@@ -41,9 +48,9 @@ function SliderForm({ closeRightMenu, isShow }) {
           <h2 className="title">Our Destinations</h2>
           <div className="destinations">
             {
-              (showAll ? data : data.slice(0, 2))?.map((ele, index) => {
+              data?.slice(0, 2)?.map((ele, index) => {
                 return (
-                  <Link href={`/destinations/${ele.city_id}`} key={index}>
+                  <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                     <div className="destination">
                       <img src={ele.image || empty.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
                       <div className="destination-text">
@@ -55,8 +62,8 @@ function SliderForm({ closeRightMenu, isShow }) {
               })
             }
           </div>
-          <button className={showAll?'all-destinations':'view-all-button'} onClick={() => setShowAll(!showAll)}>
-            {showAll ? 'Hide all' : 'View all'}
+          <button className={'view-all-button'} onClick={GoToDestinatiosPages}>
+            view all
           </button>
           <div className="contact-info">
             <div className='two_name_email'>

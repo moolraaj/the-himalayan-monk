@@ -43,7 +43,7 @@ function Headercustom() {
 
   return (
     <>
-      <SliderForm closeRightMenu={closeRightMenu} isShow={isShow}/>
+      <SliderForm closeRightMenu={closeRightMenu} isShow={isShow} setIsShow={setIsShow}/>
       <PopupForm ShowDestinations={ShowDestinations} closeDestinations={closeDestinations} />
       <div className='header_custom_main'>
         <div className='header_i_sec'>

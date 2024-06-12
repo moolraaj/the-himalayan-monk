@@ -2,7 +2,7 @@ export const ExportAllApis = () => {
 
     const fetchTourPackages = async () => {
         try {
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/index`,{next:{revalidate:2}})
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/index`)
             let resp = await result.json()
             return resp.data
         } catch (error) {
