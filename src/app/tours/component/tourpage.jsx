@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import {airplane, speedometer ,location } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
-import TourTopBanner from '@/app/components/tour/tourTopbanner';
+ 
  
 
  
@@ -37,7 +37,7 @@ function TourPackagesPage() {
   
   return (
   <>
-  <TourTopBanner/>
+ 
   <div className="TourPackages_outer_section">
     <div className="TourPackages_inner">
       <div className="tour_packages_wrapper">
