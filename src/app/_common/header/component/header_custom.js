@@ -5,9 +5,10 @@ import call from '../../../assets/headerAssets/call.png';
 import logo from '../../../assets/headerAssets/logo.png';
 import window from '../../../assets/headerAssets/window.gif';
 import Link from 'next/link';
-import SliderForm from '../../slider-form/page';
+ 
 import arrow from '../../../assets/headerAssets/megamenu.png.gif'
 import PopupForm from '../../destinationpopup/popupForm';
+import SliderForm from '../../slider-form/page';
  
 
 function Headercustom() {
