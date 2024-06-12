@@ -8,7 +8,8 @@ import Link from 'next/link';
  
 import arrow from '../../../assets/headerAssets/megamenu.png.gif'
 import PopupForm from '../../destinationpopup/popupForm';
-import SliderForm from '../../slider-form/page';
+import SliderForm from '../../slider-form/sliderForm';
+ 
  
 
 function Headercustom() {
