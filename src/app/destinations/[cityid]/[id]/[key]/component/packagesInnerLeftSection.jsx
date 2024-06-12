@@ -1,82 +1,94 @@
 'use client'
 
+import { ExportAllApis } from "@/utils/apis/apis";
 import React, { useEffect, useState } from "react";
-const loadInnerPage = async (id) => {
-  let data = await fetch(`http://localhost:4500/innerPage?id=${id}`);
-  let resp = await data.json();
-  return resp;
-};
 
-function TravelPackage({ id }) {
-  console.log(id)
-  let [data, setData] = useState([]);
+
+function TravelPackage({ innerid, innerkey }) {
+  let api = ExportAllApis()
+  console.log(`innerpage ${innerid} + innerpage key ${innerkey}`)
+
+  let [result, setResult] = useState([]);
   const [activeDay, setActiveDay] = useState(null);
 
   const toggleDay = (index) => {
     setActiveDay(activeDay === index ? null : index);
   };
 
-  const fetchInner = async () => {
-    let resp = await loadInnerPage(id);
-    setData(resp);
+  const fetchSingleDestination = async () => {
+    let resp = await api.fetchSingledestination(innerid, innerkey);
+    setResult(resp);
   };
 
   useEffect(() => {
-    fetchInner();
+    fetchSingleDestination()
   }, []);
+  console.log(result)
+
+
 
   return (
     <>
       <div className="package">
-        {data.map((ele) => {
+        {result?.map((ele) => {
+          let daywise_meta = JSON.parse(ele.daywise_meta)
+          console.log(daywise_meta)
           return (
             <div className="package-wrapper" key={ele.id}>
               <div className="price-section">
                 <span className="discounted-price">
-                  <b>Rs {ele.price} </b>{" "}
-                  <span className="original-price">Rs {ele.originalPrice}</span>{" "}
+                  <b>Rs {ele.pakage_discounted_cost} </b>{" "}
+                  <span className="original-price">Rs {ele.starting_cost}</span>{" "}
                   / Per Person
                 </span>
               </div>
               <div className="details">
                 <span>
-                  <strong>Duration:</strong> {data.duration}
+                  <strong>Duration:</strong> {ele.duration}
                 </span>
                 <span>
-                  <strong>Max People:</strong> {data.maxPeople}
+                  <strong>Max People:</strong> {ele.maxPeople}
                 </span>
               </div>
-              <p className="description">{data.description}</p>
+              <p className="description">{ele.description}</p>
               <h2>Included</h2>
               <ul className="included-excluded">
-                {ele.included.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                {ele.inc_meta.map((item, index) => {
+
+                  return <div key={index} className="inc-excl-wrapper">
+                    <li>{item.tour_inc}</li>
+                  </div>
+                }
+                )}
               </ul>
               <h2>Excluded</h2>
               <ul className="included-excluded">
-                {ele.excluded.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+                {ele.exc_meta.map((item, index) => {
+
+                  return <div key={index} className="inc-excl-wrapper">
+                    <li>{item.tour_exc}</li>
+                  </div>
+                }
+                )}
               </ul>
               <h2>Itinerary</h2>
               <div className="itinerary">
-                {ele.itinerary.map((item, index) => (
+                {daywise_meta?.map((item, index) => (
                   <div key={index} className="day">
                     <div
                       className="day-header"
                       onClick={() => toggleDay(index)}>
                       <div className="desc_name">
-                        <span className="days_item">{item.day} </span>
+                        <span className="days_item">{item.tour_day} </span>
                         <p>
-                          <strong>{item.activity}</strong>
+                          <strong>{item.tour_name}</strong>
                         </p>
                       </div>
                       <span>{activeDay === index ? "-" : "+"}</span>
                     </div>
                     {activeDay === index && (
                       <div className="day-activity">
-                        <p>{item.description}</p>
+                        <span dangerouslySetInnerHTML={{__html:item.tour_des}}></span>
                       </div>
                     )}
                   </div>
@@ -86,6 +98,8 @@ function TravelPackage({ id }) {
           );
         })}
       </div>
+
+
     </>
   );
 }

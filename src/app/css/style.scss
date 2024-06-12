@@ -1660,11 +1660,13 @@ a {
 
 
 .all_tour_packages .tour-packages {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   max-width: 1440px;
   margin: auto;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .package {
@@ -1805,10 +1807,26 @@ span.days_item {
 
 
 .all_tour_packages .tour-package {
-  width: calc(25% - 20px);
   margin-bottom: 80px;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.view-all-packages {
+  display: flex;
+  justify-content: end;
+  padding-top: 34px;
+}
+.view-all-packages button {
+  padding: 10px 48px;
+  text-transform: capitalize;
+  background: orange;
+  border: unset;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
 }
 
 .all_tour_packages .tour-image {
@@ -2393,9 +2411,9 @@ span.name_location {
 span.name_location h3 {
   font-family: 'josefin';
   font-size: 20px;
-  color: white;
+  color: #000;
   margin-bottom: 0px;
-  top: 21px !important;
+  top: -21px !important;
   position: relative;
 }
 

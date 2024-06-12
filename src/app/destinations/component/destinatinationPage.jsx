@@ -4,6 +4,7 @@ import monastry from "../../assets/homepageAssets/monastry.png";
 
 import DestinationBanner from '@/app/components/headertitlesection/bannersection';
 import DPlaces from './destinationLocation';
+import DestinationPageBanner from '@/app/components/headertitlesection/destinationPageBanner';
 const placesData = [
     {
       id: 1,
@@ -80,7 +81,7 @@ function DestinatinationPage() {
         <div className="desti_inner">
           <div className="desti_wrapper">
             <div className="banner_section">
-           <DestinationBanner/>
+          <DestinationPageBanner/>
            </div>
             <div className="testi_inner_wapper">
               <h3>Our Latest Destinations</h3>
@@ -89,7 +90,6 @@ function DestinatinationPage() {
               <p>Here you will find information, advice, routes and experiences about the latest destinations we have visited. Because when we are organizing a vacation and preparing our trip, we need information about destinations, flight reservations, which hotel to choose and, if possible, some advice to avoid possible surprises. We seek an experience that serves as a guide to the unknown.</p>
               <p>We hope to be able to help you with our articles with our experience, and thus do our part as a thank you for all the advice that we have acquired over the years from other travelers.</p>
             </div>
-            {/* <DPlaces/> */}
            
           </div>
         </div>

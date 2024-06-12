@@ -8,15 +8,12 @@ import React, { useEffect, useState } from 'react';
 import {airplane, speedometer ,location } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
  
 
  
  
 
-function TourPackages() {
-
-  let router=useRouter()
+function TourPackagesPage() {
 
   let api=ExportAllApis()
 
@@ -43,7 +40,7 @@ function TourPackages() {
   <div className="TourPackages_outer_section">
     <div className="TourPackages_inner">
       <div className="tour_packages_wrapper">
-        {result&&result.slice(0,6)?.map((ele) => (
+        {result&&result?.map((ele) => (
           
           <div className="tour_package" key={ele.id}>
             <Link href={`/tours/${ele.id}/${ele.key}`}>  
@@ -81,17 +78,12 @@ function TourPackages() {
         
         ))}
       </div>
-      <div className="view-all-packages">
-      <button onClick={()=>router.push('/tours')}>explore all</button>
-      </div>
     </div>
   </div>
-
-  
  
   </>
   );
 }
 
-export default TourPackages;
+export default TourPackagesPage;
 

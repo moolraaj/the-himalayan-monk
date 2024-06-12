@@ -2,13 +2,13 @@ import React from 'react'
 import LocationBanner from './locationBanner'
 import TourPackages from './locationPackages'
 
-function CategorySlug({category}) {
+function CategorySlug({id}) {
   return (
     <>
     
         
-        <LocationBanner category={category}/>
-        <TourPackages category={category}/>
+        <LocationBanner/>
+        <TourPackages id={id}/>
 
 
 

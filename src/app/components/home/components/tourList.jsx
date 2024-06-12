@@ -1,39 +1,49 @@
-// components/TourList.js
-import React from 'react';
- 
-const loadAllTours=async()=>{
-  let data=await fetch(`http://localhost:4500/tours`)
-  let resp=await data.json()
-  return resp
-} 
+'use client'
+import { ExportAllApis } from '@/utils/apis/apis';
+import React, { useEffect, useState } from 'react';
+import empty from '../../../assets/empty.jpg' 
+import Link from 'next/link';
+
 
 
 
 async function TourList() {
+  let api=ExportAllApis()
 
-  let result=await loadAllTours()
+  let [result,setResult]=useState([])
+
+
+  let loadAllDestinations=async()=>{
+    let resp=await api.fetchAlldestinations()
+    setResult(resp)
+  }
+
+   useEffect(()=>{
+    loadAllDestinations()
+   },[])
    
   return (
     <div className="tourlist_outer_section">
       <div className="tourlist_inner">
         <div className="tour_destination_wrapper">
-          {result&&result.map((ele) => (
-            <div className="tour_destination" key={ele.id}>
+          {result.slice(0,7)?.map((ele,index) => (
+            <div className="tour_destination" key={index}>
+              <Link href={`/destinations/${ele.city_id}`}>
               <div className="tour_destination_inner">
                 <div className="tour_destination_info">
                   <div className="tour_info_inner">
                     <div className="tour_info_left">
-                      <p>Travel To</p>
                       <h2>{ele.name}</h2>
                     </div>
-                    <div className="tour_info_right">
+                    {/* <div className="tour_info_right">
                       <h4>{ele.tours} Tour</h4>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-                <img src={ele.img} alt={ele.name} 
+                <img src={ele.img || empty.src} alt={ele.name} 
                  />
               </div>
+              </Link>
             </div>
           ))}
         </div>

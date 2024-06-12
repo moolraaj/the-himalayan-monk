@@ -3,22 +3,26 @@ import React from 'react';
 import BookTourForm from './component/formRightSide';
 import TravelPackage from './component/packagesInnerLeftSection';
 
-const fetchAllDestinations = async () => {
-  let data = await fetch(`http://localhost:4500/destinationInnerData`);
-  let resp = await data.json();
-  return resp;
-};
+ 
 
 function Page({ params }) {
-  let { slug } = params;
-  console.log(slug);
+  let { id, key } = params;
+
+  console.log(`id is  ${id}, + key is ${key}`)
+
+
+
+   
+   
   return (
     <>
-      <DestinationBanner />
+      <DestinationBanner innerid={id} innerkey={key} />
       <div className='left_section_inner_package'>
-        <TravelPackage id={slug} />
+        <TravelPackage innerid={id} innerkey={key} />
         <BookTourForm />
       </div>
+
+     
     </>
   );
 }

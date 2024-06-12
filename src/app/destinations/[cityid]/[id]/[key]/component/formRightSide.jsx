@@ -1,7 +1,7 @@
 'use client'
 // components/BookTourForm.js
 import React, { useState } from 'react';
-import airplane from '../../../../assets/homepageAssets/airplane.gif';
+import airplane from '../../../../../assets/homepageAssets/airplane.gif';
 
 
 

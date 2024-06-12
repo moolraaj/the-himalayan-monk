@@ -19,7 +19,7 @@ const images = [
 
 
 
-function LocationBanner({category}) {
+function LocationBanner({id}) {
   const settings = {
     dots: true,
     infinite: true,
