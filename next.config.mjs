@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath:'/docx',
-    // output:'export',
     images:{
         unoptimized:true
     },
