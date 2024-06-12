@@ -5,6 +5,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import empty from '../../assets/empty.jpg'  
+import Image from 'next/image';
 
  
 
@@ -36,7 +37,7 @@ import empty from '../../assets/empty.jpg'
 
         return <Link href={`/destinations/${place.city_id}`} key={index}>
         <div className="place">
-          <img src={place.image || empty.src} alt={place.name} />
+          <Image src={place.image || empty.src} alt={place.name} />
           <div className="place-info">
             {/* <p>{place.tours} Tour{place.tours > 1 ? 's' : ''}</p> */}
             <span className='name_location'>
