@@ -1,8 +1,4 @@
-const loadActivitiesPlaces=async()=>{
-  let resp=await fetch(`http://localhost:4500/activitiesPlacesData`)
-  let data=await resp.json()
-  return data
-}
+ 
 
 import Link from 'next/link';
 import React from 'react';
@@ -14,7 +10,74 @@ import React from 'react';
 
 async function APlaces () {
 
-  let result=await loadActivitiesPlaces()
+  let result=[
+    {
+      "id": "1",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Lama Monastery",
+      "tours": 5,
+      "name": "Lama Monastery",
+      "location": "Kangra"
+    },
+    {
+      "id": "2",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Bijli Mahadev",
+      "tours": 4,
+      "name": "Bijli Mahadev",
+      "location": "Kullu"
+    },
+    {
+      "id": "3",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Main Bazar",
+      "tours": 5,
+      "name": "Main Bazar",
+      "location": "Chamba"
+    },
+    {
+      "id": "4",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Ridge",
+      "tours": 3,
+      "name": "Ridge",
+      "location": "Shimla"
+    },
+    {
+      "id": "5",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Parvati Valley",
+      "tours": 5,
+      "name": "Parvati Valley",
+      "location": "Kasol"
+    },
+    {
+      "id": "6",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Mini Switzerland",
+      "tours": 5,
+      "name": "Mini Switzerland",
+      "location": "Kullu"
+    },
+    {
+      "id": "7",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Christ Church",
+      "tours": 5,
+      "name": "Christ Church",
+      "location": "Kasauli"
+    },
+    {
+      "id": "8",
+      "imgSrc": "https://images.unsplash.com/photo-1569949381669-ecf31ae8e613",
+      "altText": "Rang Mahal",
+      "tours": 5,
+      "name": "Rang Mahal",
+      "location": "Kullu"
+    }
+  ]
+
+ 
   
   return (
     <div className="places-container">
