@@ -9,6 +9,7 @@ import {airplane, speedometer ,location } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import TourTopBanner from '../../tour/tourTopbanner';
  
 
  
@@ -40,6 +41,7 @@ function TourPackages() {
   return (
   <>
   
+  <TourTopBanner/>
   <div className="TourPackages_outer_section">
     <div className="TourPackages_inner">
       <div className="tour_packages_wrapper">
