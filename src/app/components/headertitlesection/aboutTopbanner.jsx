@@ -9,7 +9,7 @@ const AboutTopbanner = () => {
         <Image src={galleryleh.src} alt="destinations" width={100} height={100}/>
       </div>
       <div className="desti_top_heading">
-        <h1>About Us</h1>
+        <h1>About</h1>
       </div>
     </div>
   );
