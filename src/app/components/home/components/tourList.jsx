@@ -40,7 +40,7 @@ async function TourList() {
                     </div> */}
                   </div>
                 </div>
-                <img src={ele.img || empty.src} alt={ele.name} 
+                <img src={ele.image || empty.src} alt={ele.name} 
                  />
               </div>
               </Link>
