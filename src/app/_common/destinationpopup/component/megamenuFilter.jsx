@@ -50,16 +50,16 @@ export default function Destinationsmenu({ setShowDestinations }) {
 
   return (
     <div className='desti-feilter-flex'>
-     
+
       <div className='destinationfilter'>
-        
+
         <select
           id="location-select"
           value={selectedCity}
           onChange={handleCityChange}
         >
           <option value="">all destinations</option>
-          {data.map((ele,index) => (
+          {data.map((ele, index) => (
             <option key={index} value={ele.city_id}>
               {ele.name || 'destinations'}
             </option>
@@ -69,31 +69,31 @@ export default function Destinationsmenu({ setShowDestinations }) {
       <div className='filter_outer_desti'>
         <ul>
           {showAllPackages
-            ? data.map((ele,index) => {
+            ? data.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
-                   <div className="filter-desti-img">
-                   <h1>{ele.name}</h1>
-                    <img src={ele.image} alt='destinations' width={100}/>
-                   </div>
+                  <div className="filter-desti-img">
+                    <h1>{ele.name}</h1>
+                    <img src={ele.image} alt='destinations' width={100} />
+                  </div>
                 </Link>
 
               </div>
             })
-            : filteredPackages.map((ele,index) => {
+            : filteredPackages.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
-                
-                   <div className="filter-desti-img">
-                   <h1>{ele.package_name}</h1>
-                    <img src={ele.pdf_image} alt='destinations' width={100}/>
-                   </div>
+
+                  <div className="filter-desti-img">
+                    <h1>{ele.package_name}</h1>
+                    <img src={ele.pdf_image} alt='destinations' width={100} />
+                  </div>
                 </Link>
 
               </div>
             }
-              
-            
+
+
             )}
         </ul>
       </div>
