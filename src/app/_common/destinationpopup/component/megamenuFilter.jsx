@@ -1,64 +1,100 @@
-// components/Destinations.js
-
+import { ExportAllApis } from '@/utils/apis/apis';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-// Define the function to get the data
-export function getData() {
-  return {
-    locations: ['Location 1', 'Location 2', 'Location 3'],
-    packages: {
-      'Location 1': ['Package A1', 'Package B1', 'Package C1'],
-      'Location 2': ['Package A2', 'Package B2', 'Package C2'],
-      'Location 3': ['Package A3', 'Package B3', 'Package C3'],
-    },
-  };
-}
-
-export default function Destinationsmenu() {
-  // Get the data by calling the function
-  const data = getData();
-
-  const [locations, setLocations] = useState(data.locations);
-  const [packages, setPackages] = useState(data.packages);
-  const [selectedLocation, setSelectedLocation] = useState(data.locations[0]);
-  const [displayedPackages, setDisplayedPackages] = useState(data.packages[data.locations[0]]);
+export default function Destinationsmenu({ setShowDestinations }) {
+  const api = ExportAllApis();
+  const [data, setData] = useState([]);
+  const [selectedCity, setSelectedCity] = useState('');
+  const [filteredPackages, setFilteredPackages] = useState([]);
+  const [showAllPackages, setShowAllPackages] = useState(true);
 
   useEffect(() => {
-    // Set initial state with the data
-    setLocations(data.locations);
-    setPackages(data.packages);
-    setSelectedLocation(data.locations[0]);
-    setDisplayedPackages(data.packages[data.locations[0]]);
+    const fetchDestinations = async () => {
+      try {
+        const resp = await api.fetchAlldestinations();
+        setData(resp);
+      } catch (error) {
+        console.error('Error fetching destinations:', error);
+      }
+    };
+    fetchDestinations();
   }, []);
 
-  const handleLocationChange = (event) => {
-    const location = event.target.value;
-    setSelectedLocation(location);
-    setDisplayedPackages(packages[location]);
+  const filterDestinations = async (city) => {
+    try {
+      if (city) {
+        const resp = await api.fetchFilterDestination(city);
+        setFilteredPackages(resp);
+        setShowAllPackages(false);
+      } else {
+
+        const resp = await api.fetchAlldestinations();
+        setData(resp);
+        setShowAllPackages(true);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
+  const handleCityChange = (e) => {
+    const cityId = e.target.value;
+    setSelectedCity(cityId);
+    filterDestinations(cityId);
+  };
+
+  const goTodestinations = () => {
+    setShowDestinations(false)
+  }
+
   return (
-    <div>
-      <h1>Our Destinations</h1>
+    <div className='desti-feilter-flex'>
+     
       <div className='destinationfilter'>
-        <label htmlFor="location-select">All Destinations</label>
+        
         <select
           id="location-select"
-          value={selectedLocation}
-          onChange={handleLocationChange}
+          value={selectedCity}
+          onChange={handleCityChange}
         >
-          {locations.map((location) => (
-            <option key={location} value={location}>
-              {location}
+          <option value="">all destinations</option>
+          {data.map((ele,index) => (
+            <option key={index} value={ele.city_id}>
+              {ele.name || 'destinations'}
             </option>
           ))}
         </select>
       </div>
-      <div>
+      <div className='filter_outer_desti'>
         <ul>
-          {displayedPackages.map((pkg, index) => (
-            <li key={index}>{pkg}</li>
-          ))}
+          {showAllPackages
+            ? data.map((ele,index) => {
+              return <div className='filter-destination-wrapper' key={index}>
+                <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
+                   <div className="filter-desti-img">
+                   <h1>{ele.package_name}</h1>
+                    <img src={ele.image} alt='destinations' width={100}/>
+                   </div>
+                </Link>
+
+              </div>
+            })
+            : filteredPackages.map((ele,index) => {
+              return <div className='filter-destination-wrapper' key={index}>
+                <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
+                
+                   <div className="filter-desti-img">
+                   <h1>{ele.package_name}</h1>
+                    <img src={ele.pdf_image} alt='destinations' width={100}/>
+                   </div>
+                </Link>
+
+              </div>
+            }
+              
+            
+            )}
         </ul>
       </div>
     </div>

@@ -50,13 +50,33 @@ export const ExportAllApis = () => {
     }
 
 
+    
+        const SubmitDestinmationsformData = async (data) => {
+          try {
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, data);
+            if (!result.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const resp = await result.json();
+            return resp.data;
+          } catch (error) {
+            console.log('Error during fetch:', error);
+            throw error; 
+          }
+        };
+      
+        
+      
+
+
 
 
     return {
         fetchTourPackages,
         fetchAlldestinations,
         fetchFilterDestination,
-        fetchSingledestination
+        fetchSingledestination,
+        SubmitDestinmationsformData
     }
 
 }
