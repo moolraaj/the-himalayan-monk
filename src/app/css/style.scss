@@ -129,11 +129,14 @@ body {
                 }
 
                 p {
-                    font-family: $inter;
-                    font-weight: 400;
-                    font-size: $desktop-font;
-                    line-height: 28px;
-                    color: $white;
+                  font-family: "inter";
+                  font-weight: 400;
+                  font-size: 1.125rem;
+                  line-height: 28px;
+                  color: #fff;
+                  padding-bottom: 40px;
+                  padding-top: 23px;
+              
                 }
 
                 button {
@@ -147,7 +150,7 @@ body {
                     font-weight: 500;
                     margin-top: 30px;
                     color: $white;
-                    font-size: $desktop-font;
+                    font-size: 18px;
                 }
                 button:hover{
                     background-color: black !important;
@@ -377,6 +380,29 @@ body {
 
 .stat-item img {
   height: 58px;
+}
+
+
+
+.filter-destination-wrapper {
+  text-align: left;
+  color: white !important;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 6px #00000017;
+  padding: 6px;
+  max-width: 154px;
+  width: 100%;
+}
+
+.filter-destination-wrapper img {
+  height: 85px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.filter-desti-img h1 {
+  font-size: 14px !important;
 }
 
 .features-section {
@@ -965,11 +991,20 @@ button.call_a_button {
 }
 
 
+.filter_outer_desti ul {
+  display: flex;
+}
+
+.filter_outer_desti {
+  overflow: hidden;
+}
+
 .destinationfilter {
   display: flex;
   justify-content: end;
   align-items: center;
   column-gap: 12px;
+  padding-right: 80px;
 }
 
 .destinationfilter select {
@@ -990,6 +1025,8 @@ button.call_a_button {
 .popup-wrapper.slide-down ul {
   display: flex;
   column-gap: 30px;
+  flex-wrap: wrap;
+  padding-left: 10px;
 }
 
 .popup-wrapper.slide-down ul {
@@ -1464,10 +1501,13 @@ font-size: 16px;
 
 .tour_destination_inner img {
   object-fit: cover !important;
-  width: 100%;
-  height: 100% !important;
+  width: auto;
+  height: 70vh !important;
   z-index: -1;
 }
+
+
+
 .tabs-container.activities_home .tab img {
   width: 100px !important;
 }
@@ -2481,7 +2521,8 @@ form input[type="submit"] {
 }
 
 .popup-wrapper.slide-down {
-  top: 200px; 
+  top: 200px;
+  box-shadow: 0px 0px 24px #00000054; 
 }
 
 .popup-wrapper.slide-up {
