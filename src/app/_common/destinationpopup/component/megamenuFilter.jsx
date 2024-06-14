@@ -73,7 +73,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
                    <div className="filter-desti-img">
-                   <h1>{ele.package_name}</h1>
+                   <h1>{ele.name}</h1>
                     <img src={ele.image} alt='destinations' width={100}/>
                    </div>
                 </Link>

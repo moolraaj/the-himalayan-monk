@@ -4,6 +4,14 @@ const nextConfig = {
         unoptimized:true
     },
     trailingSlash:true,
+    async rewrites() {
+        return [
+          {
+            source: '/about-us',
+            destination: '/new',
+          },
+        ];
+      },
 };
 
 export default nextConfig;
