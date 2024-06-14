@@ -51,17 +51,14 @@ export const ExportAllApis = () => {
 
 
     
-        const SubmitDestinmationsformData = async (data) => {
+        const SubmitDestinmationsformData = async (formdata) => {
           try {
-            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, data);
-            if (!result.ok) {
-              throw new Error('Network response was not ok');
-            }
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, formdata);
             const resp = await result.json();
-            return resp.data;
+            return resp
           } catch (error) {
-            console.log('Error during fetch:', error);
-            throw error; 
+            console.log(error);
+           
           }
         };
       
