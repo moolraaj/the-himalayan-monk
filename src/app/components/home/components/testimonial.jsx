@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import triangle from '@/app/assets/homepageAssets/triangle.png' 
+import profile  from '../../../assets/homepageAssets/profile.png'
 import Image from "next/image";
 const testimonials = [
   {
@@ -11,7 +12,7 @@ const testimonials = [
     date: "May 5, 2024",
     time: "10:30 AM",
     rating: 5,
-    avatar: "/avatars/rakesh-sharma.jpg",
+    avatar: "/avatars/rakesh.jpg",
   },
   {
     name: "Henry Menry",
@@ -114,13 +115,20 @@ const Testimonials = () => {
                   "☆".repeat(5 - testimonial.rating)}
                   
               </div>
-              <img src={triangle.src} alt="image"/>
+
+              <img 
+              src={triangle.src}
+               alt="image"
+               className="triangle-testimonial-img"
+               />
+             
+             
 
               <div className="user_infos">
                 <div className="avtar_outer">
 
               <img
-                  src={testimonial.avatar}
+                  src={profile.src}
                   alt={testimonial.name}
                   className="avatar"
                 />

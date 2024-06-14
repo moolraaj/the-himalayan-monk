@@ -15,7 +15,7 @@ const activities = [
     title: 'Thrill Above Ground: The Zip Line Adventure',
     description: 'Embark on an adrenaline-fueled journey, zipping through lush landscapes, feeling the wind rush past, and experiencing nature from breathtaking heights. Unleash your inner adventurer today.',
     features: ['Treetop Views', 'Adrenaline Rush', 'Safety Measures'],
-    image: '/images/ziplining.jpg' // Replace with actual image path
+    image: '/images/aboutinner.png' // Replace with actual image path
   },
   {
     name: 'Bungee Jumping',
