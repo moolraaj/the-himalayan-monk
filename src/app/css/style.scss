@@ -1413,7 +1413,7 @@ a.tel_header_c {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ffffffc4;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -2647,6 +2647,7 @@ button.custom_close {
 .desti_top_banner img {
   height: 396px;
   width: 100%;
+  object-fit: cover;
 }
 
 .desti_top_heading {
@@ -2837,6 +2838,29 @@ form input[type="submit"] {
     font-weight: 600;
     font-size: 15px;
   }
+  .contact_both_sections {
+    display: grid;
+    max-width: 1440px;
+    justify-content: space-between;
+    margin: auto;
+    grid-template-columns: 1fr 62%;
+    column-gap: 3%;
+    margin-bottom: 60px;
+}
+
+  .contact_both_sections {
+       padding: 0px 25px;
+}
+
+.contact_both_sections h4 {
+  font-size: 28px;
+}
+
+
+.contact_form_map {
+  padding: 0px 20px;
+  padding-bottom: 50px;
+}
 
   .who-feature {
     max-width: 1440px;
@@ -2881,15 +2905,57 @@ form input[type="submit"] {
     padding-top: 60px;
   }
 
+  .testi_inner_wapper {
+    padding: 0px 25px;
+}
+
+.desti_top_banner img {
+  height: 300px !important; 
+  width: 100%;
+  object-fit: cover;
+}
+
+.desti_top_heading {
+  top: 46%;
+ }
+
+ .desti_inner {
+  margin: auto;
+  padding-bottom: 0px;
+}
+
+
+
+.places-container { 
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px 25px;
+}
+
   .feature-icon img {
     width: 53px;
   }
+
+  .place img {
+    max-width: 335px;
+    height: 250px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+
 
   .desti_top_heading h1 {
     font-size: 60px;
   }
 
   .destinationfilter {
+    font-size: 44px;
+    line-height: 90px;
+    text-transform: capitalize;
+}
+
+
+  .destinationfilter{
     justify-content: flex-start;
   }
 
@@ -2906,6 +2972,17 @@ form input[type="submit"] {
     max-width: 100%;
     padding: 0px;
   }
+
+  .contact_both_sections {
+    display: grid;
+    max-width: 1440px;
+    justify-content: space-between;
+    margin: auto;
+    grid-template-columns: 1fr;
+    column-gap: 3%;
+    margin-bottom: 60px;
+    padding: 0px 25px;
+}
 
   .call_to_action img {
     height: 230px;
@@ -3075,6 +3152,52 @@ form input[type="submit"] {
   .hero_section_outer .hero_section_inner {
     padding-top: 200px;
   }
+  
+
+  form.enquiryForm h4 {
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+  form.enquiryForm label {
+    color: orange;
+    font-family: "inter";
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+  form.enquiryForm h4 {
+    margin-bottom: 8px;
+}
+
+
+  .both_middle_form {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 15px;
+}
+
+  .places-container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0px 25px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.place img {
+  max-width: 335px;
+  height: 191px;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+  .footer_i::before {
+      top: 48px;
+}
+
 
   // homepage responsive **********
   .mobile_menu_header {
@@ -3083,6 +3206,27 @@ form input[type="submit"] {
       max-width: 126px;
       width: 100%;
     }
+
+    .footer_i::before {
+      content: "";
+       top: 39px;
+  }
+
+
+    
+  .desti_top_banner img {
+    height: 320px;
+    width: 100%;
+}
+
+.desti_top_heading {
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
 
     .mobile_close_menu {
       max-width: 20px;
@@ -3212,6 +3356,16 @@ form input[type="submit"] {
     grid-template-columns: 1fr 2fr;
   }
 
+
+  .footer_i {
+    display: block;    
+}
+
+.top_bar_notifications span {
+  display: none;
+}
+
+
 }
 
 @media (max-width: 600px) {
@@ -3219,6 +3373,57 @@ form input[type="submit"] {
     flex: 0 0 calc(100% - 20px);
     /* 1 slide for mobile with gap */
   }
+
+  .popup-wrapper.slide-down {
+    padding: 21px 10px 10px 12px;
+}
+
+.filter_outer_desti {
+  height: 480px;
+overflow: auto;
+
+}
+
+  .follow_name {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    align-items: initial;
+}
+.footer_wrapper_second h4 {
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+
+ 
+  .desti_top_banner img {
+    height: 300px;
+    width: 100%;
+}
+
+.desti_top_heading h1 {
+  font-size: 40px;
+}
+
+
+.desti_top_heading {
+  top: 50%;
+  width: 100%;
+}
+
+.navbar_c_section span {
+  position: absolute;
+  bottom: -49px;
+  width: 75px;
+  height: 50px;
+  margin-left: -3%;
+  border-bottom-right-radius: 36px;
+  border-bottom-left-radius: 39px;
+}
+
+
 
   .hero_section_outer .hero_section_inner .hero_wrapper {
     grid-template-columns: 1fr;
@@ -3247,11 +3452,66 @@ form input[type="submit"] {
   }
 }
 
-@media (max-width: 468px) {
+
+
+
+@media only screen and (max-width:468px) {
+
+
   .aboutus-features {
     grid-template-columns: 1fr;
   }
+  .desti_top_heading {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .desti_top_banner img {
+    height: 300px;
+    width: 100%;
+  }
+
+  .footer_wrapper_second ul {
+    margin: 0px;
+    padding-left: 0px;
+    padding-top: 20px;
 }
+
+  .footer_social_icons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    column-gap: 20px;
+}
+
+.footer_copywrite_second {
+  margin-top: 15px;
+}
+  
+  .desti_top_heading h1 {
+    font-size: 40px;
+  }
+  .desti_top_banner img {
+    height: 300px !important;
+    width: 100%;
+    object-fit: cover;
+}
+.desti_top_heading {
+  position: absolute;
+  top: 47%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+
+}
+
+
 
 @media only screen and (max-width:420px) {
   .about_traveller .features-section {
@@ -3262,12 +3522,38 @@ form input[type="submit"] {
     gap: 20px;
   }
 
+ 
+
   .about_traveller .stat-label {
     font-size: 13px;
     color: #757575;
   }
 
+  form.enquiryForm input {
+    background: #F4F4F4;
+    border: none !important;
+    width: 90%;
+}
+
+.detailItem span.text a {
+  font-size: 16px;
+}
+
+.detailItem span.text  {
+  font-size: 16px;
+}
+
+.detailItem {
+  position: relative;
+  width: 84%;
+}
 
 
+}
 
+
+@media (max-width: 600px) {
+  .testimonial {
+    flex: 0 0 calc(100% - 20px); /* 1 slide for mobile with gap */
+  }
 }
