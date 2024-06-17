@@ -5,7 +5,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import empty from '../../assets/empty.jpg'  
-
+import Image from 'next/image';
 
  
 
@@ -27,15 +27,13 @@ import empty from '../../assets/empty.jpg'
     loadAllDestinations()
   },[])
 
-  const {data,total}=result
-
   
       
       
 
   return (
     <div className="places-container">
-      {data?.map((place,index) => {
+      {result && result?.map((place,index) => {
 
         return <Link href={`/destinations/${place.city_id}`} key={index}>
         <div className="place">

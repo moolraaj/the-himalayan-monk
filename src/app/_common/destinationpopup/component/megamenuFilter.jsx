@@ -13,16 +13,15 @@ export default function Destinationsmenu({ setShowDestinations }) {
     const fetchDestinations = async () => {
       try {
         const resp = await api.fetchAlldestinations();
-        setResult(resp.data);
-        console.log(resp)
+        setResult(resp?.data);
       } catch (error) {
         console.error('Error fetching destinations:', error);
       }
     };
     fetchDestinations();
-  }, [api]);
+  }, []);
 
-  let {data}=result
+  
 
    
  
@@ -42,13 +41,15 @@ export default function Destinationsmenu({ setShowDestinations }) {
       } else {
 
         const resp = await api.fetchAlldestinations();
-        setData(resp);
+        setResult(resp?.data);
         setShowAllPackages(true);
       }
     } catch (error) {
       console.error(error);
     }
   };
+
+   
 
   const handleCityChange = (e) => {
     const cityId = e.target.value;
@@ -71,7 +72,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
           onChange={handleCityChange}
         >
           <option value="">all destinations</option>
-          {data?.map((ele, index) => (
+          {result?.map((ele, index) => (
             <option key={index} value={ele.city_id}>
               {ele.name || 'destinations'}
             </option>
@@ -81,7 +82,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
       <div className='filter_outer_desti'>
         <ul>
           {showAllPackages
-            ?data?.map((ele, index) => {
+            ?result?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
                   <div className="filter-desti-img">

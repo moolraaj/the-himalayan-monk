@@ -1,67 +1,104 @@
-import React from 'react'
- 
-
-import right2 from '@/app/assets/herosection/img5.png'
-import right3 from '@/app/assets/herosection/img6.png'
-import right4 from '@/app/assets/herosection/img7.png'
-import right1 from '@/app/assets/herosection/img8.png'
-import heroimg from '@/app/assets/herosection/hero_background.png'
-import Image from 'next/image'
- 
-
-
+'use client'
+import React, { useEffect, useState } from 'react';
+import heroimg from '@/app/assets/herosection/hero_background.png';
+import { ExportAllApis } from '@/utils/apis/apis';
+import Link from 'next/link';
 
 function Herosection() {
+  const api = ExportAllApis();
+  const [destinations, setDestinations] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);  
 
-    return (
-        <>
+  useEffect(() => {
+    const loadDestinations = async () => {
+      try {
+        const response = await api.fetchAlldestinations();
+        setDestinations(response.data || []);
+      } catch (error) {
+        console.error('Failed to fetch destinations:', error);
+      }
+    };
 
+    loadDestinations();
+  }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % Math.ceil(destinations.length / 6));
+    }, 2500);  
 
-            <div className="hero_section_outer">
-                <div className="slider_wrapper">
-                    <Image src={heroimg} alt="this is image"  style={{width:'100%', height:'100%'}}/>
+    return () => clearInterval(interval);
+  }, [destinations]);
 
-                </div>
-                <div className="hero_section_inner">
-                    <div className="hero_wrapper">
+  const handleDotClick = (index) => {
+    setCurrentIndex(index);
+  };
 
-                        <div className="hero_left_section">
-                            <h1>Let’s Explore Your
-                                <span style={{ color: '#F69625' }}> Holiday</span> Trip.</h1>
-                            <p>This is the story of our travels. A travel blog with the moments that moved us, people we met and the destinations in which we lived these experiences. There is a huge world, come discover it with us!
-                            </p>
-                            <button type='button'>book a trip</button>
+  const renderDestinationGroups = () => {
+    const groups = [];
+    for (let i = 0; i < destinations.length; i += 4) {
+      groups.push(
+        <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
+          {destinations.slice(i, i + 4).map((destination, index) => (
+            <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
+              <div className="hero_destination_outer">
+                <h1>{destination?.name}</h1>
+                <img src={destination?.image} alt="destination"  />
+              </div>
+            </Link>
+          ))}
+        </div>
+      );
+    }
+    return groups;
+  };
 
-                        </div>
-                        <div className="hero_right_section">
-                            <div className="hero_destination_outer">
-                                <h1>leh ladakh</h1>
-                                <Image src={right1} alt="destination" style={{width:'100%', height:'100%'}}/>
-                            </div>
-                            <div className="hero_destination_outer">
-                                <h1>Manali</h1>
-                                <Image src={right2} alt="destination" style={{width:'100%', height:'100%'}}/>
-                            </div>
-                            <div className="hero_destination_outer">
-                                <h1>Kufri Shimla</h1>
-                                <Image src={right3} alt="destination" style={{width:'100%', height:'100%'}}/>
-                            </div>
-                            <div className="hero_destination_outer">
-                                <h1>Narkanda</h1>
-                                <Image src={right4} alt="destination" style={{width:'100%', height:'100%'}}/>
-                            </div>
+  const renderDots = () => {
+    const dots = [];
+    for (let i = 0; i < Math.ceil(destinations.length / 4); i++) {
+      dots.push(
+        <span
+          key={i}
+          className={`dot ${currentIndex === i ? 'active' : ''}`}
+          onClick={() => handleDotClick(i)}
+        ></span>
+      );
+    }
+    return dots;
+  };
 
-
-                        </div>
-                        
-                    </div>
-                </div>
-
+  return (
+    <div className="hero_section_outer">
+      <div className="slider_wrapper">
+        <img src={heroimg.src} alt="Hero Background" style={{ width: '100%', height: '100%' }} />
+      </div>
+      <div className="hero_section_inner">
+        <div className="hero_wrapper">
+          <div className="hero_left_section">
+            <h1>
+              Let’s Explore Your
+              <span style={{ color: '#F69625' }}> Holiday</span> Trip.
+            </h1>
+            <p>
+              This is the story of our travels. A travel blog with the moments that moved us, people we met and the
+              destinations in which we lived these experiences. There is a huge world, come discover it with us!
+            </p>
+            <button type="button">Book a Trip</button>
+          </div>
+          <div className="hero_right_section">
+            <div className="destination_slider">
+              {renderDestinationGroups()}
             </div>
-            
-        </>
-    )
+
+              <div className="dots_container">
+              {renderDots()}
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Herosection
+export default Herosection;
