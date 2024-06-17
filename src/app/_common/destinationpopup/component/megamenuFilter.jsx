@@ -23,9 +23,9 @@ export default function Destinationsmenu({ setShowDestinations }) {
   }, []);
 
   let {data}=result
-  console.log(data)
+
    
-   console.log(result)
+ 
   
    
   
@@ -81,7 +81,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
       <div className='filter_outer_desti'>
         <ul>
           {showAllPackages
-            ? data?.map((ele, index) => {
+            ?data?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
                   <div className="filter-desti-img">

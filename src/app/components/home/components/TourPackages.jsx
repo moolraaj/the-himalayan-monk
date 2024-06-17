@@ -45,7 +45,7 @@ function TourPackages() {
   <div className="TourPackages_outer_section">
     <div className="TourPackages_inner">
       <div className="tour_packages_wrapper">
-        {result&&result.slice(0,6)?.map((ele) => (
+        {result?.slice(0,6).map((ele) => (
           
           <div className="tour_package" key={ele.id}>
             <Link href={`/tours/${ele.id}/${ele.key}`}>  

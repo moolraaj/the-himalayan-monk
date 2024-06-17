@@ -35,7 +35,7 @@ import empty from '../../assets/empty.jpg'
 
   return (
     <div className="places-container">
-      {data && data?.map((place,index) => {
+      {data?.map((place,index) => {
 
         return <Link href={`/destinations/${place.city_id}`} key={index}>
         <div className="place">
