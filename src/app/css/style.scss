@@ -3559,4 +3559,13 @@ overflow: auto;
   .testimonial {
     flex: 0 0 calc(100% - 20px); /* 1 slide for mobile with gap */
   }
+  .top_bar_details_inner_s{
+    padding: 0px 10px;
+    .top_bar_mail a{
+      font-size: 10px;
+    }
+    ul.social_icons_t{
+      column-gap: 10px;
+    }
+  }
 }
