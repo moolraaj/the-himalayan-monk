@@ -380,7 +380,7 @@ body {
   max-width: 1440px;
   margin: auto;
   text-align: left;
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 .stat-item img {
@@ -670,6 +670,7 @@ span.icon {
   max-width: 335px;
   height: 350px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .rating img {
@@ -1827,6 +1828,7 @@ a {
 .tour_img_wrapper img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .price-section {
@@ -2675,6 +2677,53 @@ form input[type="submit"] {
   top: -300%;
 }
 
+
+@media only screen and (max-width:1500px) {
+
+  .feature span {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.who-feature {
+  max-width: 1440px;
+  margin: auto;
+  text-align: left;
+  padding: 0px 20px;
+}
+
+img.two_image_c {
+  position: absolute;
+  max-width: 414px;
+  right: 2px;
+  bottom: -52px;
+}
+
+
+}
+
+
+
+@media only screen and (max-width:1200px ) {
+  .aboutus-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+}
+
+.feature-icon img {
+  width: 53px;
+}
+
+.desti_top_heading h1 {
+  font-size: 60px;
+ }
+
+}
+ 
+
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
   .testimonials-container {
@@ -2877,6 +2926,97 @@ form input[type="submit"] {
   // homepage responsive end**********
 
 }
+
+
+
+@media only screen and (max-width:768px) {
+  
+  .aboutus-content {
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    gap: 40px;
+}
+
+.about_traveller .stats-section {
+  display: grid;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  max-width: 1440px;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  padding: 32px 21px;
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  row-gap: 20px;
+}
+
+.about_traveller .features-section {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 100px;
+}
+.about_traveller .feature-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  width: 91px;
+  height: 91px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(246, 148, 37, 0.3803921569);
+  border-radius: 85px;
+}
+
+img.one_image_c {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  max-width: 100% !important;
+  height: 270px;
+}
+
+
+.about_traveller .feature-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  display: block;
+  column-gap: 20px;
+  border: 1px solid #D9D9D9;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+}
+
+
+@media only screen and (max-width:420px) {
+  .about_traveller .features-section {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+    
+    .about_traveller .stat-label {
+      font-size: 13px;
+      color: #757575;
+  }
+
+
+
+
+}
+
+
 
 @media (max-width: 600px) {
   .testimonial {
