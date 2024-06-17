@@ -20,7 +20,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
       }
     };
     fetchDestinations();
-  }, []);
+  }, [api]);
 
   let {data}=result
 
