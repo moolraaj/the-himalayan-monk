@@ -12,9 +12,16 @@ import location from '../assets/homepageAssets/location.gif';
 import emptyImage from '../assets/empty.jpg';
 import CloseMenu from '../assets/headerAssets/close_menu.png';
 import logo from '../assets/headerAssets/logo.png'
-
-
-
+import arrow from '../assets/headerAssets/megamenu.png.gif';
+import search from '../assets/headerAssets/search.png';
+import call from '../assets/headerAssets/call.png';
+import window from '../assets/headerAssets/window.gif';
+import lining from '../assets/homepageAssets/lining.png';
+import jumping from '../assets/homepageAssets/Bungee_Jumping.png';
+import rafting from '../assets/homepageAssets/Rafting.png';
+import paragliding from '../assets/homepageAssets/Paragliding.png';
+import ski from '../assets/homepageAssets/Ski_Touring.png';
+import surfing from '../assets/homepageAssets/Surfing.png';
 
 
 
@@ -35,4 +42,15 @@ export {
     emptyImage,
     logo,
     CloseMenu,
+    arrow,
+    search,
+    call,
+    window,
+    lining,
+    jumping,
+    rafting,
+    paragliding,
+    ski,
+    surfing,
+
   };
