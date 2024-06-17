@@ -15,12 +15,14 @@ export const ExportAllApis = () => {
         try {
             let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/package_category_with_city`)
             let resp = await result.json()
-            return resp.data
-
+            return  resp
         } catch (error) {
             console.log(error)
         }
     }
+   
+
+   
 
     const fetchFilterDestination = async (id) => {
         try {
@@ -51,9 +53,9 @@ export const ExportAllApis = () => {
 
 
     
-        const SubmitDestinmationsformData = async (formdata) => {
+        const SubmitDestinmationsformData = async (user) => {
           try {
-            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, formdata);
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, user);
             const resp = await result.json();
             return resp
           } catch (error) {

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function Destinationsmenu({ setShowDestinations }) {
   const api = ExportAllApis();
-  const [data, setData] = useState([]);
+  const [result, setResult] = useState([]);
   const [selectedCity, setSelectedCity] = useState('');
   const [filteredPackages, setFilteredPackages] = useState([]);
   const [showAllPackages, setShowAllPackages] = useState(true);
@@ -13,13 +13,25 @@ export default function Destinationsmenu({ setShowDestinations }) {
     const fetchDestinations = async () => {
       try {
         const resp = await api.fetchAlldestinations();
-        setData(resp);
+        setResult(resp.data);
+        console.log(resp)
       } catch (error) {
         console.error('Error fetching destinations:', error);
       }
     };
     fetchDestinations();
   }, []);
+
+  let {data}=result
+  console.log(data)
+   
+   console.log(result)
+  
+   
+  
+
+ 
+  
 
   const filterDestinations = async (city) => {
     try {
@@ -59,7 +71,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
           onChange={handleCityChange}
         >
           <option value="">all destinations</option>
-          {data.map((ele, index) => (
+          {data?.map((ele, index) => (
             <option key={index} value={ele.city_id}>
               {ele.name || 'destinations'}
             </option>
@@ -69,7 +81,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
       <div className='filter_outer_desti'>
         <ul>
           {showAllPackages
-            ? data.map((ele, index) => {
+            ? data?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
                   <div className="filter-desti-img">
@@ -80,7 +92,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
 
               </div>
             })
-            : filteredPackages.map((ele, index) => {
+            : filteredPackages?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
 
@@ -98,5 +110,6 @@ export default function Destinationsmenu({ setShowDestinations }) {
         </ul>
       </div>
     </div>
+   
   );
 }
