@@ -9,7 +9,9 @@ import airplane from '../assets/homepageAssets/airplane.gif';
 import bunjeeJumping from '../assets/homepageAssets/Bungee_Jumping.png';
 import speedometer from '../assets/homepageAssets/speedometer.png';
 import location from '../assets/homepageAssets/location.gif';
-import emptyImage from '../assets/empty.jpg'
+import emptyImage from '../assets/empty.jpg';
+import CloseMenu from '../assets/headerAssets/close_menu.png';
+import logo from '../assets/headerAssets/logo.png'
 
 
 
@@ -30,5 +32,7 @@ export {
     airplane,
     speedometer,
     location,
-    emptyImage
+    emptyImage,
+    logo,
+    CloseMenu,
   };
