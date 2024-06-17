@@ -12,7 +12,8 @@ const BookTourForm = () => {
     destination: '',
     total_no_travelers: '',
     departuredate: '',
-    returndate: ''
+    returndate: '',
+    adminEamil:'sales@eligocs.com'
   });
 
   const handleChange = (e) => {
@@ -27,23 +28,23 @@ const BookTourForm = () => {
     e.preventDefault();
     console.log(user);
 
-    let formdata = new FormData()
+    // let formdata = new FormData()
 
-    formdata.append('adminEamil', 'sales@eligocs.com')
+    // formdata.append('adminEamil', 'sales@eligocs.com')
 
-    formdata.append('name', user.name,)
-    formdata.append('email', user.email,)
-    formdata.append('mobile', user.mobile,)
-    formdata.append('destination', user.destination,)
-    formdata.append('total_no_travelers', user.total_no_travelers,)
-    formdata.append('departuredate', user.departuredate,)
-    formdata.append('returndate', user.returndate,)
+    // formdata.append('name', user.name,)
+    // formdata.append('email', user.email,)
+    // formdata.append('mobile', user.mobile,)
+    // formdata.append('destination', user.destination,)
+    // formdata.append('total_no_travelers', user.total_no_travelers,)
+    // formdata.append('departuredate', user.departuredate,)
+    // formdata.append('returndate', user.returndate,)
 
 
     try {
       const resp = await api.SubmitDestinmationsformData({
         method: 'POST',
-        body: formdata
+        body: user
       });
 
       const responseJson = await resp.json();

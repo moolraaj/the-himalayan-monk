@@ -11,7 +11,7 @@ import { useRouter } from 'next/navigation'
 function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
   let router=useRouter()
   let api = ExportAllApis()
-  let [data, setData] = useState([])
+  let [result, setResult] = useState([])
 
   const GoToDestinatiosPages=()=>{
     router.push('/destinations')
@@ -21,12 +21,14 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
 
   let loadAllDestinations = async () => {
     let resp = await api.fetchAlldestinations()
-    setData(resp)
+    setResult(resp.data)
   }
 
   useEffect(() => {
     loadAllDestinations()
   }, [])
+
+ let {data}=result
 
   return (
     <>
@@ -48,7 +50,7 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
           <h2 className="title">Our Destinations</h2>
           <div className="destinations">
             {
-              data?.slice(0, 2)?.map((ele, index) => {
+              data && data?.slice(0,2).map((ele, index) => {
                 return (
                   <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                     <div className="destination">

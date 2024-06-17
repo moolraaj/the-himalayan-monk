@@ -15,18 +15,20 @@ async function TourList() {
 
   let loadAllDestinations=async()=>{
     let resp=await api.fetchAlldestinations()
-    setResult(resp)
+    setResult(resp.data)
   }
 
    useEffect(()=>{
     loadAllDestinations()
    },[])
+
+   let {data}=result
    
   return (
     <div className="tourlist_outer_section">
       <div className="tourlist_inner">
         <div className="tour_destination_wrapper">
-          {result.slice(0,7)?.map((ele,index) => (
+          {data?.slice(0,7)?.map((ele,index) => (
             <div className="tour_destination" key={index}>
               <Link href={`/destinations/${ele.city_id}`}>
               <div className="tour_destination_inner">
