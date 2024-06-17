@@ -44,11 +44,10 @@ const BookTourForm = () => {
     try {
       const resp = await api.SubmitDestinmationsformData({
         method: 'POST',
-        body: user
+        body: JSON.stringify(user)
       });
 
-      const responseJson = await resp.json();
-      console.log(responseJson);
+      console.log(resp);
 
       setUser({
         name: '',
@@ -107,5 +106,7 @@ const BookTourForm = () => {
 
 export default BookTourForm;
 
+
+ 
 
 

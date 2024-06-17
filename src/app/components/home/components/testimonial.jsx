@@ -95,7 +95,7 @@ const Testimonials = () => {
         <h2 className="section-title">Customer Reviews</h2>
         <div className="testimonials-slider">
           {displayedTestimonials.map((testimonial, index) => (
-            <>
+           
             
             <div key={index} className="testimonial">
               <p className="review">{testimonial.review}</p>
@@ -140,7 +140,7 @@ const Testimonials = () => {
                 </div>
               </div>
             </div>
-            </>
+       
             
           ))}
         </div>
