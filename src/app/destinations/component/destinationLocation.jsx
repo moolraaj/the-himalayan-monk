@@ -5,7 +5,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import empty from '../../assets/empty.jpg'  
-import Image from 'next/image';
+
 
  
 
@@ -28,7 +28,6 @@ import Image from 'next/image';
   },[])
 
   const {data,total}=result
-  console.log(total)
 
   
       

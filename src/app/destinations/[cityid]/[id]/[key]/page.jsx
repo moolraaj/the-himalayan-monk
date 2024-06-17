@@ -8,7 +8,7 @@ import TravelPackage from './component/packagesInnerLeftSection';
 function Page({ params }) {
   let { id, key } = params;
 
-  console.log(`id is  ${id}, + key is ${key}`)
+  
 
 
 

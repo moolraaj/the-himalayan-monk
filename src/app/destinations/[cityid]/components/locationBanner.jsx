@@ -67,7 +67,7 @@ function LocationBanner({ id }) {
             <h3>Get up to <span>20% OFF</span> on<br /></h3>
             {data?.map((ele) => {
               return <div>
-                <h1><span>{ele.package_name[0]}</span> Tour Packages</h1>
+                <h1><span>{ele.package_name}</span> Tour Packages</h1>
                 <h4><span>Starting at INR 67.05 </span>INR 29,804</h4>
                 <button className="contactButton">Contact Us</button>
                 <div className="ratings">

@@ -12,16 +12,8 @@ import { ExportAllApis } from '@/utils/apis/apis';
 
 function TourPackages({ id }) {
 
-  console.log(`this is filtertour ${id}`)
-
   let api = ExportAllApis()
-
-
-
-
   let [data, setData] = useState([])
-
-
   const loadSingleDestination = async () => {
     let resp = await api.fetchFilterDestination(id)
     setData(resp)

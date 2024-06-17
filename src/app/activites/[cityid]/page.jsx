@@ -6,11 +6,11 @@ import ActivitesSlug from '@/app/components/activites/components/activitiesSlug'
 
  
 function page({params}) {
-  let {slug}=params
+  let {cityid}=params
  
   return (
      <>
-     <ActivitesSlug id={slug}/>
+     <ActivitesSlug id={cityid}/>
      </>
   )
 }
