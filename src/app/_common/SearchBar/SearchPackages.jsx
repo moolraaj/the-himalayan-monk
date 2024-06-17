@@ -142,8 +142,6 @@
 
 
 
-
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
@@ -174,20 +172,22 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
 
   useEffect(() => {
     const fetchSearchResults = () => {
-      if (searchTerm) {
-        const filteredResults = allPackages.filter((pkg) => {
-          const packageName = pkg.package_name ? pkg.package_name.toLowerCase() : '';
-          const tourLocation = pkg.tour_location ? pkg.tour_location.toLowerCase() : '';
-          return packageName.includes(searchTerm.toLowerCase()) || tourLocation.includes(searchTerm.toLowerCase());
-        });
-        setSearchResults(filteredResults);
-      } else {
+      if (searchTerm.trim() === '') {
+        // If search term is empty, show all packages matching current filters
         const filteredResults = allPackages.filter(
           (pkg) =>
             pkg.package_type === packageType &&
             pkg.starting_cost >= minPrice &&
             pkg.starting_cost <= maxPrice
         );
+        setSearchResults(filteredResults);
+      } else {
+        // Filter packages based on search term
+        const filteredResults = allPackages.filter((pkg) => {
+          const packageName = pkg.package_name ? pkg.package_name.toLowerCase() : '';
+          const tourLocation = pkg.tour_location ? pkg.tour_location.toLowerCase() : '';
+          return packageName.includes(searchTerm.toLowerCase()) || tourLocation.includes(searchTerm.toLowerCase());
+        });
         setSearchResults(filteredResults);
       }
     };
@@ -201,7 +201,12 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
 
   const handleClearSearch = () => {
     setSearchTerm('');
-    setSearchResults([]);
+    setSearchResults(allPackages.filter(
+      (pkg) =>
+        pkg.package_type === packageType &&
+        pkg.starting_cost >= minPrice &&
+        pkg.starting_cost <= maxPrice
+    ));
   };
 
   const handleSearchPackages = () => {
@@ -219,15 +224,16 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
       <div className="search-content">
         <button className="close-search" onClick={closeSearch}>x</button>
         <div className="search-bar">
+          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ width: '16px', height: '16px' }} />
           <input
             type="text"
             placeholder="Search Your Destination"
             value={searchTerm}
             onChange={handleInputChange}
           />
-          <button onClick={handleClearSearch}>
-            <img src="/path/to/search/icon" alt="search" />
-          </button>
+          {searchTerm.trim() !== '' && (
+            <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
+          )}
         </div>
         <h2 className="title">Packages Type</h2>
         <div className="package-types">
