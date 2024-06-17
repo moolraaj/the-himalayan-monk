@@ -187,7 +187,7 @@ function Headercustom() {
     <>
       <SliderForm closeRightMenu={closeRightMenu} isShow={isShow} setIsShow={setIsShow} />
       <PopupForm ShowDestinations={ShowDestinations} closeDestinations={closeDestinations} setShowDestinations={setShowDestinations} />
-      <SearchPackages closeSearch={closeSearch} isSearchVisible={isSearchVisible} />
+      {/* <SearchPackages closeSearch={closeSearch} isSearchVisible={isSearchVisible} /> */}
       <div className='header_custom_main'>
         <div className='header_i_sec'>
           <div className='logo_r_section'>
