@@ -34,7 +34,6 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
     loadAllDestinations()
   }, [])
 
- let {data}=result
 
   return (
     <>
@@ -56,7 +55,7 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
           <h2 className="title">Our Destinations</h2>
           <div className="destinations">
             {
-              data?.slice(0,2).map((ele, index) => {
+              result?.slice(0,2).map((ele, index) => {
                 return (
                   <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                     <div className="destination">
