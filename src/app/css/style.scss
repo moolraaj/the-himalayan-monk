@@ -1203,6 +1203,7 @@ a.tel_header_c {
 .search_e {
   display: flex;
   column-gap: 12px;
+  align-items: center;
 }
 
 .search_e img {
@@ -1624,7 +1625,7 @@ span.days_item {
 
 
 .tour_destination_inner img {
-  object-fit: cover ;
+  object-fit: cover;
   width: auto;
   height: 600px;
   z-index: -1;
@@ -2683,46 +2684,46 @@ form input[type="submit"] {
   .feature span {
     font-weight: 600;
     font-size: 15px;
+  }
+
+  .who-feature {
+    max-width: 1440px;
+    margin: auto;
+    text-align: left;
+    padding: 0px 20px;
+  }
+
+  img.two_image_c {
+    position: absolute;
+    max-width: 414px;
+    right: 2px;
+    bottom: -52px;
+  }
+
+
 }
 
-.who-feature {
-  max-width: 1440px;
-  margin: auto;
-  text-align: left;
-  padding: 0px 20px;
-}
-
-img.two_image_c {
-  position: absolute;
-  max-width: 414px;
-  right: 2px;
-  bottom: -52px;
-}
 
 
-}
-
-
-
-@media only screen and (max-width:1200px ) {
+@media only screen and (max-width:1200px) {
   .aboutus-features {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     margin-bottom: 40px;
     padding-top: 60px;
+  }
+
+  .feature-icon img {
+    width: 53px;
+  }
+
+  .desti_top_heading h1 {
+    font-size: 60px;
+  }
+
 }
 
-.feature-icon img {
-  width: 53px;
-}
-
-.desti_top_heading h1 {
-  font-size: 60px;
- }
-
-}
- 
 
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
@@ -2882,15 +2883,19 @@ img.two_image_c {
     /* 2 slides for tablets with gap */
   }
 }
+
 @media (min-width: 769px) and (max-width:1024px) {
+
   // homepage responsive **********
-  .tour_destination_wrapper{
+  .tour_destination_wrapper {
     grid-template-columns: 1fr;
   }
-// homepage responsive end **********
+
+  // homepage responsive end **********
 }
 
-@media (max-width: 768px) {
+
+@media only screen and (max-width:768px) {
 
   // homepage responsive **********
   .mobile_menu_header {
@@ -2906,7 +2911,6 @@ img.two_image_c {
       height: 20px;
     }
   }
-
   .call_to_action {
     margin: 50px 20px auto 20px;
 
@@ -2923,100 +2927,105 @@ img.two_image_c {
       height: 100%;
     }
   }
+  .tour_destination_wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; 
+    .tour_destination {
+      height: 200px !important; 
+    }
+    .tour_destination:nth-child(1),
+    .tour_destination:nth-child(3),
+    .tour_destination:nth-child(5),
+    .tour_destination:nth-child(6) {
+      grid-column: auto; 
+      grid-row: auto;
+    }
+  
+    .tour_destination:nth-child(2),
+    .tour_destination:nth-child(4) {
+      grid-column: auto; 
+      grid-row: auto;
+    }
+  
+    .tour_destination:nth-child(7) {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+  }
+  .footer_inner{
+  grid-template-columns: 1fr;
+  }
+  .form-container{
+    right: -140%;
+  }
   // homepage responsive end**********
 
-}
 
-
-
-@media only screen and (max-width:768px) {
-  
   .aboutus-content {
     display: block;
     max-width: 1440px;
     width: 100%;
     gap: 40px;
-}
+  }
 
-.about_traveller .stats-section {
-  display: grid;
-  justify-content: space-around;
-  margin-bottom: 40px;
-  max-width: 1440px;
-  margin: auto;
-  grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap;
-  column-gap: 10px;
-  padding: 32px 21px;
-  border-top: 1px solid #D9D9D9;
-  border-bottom: 1px solid #D9D9D9;
-  row-gap: 20px;
-}
+  .about_traveller .stats-section {
+    display: grid;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    max-width: 1440px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    padding: 32px 21px;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    row-gap: 20px;
+  }
 
-.about_traveller .features-section {
-  display: grid;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding-bottom: 100px;
-}
-.about_traveller .feature-icon {
-  font-size: 36px;
-  margin-bottom: 10px;
-  width: 91px;
-  height: 91px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(246, 148, 37, 0.3803921569);
-  border-radius: 85px;
-}
-
-img.one_image_c {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  max-width: 100% !important;
-  height: 270px;
-}
-
-
-.about_traveller .feature-item {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: left;
-  display: block;
-  column-gap: 20px;
-  border: 1px solid #D9D9D9;
-  align-items: center;
-  grid-template-columns: 1fr 2fr;
-}
-
-}
-
-
-@media only screen and (max-width:420px) {
   .about_traveller .features-section {
     display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-  }
-    
-    .about_traveller .stat-label {
-      font-size: 13px;
-      color: #757575;
+    padding-bottom: 100px;
   }
 
+  .about_traveller .feature-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+    width: 91px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(246, 148, 37, 0.3803921569);
+    border-radius: 85px;
+  }
+
+  img.one_image_c {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    max-width: 100% !important;
+    height: 270px;
+  }
 
 
+  .about_traveller .feature-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    display: block;
+    column-gap: 20px;
+    border: 1px solid #D9D9D9;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+  }
 
 }
-
-
 
 @media (max-width: 600px) {
   .testimonial {
@@ -3028,8 +3037,38 @@ img.one_image_c {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .activities_new .tabs-container,
+  .tour_packages_wrapper{
+    grid-template-columns: 1fr;
+  }
+  .logo_r_section img {
+    max-width: 126px;
+    height: 48px;
+}
+.number_header_c {
+  display: none;
+}
 }
 
 @media (min-width: 469px) and (max-width:768px) {}
 
 @media (max-width: 468px) {}
+
+@media only screen and (max-width:420px) {
+  .about_traveller .features-section {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about_traveller .stat-label {
+    font-size: 13px;
+    color: #757575;
+  }
+
+
+
+
+}
