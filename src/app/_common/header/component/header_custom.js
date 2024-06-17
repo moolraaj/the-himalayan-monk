@@ -1,14 +1,10 @@
 
 'use client'
 import React, { useState } from 'react';
-import search from '../../../assets/headerAssets/search.png';
-import call from '../../../assets/headerAssets/call.png';
-import window from '../../../assets/headerAssets/window.gif';
 import Link from 'next/link';
-import arrow from '../../../assets/headerAssets/megamenu.png.gif';
 import PopupForm from '../../destinationpopup/popupForm';
 import SliderForm from '../../slider-form/sliderForm';
-import { CloseMenu, logo } from '@/app/assets/images';
+import { CloseMenu, logo,arrow,search,call,window} from '@/app/assets/images';
 
 function Headercustom() {
   const [isShow, setIsShow] = useState(false);

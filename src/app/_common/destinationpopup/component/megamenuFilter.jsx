@@ -24,14 +24,6 @@ export default function Destinationsmenu({ setShowDestinations }) {
   
 
    
- 
-  
-   
-  
-
- 
-  
-
   const filterDestinations = async (city) => {
     try {
       if (city) {

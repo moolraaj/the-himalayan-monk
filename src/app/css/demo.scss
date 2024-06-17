@@ -76,48 +76,6 @@ body {
     }
   }
 
-
-
-  .hero_right_section {
-    overflow: hidden;  
-    position: relative;
-    width: 100%;  
-  }
-  
-  .destination_slider {
-    display: flex;
-    transition: transform 0.5s ease;  
-    width: 100%;  
-  }
-  
-  
-  
-  .hero_destination_outer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-  }
-  
-  .link-group {
-    width: 100%;  
-    display: none; 
-    justify-content: space-between; 
-  }
-  
-  .link-group:nth-child(n+1) {
-    display: flex; 
-  }
-  .link-group {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
-}
-.link-group a {
-    width: 100%;
-}
-
-
-  
   .hero_section_inner {
     @extend %inner-section_max_width;
     padding: 210px 15px 70px 15px;
@@ -129,7 +87,7 @@ body {
       align-items: flex-start !important;
 
       .hero_right_section {
-        // @include grid-property(grid, 1fr 1fr, center, 20px, 20px);
+        @include grid-property(grid, 1fr 1fr, center, 20px, 20px);
 
         .hero_destination_outer {
           position: relative;
@@ -154,7 +112,6 @@ body {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 18px 0px 0px 0px;
           }
         }
       }
@@ -923,12 +880,6 @@ span.speedometer {
 }
 
 // tour package section css ends *********
-
-
-
-
-
-
 
 
 .top_bar_details_inner_s {
@@ -2765,12 +2716,7 @@ form input[type="submit"] {
   .desti_top_heading h1 {
     font-size: 60px;
   }
-  .destinationfilter{
-    justify-content: flex-start;
-  }
-  .popup-wrapper.slide-down button{
-    right: 100px;
-  }
+
 }
 
 
@@ -2912,6 +2858,7 @@ form input[type="submit"] {
     justify-content: space-between;
     align-items: center;
     padding: 12px;
+
     .desktop_menus {
       display: none;
     }
@@ -2930,19 +2877,6 @@ form input[type="submit"] {
     flex: 0 0 calc(50% - 20px);
     /* 2 slides for tablets with gap */
   }
- 
-  .popup-wrapper.slide-down{
-    ul{
-      column-gap: 15px;
-    }
-    top: 80px;
-    button{
-      right: 45px;
-    }
-  }
-  .popup-wrapper.slide-down{
-    padding: 30px 0px 10px 20px;
-  }
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
@@ -2957,9 +2891,7 @@ form input[type="submit"] {
 
 
 @media only screen and (max-width:768px) {
-  .hero_section_outer .hero_section_inner{
-    padding-top: 200px;
-  }
+
   // homepage responsive **********
   .mobile_menu_header {
     .mobile_menu_logo {
@@ -3028,7 +2960,6 @@ form input[type="submit"] {
     right: -140%;
   }
 
-  
   // homepage responsive end**********
 
 
@@ -3118,7 +3049,8 @@ form input[type="submit"] {
     max-width: 126px;
     height: 48px;
   }
-  .header_number{
+
+  .number_header_c {
     display: none;
   }
 }
@@ -3130,11 +3062,7 @@ form input[type="submit"] {
 }
 }
 
-@media (max-width: 468px) {
-  .aboutus-features{
-    grid-template-columns: 1fr;
-  }
-}
+@media (max-width: 468px) {}
 
 @media only screen and (max-width:420px) {
   .about_traveller .features-section {

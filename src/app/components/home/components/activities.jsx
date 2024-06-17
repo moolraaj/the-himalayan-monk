@@ -1,21 +1,16 @@
 'use client'
-import React, { useState } from 'react';
-import lining from '../../../assets/homepageAssets/lining.png';
-import jumping from '../../../assets/homepageAssets/Bungee_Jumping.png';
-import rafting from '../../../assets/homepageAssets/Rafting.png';
-import paragliding from '../../../assets/homepageAssets/Paragliding.png';
-import ski from '../../../assets/homepageAssets/Ski_Touring.png';
-import surfing from '../../../assets/homepageAssets/Surfing.png';
- 
+
+import React, { useState, useEffect, useRef } from 'react';
+import { lining, jumping, rafting, paragliding, ski, surfing } from '@/app/assets/images';
 
 const activities = [
   {
     name: 'Zip lining',
-    icon: lining, // Use imported image directly
+    icon: lining,
     title: 'Thrill Above Ground: The Zip Line Adventure',
     description: 'Embark on an adrenaline-fueled journey, zipping through lush landscapes, feeling the wind rush past, and experiencing nature from breathtaking heights. Unleash your inner adventurer today.',
     features: ['Treetop Views', 'Adrenaline Rush', 'Safety Measures'],
-    image: '/images/aboutinner.png' // Replace with actual image path
+    image: lining.src
   },
   {
     name: 'Bungee Jumping',
@@ -23,7 +18,7 @@ const activities = [
     title: 'Leap of Faith: The Bungee Jumping Experience',
     description: 'Experience the ultimate adrenaline rush with a thrilling bungee jump. Feel the free-fall and rebound, and conquer your fears with this exhilarating activity.',
     features: ['Free-Fall Experience', 'Safety Harnesses', 'Expert Guides'],
-    image: '/images/bungee-jumping.jpg'
+    image: jumping.src
   },
   {
     name: 'Rafting',
@@ -31,7 +26,7 @@ const activities = [
     title: 'Ride the Rapids: The Rafting Adventure',
     description: 'Navigate through roaring rapids and enjoy a thrilling white-water rafting experience. Perfect for adventure seekers and nature lovers alike.',
     features: ['Exciting Rapids', 'Safety Gear', 'Experienced Guides'],
-    image: '/images/rafting.jpg'
+    image: rafting.src
   },
   {
     name: 'Paragliding',
@@ -39,7 +34,7 @@ const activities = [
     title: 'Soar the Skies: The Paragliding Adventure',
     description: 'Soar high above scenic landscapes and enjoy the serene thrill of paragliding. A must-try for those seeking a peaceful yet exhilarating experience.',
     features: ['Scenic Views', 'Professional Instructors', 'Safety Equipment'],
-    image: '/images/paragliding.jpg'
+    image: paragliding.src
   },
   {
     name: 'Ski Touring',
@@ -47,7 +42,7 @@ const activities = [
     title: 'Explore the Slopes: The Ski Touring Adventure',
     description: 'Experience the thrill of skiing across untouched snow and exploring beautiful alpine terrains. Perfect for those who love winter sports and adventure.',
     features: ['Beautiful Slopes', 'Safety Gear', 'Expert Guides'],
-    image: '/images/ski-touring.jpg'
+    image: ski.src
   },
   {
     name: 'Surfing',
@@ -55,12 +50,40 @@ const activities = [
     title: 'Ride the Waves: The Surfing Adventure',
     description: 'Catch the perfect wave and enjoy the ultimate surfing experience. Ideal for both beginners and seasoned surfers looking to ride the waves.',
     features: ['Perfect Waves', 'Surfing Lessons', 'Safety Measures'],
-    image: '/images/surfing.jpg'
+    image: surfing.src
   }
 ];
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const tabContentRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to tab-content when activeTab changes
+    if (tabContentRef.current) {
+      tabContentRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Add event listener to handle click outside tab content
+    const handleClickOutside = (event) => {
+      if (tabContentRef.current && !tabContentRef.current.contains(event.target)) {
+        tabContentRef.current.style.paddingTop = '';
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [activeTab]);
+
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    if (tabContentRef.current) {
+      tabContentRef.current.style.paddingTop = '160px';
+    }
+  };
 
   return (
     <div className='activities_new'>
@@ -70,28 +93,30 @@ const Tabs = () => {
             <div
               key={index}
               className={`tab ${index === activeTab ? 'active' : ''}`}
-              onClick={() => setActiveTab(index)}
+              onClick={() => handleTabClick(index)}
             >
-              <img src={activity.icon.src} alt={`${activity.name} icon`} style={{width:'100%'}}/>
+              <img src={activity.icon.src} alt={`${activity.name} icon`} style={{ width: '100%' }} />
               <span>{activity.name}</span>
             </div>
           ))}
         </div>
-        <div className="tab-content">
-          <div className='activity_featured'>
-            <h2 className='name_tab'>{activities[activeTab].name}</h2>
-            <h2>{activities[activeTab].title}</h2>
-            <p>{activities[activeTab].description}</p>
-            <ul>
-              {activities[activeTab].features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
-            </ul>
-            <button>Check Availability</button>
-          </div>
-          <div className="images">
-            <img src={activities[activeTab].image} alt={activities[activeTab].name} style={{width:'100%'}}/>
-            {/* Add more images if needed */}
+        <div className="tab_content_wrapp">
+          <div className={`tab-content ${activeTab === 0 ? '' : 'active'}`} ref={tabContentRef}>
+            <div className='activity_featured'>
+              <h2 className='name_tab'>{activities[activeTab].name}</h2>
+              <h2>{activities[activeTab].title}</h2>
+              <p>{activities[activeTab].description}</p>
+              <ul>
+                {activities[activeTab].features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              <button>Check Availability</button>
+            </div>
+            <div className="images">
+              <img src={activities[activeTab].image} alt={activities[activeTab].name} style={{ width: '100%' }} />
+              {/* Add more images if needed */}
+            </div>
           </div>
         </div>
       </div>
