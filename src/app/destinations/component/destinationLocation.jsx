@@ -18,7 +18,7 @@ import Image from 'next/image';
 
   let loadAllDestinations=async()=>{
     let response=await api.fetchAlldestinations()
-    setResult(response)
+    setResult(response.data)
   }
 
 
@@ -27,13 +27,16 @@ import Image from 'next/image';
     loadAllDestinations()
   },[])
 
+  const {data,total}=result
+  console.log(total)
+
   
       
       
 
   return (
     <div className="places-container">
-      {result && result?.map((place,index) => {
+      {data && data?.map((place,index) => {
 
         return <Link href={`/destinations/${place.city_id}`} key={index}>
         <div className="place">
