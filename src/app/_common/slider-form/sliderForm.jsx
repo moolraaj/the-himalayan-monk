@@ -1,17 +1,23 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import logo from '../../assets/headerAssets/logo.png'
-import call from '../../assets/homepageAssets/call.png'
-import tele from '../../assets/homepageAssets/tele.png'
-import empty from '../../assets/empty.jpg'
 import { ExportAllApis } from '@/utils/apis/apis'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import { emptyImage,logo,call2,tele, adventure_tours,cultural_tour,group_tour,historical_tour,hnymoon_tour,luxury_tour} from '@/app/assets/images';
 
 function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
   let router=useRouter()
   let api = ExportAllApis()
   let [result, setResult] = useState([])
+  let [tourTypes, setTourTypes] = useState([
+    { name: 'Adventure Tours', icon: adventure_tours.src },
+    { name: 'Cultural Tours', icon: cultural_tour.src },
+    { name: 'Group Tours', icon: group_tour.src },
+    { name: 'Historical Tours', icon: historical_tour.src },
+    { name: 'Honeymoon Tours', icon: hnymoon_tour.src },
+    { name: 'Luxury Tours', icon: luxury_tour.src },
+  ]);
+
 
   const GoToDestinatiosPages=()=>{
     router.push('/destinations')
@@ -40,12 +46,12 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
           </div>
           <h2 className="title">Tour Type</h2>
           <div className="tour-types">
-            <button className="tour-button">Adventure Tours</button>
-            <button className="tour-button">Cultural Tours</button>
-            <button className="tour-button">Group Tours</button>
-            <button className="tour-button">Historical Tours</button>
-            <button className="tour-button">Honeymoon Tours</button>
-            <button className="tour-button">Luxury Tours</button>
+            {tourTypes.map((tourType, index) => (
+              <button key={index} className="tour-button">
+                <span className='tour_type_icon_wrapper'><img src={tourType.icon} alt={tourType.icon} style={{width: '60px',height: "60px"}} /></span>
+                <span>{tourType.name}</span>
+              </button>
+            ))}
           </div>
           <h2 className="title">Our Destinations</h2>
           <div className="destinations">
@@ -54,7 +60,7 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
                 return (
                   <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                     <div className="destination">
-                      <img src={ele.image || empty.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
+                      <img src={ele.image || emptyImage.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
                       <div className="destination-text">
                         <h3><span>Travel to</span> {ele.name}</h3>
                       </div>
@@ -70,7 +76,7 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
           <div className="contact-info">
             <div className='two_name_email'>
               <div className='more_enquiry'>
-                <img src={call.src} />
+                <img src={call2.src} />
                 <span>
                   <p>To More Inquiry</p>
                   <a href='tel:9816788165'>+98167 88165</a>
