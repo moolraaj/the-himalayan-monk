@@ -48,7 +48,7 @@ function LocationBanner({ id }) {
   return (
     <div className="container slider_plus_details">
       <main className="main">
-        <div className="hero">
+        <div className="hero destination_hero_slider_wrapper">
           <Slider {...settings}>
             {images.map((image, index) => (
               <div key={index} style={{ position: 'relative', width: '100%', height: '500px' }}>
@@ -58,7 +58,6 @@ function LocationBanner({ id }) {
                   layout="fill"
                   objectFit="cover"
                   quality={80}
-
                 />
               </div>
             ))}
@@ -66,7 +65,7 @@ function LocationBanner({ id }) {
           <div className="overlay">
             <h3>Get up to <span>20% OFF</span> on<br /></h3>
             {result?.map((ele,index) => {
-              return <div key={index}>
+              return <div key={index} className='overlay_banner_content'>
                 <h1><span>{ele.package_name}</span> Tour Packages</h1>
                 <h4><span>Starting at INR 67.05 </span>INR 29,804</h4>
                 <button className="contactButton">Contact Us</button>

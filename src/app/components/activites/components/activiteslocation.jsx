@@ -41,7 +41,6 @@ import empty from '../../../assets/empty.jpg'
             <p>{place.tour_location} Tour {place.tour_location > 1 ? 's' : ''}</p>
              <span className='name_location'>
             <h3>{place.package_name}</h3>
-            <h4>{place.tour_location}</h4>
             </span>
           </div>
           </Link>

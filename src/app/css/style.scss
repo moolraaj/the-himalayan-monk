@@ -1897,6 +1897,15 @@ span.days_item {
   padding: 100px;
 }
 
+.overlay_banner_content:last-child {
+  display: none;
+}
+.hero h1 {
+  border-bottom: 2px solid #808080;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 20px;
+}
 
 .hero .overlay h3 {
   font-size: 32px;
@@ -1906,6 +1915,10 @@ span.days_item {
 
 .hero {
   color: white;
+}
+
+.destination_hero_slider_wrapper img {
+  width: 100%;
 }
 
 .hero h1 {
@@ -1926,8 +1939,11 @@ span.days_item {
   margin: auto;
   margin-top: 36px;
   column-gap: 20px;
+  width: 100%;
 }
-
+.container.all_tour_packages{
+  padding: 0px 20px;
+}
 button.contactButton {
   padding: 12px 69px;
   border-radius: 40px;
@@ -2283,7 +2299,7 @@ button.contactButton:hover {
 }
 
 .overlay h4 {
-  font-size: 28px !important;
+  font-size: 28px;
 }
 
 
@@ -2695,6 +2711,7 @@ button.custom_close {
   height: 50px;
   border-bottom-right-radius: 36px;
   border-bottom-left-radius: 39px;
+  left: 45%;
 }
 
 .navbar_c_section span img {
@@ -2726,8 +2743,8 @@ button.custom_close {
 
 .place-info p {
   text-align: right;
-  margin-top: 11px;
-  margin-right: 18px;
+  margin-top: 18px;
+  margin-left: 18px;
   display: inline-block;
   // float: right;
   background: #F69625;
@@ -2976,10 +2993,14 @@ form input[type="submit"] {
     right: 100px;
   }
 }
-
-
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .all_tour_packages .tour-packages {
+    grid-template-columns: repeat(3, 1fr);
+}
+}
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
+  
   .testimonials-container {
     width: 100%;
     max-width: 100%;
@@ -3162,6 +3183,54 @@ form input[type="submit"] {
 
 
 @media only screen and (max-width:768px) {
+
+
+  // destination inner page responsive ***************
+  .slider_plus_details .slick-slider.slick-initialized {
+    margin-top: 75px;
+  }
+
+  .hero .overlay {
+    padding: 80px 20px 20px;
+  }
+
+  .hero .overlay h3 {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+
+  .overlay h4 {
+    font-size: 18px;
+  }
+
+  .ratings {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 36px;
+    gap: 20px;
+    place-items: baseline;
+  }
+
+  .all_tour_packages {
+    .title {
+      padding: 40px 0px 2px 0px;
+        color: $light_red;
+        border-bottom: 2px solid #D65228B2;
+        font-size: 22px;
+        margin-bottom: 20px !important;
+        display: inline-block;
+        font-family: $satisfy;
+    }
+    .tour-package{
+      margin-bottom: 30px;
+    }
+  }
+  // destination inner page responsive end ***************
+
+
   .hero_section_outer .hero_section_inner {
     padding-top: 200px;
   }
@@ -3404,6 +3473,10 @@ form input[type="submit"] {
 }
 
 @media (max-width: 600px) {
+  .all_tour_packages .tour-packages{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .top_bar_details_inner_s {
     padding: 0px 10px;
 
@@ -3505,11 +3578,13 @@ form input[type="submit"] {
 
 @media only screen and (max-width:468px) {
 
-
-  .aboutus-features {
+  .aboutus-features,
+  .all_tour_packages .tour-packages {
     grid-template-columns: 1fr;
   }
-
+  .ratings{
+    max-width: 90%;
+  }
   .desti_top_heading {
     position: absolute;
     top: 47%;
@@ -3572,9 +3647,11 @@ form input[type="submit"] {
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  .form-container .tour-types{
+
+  .form-container .tour-types {
     grid-template-columns: 1fr 1fr;
   }
+
   .about_traveller .stat-label {
     font-size: 13px;
     color: #757575;
@@ -3601,5 +3678,3 @@ form input[type="submit"] {
 
 
 }
-
-
