@@ -11,15 +11,14 @@ import Testimonials from './components/testimonial'
 function Homepage() {
   return (
     <>
-  <Herosection/>
-  <TourList/>
-  <CallToaction />
-  <TourPackages />
-
-  <Tabs/>
-  <AboutUs/>
-  <Testimonials/>
-
+  
+  <div className="home_section section_first"><Herosection/></div>
+  <div className="home_section section_second"><TourList/></div>
+  <div className="home_section section_third"><CallToaction /></div>
+  <div className="home_section section_fourth"><TourPackages /></div>
+  <div className="home_section section_fifth"><Tabs/></div>
+  <div className="home_section section_sixth"><AboutUs/></div>
+  <div className="home_section section_seventh"><Testimonials/></div>
     </>
   )
 }

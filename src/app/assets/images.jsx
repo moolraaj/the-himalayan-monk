@@ -35,8 +35,12 @@ import clear_search from '../assets/headerAssets/clear_search.png';
 import leh from '../assets/homepageAssets/lehroad.png';
 import activities_banner from '../assets/homepageAssets/activities_banner.png';
 import galleryleh from '../assets/homepageAssets/destinationleh.png';
-import ways_to_travel from '../assets/homepageAssets/ways_to_travel.png'
-
+import ways_to_travel from '../assets/homepageAssets/ways_to_travel.png';
+import section_second_bg from '../assets/homepageAssets/section_second_bg.png';
+import section_fourth_bg from '../assets/homepageAssets/section_fourth_bg.png';
+import section_fifth_bg from '../assets/homepageAssets/section_fifth_bg.png';
+import section_sixth_bg from '../assets/homepageAssets/section_sixth_bg.png';
+  
 
 export {
     kulluTour,
@@ -77,5 +81,8 @@ export {
     activities_banner,
     galleryleh,
     ways_to_travel,
-
+    section_second_bg,
+    section_fourth_bg,
+    section_fifth_bg,
+    section_sixth_bg,
   };
