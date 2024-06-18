@@ -1,12 +1,12 @@
 import React from 'react';
-import galleryleh from '../../assets/homepageAssets/destinationleh.png'; 
 import Image from 'next/image';
+import { ways_to_travel } from '@/app/assets/images';
 
 const WaystoTravel = () => {
   return (
     <div className="desti_top_banner">
       <div className="top_banner_Image">
-        <Image src={galleryleh.src} alt="destinations" width={100} height={100}/>
+        <Image src={ways_to_travel.src} alt="destinations" width={100} height={100}/>
       </div>
       <div className="desti_top_heading">
         <h1>Ways to Travel</h1>

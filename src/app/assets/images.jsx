@@ -33,6 +33,9 @@ import luxury_tour from '../assets/headerAssets/luxury_tour.png';
 import searchbar_icon from '../assets/headerAssets/searchbar_icon.png';
 import clear_search from '../assets/headerAssets/clear_search.png';
 import leh from '../assets/homepageAssets/lehroad.png';
+import activities_banner from '../assets/homepageAssets/activities_banner.png';
+import galleryleh from '../assets/homepageAssets/destinationleh.png';
+import ways_to_travel from '../assets/homepageAssets/ways_to_travel.png'
 
 
 export {
@@ -70,5 +73,9 @@ export {
     luxury_tour,
     searchbar_icon,
     clear_search,
-    leh
+    leh,
+    activities_banner,
+    galleryleh,
+    ways_to_travel,
+
   };
