@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import emptyImage from '../../../assets/empty.jpg'
 import { galleryleh } from '@/app/assets/images';
-import LocationBanner from '@/app/destinations/[cityid]/components/locationBanner';
+import ActivityLocation from './activityLocation';
 
 async function ActivitiesPackages({ id }) {
   let api = ExportAllApis()
@@ -30,7 +30,7 @@ async function ActivitiesPackages({ id }) {
         {/* <div className="activity_inner_page_banner">
         <img src={galleryleh.src} alt={galleryleh.src} />
       </div> */}
-        <LocationBanner id={id} />
+        <ActivityLocation id={id} />
       </div>
       <div className="container all_tour_packages">
 
