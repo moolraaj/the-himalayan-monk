@@ -13,7 +13,7 @@ const BookTourForm = () => {
     total_no_travelers: '',
     departuredate: '',
     returndate: '',
-    adminEamil:'sales@eligocs.com'
+    adminEamil:''
   });
 
   let [error,setError]=useState({})
@@ -97,7 +97,8 @@ const BookTourForm = () => {
           destination: '',
           total_no_travelers: '',
           departuredate: '',
-          returndate: ''
+          returndate: '',
+          adminEamil:''
         });
         setError({})
       } catch (error) {
@@ -148,6 +149,11 @@ const BookTourForm = () => {
           <label>Return Date</label>
           <input type="text" name="returndate" value={user.returndate} onChange={handleChange}  />
           {error.returndate && <span className="error">{error.returndate}</span>}
+        </div>
+        <div className="form-group">
+          <label>Admin email</label>
+          <input type="text" name="adminEamil" value={user.adminEamil} onChange={handleChange}  />
+          
         </div>
         <button type="submit" className="submit-btn" onClick={handleSubmit}>
           Book Now <img src={airplane.src} alt="demo" style={{ width: '28px' }} />

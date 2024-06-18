@@ -93,7 +93,10 @@ export const ExportAllApis = () => {
 
     const SubmitDestinmationsformData = async (user) => {
         try {
-            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, user);
+            const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, {
+                method:'POST',
+                body:JSON.stringify(user)
+                });
             const resp = await result.json();
             return resp
         } catch (error) {
