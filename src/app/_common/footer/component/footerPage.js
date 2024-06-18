@@ -31,7 +31,9 @@ function FooterPage() {
                         <div className="footer_first_section">
 
                             <div className="footer_logo_section">
+                                <Link href={`/`}>
                                 <img src={logo.src} alt="site-logo" />
+                                </Link>
                             </div>
                             <div className="footer_hand-shake">
                                 <div className="footer_svg">
