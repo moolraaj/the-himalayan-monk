@@ -65,8 +65,9 @@ function TourPackagesPage() {
                     </div>
                     <div className="tour_package_info">
                       <h2>{ele.package_name}</h2>
-                      {/* <p className="tour_description">{ele.description}</p>
-                <span> <img src={location.src} style={{ width: '25px' }} alt={ele.name}/> <p className="tour_location">{ele.location}</p></span> */}
+                      {/* <p className="tour_description">{ele.description}</p> */}
+                <span> <img src={location.src} style={{ width: '25px' }} alt={ele.name}/>  <p className="tour_location">{ele.tour_location || ele.package_name}</p></span>
+                
                     </div>
 
                     <div className='tour_b_c'>
