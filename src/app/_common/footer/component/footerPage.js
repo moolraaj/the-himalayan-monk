@@ -36,7 +36,8 @@ function FooterPage() {
                             <div className="footer_hand-shake">
                                 <div className="footer_svg">
                                     <img src={handshake.src} alt="demo" />
-                                    <span>Tour With Monks</span>                                </div>
+                                    <span>Tour With Monks</span>
+                                    </div>
 
                             </div>
                             <div className="footer_shake_heading">

@@ -26,7 +26,7 @@ function TourPackages() {
 
   const loadAllTourPackages=async()=>{
     let resp=await api.fetchTourPackages()
-    setResult(resp)
+    setResult(resp.data)
   }
   
   
@@ -34,6 +34,8 @@ function TourPackages() {
     loadAllTourPackages()
   },[])
 
+
+  console.log(result)
   
 
    

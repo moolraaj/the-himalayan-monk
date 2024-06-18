@@ -4,7 +4,8 @@ export const ExportAllApis = () => {
         try {
             let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/index`)
             let resp = await result.json()
-            return resp.data
+            let {data,totalCount,totalPerPage}=resp.data
+            return {data,totalCount,totalPerPage}
         } catch (error) {
             console.log(error)
 
