@@ -2262,7 +2262,7 @@ span.days_item {
   border: none;
   padding: 10px 20px;
   font-family: "inter";
-  border-radius: 20px;
+  border-radius: 25px;
   display: flex;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -3218,7 +3218,9 @@ form input[type="submit"] {
   .overlay h4 {
     font-size: 18px;
   }
-
+  .tour-price .price{
+    font-size: 16px;
+  }
   .ratings {
     grid-template-columns: 1fr 1fr;
     margin-top: 36px;
@@ -3250,7 +3252,6 @@ form input[type="submit"] {
   .slideform_content_outer {
     overflow: auto;
     height: 80vh;
-    padding-left: 15px;
     width: 100%;
   }
 
@@ -3343,9 +3344,9 @@ form input[type="submit"] {
 
 
     .mobile_close_menu {
-      max-width: 20px;
+      max-width: 30px;
       width: 100%;
-      height: 20px;
+      height: 30px;
     }
   }
 
