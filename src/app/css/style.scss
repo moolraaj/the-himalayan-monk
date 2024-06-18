@@ -140,21 +140,19 @@ body {
 
 
 
-  .home_section {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .home_section.section_second{
-    background-image: url(../assets/homepageAssets/section_second_bg.png) !important;
-  }
-  .home_section.section_fourth{
-    background-image: url(../assets//homepageAssets//section_fourth_bg.png) !important;
-  }
+  /* styles.css */
+
+.home_section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
   .hero_section_inner {
     @extend %inner-section_max_width;
     padding: 210px 15px 70px 15px;
@@ -1575,7 +1573,6 @@ a.tel_header_c {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  background-color: #fff;
   padding-bottom: 150px;
   padding-top: 100px;
 }
