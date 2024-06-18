@@ -3,11 +3,17 @@ import React, { useEffect, useState } from 'react';
 import heroimg from '@/app/assets/herosection/hero_background.png';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
+import PopupWrapper from '../../book-now/popupWrapper';
 
 function Herosection() {
   const api = ExportAllApis();
   const [destinations, setDestinations] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);  
+  const [isShow, setIsShow] = useState(false);  
+
+  const openPopup=()=>{
+    setIsShow(true)
+  }
 
   useEffect(() => {
     const loadDestinations = async () => {
@@ -68,6 +74,8 @@ function Herosection() {
   };
 
   return (
+    <>
+    <PopupWrapper isShow={isShow} setIsShow={setIsShow}/>
     <div className="hero_section_outer">
       <div className="slider_wrapper">
         <img src={heroimg.src} alt="Hero Background" style={{ width: '100%', height: '100%' }} />
@@ -83,7 +91,7 @@ function Herosection() {
               This is the story of our travels. A travel blog with the moments that moved us, people we met and the
               destinations in which we lived these experiences. There is a huge world, come discover it with us!
             </p>
-            <button type="button">Book a Trip</button>
+            <button type="button" onClick={openPopup}>Book a Trip</button>
           </div>
           <div className="hero_right_section">
             <div className="destination_slider">
@@ -98,6 +106,7 @@ function Herosection() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

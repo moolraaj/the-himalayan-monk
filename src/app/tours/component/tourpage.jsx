@@ -9,7 +9,6 @@ import { airplane, speedometer, location } from '@/app/assets/images';
 import { ALL_TOUSR_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import Paginations from '@/app/components/paginations/paginations';
-import BookNowForm from '@/app/components/book-now/bookNowForm';
 import PopupWrapper from '@/app/components/book-now/popupWrapper';
 
 
@@ -49,7 +48,7 @@ function TourPackagesPage() {
 
   return (
     <>
-   {isShow && <PopupWrapper setIsShow={setIsShow}/>}
+   <PopupWrapper setIsShow={setIsShow} isShow={isShow}/>
 
 
       <div className="TourPackages_outer_section">

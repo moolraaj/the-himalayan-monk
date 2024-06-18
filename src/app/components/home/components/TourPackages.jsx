@@ -30,7 +30,7 @@ function TourPackages() {
 
   return (
     <>
-      {isShow && <PopupWrapper setIsShow={setIsShow} isShow={isShow}/>}
+      <PopupWrapper setIsShow={setIsShow} isShow={isShow}/>
 
       <div className="TourPackages_outer_section">
         <div className="TourPackages_inner">
