@@ -33,7 +33,7 @@ const BookTourForm = () => {
     }
     if(mobile.length!==10){
       valid=false
-      errorFields.mobile='Phone must be 10 digit'
+      errorFields.mobile='Phone number must be 10 digit'
     }
     if(!destination){
       valid=false

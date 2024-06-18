@@ -1,6 +1,6 @@
 import WaystoTravel from '@/app/components/headertitlesection/waystotravelbanner'
-import DPlaces from '@/app/destinations/component/destinationLocation'
-import React from 'react'
+
+ import React from 'react'
 
 function WaysTravelPage() {
   return (
@@ -18,7 +18,7 @@ function WaysTravelPage() {
               <p>a private group service, creating bespoke trips and giving you total flexibility. Just as no two people are the same, no two holidays need be either. With so much of the world to explore and so many things to consider, the range of ways to travel with Exodus will ensure that your holiday is as unique as you are. Because for us, it’s personal</p>
               <p>In identifying the right holiday style for you, consider how you want to travel, and who with. In a group of like-minded travellers, independently, or in your own private group with friends or family? And if you don’t see exactly what you want, let us know and we can help! See our private group adventures page for more information.</p>
             </div>
-             <DPlaces/>
+            
            
           </div>
         </div>
