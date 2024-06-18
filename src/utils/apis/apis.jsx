@@ -29,7 +29,7 @@ export const ExportAllApis = () => {
         try {
             let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2`)
             let resp = await result.json()
-            let {data,totalCount,totalPerPage}=resp.data
+            let {data,totalCount}=resp.data
             return {data ,totalCount}
         } catch (error) {
             console.log(error)
@@ -41,7 +41,8 @@ export const ExportAllApis = () => {
         try {
             let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2/${id}`)
             let resp = await result.json()
-            return resp.data
+            let{data,totalCount}=resp.data
+            return {data,totalCount}
         } catch (error) {
             console.log(error)
         }

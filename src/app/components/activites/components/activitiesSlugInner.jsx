@@ -19,7 +19,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 
      const LoadCityWiseActivities=async()=>{
       let resp=await api.fetchCityBasedActivities(id)
-      setResult(resp)
+      setResult(resp.data)
      }
 
      useEffect(()=>{
