@@ -1,4 +1,5 @@
 'use client'
+import { airplane } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 
@@ -82,6 +83,8 @@ function BookNowForm() {
   return (
     <>
       <div className="book-form-wrapper">
+        <div className="book_fields_wrapper">
+
         <div className="book-form_fields">
           <label htmlFor="firstname">Firstname</label>
           <input type="text" name='name' value={user.name} onChange={getUserDetails} />
@@ -104,14 +107,14 @@ function BookNowForm() {
           <label htmlFor="num-of-travelers">Number Of Travelers</label>
           <input type="text" name='total_no_travelers' value={user.total_no_travelers} onChange={getUserDetails} />
         </div>
-
-        <div className="book-form_fields">
+        </div>
+        <div className="book-form_message_filed ">
           <label htmlFor="message">Enter Your Message</label>
           <input type="text" name='message' value={user.message} onChange={getUserDetails} />
         </div>
 
         <div className="book-form_button">
-          <button onClick={submitUserQuery}>Book Now</button>
+          <button onClick={submitUserQuery}>Book Now <span><img src={airplane.src} alt={airplane.src} /></span></button>
         </div>
       </div>
     </>

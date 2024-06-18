@@ -56,6 +56,155 @@ a {
 
 
 
+// book now popup form*********
+
+
+.book-popup-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: popup-fade-in 0.5s forwards;
+}
+
+@keyframes popup-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book_now_form {
+  background: #fff;
+  padding: 50px 100px;
+  border-radius: 10px;
+  max-width: 1240px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.book_now_form_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  h1{
+    font-size: 50px;
+  }
+  img {
+    width: 70px;
+    height: 40px;
+}
+}
+.book-popupo-inner{
+  padding: 0px 20px;
+}
+
+.book-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.book_fields_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.book-form_fields {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.book-form_fields label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-form_fields input {
+  background-color:#ccc ;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+.book-form_fields input::placeholder {
+  color: white;
+}
+.book-form_message_filed {
+  display: flex;
+  flex-direction: column;
+  label{
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  input{
+    background-color: #ccc;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    display: inline;
+}
+}
+
+
+.book-form_button {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.book-form_button button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  img{
+    width: 30px;
+    height: 30px;
+  }
+}
+.book-form_button button:hover> img{
+  filter: invert(1);
+}
+.book-form_button button:hover {
+  background-color: #e67e00;
+}
+
+.book-form_title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.book-form_subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #ff8c00;
+  margin-bottom: 40px;
+}
+
+
+//book now popup form end********
 
 
 
@@ -139,8 +288,7 @@ body {
   }
 
 
-
-  /* styles.css */
+ 
 
 .home_section {
   position: relative;
@@ -3647,7 +3795,17 @@ form input[type="submit"] {
   .all_tour_packages .tour-packages {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  .book_now_form_header h1{
+    font-size: 30px;
+  }
+  .book_fields_wrapper{
+    grid-template-columns: 1fr;
+  }
+  .book_now_form{
+    padding: 0px 0px 30px;
+    overflow: auto;
+    height: 90vh;
+  }
   .top_bar_details_inner_s {
     padding: 0px 10px;
 
