@@ -4,9 +4,8 @@ import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import leh from '../../../assets/homepageAssets/lehroad.png';
 import { ExportAllApis } from '@/utils/apis/apis';
-
+import { kulluTour, leh } from '@/app/assets/images';
 
 
 // Dynamically import react-slick
@@ -16,6 +15,8 @@ const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 const images = [
   { src: leh.src, alt: 'Leh Ladakh' },
+  { src: kulluTour.src, alt: 'Leh Ladakh' }
+
 ];
 
 

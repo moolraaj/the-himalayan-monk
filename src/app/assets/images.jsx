@@ -32,6 +32,7 @@ import hnymoon_tour from '../assets/headerAssets/hnymoon_tour.png';
 import luxury_tour from '../assets/headerAssets/luxury_tour.png';
 import searchbar_icon from '../assets/headerAssets/searchbar_icon.png';
 import clear_search from '../assets/headerAssets/clear_search.png';
+import leh from '../assets/homepageAssets/lehroad.png';
 
 
 export {
@@ -69,4 +70,5 @@ export {
     luxury_tour,
     searchbar_icon,
     clear_search,
+    leh
   };
