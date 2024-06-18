@@ -2,7 +2,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 
 function BookNowForm() {
-  const api = ExportAllApis(); // Assuming ExportAllApis() correctly returns an object with methods
+  const api = ExportAllApis(); 
 
   const [user, setUser] = useState({
     name: '',

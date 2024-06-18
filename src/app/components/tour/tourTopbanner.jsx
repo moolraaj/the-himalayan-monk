@@ -3,6 +3,9 @@ import galleryleh from '../../assets/homepageAssets/destinationleh.png';
 import Image from 'next/image';
 
 const TourTopBanner = () => {
+  
+
+  
   return (
     <div className="desti_top_banner">
       <div className="top_banner_Image">
@@ -17,3 +20,4 @@ const TourTopBanner = () => {
 };
 
 export default TourTopBanner;
+
