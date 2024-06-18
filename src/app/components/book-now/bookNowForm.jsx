@@ -1,7 +1,9 @@
 'use client'
+import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 
 function BookNowForm() {
+    let api=ExportAllApis()
   let [user, setUser] = useState({
     name: '',
     email: '',
@@ -45,11 +47,20 @@ function BookNowForm() {
     return valid;
   };
 
-  const submitUserQuery = () => {
+  const submitUserQuery = async() => {
     if (validateForm()) {
       console.log('Form submitted', user);
 
-   
+      let resp=await api.SubmitDestinmationsformData({
+        method:'POST',
+        body:JSON.stringify(user)
+      })
+
+      if(resp){
+        alert('data saved')
+
+      }
+
       setUser({
         name: '',
         email: '',
@@ -60,6 +71,11 @@ function BookNowForm() {
       });
 
       setErrors({});
+
+      console.log(resp)
+
+   
+ 
     }
   };
 
