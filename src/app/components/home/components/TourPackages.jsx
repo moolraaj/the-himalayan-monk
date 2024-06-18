@@ -22,6 +22,7 @@ function TourPackages() {
   let api=ExportAllApis()
 
   let[result,setResult]=useState([]) 
+  
 
 
   const loadAllTourPackages=async()=>{
@@ -35,7 +36,7 @@ function TourPackages() {
   },[])
 
 
-  console.log(result)
+ 
   
 
    

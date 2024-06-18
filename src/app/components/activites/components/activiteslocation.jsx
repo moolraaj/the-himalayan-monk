@@ -18,7 +18,7 @@ import empty from '../../../assets/empty.jpg'
 
   const loadAllActivities=async()=>{
     let resp=await api.fetchAllActivities()
-    setResult(resp)
+    setResult(resp.data)
   }
 
   useEffect(()=>{
@@ -50,7 +50,6 @@ import empty from '../../../assets/empty.jpg'
         
       ))}
     </div>
-    
   );
 };
 

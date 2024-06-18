@@ -22,10 +22,10 @@ const images = [
 
 function LocationBanner({ id }) {
   let api = ExportAllApis()
-  let [data, setData] = useState([])
+  let [result, setResult] = useState([])
   let loadDestinations = async () => {
     let resp = await api.fetchFilterDestination(id)
-    setData(resp)
+    setResult(resp.data)
   }
   useEffect(() => {
     loadDestinations()
@@ -65,7 +65,7 @@ function LocationBanner({ id }) {
           </Slider>
           <div className="overlay">
             <h3>Get up to <span>20% OFF</span> on<br /></h3>
-            {data?.map((ele,index) => {
+            {result?.map((ele,index) => {
               return <div key={index}>
                 <h1><span>{ele.package_name}</span> Tour Packages</h1>
                 <h4><span>Starting at INR 67.05 </span>INR 29,804</h4>

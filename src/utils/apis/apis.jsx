@@ -1,8 +1,8 @@
 export const ExportAllApis = () => {
 
-    const fetchTourPackages = async () => {
+    const fetchTourPackages = async (ALL_TOUSR_PER_PAGE,page) => {
         try {
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/index`)
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/index?limit=${ALL_TOUSR_PER_PAGE}&page=${page}`)
             let resp = await result.json()
             let {data,totalCount,totalPerPage}=resp.data
             return {data,totalCount,totalPerPage}
@@ -12,12 +12,12 @@ export const ExportAllApis = () => {
         }
     }
 
-    const fetchAlldestinations = async () => {
+    const fetchAlldestinations = async (ALL_DESTINATIONS_PER_PAGE, page) => {
         try {
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/package_category_with_city`)
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/package_category_with_city?limit=${ALL_DESTINATIONS_PER_PAGE}&page=${page}`)
             let resp = await result.json()
-            let {data,total}=resp.data
-            return {data,total}
+            let {data,totalCount}=resp.data
+            return {data,totalCount}
         } catch (error) {
             console.log(error)
         }
@@ -29,7 +29,8 @@ export const ExportAllApis = () => {
         try {
             let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2`)
             let resp = await result.json()
-            return resp.data
+            let {data,totalCount,totalPerPage}=resp.data
+            return {data ,totalCount}
         } catch (error) {
             console.log(error)
         }
@@ -38,7 +39,7 @@ export const ExportAllApis = () => {
 
     const fetchCityBasedActivities = async (id) => {
         try {
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typebased/2/${id}`)
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2/${id}`)
             let resp = await result.json()
             return resp.data
         } catch (error) {
@@ -69,7 +70,8 @@ export const ExportAllApis = () => {
                 body: formData
             })
             let resp = await result.json()
-            return resp.data
+            let {totalCount,data}=resp.data
+            return {totalCount,data}
         } catch (error) {
             console.log(error)
         }
@@ -117,3 +119,6 @@ export const ExportAllApis = () => {
     }
 
 }
+
+export const ALL_TOUSR_PER_PAGE=6
+export const ALL_DESTINATIONS_PER_PAGE=6

@@ -13,10 +13,10 @@ import { ExportAllApis } from '@/utils/apis/apis';
 function TourPackages({ id }) {
 
   let api = ExportAllApis()
-  let [data, setData] = useState([])
+  let [result, setResult] = useState([])
   const loadSingleDestination = async () => {
     let resp = await api.fetchFilterDestination(id)
-    setData(resp)
+    setResult(resp.data)
   }
 
   useEffect(() => {
@@ -24,14 +24,14 @@ function TourPackages({ id }) {
   }, [])
 
 
-  console.log(data)
+
 
 
   return (
     <div className="container all_tour_packages">
       <h2 className="title">All Tour Packages</h2>
       <div className="tour-packages">
-        {data && data.map((tour) => (
+        {result?.map((tour) => (
 
           <div key={tour.id} className="tour-package">
             <Link href={`/destinations/${id}/${tour.id}/${tour.key}`}>
