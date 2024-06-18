@@ -1,10 +1,11 @@
  
 
 'use client'
-import { ExportAllApis } from '@/utils/apis/apis';
+import { ALL_ACTIVITIES_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import empty from '../../../assets/empty.jpg' 
+import Paginations from '../../paginations/paginations';
  
 
  
@@ -14,16 +15,19 @@ import empty from '../../../assets/empty.jpg'
   let api=ExportAllApis()
 
   let [result,setResult]=useState([])
+  let [page,setPage]=useState(1)
+  let [totalItems,setTotalItems]=useState(1)
 
 
   const loadAllActivities=async()=>{
-    let resp=await api.fetchAllActivities()
+    let resp=await api.fetchAllActivities(ALL_ACTIVITIES_PER_PAGE,page)
     setResult(resp.data)
+    setTotalItems(Math.ceil(resp.totalCount/ALL_ACTIVITIES_PER_PAGE))
   }
 
   useEffect(()=>{
-    loadAllActivities()
-  },[])
+    loadAllActivities(page)
+  },[page])
 
 
  
@@ -31,6 +35,8 @@ import empty from '../../../assets/empty.jpg'
  
   
   return (
+    <>
+    
     <div className="places-container">
       {result?.slice(0,9).map(place => (
        
@@ -50,6 +56,8 @@ import empty from '../../../assets/empty.jpg'
         
       ))}
     </div>
+    <Paginations page={page} totalItems={totalItems} setPage={setPage}/>
+    </>
   );
 };
 
