@@ -4,7 +4,8 @@ import { airplane, speedometer, location } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import BookNowForm from '../../book-now/bookNowForm';
+
+import PopupWrapper from '../../book-now/popupWrapper';
 
 function TourPackages() {
   let router = useRouter();
@@ -17,9 +18,6 @@ function TourPackages() {
     setIsShow(true);
   };
 
-  const closePopup = () => {
-    setIsShow(false);
-  };
 
   const loadAllTourPackages = async () => {
     let resp = await api.fetchTourPackages();
@@ -32,14 +30,7 @@ function TourPackages() {
 
   return (
     <>
-      {isShow && (
-        <div className='popup-form'>
-          <div className="inner">
-            <button onClick={closePopup}>close</button>
-            <BookNowForm />
-          </div>
-        </div>
-      )}
+      {isShow && <PopupWrapper setIsShow={setIsShow} isShow={isShow}/>}
 
       <div className="TourPackages_outer_section">
         <div className="TourPackages_inner">
