@@ -120,6 +120,14 @@ body {
     display: flex;
   }
 
+  .day-activity p {
+    line-height: 24px !important;
+}
+
+
+
+
+
   .link-group {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
@@ -129,6 +137,9 @@ body {
   .link-group a {
     width: 100%;
   }
+
+
+ 
 
 
 
@@ -233,6 +244,35 @@ body {
   display: grid;
   grid-template-columns: 40% 1fr 32%;
   gap: 30px;
+}
+
+
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  column-gap: 10px;
+  margin-bottom: 40px;
+}
+
+
+.desti_top_heading h1 {
+  text-transform: capitalize;
+}
+
+
+
+.pagination-buttons button {
+  padding: 6px 14px !important;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button.active-button {
+  background: #d75227;
+  color: white;
+  border: 1px solid antiquewhite;
 }
 
 .tour_destination {
@@ -1429,6 +1469,7 @@ a.tel_header_c {
 .footer_wrapper_second ul {
   margin: 0px;
   padding-left: 0px;
+  padding-top: 25px;
 }
 
 .footer_i {
@@ -1463,7 +1504,7 @@ a.tel_header_c {
 .footer_wrapper_second h4 {
   font-size: 25px;
   color: $white;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .follow_name {
@@ -2878,6 +2919,35 @@ form input[type="submit"] {
     font-size: 15px;
   }
 
+  .header_i_sec {
+     padding: 10px 20px !important;
+}
+
+.package {
+  padding: 20px;
+  border-radius: 10px;
+  padding-left: 0px;
+}
+
+.left_section_inner_package {
+   padding: 0px 20px;
+}
+
+.desti_top_heading {
+  top: 48%;
+}
+
+.desti_top_heading h1{
+  font-size: 50px;
+}
+
+
+
+
+.top_bar_details_inner_s {
+  padding: 0px 15px;
+}
+
   .contact_both_sections {
     display: grid;
     max-width: 1440px;
@@ -3016,6 +3086,22 @@ form input[type="submit"] {
     max-width: 100%;
     padding: 0px;
   }
+
+  .desti_top_heading {
+    top: 57%;
+}
+.desti_top_heading h1 {
+  font-size: 30px;
+}
+
+  
+.left_section_inner_package {
+  grid-template-columns: 1fr;
+}
+
+.package p {
+  font-size: 16px;
+ }
 
   .contact_both_sections {
     display: grid;
@@ -3246,6 +3332,32 @@ form input[type="submit"] {
   .hero_section_outer .hero_section_inner {
     padding-top: 200px;
   }
+
+  .package {
+       overflow: hidden;
+}
+
+.form-container-custom {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+  span.discounted-price b {
+    font-size: 22px;
+    color: #F69625;
+}
+
+  .package p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+  .left_section_inner_package {
+       margin-top: 29px;
+}
 
   .slideform_content_outer {
     overflow: auto;
@@ -3599,12 +3711,10 @@ form input[type="submit"] {
   .all_tour_packages .tour-packages {
     grid-template-columns: 1fr;
   }
-  .ratings{
-    max-width: 90%;
-  }
+
   .desti_top_heading {
     position: absolute;
-    top: 47%;
+    top: 57%;
     width: 100%;
     text-align: center;
     color: white;
@@ -3633,9 +3743,7 @@ form input[type="submit"] {
     margin-top: 15px;
   }
 
-  .desti_top_heading h1 {
-    font-size: 40px;
-  }
+
 
   .desti_top_banner img {
     height: 300px !important;
@@ -3643,13 +3751,7 @@ form input[type="submit"] {
     object-fit: cover;
   }
 
-  .desti_top_heading {
-    position: absolute;
-    top: 47%;
-    width: 100%;
-    text-align: center;
-    color: white;
-  }
+ 
 
 
 }
