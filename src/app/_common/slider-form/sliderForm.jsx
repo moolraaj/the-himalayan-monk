@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react'
 import { ExportAllApis } from '@/utils/apis/apis'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
-import { emptyImage,logo,call2,tele, adventure_tours,cultural_tour,group_tour,historical_tour,hnymoon_tour,luxury_tour} from '@/app/assets/images';
+import { emptyImage, logo, call2, tele, adventure_tours, cultural_tour, group_tour, historical_tour, hnymoon_tour, luxury_tour } from '@/app/assets/images';
 
-function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
-  let router=useRouter()
+function SliderForm({ closeRightMenu, isShow, setIsShow }) {
+  let router = useRouter()
   let api = ExportAllApis()
   let [result, setResult] = useState([])
   let [tourTypes, setTourTypes] = useState([
@@ -19,11 +19,11 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
   ]);
 
 
-  const GoToDestinatiosPages=()=>{
+  const GoToDestinatiosPages = () => {
     router.push('/destinations')
     setIsShow(false)
   }
-  
+
 
   let loadAllDestinations = async () => {
     let resp = await api.fetchAlldestinations()
@@ -43,50 +43,52 @@ function SliderForm({ closeRightMenu, isShow ,setIsShow}) {
             <img src={logo.src} alt="logo" />
             <button className="custom_close" onClick={closeRightMenu}>x</button>
           </div>
-          <h2 className="title">Tour Type</h2>
-          <div className="tour-types">
-            {tourTypes.map((tourType, index) => (
-              <button key={index} className="tour-button">
-                <span className='tour_type_icon_wrapper'><img src={tourType.icon} alt={tourType.icon} style={{width: '60px',height: "60px"}} /></span>
-                <span>{tourType.name}</span>
-              </button>
-            ))}
-          </div>
-          <h2 className="title">Our Destinations</h2>
-          <div className="destinations">
-            {
-              result?.slice(0,2).map((ele, index) => {
-                return (
-                  <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
-                    <div className="destination">
-                      <img src={ele.image || emptyImage.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
-                      <div className="destination-text">
-                        <h3><span>Travel to</span> {ele.name}</h3>
+          <div className="slideform_content_outer">
+            <h2 className="title">Tour Type</h2>
+            <div className="tour-types">
+              {tourTypes.map((tourType, index) => (
+                <button key={index} className="tour-button">
+                  <span className='tour_type_icon_wrapper'><img src={tourType.icon} alt={tourType.icon} style={{ width: '60px', height: "60px" }} /></span>
+                  <span>{tourType.name}</span>
+                </button>
+              ))}
+            </div>
+            <h2 className="title">Our Destinations</h2>
+            <div className="destinations">
+              {
+                result?.slice(0, 2).map((ele, index) => {
+                  return (
+                    <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
+                      <div className="destination">
+                        <img src={ele.image || emptyImage.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
+                        <div className="destination-text">
+                          <h3><span>Travel to</span> {ele.name}</h3>
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                )
-              })
-            }
-          </div>
-          <button className={'view-all-button'} onClick={GoToDestinatiosPages}>
-            view all
-          </button>
-          <div className="contact-info">
-            <div className='two_name_email'>
-              <div className='more_enquiry'>
-                <img src={call2.src} />
-                <span>
-                  <p>To More Inquiry</p>
-                  <a href='tel:9816788165'>+98167 88165</a>
-                </span>
-              </div>
-              <div className='more_enquiry'>
-                <img src={tele.src} />
-                <span>
-                  <p>Enquiry</p>
-                  <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
-                </span>
+                    </Link>
+                  )
+                })
+              }
+            </div>
+            <button className={'view-all-button'} onClick={GoToDestinatiosPages}>
+              view all
+            </button>
+            <div className="contact-info">
+              <div className='two_name_email'>
+                <div className='more_enquiry'>
+                  <img src={call2.src} />
+                  <span>
+                    <p>To More Inquiry</p>
+                    <a href='tel:9816788165'>+98167 88165</a>
+                  </span>
+                </div>
+                <div className='more_enquiry'>
+                  <img src={tele.src} />
+                  <span>
+                    <p>Enquiry</p>
+                    <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
