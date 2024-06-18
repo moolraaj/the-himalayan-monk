@@ -25,9 +25,9 @@ export const ExportAllApis = () => {
 
 
 
-    const fetchAllActivities = async () => {
+    const fetchAllActivities = async (ALL_ACTIVITIES_PER_PAGE,page) => {
         try {
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2`)
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/typePacakge/2?limit=${ALL_ACTIVITIES_PER_PAGE}&page=${page}`)
             let resp = await result.json()
             let {data,totalCount}=resp.data
             return {data ,totalCount}
@@ -123,3 +123,4 @@ export const ExportAllApis = () => {
 
 export const ALL_TOUSR_PER_PAGE=6
 export const ALL_DESTINATIONS_PER_PAGE=6
+export const ALL_ACTIVITIES_PER_PAGE=3

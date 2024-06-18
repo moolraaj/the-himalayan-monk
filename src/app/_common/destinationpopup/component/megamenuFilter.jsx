@@ -28,7 +28,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
     try {
       if (city) {
         const resp = await api.fetchFilterDestination(city);
-        setFilteredPackages(resp);
+        setFilteredPackages(resp?.data || null);
         setShowAllPackages(false);
       } else {
 

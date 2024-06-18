@@ -9,6 +9,8 @@ import { airplane, speedometer, location } from '@/app/assets/images';
 import { ALL_TOUSR_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import Paginations from '@/app/components/paginations/paginations';
+import BookNowForm from '@/app/components/book-now/bookNowForm';
+import PopupWrapper from '@/app/components/book-now/popupWrapper';
 
 
 
@@ -22,8 +24,14 @@ function TourPackagesPage() {
   let [result, setResult] = useState([])
   let [page, setPage] = useState(1)
   let [totalItems, setTotalItems] = useState(1)
+  let [isShow, setIsShow] = useState(false);
 
 
+  const popupAForm = () => {
+    setIsShow(true);
+  };
+
+  
 
   const loadAllTourPackages = async (page) => {
     let resp = await api.fetchTourPackages(ALL_TOUSR_PER_PAGE, page)
@@ -41,7 +49,7 @@ function TourPackagesPage() {
 
   return (
     <>
-
+   {isShow && <PopupWrapper setIsShow={setIsShow}/>}
 
 
       <div className="TourPackages_outer_section">
@@ -76,11 +84,11 @@ function TourPackagesPage() {
                       </div>
                       <div className="tour_price_book_section">
                         <span className='price_tour'><p>Price</p>₹{ele.starting_cost}</span>
-                        <button className="book_button">Book a Trip <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} /></button>
                       </div>
                     </div>
                   </div>
                 </Link>
+                        <button className="book_button" onClick={popupAForm}>Book a Trip  <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} /></button>
               </div>
 
             ))}

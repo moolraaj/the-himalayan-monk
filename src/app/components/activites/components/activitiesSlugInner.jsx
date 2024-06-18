@@ -26,6 +26,9 @@ import { ExportAllApis } from '@/utils/apis/apis';
       LoadCityWiseActivities()
      },[])
 
+
+      
+
      
   
    
@@ -40,7 +43,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
           {result?.map((tour) => (
              
             <div key={tour.id} className="tour-package">
-               <Link href={`/activites/${tour.city_id}/${tour.package_id}/${tour.temp_key}`}>
+               <Link href={`/activites/${tour.city_id}/${tour.id}/${tour.key}`}>
               <div className="tour-image">
                 <img src={emptyImage.src} alt='tour-image'  />
               </div>
