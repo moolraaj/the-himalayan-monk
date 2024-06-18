@@ -79,45 +79,47 @@ body {
 
 
   .hero_right_section {
-    overflow: hidden;  
+    overflow: hidden;
     position: relative;
-    width: 100%;  
+    width: 100%;
   }
-  
+
   .destination_slider {
     display: flex;
-    transition: transform 0.5s ease;  
-    width: 100%;  
+    transition: transform 0.5s ease;
+    width: 100%;
   }
-  
-  
-  
+
+
+
   .hero_destination_outer img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
   }
-  
+
   .link-group {
-    width: 100%;  
-    display: none; 
-    justify-content: space-between; 
+    width: 100%;
+    display: none;
+    justify-content: space-between;
   }
-  
+
   .link-group:nth-child(n+1) {
-    display: flex; 
+    display: flex;
   }
+
   .link-group {
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
-}
-.link-group a {
+  }
+
+  .link-group a {
     width: 100%;
-}
+  }
 
 
-  
+
   .hero_section_inner {
     @extend %inner-section_max_width;
     padding: 210px 15px 70px 15px;
@@ -1066,10 +1068,12 @@ button.call_a_button {
   border: none;
   border-radius: 5px 0 0 5px;
 }
-.search-bar input:focus{
+
+.search-bar input:focus {
   border: none;
   outline: none;
 }
+
 .search-bar button {
   background: none;
   border: none;
@@ -1085,13 +1089,15 @@ button.call_a_button {
   margin: 20px 0 10px;
 }
 
-.package-types, .price-range {
+.package-types,
+.price-range {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.package-button, .price-input {
+.package-button,
+.price-input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -2474,9 +2480,11 @@ img.two_image_c {
   gap: 10px;
   margin-bottom: 20px;
 }
+
 span.tour_type_icon_wrapper img {
   filter: invert(1);
 }
+
 .form-container .tour-button {
   background-color: #FFDEB8;
   color: black;
@@ -2490,12 +2498,13 @@ span.tour_type_icon_wrapper img {
   align-items: center;
 
 }
-.tour-button:hover{
+
+.tour-button:hover {
   background-color: $dark_yellow;
   color: $white;
 }
 
-.tour-button:hover > span.tour_type_icon_wrapper img{
+.tour-button:hover>span.tour_type_icon_wrapper img {
   filter: none;
 }
 
@@ -2841,6 +2850,7 @@ form input[type="submit"] {
     font-weight: 600;
     font-size: 15px;
   }
+
   .contact_both_sections {
     display: grid;
     max-width: 1440px;
@@ -2849,21 +2859,21 @@ form input[type="submit"] {
     grid-template-columns: 1fr 62%;
     column-gap: 3%;
     margin-bottom: 60px;
-}
+  }
 
   .contact_both_sections {
-       padding: 0px 25px;
-}
+    padding: 0px 25px;
+  }
 
-.contact_both_sections h4 {
-  font-size: 28px;
-}
+  .contact_both_sections h4 {
+    font-size: 28px;
+  }
 
 
-.contact_form_map {
-  padding: 0px 20px;
-  padding-bottom: 50px;
-}
+  .contact_form_map {
+    padding: 0px 20px;
+    padding-bottom: 50px;
+  }
 
   .who-feature {
     max-width: 1440px;
@@ -2910,29 +2920,29 @@ form input[type="submit"] {
 
   .testi_inner_wapper {
     padding: 0px 25px;
-}
+  }
 
-.desti_top_banner img {
-  height: 300px !important; 
-  width: 100%;
-  object-fit: cover;
-}
+  .desti_top_banner img {
+    height: 300px !important;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.desti_top_heading {
-  top: 46%;
- }
+  .desti_top_heading {
+    top: 46%;
+  }
 
- .desti_inner {
-  margin: auto;
-  padding-bottom: 0px;
-}
+  .desti_inner {
+    margin: auto;
+    padding-bottom: 0px;
+  }
 
 
 
-.places-container { 
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 0px 25px;
-}
+  .places-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px 25px;
+  }
 
   .feature-icon img {
     width: 53px;
@@ -2943,7 +2953,7 @@ form input[type="submit"] {
     height: 250px;
     border-radius: 5px;
     width: 100%;
-}
+  }
 
 
 
@@ -2955,10 +2965,10 @@ form input[type="submit"] {
     font-size: 44px;
     line-height: 90px;
     text-transform: capitalize;
-}
+  }
 
 
-  .destinationfilter{
+  .destinationfilter {
     justify-content: flex-start;
   }
 
@@ -2985,7 +2995,7 @@ form input[type="submit"] {
     column-gap: 3%;
     margin-bottom: 60px;
     padding: 0px 25px;
-}
+  }
 
   .call_to_action img {
     height: 230px;
@@ -3112,7 +3122,7 @@ form input[type="submit"] {
     font-size: 30px;
   }
 
-  
+
   .tour_packages_wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -3155,51 +3165,71 @@ form input[type="submit"] {
   .hero_section_outer .hero_section_inner {
     padding-top: 200px;
   }
-  
+
+  .slideform_content_outer {
+    overflow: auto;
+    height: 80vh;
+    padding-left: 15px;
+    width: 100%;
+  }
+
+  .slideform_content_outer::-webkit-scrollbar {
+    opacity: 0;
+  }
+
+  .two_name_email {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-container .contact-info {
+    margin-bottom: 50px;
+  }
 
   form.enquiryForm h4 {
     margin-bottom: 8px;
     margin-top: 0px;
-}
+  }
 
   form.enquiryForm label {
     color: orange;
     font-family: "inter";
     font-size: 18px;
     margin-top: 10px;
-}
+  }
 
 
   form.enquiryForm h4 {
     margin-bottom: 8px;
-}
+  }
 
 
   .both_middle_form {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 15px;
-}
+  }
 
   .places-container {
     grid-template-columns: 1fr 1fr;
     padding: 0px 25px;
     column-gap: 20px;
     row-gap: 20px;
-}
-.place img {
-  max-width: 335px;
-  height: 191px;
-  border-radius: 5px;
-  width: 100%;
-  object-fit: cover;
-}
+  }
+
+  .place img {
+    max-width: 335px;
+    height: 191px;
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+  }
 
 
 
   .footer_i::before {
-      top: 48px;
-}
+    top: 48px;
+  }
 
 
   // homepage responsive **********
@@ -3212,23 +3242,23 @@ form input[type="submit"] {
 
     .footer_i::before {
       content: "";
-       top: 39px;
-  }
+      top: 39px;
+    }
 
 
-    
-  .desti_top_banner img {
-    height: 320px;
-    width: 100%;
-}
 
-.desti_top_heading {
-  position: absolute;
-  top: 52%;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
+    .desti_top_banner img {
+      height: 320px;
+      width: 100%;
+    }
+
+    .desti_top_heading {
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      text-align: center;
+      color: white;
+    }
 
 
     .mobile_close_menu {
@@ -3241,6 +3271,7 @@ form input[type="submit"] {
   .call_to_action {
     margin: 50px 20px auto 20px;
     grid-template-columns: 1fr;
+
     .journy-image-container {
       position: absolute;
       opacity: .07;
@@ -3289,6 +3320,7 @@ form input[type="submit"] {
 
   .form-container {
     right: -140%;
+    width: 90%;
   }
 
 
@@ -3361,17 +3393,29 @@ form input[type="submit"] {
 
 
   .footer_i {
-    display: block;    
-}
+    display: block;
+  }
 
-.top_bar_notifications span {
-  display: none;
-}
+  .top_bar_notifications span {
+    display: none;
+  }
 
 
 }
 
 @media (max-width: 600px) {
+  .top_bar_details_inner_s {
+    padding: 0px 10px;
+
+    .top_bar_mail a {
+      font-size: 10px;
+    }
+
+    ul.social_icons_t {
+      column-gap: 10px;
+    }
+  }
+
   .testimonial {
     flex: 0 0 calc(100% - 20px);
     /* 1 slide for mobile with gap */
@@ -3379,52 +3423,53 @@ form input[type="submit"] {
 
   .popup-wrapper.slide-down {
     padding: 21px 10px 10px 12px;
-}
+  }
 
-.filter_outer_desti {
-  height: 480px;
-overflow: auto;
+  .filter_outer_desti {
+    height: 480px;
+    overflow: auto;
 
-}
+  }
 
   .follow_name {
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 10px;
     align-items: initial;
-}
-.footer_wrapper_second h4 {
+  }
+
+  .footer_wrapper_second h4 {
     font-size: 25px;
     color: #fff;
     margin-bottom: 22px;
-}
+  }
 
 
- 
+
   .desti_top_banner img {
     height: 300px;
     width: 100%;
-}
+  }
 
-.desti_top_heading h1 {
-  font-size: 40px;
-}
+  .desti_top_heading h1 {
+    font-size: 40px;
+  }
 
 
-.desti_top_heading {
-  top: 50%;
-  width: 100%;
-}
+  .desti_top_heading {
+    top: 50%;
+    width: 100%;
+  }
 
-.navbar_c_section span {
-  position: absolute;
-  bottom: -49px;
-  width: 75px;
-  height: 50px;
-  margin-left: -3%;
-  border-bottom-right-radius: 36px;
-  border-bottom-left-radius: 39px;
-}
+  .navbar_c_section span {
+    position: absolute;
+    bottom: -49px;
+    width: 75px;
+    height: 50px;
+    margin-left: -3%;
+    border-bottom-right-radius: 36px;
+    border-bottom-left-radius: 39px;
+  }
 
 
 
@@ -3464,6 +3509,7 @@ overflow: auto;
   .aboutus-features {
     grid-template-columns: 1fr;
   }
+
   .desti_top_heading {
     position: absolute;
     top: 47%;
@@ -3481,7 +3527,7 @@ overflow: auto;
     margin: 0px;
     padding-left: 0px;
     padding-top: 20px;
-}
+  }
 
   .footer_social_icons {
     display: flex;
@@ -3489,27 +3535,29 @@ overflow: auto;
     justify-content: space-between;
     flex-direction: column;
     column-gap: 20px;
-}
+  }
 
-.footer_copywrite_second {
-  margin-top: 15px;
-}
-  
+  .footer_copywrite_second {
+    margin-top: 15px;
+  }
+
   .desti_top_heading h1 {
     font-size: 40px;
   }
+
   .desti_top_banner img {
     height: 300px !important;
     width: 100%;
     object-fit: cover;
-}
-.desti_top_heading {
-  position: absolute;
-  top: 47%;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
+  }
+
+  .desti_top_heading {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
 
 
 }
@@ -3524,9 +3572,9 @@ overflow: auto;
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
- 
-
+  .form-container .tour-types{
+    grid-template-columns: 1fr 1fr;
+  }
   .about_traveller .stat-label {
     font-size: 13px;
     color: #757575;
@@ -3536,36 +3584,22 @@ overflow: auto;
     background: #F4F4F4;
     border: none !important;
     width: 90%;
-}
-
-.detailItem span.text a {
-  font-size: 16px;
-}
-
-.detailItem span.text  {
-  font-size: 16px;
-}
-
-.detailItem {
-  position: relative;
-  width: 84%;
-}
-
-
-}
-
-
-@media (max-width: 600px) {
-  .testimonial {
-    flex: 0 0 calc(100% - 20px); /* 1 slide for mobile with gap */
   }
-  .top_bar_details_inner_s{
-    padding: 0px 10px;
-    .top_bar_mail a{
-      font-size: 10px;
-    }
-    ul.social_icons_t{
-      column-gap: 10px;
-    }
+
+  .detailItem span.text a {
+    font-size: 16px;
   }
+
+  .detailItem span.text {
+    font-size: 16px;
+  }
+
+  .detailItem {
+    position: relative;
+    width: 84%;
+  }
+
+
 }
+
+
