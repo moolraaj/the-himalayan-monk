@@ -12,7 +12,6 @@ function PopupWrapper({setIsShow}) {
             <button className="close_button" onClick={closePopup}>x</button>
                 <div className="book-popupo-inner">
                     <div className="book-form-wrapper">
-
                     <BookNowForm />
                     </div>
                 </div>
