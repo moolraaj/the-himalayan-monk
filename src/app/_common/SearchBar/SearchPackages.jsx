@@ -1,17 +1,24 @@
-import { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { clear_search, searchbar_icon } from '@/app/assets/images';
 
-function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
+function SearchPackages({ closeSearch, isSearchVisible }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [filteredDestinations, setFilteredDestinations] = useState([]);
+  const [filteredActivities, setFiltereActivities] = useState([]);
   const [allPackages, setAllPackages] = useState([]);
   const [allDestinations, setAllDestinations] = useState([]);
   const [allActivities, setAllActivities] = useState([]);
-  const [showSearchResults, setShowSearchResults] = useState(false);
-  
+
   const api = ExportAllApis();
+
+
+
+
 
   const fetchAllPackages = async () => {
     try {
@@ -22,7 +29,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     }
   };
 
-  const fetchAllDestinations = async () => {
+  const loadAllDestinations = async () => {
     try {
       const resp = await api.fetchAlldestinations();
       setAllDestinations(resp.data);
@@ -31,49 +38,47 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     }
   };
 
-  const fetchAllActivities = async () => {
+  const loadAllActivities = async () => {
     try {
       const resp = await api.fetchAllActivities();
       setAllActivities(resp.data);
     } catch (error) {
-      console.error('Error fetching all activities:', error);
+      console.error('Error fetching all destinations:', error);
     }
   };
 
   useEffect(() => {
     fetchAllPackages();
-    fetchAllDestinations();
-    fetchAllActivities();
+    loadAllDestinations();
+    loadAllActivities()
   }, []);
 
   useEffect(() => {
     const fetchSearchResults = () => {
       if (searchTerm.trim() === '') {
         setSearchResults([]);
-        setShowSearchResults(false);
+        setFilteredDestinations([]);
+        setFiltereActivities([])
+
       } else {
-        const normalizedSearchTerm = searchTerm.toLowerCase();
+        const filteredPackageResults = allPackages.filter((pkg) => {
+          const packageName = pkg.package_name ? pkg.package_name.toLowerCase() : '';
+          return packageName.includes(searchTerm.toLowerCase());
+        });
+        setSearchResults(filteredPackageResults);
 
-        const tourResults = allPackages.filter(pkg =>
-          pkg.package_name.toLowerCase().includes(normalizedSearchTerm)
-        ).map(pkg => ({ ...pkg, type: 'Tour' }));
+        const filteredDestinationResults = allDestinations.filter((dest) => {
+          const destinationName = dest.name ? dest.name.toLowerCase() : '';
+          return destinationName.includes(searchTerm.toLowerCase());
+        });
+        setFilteredDestinations(filteredDestinationResults);
 
-        const destinationResults = allDestinations.filter(destination =>
-          destination.name.toLowerCase().includes(normalizedSearchTerm)
-        ).map(destination => ({ ...destination, type: 'Destination' }));
 
-        const activityResults = allActivities.filter(activity =>
-          activity.package_name.toLowerCase().includes(normalizedSearchTerm)
-        ).map(activity => ({ ...activity, type: 'Activity' }));
-
-        const results = [
-          ...tourResults,
-          ...destinationResults,
-          ...activityResults
-        ];
-
-        setSearchResults(results);
-        setShowSearchResults(true);
+        const filteredActivitiesResults = allActivities.filter((act) => {
+          const activitiesName = act.package_name ? act.package_name.toLowerCase() : '';
+          return activitiesName.includes(searchTerm.toLowerCase());
+        });
+        setFiltereActivities(filteredActivitiesResults);
       }
     };
 
@@ -84,14 +89,8 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     setSearchTerm(e.target.value);
   };
 
-  const clearSearch = () => {
+  const handleClearSearch = () => {
     setSearchTerm('');
-    setSearchResults([]);
-    setShowSearchResults(false);
-  };
-
-  const closePopUp = () => {
-    setIsSearchVisible(false);
   };
 
   return (
@@ -99,7 +98,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
       <div className="search-content">
         <button className="close-search" onClick={closeSearch}>x</button>
         <div className="search-bar">
-          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ width: '16px', height: '16px' }} />
+          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ cursor: 'pointer' }} />
           <input
             type="text"
             placeholder="Search Your Destination"
@@ -107,35 +106,28 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
             onChange={handleInputChange}
           />
           {searchTerm.trim() !== '' && (
-            <img onClick={clearSearch} src={clear_search.src} alt="clear" style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
+            <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{ cursor: 'pointer' }} />
           )}
         </div>
 
-        {showSearchResults && (
+        {(searchResults.length > 0 || filteredDestinations.length > 0 || filteredActivities.length > 0) && (
           <div className="search-results">
-            {searchResults.length > 0 ? (
-              searchResults.map(result => (
-                <div key={result.id}>
-                  {result.type === 'Tour' && (
-                    <Link href={`/tours/${result.id}/${result.key}`} onClick={closePopUp}>
-                      <h1>{result.package_name}</h1>
-                    </Link>
-                  )}
-                  {result.type === 'Destination' && (
-                    <Link href={`/destinations/${result.city_id}`} onClick={closePopUp}>
-                      <h1>{result.name}</h1>
-                    </Link>
-                  )}
-                  {result.type === 'Activity' && (
-                    <Link href={`/activities/${result.id}`} onClick={closePopUp}>
-                      <h1>{result.package_name}</h1>
-                    </Link>
-                  )}
-                </div>
-              ))
-            ) : (
-              <p>No results found.</p>
-            )}
+            {searchResults.map((ele, index) => (
+              <Link href={`/tour/${ele.id}`} key={index}>
+                <h1>{ele.package_name}</h1>
+              </Link>
+            ))}
+
+            {filteredDestinations.map((ele, index) => (
+              <Link href={`/destinations/${ele.city_id}`} key={index}>
+                <h1>{ele.name}</h1>
+              </Link>
+            ))}
+            {filteredActivities.map((ele, index) => (
+              <Link href={`/activities/${ele.id}`} key={index}>
+                <h1>{ele.package_name}</h1>
+              </Link>
+            ))}
           </div>
         )}
       </div>
