@@ -79,6 +79,7 @@ a {
     opacity: 0;
     transform: translateY(-100%);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -95,20 +96,24 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
+
 .book_now_form_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
-  h1{
+
+  h1 {
     font-size: 50px;
   }
+
   img {
     width: 70px;
     height: 40px;
+  }
 }
-}
-.book-popupo-inner{
+
+.book-popupo-inner {
   padding: 0px 20px;
 }
 
@@ -116,6 +121,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .book_fields_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -134,28 +140,32 @@ a {
 }
 
 .book-form_fields input {
-  background-color:#ccc ;
+  background-color: #ccc;
   padding: 20px;
   border: none;
   border-radius: 5px;
 }
+
 .book-form_fields input::placeholder {
   color: white;
 }
+
 .book-form_message_filed {
   display: flex;
   flex-direction: column;
-  label{
+
+  label {
     font-weight: bold;
     margin-bottom: 5px;
   }
-  input{
+
+  input {
     background-color: #ccc;
     padding: 20px;
     border: none;
     border-radius: 5px;
     display: inline;
-}
+  }
 }
 
 
@@ -177,14 +187,17 @@ a {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  img{
+
+  img {
     width: 30px;
     height: 30px;
   }
 }
-.book-form_button button:hover> img{
+
+.book-form_button button:hover>img {
   filter: invert(1);
 }
+
 .book-form_button button:hover {
   background-color: #e67e00;
 }
@@ -288,18 +301,18 @@ body {
   }
 
 
- 
 
-.home_section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
+  .home_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   .hero_section_inner {
     @extend %inner-section_max_width;
@@ -2277,6 +2290,24 @@ span.discounted-price b {
   }
 }
 
+
+.banner_section{
+  position: relative;
+}
+.activity_page_banner_heading{
+  position: absolute;
+  top: 57%;
+  width: 100%;
+  text-align: center;
+  color: $white;
+  h1{
+    font-size: $top_heading_desktop_h1;
+    margin: 0;
+  }
+  
+}
+
+
 .banner_section,
 .activity_inner_page_banner {
   margin-top: 100px;
@@ -3265,7 +3296,9 @@ form input[type="submit"] {
 
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
-
+  .activity_page_banner_heading h1{
+    font-size: 40px;
+  }
   .testimonials-container {
     width: 100%;
     max-width: 100%;
@@ -3306,7 +3339,7 @@ form input[type="submit"] {
   }
 
   .hero_section_outer .hero_section_inner .hero_wrapper {
-    grid-template-columns: 65% 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
@@ -3435,10 +3468,11 @@ form input[type="submit"] {
     flex: 0 0 calc(50% - 20px);
     /* 2 slides for tablets with gap */
   }
-  .filter-destination-wrapper{
+
+  .filter-destination-wrapper {
     max-width: 130px;
   }
-  
+
   .popup-wrapper.slide-down {
     ul {
       column-gap: 10px;
@@ -3468,9 +3502,57 @@ form input[type="submit"] {
   // homepage responsive end **********
 }
 
+.tourlist_inner,
+.tour_packages_wrapper,
+.activities_new .tabs-container,
+.aboutus-content{
+  position: relative;
+}
+
+.tourlist_inner::before,
+.tour_packages_wrapper::before,
+.activities_new .tabs-container::before,
+.aboutus-content::before{
+  font-size: 30px;
+  position: absolute;
+  left: -50px;
+  bottom: 50px;
+  writing-mode: tb;
+  transform: rotate(180deg);
+  font-family: $satisfy;
+  color: $light_red;
+}
+
+.tourlist_inner::before {
+  content: "Trendy Travel Destinations";
+
+}
+
+.tour_packages_wrapper::before{
+  content: " Tour Packages";
+}
+
+.activities_new .tabs-container::before{
+  content: "Explore Your Activities";
+}
+
+.aboutus-content::before{
+content: "About Us";
+}
 
 @media only screen and (max-width:768px) {
 
+  .tourlist_inner::before,
+  .tour_packages_wrapper::before,
+  .activities_new .tabs-container::before,
+  .aboutus-content::before{
+    font-size: 20px;
+    position: relative;
+    left: 0px;
+    top: -20px;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+  }
 
   // destination inner page responsive ***************
   .slider_plus_details .slick-slider.slick-initialized {
@@ -3792,20 +3874,28 @@ form input[type="submit"] {
 }
 
 @media (max-width: 600px) {
+  .hero_section_outer .hero_right_section {
+    display: none;
+  }
+
   .all_tour_packages .tour-packages {
     grid-template-columns: repeat(2, 1fr);
   }
-  .book_now_form_header h1{
+
+  .book_now_form_header h1 {
     font-size: 30px;
   }
-  .book_fields_wrapper{
+
+  .book_fields_wrapper {
     grid-template-columns: 1fr;
   }
-  .book_now_form{
+
+  .book_now_form {
     padding: 0px 0px 30px;
     overflow: auto;
     height: 90vh;
   }
+
   .top_bar_details_inner_s {
     padding: 0px 10px;
 
@@ -3832,9 +3922,11 @@ form input[type="submit"] {
     overflow: auto;
     width: 92%;
   }
-  .filter_outer_desti::-webkit-scrollbar{
+
+  .filter_outer_desti::-webkit-scrollbar {
     opacity: 0;
   }
+
   .follow_name {
     display: grid;
     grid-template-columns: 1fr;

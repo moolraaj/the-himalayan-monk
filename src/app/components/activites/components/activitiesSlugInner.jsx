@@ -33,8 +33,6 @@ async function ActivitiesPackages({ id }) {
         <ActivityLocation id={id} />
       </div>
       <div className="container all_tour_packages">
-
-
         <h2 className="title">All Tour Packages</h2>
         <div className="tour-packages">
           {result?.map((tour) => (
