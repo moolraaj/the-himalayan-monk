@@ -40,7 +40,8 @@ import section_second_bg from '../assets/homepageAssets/section_second_bg.png';
 import section_fourth_bg from '../assets/homepageAssets/section_fourth_bg.png';
 import section_fifth_bg from '../assets/homepageAssets/section_fifth_bg.png';
 import section_sixth_bg from '../assets/homepageAssets/section_sixth_bg.png';
-import closeForm from '../assets/homepageAssets/close_form.png'
+import closeForm from '../assets/homepageAssets/close_form.png';
+import save_price from '../assets/homepageAssets/save_price.png'
   
 
 export {
@@ -87,5 +88,6 @@ export {
     section_fifth_bg,
     section_sixth_bg,
     closeForm,
+    save_price,
     
   };

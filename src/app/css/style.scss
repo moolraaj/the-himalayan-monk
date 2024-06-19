@@ -3113,7 +3113,25 @@ span.name_location h4 {
   color: black;
 }
 
-
+.ways_travel_image{
+  position: relative;
+  .save_value {
+    position: absolute;
+    background: $dark_yellow;
+    color: $white;
+    top: 30px;
+    display: flex;
+    padding: 5px 10px;
+    justify-content: space-between;
+    gap: 7px;
+    border-radius: 0px 5px 5px 0px;
+   img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+  }
+}
+}
 
 .form-container {
   position: fixed;

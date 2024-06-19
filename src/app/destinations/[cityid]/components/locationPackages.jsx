@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import airplane from '../../../assets/homepageAssets/airplane.gif';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
+import { save_price } from '@/app/assets/images';
 
 
 
@@ -35,8 +36,14 @@ function TourPackages({ id }) {
 
           <div key={tour.id} className="tour-package">
             <Link href={`/destinations/${id}/${tour.id}/${tour.key}`}>
-              <div className="tour-image">
-                <img src={tour.pdf_image} alt='tour-image' />
+              <div className="ways_travel_image">
+                <div className="save_value">
+                  <img src={save_price.src} alt={save_price.src} />
+                  <p> save INR  {tour.starting_cost}</p>
+                </div>
+                <div className="tour-image">
+                  <img src={tour.pdf_image} alt='tour-image' />
+                </div>
               </div>
               <div className="tour-content">
                 <div className="tour-details">
@@ -62,7 +69,7 @@ function TourPackages({ id }) {
         ))}
       </div>
     </div>
- 
+
   );
 };
 
