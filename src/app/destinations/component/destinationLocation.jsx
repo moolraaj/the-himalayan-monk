@@ -32,9 +32,7 @@ function DPlaces() {
   return (
     <>
       <div className="places-container">
-        {loading ? (
-          <EmptyComponent />
-        ) : (
+        {
           result.map((place, index) => (
             <Link href={`/destinations/${place.city_id}`} key={index}>
               <div className="place">
@@ -47,29 +45,10 @@ function DPlaces() {
               </div>
             </Link>
           ))
-        )}
+        }
       </div>
       <Paginations page={page} totalItems={totalItems} setPage={setPage} />
     </>
-  );
-}
-
-function EmptyComponent() {
-  return (
-    <div className="places-container">
-      {Array(ALL_DESTINATIONS_PER_PAGE).fill().map((_, index) => (
-        <div className="place empty" key={index}>
-          <div style={{maxWidth: '100%',width: '335px',height: '350px',borderRadius: "5px",background: '#ccc'}}>
-            
-          </div>
-          <div className="place-info">
-            <span className="name_location">
-              <h3>Loading...</h3>
-            </span>
-          </div>
-        </div>
-      ))}
-    </div>
   );
 }
 
