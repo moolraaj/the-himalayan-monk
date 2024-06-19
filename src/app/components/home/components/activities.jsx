@@ -120,7 +120,7 @@ const Tabs = () => {
               <button>Check Availability</button>
             </div>
             <div className="images">
-              {Object.values(activities[activeTab].tab_activity_images).map((imgSrc, index) => (
+              {Object.values(activities[activeTab].tab_activity_images).map((imgSrc, index)  => (
                 <img key={index} src={imgSrc} alt={`Additional ${activities[activeTab].name} ${index + 1}`} />
               ))}
             </div>
