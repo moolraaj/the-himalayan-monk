@@ -1393,6 +1393,7 @@ button.call_a_button {
   font-size: 18px;
   font-weight: bold;
   font-family: $inter;
+  margin-top: 30px;
 }
 
 // Search packages section end***************
@@ -3601,6 +3602,10 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
+  .search-button{
+    font-size: 16px;
+    margin-top: 20px;
+  }
   .book_now_form_header img {
     width: 55px;
     height: 35px;
