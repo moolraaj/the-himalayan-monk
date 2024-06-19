@@ -105,11 +105,12 @@ a {
 
   h1 {
     font-size: 50px;
+    font-family: $josifin;
   }
 
   img {
-    width: 70px;
-    height: 40px;
+    width: 80px;
+    height: 50px;
   }
 }
 
@@ -125,7 +126,8 @@ a {
 .book_fields_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  column-gap: 50px;
+  row-gap: 10px;
 }
 
 .book-form_fields {
@@ -140,7 +142,7 @@ a {
 }
 
 .book-form_fields input {
-  background-color: #ccc;
+  background-color: #F4F4F4;
   padding: 20px;
   border: none;
   border-radius: 5px;
@@ -153,6 +155,7 @@ a {
 .book-form_message_filed {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
 
   label {
     font-weight: bold;
@@ -160,7 +163,7 @@ a {
   }
 
   input {
-    background-color: #ccc;
+    background-color: #F4F4F4;
     padding: 20px;
     border: none;
     border-radius: 5px;
@@ -1297,9 +1300,11 @@ button.call_a_button {
   border-radius: 5px 0 0 5px;
   font-size: 20px;
 }
-.search-bar input::placeholder{
+
+.search-bar input::placeholder {
   font-size: 16px;
 }
+
 .search-bar input:focus {
   border: none;
   outline: none;
@@ -1328,7 +1333,8 @@ button.call_a_button {
   cursor: pointer;
 
 }
-.package-button{
+
+.package-button {
   padding: 15px 40px;
   border-radius: 30px;
   border: 1px solid $dark_yellow;
@@ -1336,26 +1342,31 @@ button.call_a_button {
   font-weight: 500;
   font-family: $inter;
 }
+
 .package-button.active {
   background: $dark_yellow;
   color: $white;
 }
-.price-input{
+
+.price-input {
   border: 1px solid $dark_yellow;
   border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  label {
     background-color: #f8af5c8f;
     padding: 10px;
   }
-  input{
+
+  input {
     border: none;
     padding: 10px;
   }
 }
-.price-input input:focus{
+
+.price-input input:focus {
   border: none;
   outline: none;
 }
@@ -2322,20 +2333,22 @@ span.discounted-price b {
 }
 
 
-.banner_section{
+.banner_section {
   position: relative;
 }
-.activity_page_banner_heading{
+
+.activity_page_banner_heading {
   position: absolute;
   top: 57%;
   width: 100%;
   text-align: center;
   color: $white;
-  h1{
+
+  h1 {
     font-size: $top_heading_desktop_h1;
     margin: 0;
   }
-  
+
 }
 
 
@@ -3327,9 +3340,14 @@ form input[type="submit"] {
 
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
-  .activity_page_banner_heading h1{
+  .book_now_form {
+    padding: 50px 0px;
+  }
+
+  .activity_page_banner_heading h1 {
     font-size: 40px;
   }
+
   .testimonials-container {
     width: 100%;
     max-width: 100%;
@@ -3536,14 +3554,14 @@ form input[type="submit"] {
 .tourlist_inner,
 .tour_packages_wrapper,
 .activities_new .tabs-container,
-.aboutus-content{
+.aboutus-content {
   position: relative;
 }
 
 .tourlist_inner::before,
 .tour_packages_wrapper::before,
 .activities_new .tabs-container::before,
-.aboutus-content::before{
+.aboutus-content::before {
   font-size: 30px;
   position: absolute;
   left: -50px;
@@ -3559,26 +3577,42 @@ form input[type="submit"] {
 
 }
 
-.tour_packages_wrapper::before{
+.tour_packages_wrapper::before {
   content: " Tour Packages";
 }
 
-.activities_new .tabs-container::before{
+.activities_new .tabs-container::before {
   content: "Explore Your Activities";
 }
 
-.aboutus-content::before{
-content: "About Us";
+.aboutus-content::before {
+  content: "About Us";
 }
 
 @media only screen and (max-width:768px) {
-  .search-container{
+  .book_now_form_header img {
+    width: 55px;
+    height: 35px;
+  }
+
+  .book_fields_wrapper {
+    row-gap: 0;
+  }
+
+  .book-form_message_filed {
+    margin: 0;
+  }
+  .book-form_fields input{
+    padding: 12px;
+  }
+  .search-container {
     width: 90%;
   }
+
   .tourlist_inner::before,
   .tour_packages_wrapper::before,
   .activities_new .tabs-container::before,
-  .aboutus-content::before{
+  .aboutus-content::before {
     font-size: 20px;
     position: relative;
     left: 0px;
