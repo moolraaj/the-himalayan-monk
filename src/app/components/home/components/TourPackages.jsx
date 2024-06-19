@@ -1,10 +1,10 @@
+
 'use client'
 import React, { useEffect, useState } from 'react';
 import { airplane, speedometer, location } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-
 import PopupWrapper from '../../book-now/popupWrapper';
 
 function TourPackages() {
@@ -13,15 +13,16 @@ function TourPackages() {
 
   let [result, setResult] = useState([]);
   let [isShow, setIsShow] = useState(false);
+  let [loading, setLoading] = useState(true);
 
   const popupAForm = () => {
     setIsShow(true);
   };
 
-
   const loadAllTourPackages = async () => {
     let resp = await api.fetchTourPackages();
     setResult(resp.data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -30,11 +31,12 @@ function TourPackages() {
 
   return (
     <>
-      <PopupWrapper setIsShow={setIsShow} isShow={isShow}/>
+      <PopupWrapper setIsShow={setIsShow} isShow={isShow} />
 
       <div className="TourPackages_outer_section">
         <div className="TourPackages_inner">
-          <div className="tour_packages_wrapper">
+          <div className={`tour_packages_wrapper ${loading ? 'loading' : ''}`}>
+            {loading && <EmptyComponent />}
             {result?.slice(0, 6).map((ele) => (
               <div className="tour_package" key={ele.id}>
                 <Link href={`/tours/${ele.id}/${ele.key}`}>
@@ -61,23 +63,17 @@ function TourPackages() {
                             {ele.days}days / {ele.night}nights
                           </span>
                         </div>
-                      
                       </div>
-                     
                       <div className="tour_price_book_section">
                         <span className='price_tour'><p>Price</p>₹{ele.starting_cost}</span>
-                        
                       </div>
-                      
                     </div>
-                   
                   </div>
                 </Link>
                 <button className="book_button" onClick={popupAForm}>
                   Book a Trip
                   <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} />
                 </button>
-                
               </div>
             ))}
           </div>
@@ -86,6 +82,32 @@ function TourPackages() {
           </div>
         </div>
       </div>
+    </>
+  );
+}
+
+function EmptyComponent() {
+  return (
+    <>
+      {Array(6).fill().map((_, index) => (
+        <div className="tour_package empty" key={index}>
+          <div className="tour_package_inner">
+            <div className="tour_img_wrapper">
+              <div className="tour_badge">Loading...</div>
+            </div>
+            <div className="tour_package_info">
+              <h2>Loading...</h2>
+              <span>
+                <p className="tour_location">Loading...</p>
+              </span>
+            </div>
+            
+          </div>
+          <button className="book_button">
+                loading...
+                </button>
+        </div>
+      ))}
     </>
   );
 }

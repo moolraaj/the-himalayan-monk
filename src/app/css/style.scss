@@ -53,11 +53,44 @@ a {
 }
 
 
+// not found 404 page *********
+.page_top {
+  max-width: 1520px;
+  margin: auto;
+  padding: 120px 20px 50px;
+}
 
+.not_found_banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  color: $white;
+
+  a {
+    color: $white;
+
+  }
+
+  img {
+    width: 100%;
+    height: 400px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
+// not found 404 page end
 
 
 // book now popup form*********
-
 
 .book-popup-outer {
   position: fixed;
@@ -1264,19 +1297,20 @@ button.call_a_button {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 25px 50px;
+  
+  
+ 
   display: none;
-  z-index: 1000;
-  max-width: 700px;
-  width: 100%;
-  max-height: 700px;
+ 
 }
 
 .search-container.show {
   display: block;
   overflow: auto;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  background: #000000bd;
 }
 
 .search-content {
@@ -1284,14 +1318,24 @@ button.call_a_button {
   flex-direction: column;
   align-items: flex-start;
   text-transform: capitalize;
+  max-width: 900px;
+  margin: auto;
+  padding: 36px;
+  background: #fff;
+  margin-top:188px;
+  border-radius: 12px;
 }
 
 .close-search {
   align-self: flex-end;
   background: none;
   border: none;
-  font-size: 20px;
+  font-size: 40px;
   cursor: pointer;
+  color: #D65228;
+  font-weight: bold;
+  margin-bottom: 22px;
+
 }
 
 .search-bar {
@@ -1303,9 +1347,31 @@ button.call_a_button {
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1490196078);
   width: 95%;
 }
-
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+.search-result {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.search-wrapper h1 {
+  margin: 0px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: "josefin";
+  color: #D65228;
+}
+.search-result a {
+  font-size: 20px;
+  font-family: 'rubik';
+  text-transform: capitalize;
+}
 .search-bar input {
-  width: 200px;
+  width: 100%;
   padding: 10px;
   border: none;
   border-radius: 5px 0 0 5px;
@@ -3574,9 +3640,10 @@ form input[type="submit"] {
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
-  .activities_new .tab-content{
+  .activities_new .tab-content {
     grid-template-columns: 1fr;
   }
+
   .tourlist_inner::before,
   .tour_packages_wrapper::before,
   .activities_new .tabs-container::before,
@@ -4152,9 +4219,11 @@ form input[type="submit"] {
     margin: 0;
     padding: 0;
   }
-  .activities_new .tab-content{
+
+  .activities_new .tab-content {
     grid-template-columns: 1fr;
   }
+
   .aboutus-features,
   .all_tour_packages .tour-packages {
     grid-template-columns: 1fr;

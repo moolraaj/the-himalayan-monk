@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { clear_search, searchbar_icon } from '@/app/assets/images';
 
-function SearchPackages({ closeSearch, isSearchVisible }) {
+function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [filteredDestinations, setFilteredDestinations] = useState([]);
@@ -93,6 +93,10 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
     setSearchTerm('');
   };
 
+  const closeSearchPopup = () => {
+    setIsSearchVisible(false)
+  }
+
   return (
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
       <div className="search-content">
@@ -111,23 +115,44 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
         </div>
 
         {(searchResults.length > 0 || filteredDestinations.length > 0 || filteredActivities.length > 0) && (
-          <div className="search-results">
-            {searchResults.map((ele, index) => (
-              <Link href={`/tour/${ele.id}`} key={index}>
-                <h1>{ele.package_name}</h1>
-              </Link>
-            ))}
 
-            {filteredDestinations.map((ele, index) => (
-              <Link href={`/destinations/${ele.city_id}`} key={index}>
-                <h1>{ele.name}</h1>
-              </Link>
-            ))}
-            {filteredActivities.map((ele, index) => (
-              <Link href={`/activities/${ele.id}`} key={index}>
-                <h1>{ele.package_name}</h1>
-              </Link>
-            ))}
+          <div className="search-results">
+
+            <div className="search-wrapper">
+              <h1>tours</h1>
+              <div className="search-result">
+              {searchResults.map((ele, index) => (
+                <Link href={`/tours/${ele.id}/${ele.key}`} key={index} onClick={closeSearchPopup}>
+                  {ele.package_name}
+                </Link>
+              ))}
+              </div>
+            </div>
+
+
+            <div className="search-wrapper">
+              <h1>destinations</h1>
+              <div className="search-result">
+              {filteredDestinations.map((ele, index) => (
+                <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
+                  {ele.name}
+                </Link>
+              ))}
+              </div>
+            </div>
+
+
+            <div className="search-wrapper">
+              <h1>activities</h1>
+              <div className="search-result">
+              {filteredActivities.map((ele, index) => (
+                <Link href={`/activites/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
+                  {ele.package_name}
+                </Link>
+              ))}
+              </div>
+            </div>
+
           </div>
         )}
       </div>
