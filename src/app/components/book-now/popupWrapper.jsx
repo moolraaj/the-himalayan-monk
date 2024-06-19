@@ -16,6 +16,7 @@ function PopupWrapper({ isShow, setIsShow }) {
                         <img className="close_button" onClick={closePopup} src={closeForm.src} alt={closeForm.src} />
                     </div>
                     <div className="book-popupo-inner">
+                    <h2>Make an enquiry</h2>
                             <BookNowForm />
                     </div>
                 </div>

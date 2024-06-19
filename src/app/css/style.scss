@@ -111,7 +111,13 @@ a {
   img {
     width: 80px;
     height: 50px;
+    cursor: pointer;
   }
+}
+.book_now_form h2 {
+  font-size: 30px;
+  margin: 0px 0px 40px;
+  color: $dark_yellow;
 }
 
 .book-popupo-inner {
@@ -139,6 +145,7 @@ a {
 .book-form_fields label {
   font-weight: bold;
   margin-bottom: 5px;
+  font-family: $josifin;
 }
 
 .book-form_fields input {
@@ -147,7 +154,11 @@ a {
   border: none;
   border-radius: 5px;
 }
-
+.book-form_fields input:focus,
+.book-form_message_filed input:focus{
+  border: none;
+  outline: none;
+}
 .book-form_fields input::placeholder {
   color: white;
 }
@@ -3594,7 +3605,10 @@ form input[type="submit"] {
     width: 55px;
     height: 35px;
   }
-
+  .book_now_form h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
   .book_fields_wrapper {
     row-gap: 0;
   }
