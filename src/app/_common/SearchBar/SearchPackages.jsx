@@ -272,15 +272,17 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   useEffect(() => {
     const handleTyping = () => {
       const currentWord = words[currentWordIndex];
-      setCurrentText((prev) =>
-        isDeleting ? currentWord.substring(0, prev.length - 1) : currentWord.substring(0, prev.length + 1)
-      );
+      const updatedText = isDeleting
+        ? currentWord.substring(0, currentText.length - 1)
+        : currentWord.substring(0, currentText.length + 1);
 
-      if (!isDeleting && currentText === currentWord) {
+      setCurrentText(updatedText);
+
+      if (!isDeleting && updatedText === currentWord) {
         setTimeout(() => setIsDeleting(true), 1000);
-      } else if (isDeleting && currentText === '') {
+      } else if (isDeleting && updatedText === '') {
         setIsDeleting(false);
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
       }
 
       setTypingSpeed(isDeleting ? 50 : 150);
