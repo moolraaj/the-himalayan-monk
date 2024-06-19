@@ -140,7 +140,7 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
       <div className="search-content">
         <button className="close-search" onClick={closeSearch}>x</button>
         <div className="search-bar">
-          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ width: '16px', height: '16px' }} />
+          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{cursor: 'pointer' }}/>
           <input
             type="text"
             placeholder="Search Your Destination"
@@ -148,7 +148,7 @@ function SearchPackages({ closeSearch, isSearchVisible }) {
             onChange={handleInputChange}
           />
           {searchTerm.trim() !== '' && (
-            <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{ width: '16px', height: '16px', cursor: 'pointer' }} />
+            <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{cursor: 'pointer' }} />
           )}
         </div>
         <h2 className="title">Packages Type</h2>

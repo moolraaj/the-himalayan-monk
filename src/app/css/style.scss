@@ -53,11 +53,45 @@ a {
 }
 
 
+// not found 404 page *********
+.page_top {
+  max-width: 1520px;
+  margin: auto;
+  padding: 120px 20px 50px;
+}
+
+.not_found_banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  color: $white;
+
+  a {
+    color: $white;
+
+  }
+
+  img {
+    width: 100%;
+    height: 400px;
+  }
+
+  h1 {
+    position: absolute;
+    top: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+  }
+}
+
+// not found 404 page end
 
 
 
 // book now popup form*********
-
 
 .book-popup-outer {
   position: fixed;
@@ -3574,9 +3608,10 @@ form input[type="submit"] {
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
-  .activities_new .tab-content{
+  .activities_new .tab-content {
     grid-template-columns: 1fr;
   }
+
   .tourlist_inner::before,
   .tour_packages_wrapper::before,
   .activities_new .tabs-container::before,
@@ -4152,9 +4187,11 @@ form input[type="submit"] {
     margin: 0;
     padding: 0;
   }
-  .activities_new .tab-content{
+
+  .activities_new .tab-content {
     grid-template-columns: 1fr;
   }
+
   .aboutus-features,
   .all_tour_packages .tour-packages {
     grid-template-columns: 1fr;
