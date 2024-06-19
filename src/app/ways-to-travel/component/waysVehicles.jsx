@@ -1,10 +1,18 @@
+'use client'
 import { airplane, save_price } from '@/app/assets/images'
-import Link from 'next/link'
-import React from 'react'
+import PopupWrapper from '@/app/components/book-now/popupWrapper';
+ 
+import React, { useState } from 'react'
 
 function WaysVehicles({ vehicles }) {
+    let [isShow, setIsShow] = useState(false);  
+
+    const popupTourBook=()=>{
+        setIsShow(true)
+    }
     return (
         <>
+        <PopupWrapper isShow={isShow} setIsShow={setIsShow}/>   
             <div className="vehicles_outer">
                 <div className="vehicles_inner">
                     <div className="container all_tour_packages">
@@ -43,7 +51,7 @@ function WaysVehicles({ vehicles }) {
                                                     <span className="price">Rs {ele.starting_cost}</span>
                                                     <span className="price-details">INR - ${ele.starting_cost} Per Person</span>
                                                 </div>
-                                                <button className="book-button">Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
+                                                <button className="book-button" onClick={popupTourBook}>Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
                                             </div>
                                         </div>
                                     </div>
