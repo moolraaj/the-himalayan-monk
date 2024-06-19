@@ -1252,21 +1252,24 @@ button.call_a_button {
   background: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 25px 50px;
   display: none;
   z-index: 1000;
+  max-width: 700px;
+  width: 100%;
+  max-height: 700px;
 }
 
 .search-container.show {
   display: block;
-  height: 80%;
   overflow: auto;
 }
 
 .search-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-transform: capitalize;
 }
 
 .close-search {
@@ -1284,6 +1287,7 @@ button.call_a_button {
   padding: 6px 20px;
   border-radius: 30px;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1490196078);
+  width: 95%;
 }
 
 .search-bar input {
@@ -1291,26 +1295,23 @@ button.call_a_button {
   padding: 10px;
   border: none;
   border-radius: 5px 0 0 5px;
+  font-size: 20px;
 }
-
+.search-bar input::placeholder{
+  font-size: 16px;
+}
 .search-bar input:focus {
   border: none;
   outline: none;
 }
 
-.search-bar button {
-  background: none;
-  border: none;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-}
+
 
 .title {
-  font-size: 18px;
-  margin: 20px 0 10px;
+  font-size: 20px;
+  margin: 20px 0 20px;
+  font-family: $rubik;
+  color: $light_red;
 }
 
 .package-types,
@@ -1318,28 +1319,58 @@ button.call_a_button {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .package-button,
 .price-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   cursor: pointer;
-}
 
+}
+.package-button{
+  padding: 15px 40px;
+  border-radius: 30px;
+  border: 1px solid $dark_yellow;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: $inter;
+}
 .package-button.active {
-  background: orange;
-  color: white;
+  background: $dark_yellow;
+  color: $white;
+}
+.price-input{
+  border: 1px solid $dark_yellow;
+  border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  label{
+    background-color: #f8af5c8f;
+    padding: 10px;
+  }
+  input{
+    border: none;
+    padding: 10px;
+  }
+}
+.price-input input:focus{
+  border: none;
+  outline: none;
 }
 
 .search-button {
-  padding: 10px 20px;
-  background: orange;
-  color: white;
+  padding: 15px 20px;
+  background: $dark_yellow;
+  color: $white;
   border: none;
-  border-radius: 5px;
+  border-radius: 24px;
   cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $inter;
 }
 
 // Search packages section end***************
@@ -3541,7 +3572,9 @@ content: "About Us";
 }
 
 @media only screen and (max-width:768px) {
-
+  .search-container{
+    width: 90%;
+  }
   .tourlist_inner::before,
   .tour_packages_wrapper::before,
   .activities_new .tabs-container::before,
