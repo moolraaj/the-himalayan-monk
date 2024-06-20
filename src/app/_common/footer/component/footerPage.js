@@ -16,7 +16,7 @@ function FooterPage() {
 
     const loadAlldestinations = async () => {
         let resp = await api.fetchAlldestinations()
-        setResult(resp.data)
+        setResult(resp?.data || [])
     }
     useEffect(() => {
         loadAlldestinations()

@@ -27,7 +27,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
 
   let loadAllDestinations = async () => {
     let resp = await api.fetchAlldestinations()
-    setResult(resp.data)
+    setResult(resp?.data || [])
   }
 
   useEffect(() => {
