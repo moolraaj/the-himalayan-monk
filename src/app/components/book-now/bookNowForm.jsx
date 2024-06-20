@@ -114,7 +114,7 @@ function BookNowForm() {
         </div>
 
         <div className="book-form_button">
-          <button onClick={submitUserQuery}>Book Now <span><img src={airplane.src} alt={airplane.src} /></span></button>
+          <button onClick={submitUserQuery}><span>Book Now </span><span><img src={airplane.src} alt={airplane.src} /></span></button>
         </div>
       </div>
     </>
