@@ -7,20 +7,22 @@ import { useRouter } from 'next/navigation';
 import PopupWrapper from '../../book-now/popupWrapper';
 
 function TourPackages() {
-  let router = useRouter();
-  let api = ExportAllApis();
+  const router = useRouter();
+  const api = ExportAllApis();
 
-  let [result, setResult] = useState([]);
-  let [isShow, setIsShow] = useState(false);
-  let [loading, setLoading] = useState(true);
+  const [result, setResult] = useState([]);
+  const [isShow, setIsShow] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const popupAForm = () => {
+  const popupAForm = (event) => {
+    event.preventDefault(); // Prevent default behavior
+    event.stopPropagation(); // Stop event from propagating to the Link
     setIsShow(true);
   };
 
   const loadAllTourPackages = async () => {
     try {
-      let resp = await api.fetchTourPackages();
+      const resp = await api.fetchTourPackages();
       setResult(resp?.data || []);
     } catch (error) {
       console.error('Failed to load tour packages:', error);
@@ -72,14 +74,14 @@ function TourPackages() {
                         </div>
                         <div className="tour_price_book_section">
                           <span className='price_tour'><p>Price</p>₹{ele.starting_cost}</span>
+                          <button className="book_button" onClick={popupAForm}>
+                            Book a Trip
+                            <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} />
+                          </button>
                         </div>
                       </div>
                     </div>
                   </Link>
-                  <button className="book_button" onClick={popupAForm}>
-                    Book a Trip
-                    <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} />
-                  </button>
                 </div>
               ))
             )}
@@ -109,9 +111,25 @@ function EmptyComponent() {
               </span>
             </div>
           </div>
-          <button className="book_button">
-            Loading...
-          </button>
+
+          <div className='tour_b_c'>
+            <div className="tour_rating_duration_section">
+              <div className="tour_details">
+                <div className="tour_ratings">
+                  <span>Loading...</span>
+                </div>
+                <span className='speedometer'>
+                Loading...
+                </span>
+              </div>
+            </div>
+            <div className="tour_price_book_section">
+              <span className='price_tour'>Loading...</span>
+              <button className="book_button">
+                Loading...
+              </button>
+            </div>
+          </div>
         </div>
       ))}
     </>
