@@ -131,7 +131,7 @@
 
 'use client'
 import React, { useEffect, useState } from 'react';
-import { airplane, speedometer, location, emptyImage, search_icon } from '@/app/assets/images';
+import { airplane, speedometer, location, emptyImage, search_icon, previous_vector, next_vector } from '@/app/assets/images';
 import { ALL_TOUSR_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import Paginations from '@/app/components/paginations/paginations';

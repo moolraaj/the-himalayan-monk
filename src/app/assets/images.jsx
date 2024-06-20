@@ -43,7 +43,8 @@ import section_sixth_bg from '../assets/homepageAssets/section_sixth_bg.png';
 import closeForm from '../assets/homepageAssets/close_form.png';
 import save_price from '../assets/homepageAssets/save_price.png';
 import search_icon from '../assets/headerAssets/saerch_icon.png';
-  
+import previous_vector from '../assets/headerAssets/previous_vector.png';
+import next_vector from '../assets/headerAssets/next_vector.png'; 
 
 export {
     kulluTour,
@@ -91,5 +92,7 @@ export {
     closeForm,
     save_price,
     search_icon,
+    previous_vector,
+    next_vector,
     
   };

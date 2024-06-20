@@ -995,6 +995,7 @@ form.enquiryForm label {
 span.icon {
   margin-right: 20px;
 }
+
 span.package_count {
   position: absolute;
   background: $dark_yellow;
@@ -1050,36 +1051,40 @@ img.triangle-testimonial-img {
     justify-content: space-between;
     align-items: center;
     padding: 60px 20px 20px;
-  
+    flex-wrap: wrap;
+    gap: 20px;
+
     .select_option_wrapper {
       width: 80%;
-      
-  }
+
+    }
+
     .select_option_wrapper select {
       padding: 20px 40px;
       font-size: 22px;
       font-family: $josifin;
       max-width: 300px;
       width: 100%;
-  }
-
-  .select_option_wrapper select:focus{
-    outline: none;
-  }
-  .search_btn_wrapper{
-    button{
-      border: none;
-      background-color: $dark_yellow;
-      padding: 20px 40px;
-      font-size: 18px;
-      color: $white;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
     }
-  }
+
+    .select_option_wrapper select:focus {
+      outline: none;
+    }
+
+    .search_btn_wrapper {
+      button {
+        border: none;
+        background-color: $dark_yellow;
+        padding: 20px 40px;
+        font-size: 18px;
+        color: $white;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -3256,6 +3261,7 @@ span.name_location h3 {
   position: relative;
   top: -40px;
 }
+
 span.name_location h2 {
   font-family: 'josefin';
   font-size: 20px;
@@ -3263,6 +3269,7 @@ span.name_location h2 {
   margin: 0px;
   position: relative;
 }
+
 span.name_location h1 {
   color: #D65228;
   font-size: 25px;
@@ -3805,6 +3812,24 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
+  .filter_section .filter_section_inner{
+    padding: 50px 10px 0px 10px;
+    .select_option_wrapper {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+  
+      select {
+        padding: 12px 10px;
+        font-size: 12px;
+        max-width: 120px;
+      }
+    }
+    .search_btn_wrapper button{
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
 
   .book-form_button button {
     padding: 10px 20px;
@@ -3813,18 +3838,22 @@ form input[type="submit"] {
       font-size: 15px;
     }
   }
-  span.package_count{
+
+  span.package_count {
     padding: 6px 12px;
     font-size: 10px;
   }
-  span.name_location{
-    h1{
+
+  span.name_location {
+    h1 {
       font-size: 20px;
     }
-    h2{
+
+    h2 {
       font-size: 16px;
     }
   }
+
   span.error {
     color: red;
     margin-top: 10px;
