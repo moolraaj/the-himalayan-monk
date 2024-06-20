@@ -14,7 +14,7 @@ const DestinationBanner = ({innerid ,innerkey }) => {
 
   const fetchBannerDetails=async()=>{
     let resp=await api.fetchSingledestination(innerid ,innerkey)
-    setResult(resp)
+    setResult(resp || null)
   }
 
 

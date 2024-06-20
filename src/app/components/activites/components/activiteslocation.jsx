@@ -21,8 +21,8 @@ import Paginations from '../../paginations/paginations';
 
   const loadAllActivities=async()=>{
     let resp=await api.fetchAllActivities(ALL_ACTIVITIES_PER_PAGE,page)
-    setResult(resp.data)
-    setTotalItems(Math.ceil(resp.totalCount/ALL_ACTIVITIES_PER_PAGE))
+    setResult(resp?.data || null)
+    setTotalItems(Math.ceil(resp?.totalCount/ALL_ACTIVITIES_PER_PAGE || null))
   }
 
   useEffect(()=>{

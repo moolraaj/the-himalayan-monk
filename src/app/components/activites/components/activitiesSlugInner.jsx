@@ -6,7 +6,7 @@ import airplane from '../../../assets/homepageAssets/airplane.gif';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import emptyImage from '../../../assets/empty.jpg'
-import { galleryleh } from '@/app/assets/images';
+
 import ActivityLocation from './activityLocation';
 
 async function ActivitiesPackages({ id }) {
@@ -16,7 +16,7 @@ async function ActivitiesPackages({ id }) {
 
   const LoadCityWiseActivities = async () => {
     let resp = await api.fetchCityBasedActivities(id)
-    setResult(resp.data)
+    setResult(resp?.data || null)
   }
 
   useEffect(() => {

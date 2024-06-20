@@ -190,7 +190,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const fetchAllPackages = async () => {
     try {
       const resp = await api.fetchTourPackages();
-      setAllPackages(resp.data);
+      setAllPackages(resp?.data || null);
     } catch (error) {
       console.error('Error fetching all packages:', error);
     }
@@ -199,7 +199,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const loadAllDestinations = async () => {
     try {
       const resp = await api.fetchAlldestinations();
-      setAllDestinations(resp.data);
+      setAllDestinations(resp?.data || null );
     } catch (error) {
       console.error('Error fetching all destinations:', error);
     }
@@ -208,7 +208,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const loadAllActivities = async () => {
     try {
       const resp = await api.fetchAllActivities();
-      setAllActivities(resp.data);
+      setAllActivities(resp?.data || null);
     } catch (error) {
       console.error('Error fetching all destinations:', error);
     }

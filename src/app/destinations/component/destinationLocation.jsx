@@ -15,8 +15,8 @@ function DPlaces() {
   let loadAllDestinations = async (page) => {
     try {
       let response = await api.fetchAlldestinations(ALL_DESTINATIONS_PER_PAGE, page);
-      setResult(response.data);
-      setTotalItems(Math.ceil(response.totalCount / ALL_DESTINATIONS_PER_PAGE));
+      setResult(response?.data || null);
+      setTotalItems(Math.ceil(response?.totalCount / ALL_DESTINATIONS_PER_PAGE || null));
     } catch (error) {
       console.error('Failed to fetch destinations:', error);
     } finally {
