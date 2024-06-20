@@ -1,4 +1,3 @@
-
 'use client'
 import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useEffect, useState } from 'react';
@@ -12,9 +11,14 @@ function TourList() {
   let [loading, setLoading] = useState(true);
 
   let loadAllDestinations = async () => {
-    let resp = await api.fetchAlldestinations();
-    setResult(resp?.data || null);
-    setLoading(false);
+    try {
+      let resp = await api.fetchAlldestinations();
+      setResult(resp?.data || []);
+    } catch (error) {
+      console.error('Failed to load destinations:', error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   useEffect(() => {
@@ -25,23 +29,26 @@ function TourList() {
     <div className="tourlist_outer_section">
       <div className="tourlist_inner">
         <div className={`tour_destination_wrapper ${loading ? 'loading' : ''}`}>
-          {loading && <EmptyComponent />}
-          {result?.slice(0, 7)?.map((ele, index) => (
-            <div className="tour_destination" key={index}>
-              <Link href={`/destinations/${ele.city_id}`}>
-                <div className="tour_destination_inner">
-                  <div className="tour_destination_info">
-                    <div className="tour_info_inner">
-                      <div className="tour_info_left">
-                        <h2>{ele.name}</h2>
+          {loading || result.length === 0 ? (
+            <EmptyComponent />
+          ) : (
+            result.slice(0, 7).map((ele, index) => (
+              <div className="tour_destination" key={index}>
+                <Link href={`/destinations/${ele.city_id}`}>
+                  <div className="tour_destination_inner">
+                    <div className="tour_destination_info">
+                      <div className="tour_info_inner">
+                        <div className="tour_info_left">
+                          <h2>{ele.name}</h2>
+                        </div>
                       </div>
                     </div>
+                    <img src={ele.image || empty.src} alt={ele.name} />
                   </div>
-                  <img src={ele.image || empty.src} alt={ele.name} />
-                </div>
-              </Link>
-            </div>
-          ))}
+                </Link>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </div>
