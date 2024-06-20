@@ -244,6 +244,7 @@ a {
     font-size: 18px;
     font-family: $inter;
     font-weight: 600;
+
     img {
       width: 20px;
       height: 20px;
@@ -251,6 +252,7 @@ a {
   }
 
 }
+
 span.error {
   color: red;
   margin-top: 10px;
@@ -3717,6 +3719,22 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
+
+  .book-form_button button {
+    padding: 10px 20px;
+
+    span {
+      font-size: 15px;
+    }
+  }
+
+  span.error {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+
   .activities_new .tab-content .images img {
     max-width: 200px;
     width: 100%;
