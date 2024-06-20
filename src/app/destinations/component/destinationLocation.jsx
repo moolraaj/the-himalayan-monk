@@ -38,8 +38,10 @@ function DPlaces() {
               <div className="place">
                 <img src={place.image || empty.src} alt={place.name} />
                 <div className="place-info">
+                <span className='package_count'>{place.package_count} Tours</span>
                   <span className="name_location">
-                    <h3>{place.name}</h3>
+                    <h2>{place.title}</h2>
+                    <h1>{place.name}</h1>
                   </span>
                 </div>
               </div>
