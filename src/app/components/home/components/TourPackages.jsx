@@ -21,7 +21,7 @@ function TourPackages() {
 
   const loadAllTourPackages = async () => {
     let resp = await api.fetchTourPackages();
-    setResult(resp.data);
+    setResult(resp?.data || null );
     setLoading(false);
   };
 

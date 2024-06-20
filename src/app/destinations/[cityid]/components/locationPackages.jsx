@@ -17,7 +17,7 @@ function TourPackages({ id }) {
   let [result, setResult] = useState([])
   const loadSingleDestination = async () => {
     let resp = await api.fetchFilterDestination(id)
-    setResult(resp.data)
+    setResult(resp?.data || null)
   }
 
   useEffect(() => {

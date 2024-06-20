@@ -34,8 +34,8 @@ function TourPackagesPage() {
 
   const loadAllTourPackages = async (page) => {
     let resp = await api.fetchTourPackages(ALL_TOUSR_PER_PAGE, page)
-    setResult(resp.data)
-    setTotalItems(Math.ceil(resp.totalCount / ALL_TOUSR_PER_PAGE))
+    setResult(resp?.data || null)
+    setTotalItems(Math.ceil(resp?.totalCount / ALL_TOUSR_PER_PAGE || null))
   }
 
   useEffect(() => {

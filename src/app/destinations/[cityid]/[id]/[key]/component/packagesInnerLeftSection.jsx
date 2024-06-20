@@ -17,13 +17,13 @@ function TravelPackage({ innerid, innerkey }) {
 
   const fetchSingleDestination = async () => {
     let resp = await api.fetchSingledestination(innerid, innerkey);
-    setResult(resp);
+    setResult(resp || null);
   };
 
   useEffect(() => {
     fetchSingleDestination()
   }, []);
-  console.log(result)
+ 
 
 
 
