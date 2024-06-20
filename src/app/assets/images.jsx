@@ -41,7 +41,8 @@ import section_fourth_bg from '../assets/homepageAssets/section_fourth_bg.png';
 import section_fifth_bg from '../assets/homepageAssets/section_fifth_bg.png';
 import section_sixth_bg from '../assets/homepageAssets/section_sixth_bg.png';
 import closeForm from '../assets/homepageAssets/close_form.png';
-import save_price from '../assets/homepageAssets/save_price.png'
+import save_price from '../assets/homepageAssets/save_price.png';
+import search_icon from '../assets/headerAssets/saerch_icon.png';
   
 
 export {
@@ -89,5 +90,6 @@ export {
     section_sixth_bg,
     closeForm,
     save_price,
+    search_icon,
     
   };

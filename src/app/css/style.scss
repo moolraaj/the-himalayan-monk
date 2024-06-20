@@ -1035,6 +1035,73 @@ img.triangle-testimonial-img {
 
 // tour package section css starts *********
 
+
+// tour filter style start************
+
+.filter_section {
+  width: 100%;
+  overflow: hidden;
+
+  .filter_section_inner {
+    max-width: 1520px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px 20px;
+  
+    .select_option_wrapper {
+      width: 80%;
+      
+  }
+    .select_option_wrapper select {
+      padding: 20px 40px;
+      font-size: 22px;
+      font-family: $josifin;
+      max-width: 300px;
+      width: 100%;
+  }
+
+  .select_option_wrapper select:focus{
+    outline: none;
+  }
+  .search_btn_wrapper{
+    button{
+      border: none;
+      background-color: $dark_yellow;
+      padding: 20px 40px;
+      font-size: 18px;
+      color: $white;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+  }
+  }
+}
+
+// tour filter style end************
+
+
+.price_filter.active {
+  background: #F69625;
+  color: #ffffff;
+}
+
+.tripType_filter.active {
+  background: #F69625;
+  color: #ffffff;
+}
+
+.tripName_filter.active {
+  background: #F69625;
+  color: #ffffff;
+}
+
+
 .TourPackages_outer_section {
   display: flex;
   justify-content: center;
