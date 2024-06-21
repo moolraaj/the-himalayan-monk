@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 
 function TravelPackage({ innerid, innerkey }) {
   let api = ExportAllApis()
-  console.log(`innerpage ${innerid} + innerpage key ${innerkey}`)
+
 
   let [result, setResult] = useState([]);
   const [activeDay, setActiveDay] = useState(null);
