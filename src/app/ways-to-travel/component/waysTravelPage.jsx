@@ -5,6 +5,7 @@ import WaystoTravel from '@/app/components/headertitlesection/waystotravelbanner
 import WaysVehicles from './waysVehicles';
 
 function WaysTravelPage() {
+  
   const vehicles = [
     {
       id: 1,

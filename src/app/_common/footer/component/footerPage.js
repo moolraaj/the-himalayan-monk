@@ -61,8 +61,8 @@ function FooterPage() {
                                 <h4>Contact Us</h4>
                                 <ul className='footer_client_section'>
                                     <li><a href="mailto:">demo@gmail.com</a></li>
-                                    <li><a href="tel:+8894229191">+91 8894229191</a></li>
-                                    <li><a href="tel:+8894229191">+91 9999999999</a></li>
+                                    <li><a href="tel:+9999999999">+91 9999999999</a></li>
+                                    <li><a href="tel:+9999999999">+91 9999999999</a></li>
                                 </ul>
                             </div>
 
