@@ -32,7 +32,7 @@ function TravelPackage({ innerid, innerkey }) {
       <div className="package">
         {result?.map((ele) => {
           let daywise_meta = JSON.parse(ele.daywise_meta)
-          console.log(daywise_meta)
+         
           return (
             <div className="package-wrapper" key={ele.id}>
               <div className="price-section">
