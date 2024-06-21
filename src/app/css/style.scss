@@ -2497,6 +2497,7 @@ span.discounted-price b {
   max-width: 1440px;
   column-gap: 30px;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .package p {
@@ -3822,7 +3823,7 @@ form input[type="submit"] {
       select {
         padding: 12px 10px;
         font-size: 12px;
-        max-width: 120px;
+        max-width: 32%;
       }
     }
     .search_btn_wrapper button{
