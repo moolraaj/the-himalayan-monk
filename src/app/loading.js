@@ -4,7 +4,7 @@ import LoadingSpinner from './components/loader/loader'
 function loading() {
   return (
     <>
-      <div className="page_top" style={{ marginTop: '120px' }}>
+      <div className="loading_spinner" style={{display: 'flex',alignItems: 'center',justifyContent:'center' }}>
         <LoadingSpinner />
       </div>
     </>

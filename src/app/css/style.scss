@@ -53,6 +53,11 @@ a {
 }
 
 
+.loading_spinner {
+  padding: 200px 0px 100px 0px;
+}
+
+
 // not found 404 page *********
 .page_top {
   max-width: 1520px;
@@ -3813,20 +3818,32 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
-  .filter_section .filter_section_inner{
+  .loading_spinner {
+    padding: 150px 0px 80px 0px;
+
+    .loading_spinner_wrapper {
+      max-width: 100px;
+      height: 100px;
+      width: 100%;
+    }
+  }
+
+  .filter_section .filter_section_inner {
     padding: 50px 10px 0px 10px;
+
     .select_option_wrapper {
       width: 100%;
       display: flex;
       overflow: hidden;
-  
+
       select {
         padding: 12px 10px;
         font-size: 12px;
         max-width: 32%;
       }
     }
-    .search_btn_wrapper button{
+
+    .search_btn_wrapper button {
       padding: 12px 20px;
       font-size: 14px;
     }
@@ -4425,15 +4442,29 @@ form input[type="submit"] {
     grid-template-columns: 1fr;
   }
 
+  .destination_page_wrapper .desti_top_heading {
+    top: 30%;
+  }
+
+  .activities_page_wrapper .activity_page_banner_heading {
+    top: 37%;
+  }
+
+  .ways_travel_page_wrapper .desti_top_heading{
+    top: 37%;
+  }
+
   .desti_top_heading {
     position: absolute;
-    top: 57%;
+    top: 50%;
     width: 100%;
     text-align: center;
     color: white;
   }
 
-  .desti_top_banner img {
+  .desti_top_banner img,
+  .banner_section img,
+  .activity_inner_page_banner img {
     height: 300px;
     width: 100%;
   }

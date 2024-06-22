@@ -77,6 +77,7 @@ function DestinatinationPage() {
   return (
     <>
     
+    <div className="destination_page_wrapper">
     <div className="desti_outer">
         <div className="desti_inner">
           <div className="desti_wrapper">
@@ -94,6 +95,7 @@ function DestinatinationPage() {
           </div>
         </div>
       </div>
+    </div>
      
     </>
   )
