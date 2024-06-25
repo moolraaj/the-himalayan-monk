@@ -8,7 +8,7 @@ import { Toaster } from 'sonner'
 function Layout({children}) {
   return (
    <>
-   <Toaster position='top-right'/>
+   <Toaster richColors position='top-right'/>
    <Header/>
     {children}
    <Footer/>
