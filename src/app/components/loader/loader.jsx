@@ -4,7 +4,7 @@ import { Watch } from 'react-loader-spinner'
 
 function LoadingSpinner() {
     return (
-        <div>
+        <div className='loading_spinner_wrapper'>
             <Watch
                 visible={true}
                 height="200"

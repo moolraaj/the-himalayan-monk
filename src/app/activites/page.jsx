@@ -8,8 +8,10 @@ import ActivitesPage from '../components/activites/components/activitiesPage'
  function page() {
    return (
       <>
-       <ActivitesPage/> 
-  
+      
+  <div className="activities_page_wrapper">
+  <ActivitesPage/> 
+  </div>
       </>
    )
  }
