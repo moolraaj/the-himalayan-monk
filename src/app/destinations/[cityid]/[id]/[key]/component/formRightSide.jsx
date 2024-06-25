@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import airplane from '../../../../../assets/homepageAssets/airplane.gif';
 import { ExportAllApis } from '@/utils/apis/apis';
+import { toast } from 'sonner';
 
 const BookTourForm = () => {
   let api=ExportAllApis()
@@ -13,7 +14,6 @@ const BookTourForm = () => {
     total_no_travelers: '',
     departuredate: '',
     returndate: '',
-    adminEamil:''
   });
 
   let [error,setError]=useState({})
@@ -69,38 +69,40 @@ const BookTourForm = () => {
     e.preventDefault();
   
 
-    // let formdata = new FormData()
+    let formData = new FormData()
 
-    // formdata.append('adminEamil', 'sales@eligocs.com')
-
-    // formdata.append('name', user.name,)
-    // formdata.append('email', user.email,)
-    // formdata.append('mobile', user.mobile,)
-    // formdata.append('destination', user.destination,)
-    // formdata.append('total_no_travelers', user.total_no_travelers,)
-    // formdata.append('departuredate', user.departuredate,)
-    // formdata.append('returndate', user.returndate,)
-
+    
+    formData.append('name', user.name,)
+    formData.append('email', user.email,)
+    formData.append('mobile', user.mobile,)
+    formData.append('destination', user.destination,)
+    formData.append('total_no_travelers', user.total_no_travelers,)
+    formData.append('departuredate', user.departuredate,)
+    formData.append('returndate', user.returndate,)
+    formData.append('adminEamil', 'sales@eligocs.com')
+    
     if(showErrors()){
       try {
-        const resp = await api.SubmitDestinmationsformData({
-          method: 'POST',
-          body: JSON.stringify(user)
-        });
+        const resp = await api.SubmitDestinmationsformData(formData);
+        if(resp.status){
+          toast.success(resp.msg)
+          setUser({
+            name: '',
+            email: '',
+            mobile: '',
+            destination: '',
+            total_no_travelers: '',
+            departuredate: '',
+            returndate: '',
+   
+          });
+          setError({})
+        }else{
+          toast.error(resp.msg)
+        }
   
-        console.log(resp);
+        
   
-        setUser({
-          name: '',
-          email: '',
-          mobile: '',
-          destination: '',
-          total_no_travelers: '',
-          departuredate: '',
-          returndate: '',
-          adminEamil:''
-        });
-        setError({})
       } catch (error) {
         console.error('Failed to submit form', error);
       }
@@ -150,11 +152,7 @@ const BookTourForm = () => {
           <input type="text" name="returndate" value={user.returndate} onChange={handleChange}  />
           {error.returndate && <span className="error">{error.returndate}</span>}
         </div>
-        <div className="form-group">
-          <label>Admin email</label>
-          <input type="text" name="adminEamil" value={user.adminEamil} onChange={handleChange}  />
-          
-        </div>
+        
         <button type="submit" className="submit-btn" onClick={handleSubmit}>
           Book Now <img src={airplane.src} alt="demo" style={{ width: '28px' }} />
         </button>

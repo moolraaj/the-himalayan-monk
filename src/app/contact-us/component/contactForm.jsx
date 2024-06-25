@@ -1,13 +1,16 @@
 'use client'
+import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
+import { toast } from 'sonner';
 
 
 const EnquiryForm = () => {
+    let api=ExportAllApis()
 
     let [user, setUser] = useState({
         name: '',
-        email: '',
         mobile: '',
+        email: '',
         message: '',
     })
     let [erros, setErrors] = useState({})
@@ -41,11 +44,36 @@ const EnquiryForm = () => {
         return valid
     }
 
-    const submitHandler = (e) => {
+    const submitHandler = async(e) => {
         e.preventDefault()
         if(excuteErrors()){
+            let formData=new FormData()
+            formData.append('name',user.name)
+            formData.append('mobile',user.mobile)
+            formData.append('email',user.email)
+            formData.append('message',user.message)
+            formData.append('adminEamil',"sales@eligocs.com")
 
-            console.log(user)
+            let resp=await api.SubmitDestinmationsformData(formData)
+
+            if(resp.status){
+                toast.success(resp.msg)
+                setUser({
+                    name: '',
+                    mobile: '',
+                    email: '',
+                    message: '',
+                })
+                setErrors({})
+            }else{
+                toast.error(resp.msg)
+            }
+           
+
+
+             
+
+            
         }
     }
 
