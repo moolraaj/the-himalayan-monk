@@ -29,7 +29,8 @@ const DestinationBanner = ({innerid ,innerkey }) => {
       {result===null? '' : result?.map((ele)=>{
         return <div className='banner-wrapper' key={ele.id}>
           <div className="top_banner_Image">
-        <Image src={ele.pdf_image || activities_banner.src} alt="destinations" width={100} height={100}/>
+        <Image src={ele.pdf_image || activities_banner.src} alt="destinations" width={100} height={100}
+        onError={(e) => e.target.src = activities_banner.src}/>
       </div>
       <div className="desti_top_heading">
         <h1>{ele.package_name}</h1>
