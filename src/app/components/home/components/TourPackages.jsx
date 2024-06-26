@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { airplane, speedometer, location } from '@/app/assets/images';
+import { airplane, speedometer, location, emptyImage } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -35,6 +35,8 @@ function TourPackages() {
     loadAllTourPackages();
   }, []);
 
+  let reverAllPackages=[...result].reverse()
+
   return (
     <>
       <PopupWrapper setIsShow={setIsShow} isShow={isShow} />
@@ -42,15 +44,16 @@ function TourPackages() {
       <div className="TourPackages_outer_section">
         <div className="TourPackages_inner">
           <div className={`tour_packages_wrapper ${loading ? 'loading' : ''}`}>
-            {loading || result.length === 0 ? (
+            {loading || reverAllPackages.length === 0 ? (
               <EmptyComponent />
             ) : (
-              result.slice(0, 6).map((ele) => (
+              reverAllPackages.slice(0, 6).map((ele) => (
                 <div className="tour_package" key={ele.id}>
                   <Link href={`/tours/${ele.id}/${ele.key}`}>
                     <div className="tour_package_inner">
                       <div className="tour_img_wrapper">
-                        <img src={ele.pdf_image} alt={ele.package_name} />
+                        <img src={ele.pdf_image || emptyImage.src} alt={ele.package_name}  
+                        onError={(e) => e.target.src = emptyImage.src} />
                         <div className="tour_badge">{ele.days} Days</div>
                       </div>
                       <div className="tour_package_info">
@@ -67,7 +70,8 @@ function TourPackages() {
                               <span>{ele.rating} ★ ({ele.reviews} reviews)</span>
                             </div>
                             <span className='speedometer'>
-                              <img style={{ width: '35px' }} src={speedometer.src} alt={ele.name} />
+                              <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  
+                               onError={(e) => e.target.src = emptyImage.src}/>
                               {ele.days}days / {ele.night}nights
                             </span>
                           </div>
@@ -76,7 +80,8 @@ function TourPackages() {
                           <span className='price_tour'><p>Price</p>₹{ele.starting_cost}</span>
                           <button className="book_button" onClick={popupAForm}>
                             Book a Trip
-                            <img src={airplane.src} alt={ele.name} style={{ width: '28px' }} />
+                            <img src={airplane.src} alt={ele.name || emptyImage.src} style={{ width: '28px' }} 
+                             onError={(e) => e.target.src = emptyImage.src}/>
                           </button>
                         </div>
                       </div>

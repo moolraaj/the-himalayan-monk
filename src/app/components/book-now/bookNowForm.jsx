@@ -2,6 +2,7 @@
 import { airplane } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
+import { toast } from 'sonner';
 
 function BookNowForm() {
     let api=ExportAllApis()
@@ -10,9 +11,10 @@ function BookNowForm() {
     email: '',
     mobile: '',
     total_no_travelers: '',
-    adminEamil: '',
     message: '',
   });
+
+  
 
   let [errors, setErrors] = useState({});
 
@@ -52,28 +54,33 @@ function BookNowForm() {
     if (validateForm()) {
       console.log('Form submitted', user);
 
-      let resp=await api.SubmitDestinmationsformData({
-        method:'POST',
-        body:JSON.stringify(user)
-      })
+      let formData=new FormData()
+      formData.append('name',user.name)
+      formData.append('email',user.email)
+      formData.append('mobile',user.mobile)
+      formData.append('total_no_travelers',user.total_no_travelers)
+      formData.append('message',user.message)
+      formData.append('adminEamil',"sales@eligocs.com")
 
-      if(resp){
-        alert('data saved')
+      let resp=await api.SubmitDestinmationsformData(formData)
 
+      if(resp.status){
+       toast.success(resp.msg)
+       setUser({
+         name: '',
+         email: '',
+         mobile: '',
+         total_no_travelers: '',
+         message: '',
+       });
+ 
+       setErrors({});
+      }else{
+        toast.error(resp.msg)
       }
 
-      setUser({
-        name: '',
-        email: '',
-        mobile: '',
-        total_no_travelers: '',
-        adminEamil: '',
-        message: '',
-      });
 
-      setErrors({});
-
-      console.log(resp)
+     
 
    
  

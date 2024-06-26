@@ -91,11 +91,11 @@ export const ExportAllApis = () => {
 
 
 
-    const SubmitDestinmationsformData = async (user) => {
+    const SubmitDestinmationsformData = async (formData) => {
         try {
             const result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/query/savequery`, {
                 method:'POST',
-                body:JSON.stringify(user)
+                body:formData
                 });
             const resp = await result.json();
             return resp

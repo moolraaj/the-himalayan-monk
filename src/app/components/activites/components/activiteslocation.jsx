@@ -32,13 +32,13 @@ import Paginations from '../../paginations/paginations';
 
  
  
- 
+  let reverAllactivities=[...result].reverse()
   
   return (
     <>
     
     <div className="places-container">
-      {result?.slice(0,9).map(place => (
+      {reverAllactivities?.map(place => (
        
         <div key={place.id} className="place">
           <Link href={`/activites/${place.city_id}`}>

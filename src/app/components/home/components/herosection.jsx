@@ -53,13 +53,13 @@ function Herosection() {
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
-
+  let reverse=[...destinations].reverse()
   const renderDestinationGroups = () => {
     const groups = [];
     for (let i = 0; i < destinations.length; i += 4) {
       groups.push(
         <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
-          {destinations.slice(i, i + 4).map((destination, index) => (
+          {reverse.slice(i, i + 4).map((destination, index) => (
             <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>
@@ -107,10 +107,10 @@ function Herosection() {
       <div className="hero_section_outer">
         <div className="slider_wrapper">
           <Slider {...sliderSettings}>
-            {bannerImages.map((image, index) => (
+            {bannerImages===null?  heroimg.src : bannerImages.map((image, index) => (
               <div key={index}>
                 <img
-                  src={image.img}
+                  src={image.img || emptyImage.src}
                   alt={`Banner ${index}`}
                   style={{ width: '100%', height: '100%' }}
                   onError={(e) => e.target.src = emptyImage.src}

@@ -95,7 +95,7 @@ const Tabs = () => {
     <div className='activities_new'>
       <div className="tabs-container activities_home">
         <div className="tabs">
-          {activities.map((activity, index) => (
+          {activities===null? 'no activities data found' :  activities.map((activity, index) => (
             <div
               key={index}
               className={`tab ${index === activeTab ? 'active' : ''}`}

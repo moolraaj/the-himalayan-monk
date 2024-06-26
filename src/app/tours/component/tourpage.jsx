@@ -196,6 +196,7 @@ function TourPackagesPage() {
     applyFilters();
   };
 
+  let  reversePackages=[...result].reverse()
 
   return (
     <>
@@ -251,10 +252,10 @@ function TourPackagesPage() {
       <div className="TourPackages_outer_section">
         <div className="TourPackages_inner">
           <div className="tour_packages_wrapper">
-            {result.length === 0 ? (
+            {reversePackages.length === 0 ? (
               <EmptyComponent />
             ) : (
-              result.map((ele) => (
+              reversePackages.map((ele) => (
                 <div className="tour_package" key={ele.id}>
                   <Link href={`/tours/${ele.id}/${ele.key}`}>
                     <div className="tour_package_inner">
