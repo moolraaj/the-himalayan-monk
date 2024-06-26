@@ -1485,6 +1485,11 @@ button.call_a_button {
   margin-bottom: 20px;
   font-family: "josefin";
   color: $light_red;
+  position: sticky;
+  top: -10px;
+  background: #fff;
+  padding: 10px 0px;
+  border-bottom: 1px solid;
 }
 
 .search-result a {
@@ -4319,7 +4324,10 @@ form input[type="submit"] {
   .hero_section_outer .hero_right_section {
     display: none;
   }
-
+  .search-wrapper h1{
+    position: static;
+    border: none;
+  }
   .search-results {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
