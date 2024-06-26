@@ -5,6 +5,7 @@ import kullu from '../../assets/homepageAssets/kangra_tour.jpg';
 import manali from '../../assets/homepageAssets/manali_tour.jpg';
 import lahul from '../../assets/homepageAssets/lahaul_tour.jpg';
 import Image from "next/image";
+import { emptyImage } from "@/app/assets/images";
 
 const images = [kullu, manali, lahul];
 
@@ -22,7 +23,7 @@ const CallSlider = () => {
   return (
     <div className="journy-image-container">
      
-      {images.map((image, index) => (
+      {images===null? emptyImage.src: images.map((image, index) => (
         <div
           className={`call_slider_image ${index === currentIndex ? 'active' : ''}`}
           key={index}

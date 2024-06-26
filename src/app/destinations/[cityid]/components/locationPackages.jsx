@@ -32,7 +32,7 @@ function TourPackages({ id }) {
     <div className="container all_tour_packages">
       <h2 className="title">All Tour Packages</h2>
       <div className="tour-packages">
-        {result?.map((tour) => (
+        {result===null? 'no packages availble' : result?.map((tour) => (
 
           <div key={tour.id} className="tour-package">
             <Link href={`/destinations/${id}/${tour.id}/${tour.key}`}>

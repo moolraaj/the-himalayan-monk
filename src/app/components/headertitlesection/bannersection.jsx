@@ -26,7 +26,7 @@ const DestinationBanner = ({innerid ,innerkey }) => {
 
   return (
     <div className="desti_top_banner">
-      {result?.map((ele)=>{
+      {result===null? '' : result?.map((ele)=>{
         return <div className='banner-wrapper' key={ele.id}>
           <div className="top_banner_Image">
         <Image src={ele.pdf_image || activities_banner.src} alt="destinations" width={100} height={100}/>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -20,7 +19,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const fetchAllPackages = async () => {
     try {
       const resp = await api.fetchTourPackages();
-      setAllPackages(resp?.data || null);
+      setAllPackages(resp?.data || []);
     } catch (error) {
       console.error('Error fetching all packages:', error);
     }
@@ -29,7 +28,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const loadAllDestinations = async () => {
     try {
       const resp = await api.fetchAlldestinations();
-      setAllDestinations(resp?.data || null );
+      setAllDestinations(resp?.data || []);
     } catch (error) {
       console.error('Error fetching all destinations:', error);
     }
@@ -38,9 +37,9 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const loadAllActivities = async () => {
     try {
       const resp = await api.fetchAllActivities();
-      setAllActivities(resp?.data || null);
+      setAllActivities(resp?.data || []);
     } catch (error) {
-      console.error('Error fetching all destinations:', error);
+      console.error('Error fetching all activities:', error);
     }
   };
 
@@ -122,6 +121,12 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     return () => clearInterval(typingInterval);
   }, [currentText, isDeleting, typingSpeed, currentWordIndex]);
 
+  const noResultsFound =
+    searchTerm.trim() !== '' &&
+    searchResults.length === 0 &&
+    filteredDestinations.length === 0 &&
+    filteredActivities.length === 0;
+
   return (
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
       <div className="search-content">
@@ -139,41 +144,51 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
           )}
         </div>
 
-        {(searchResults.length > 0 || filteredDestinations.length > 0 || filteredActivities.length > 0) && (
-          <div className="search-results">
-            <div className="search-wrapper">
-              <h1>Tours</h1>
-              <div className="search-result">
-                {searchResults.map((ele, index) => (
-                  <Link href={`/tours/${ele.id}/${ele.key}`} key={index} onClick={closeSearchPopup}>
-                    {ele.package_name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+        {noResultsFound ? (
+          <div className="no-results-message">Results not found</div>
+        ) : (
+          searchTerm.trim() !== '' && (
+            <div className="search-results">
+              {searchResults.length > 0 && (
+                <div className="search-wrapper">
+                  <h1>Tours</h1>
+                  <div className="search-result">
+                    {searchResults.map((ele, index) => (
+                      <Link href={`/tours/${ele.id}/${ele.key}`} key={index} onClick={closeSearchPopup}>
+                        {ele.package_name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-            <div className="search-wrapper">
-              <h1>Destinations</h1>
-              <div className="search-result">
-                {filteredDestinations.map((ele, index) => (
-                  <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
-                    {ele.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+              {filteredDestinations.length > 0 && (
+                <div className="search-wrapper">
+                  <h1>Destinations</h1>
+                  <div className="search-result">
+                    {filteredDestinations.map((ele, index) => (
+                      <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
+                        {ele.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-            <div className="search-wrapper">
-              <h1>Activities</h1>
-              <div className="search-result">
-                {filteredActivities.map((ele, index) => (
-                  <Link href={`/activities/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
-                    {ele.package_name}
-                  </Link>
-                ))}
-              </div>
+              {filteredActivities.length > 0 && (
+                <div className="search-wrapper">
+                  <h1>Activities</h1>
+                  <div className="search-result">
+                    {filteredActivities.map((ele, index) => (
+                      <Link href={`/activities/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
+                        {ele.package_name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
+          )
         )}
       </div>
     </div>

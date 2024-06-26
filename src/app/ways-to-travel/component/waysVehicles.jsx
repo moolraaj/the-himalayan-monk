@@ -18,7 +18,7 @@ function WaysVehicles({ vehicles }) {
                     <div className="container all_tour_packages">
                         <div className="vehicles_wrapper tour-packages">
                             {
-                                vehicles?.map((ele, index) => {
+                               vehicles===null? 'no vehicles availble' : vehicles?.map((ele, index) => {
                                     return <div key={index} className='vehicles'>
                                         <div key={ele.id} className="tour-package">
                                         <div className="ways_travel_image">

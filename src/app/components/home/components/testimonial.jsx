@@ -94,7 +94,7 @@ const Testimonials = () => {
       <div className="testimonials-container">
         <h2 className="section-title">Customer Reviews</h2>
         <div className="testimonials-slider">
-          {displayedTestimonials.map((testimonial, index) => (
+          {displayedTestimonials===null? 'no testimonials availble' : displayedTestimonials.map((testimonial, index) => (
            
             
             <div key={index} className="testimonial">

@@ -9,6 +9,7 @@ import himachal from '../../../assets/headerAssets/himachal.png';
 
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
+import { emptyImage } from '@/app/assets/images';
 
 function FooterPage() {
     let api = ExportAllApis()
@@ -32,18 +33,21 @@ function FooterPage() {
 
                             <div className="footer_logo_section">
                                 <Link href={`/`}>
-                                <img src={logo.src} alt="site-logo" />
+                                <img src={logo.src || emptyImage.src} alt="site-logo" 
+                                onError={(e) => e.target.src = emptyImage.src} />
                                 </Link>
                             </div>
                             <div className="footer_hand-shake">
                                 <div className="footer_svg">
-                                    <img src={handshake.src} alt="demo" />
+                                    <img src={handshake.src || emptyImage.src} alt={handshake.src || emptyImage.src} 
+                                    onError={(e) => e.target.src = emptyImage.src}/>
                                     <span>Tour With Monks</span>
                                     </div>
 
                             </div>
                             <div className="footer_shake_heading">
-                                <img src={himachal.src} alt="demo" />
+                                <img src={himachal.src || emptyImage.src} alt={himachal.src || emptyImage.src} 
+                                onError={(e) => e.target.src = emptyImage.src}/>
                             </div>
                             <div className="footer_copywrite_first">
                                 <p>The Himalayan Monks. All Right Reserved.</p>
@@ -70,7 +74,7 @@ function FooterPage() {
                                 <h4>Destinations</h4>
                                 <ul className='footer_client_section'>
                                     {
-                                        result?.slice(0,6).map((ele, index) => {
+                                       result===null? 'no destinations found' : result?.slice(0,6).map((ele, index) => {
                                             return <li key={index}>
                                                 <Link href={`/destinations/${ele.city_id}`}>{ele?.name}</Link>
                                             </li>

@@ -113,7 +113,7 @@ const Tabs = () => {
               <h2>{activities[activeTab].title}</h2>
               <p>{activities[activeTab].description}</p>
               <ul>
-                {activities[activeTab].features.map((feature, index) => (
+                {activities===null? '' : activities[activeTab].features.map((feature, index) => (
                   <li key={index}>{feature}</li>
                 ))}
               </ul>

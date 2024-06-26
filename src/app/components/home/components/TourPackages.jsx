@@ -47,7 +47,7 @@ function TourPackages() {
             {loading || reverAllPackages.length === 0 ? (
               <EmptyComponent />
             ) : (
-              reverAllPackages.slice(0, 6).map((ele) => (
+              reverAllPackages===null? <EmptyComponent/> : reverAllPackages.slice(0, 6).map((ele) => (
                 <div className="tour_package" key={ele.id}>
                   <Link href={`/tours/${ele.id}/${ele.key}`}>
                     <div className="tour_package_inner">

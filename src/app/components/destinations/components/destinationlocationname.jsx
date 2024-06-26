@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import monastry from "../../../assets/homepageAssets/monastry.png";
 import Image from 'next/image';
+import { emptyImage } from '@/app/assets/images';
 
 const placesData = [
   {
@@ -73,9 +75,10 @@ const placesData = [
 const Places = () => {
   return (
     <div className="places-container">
-      {placesData.map(place => (
+      {placesData===null? 'no destinations availble' : placesData.map(place => (
         <div key={place.id} className="place">
-          <Image src={place.imgSrc.src} alt={place.altText} />
+          <Image src={place.imgSrc.src || emptyImage.src} alt={place.altText} 
+          onError={(e) => e.target.src = emptyImage.src}/>
           <div className="place-info">
             <p>{place.tours} Tour{place.tours > 1 ? 's' : ''}</p>
              <span className='name_location'>

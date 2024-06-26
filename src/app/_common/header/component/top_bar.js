@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import vector from '../../../assets/headerAssets/Vector.png'
+import { emptyImage } from '@/app/assets/images';
 
 
 
@@ -13,7 +15,8 @@ function Topbar() {
       <div className='custom_navbar'>
         <div className='top_bar_details_inner_s'>
           <div className='top_bar_mail'>
-            <img src={vector.src} alt='demo' width={20}/>
+            <img src={vector.src ||emptyImage.src} alt='demo' width={20}
+            onError={(e) => e.target.src = emptyImage.src}/>
             <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
           </div>
 

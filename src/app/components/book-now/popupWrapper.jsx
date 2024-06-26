@@ -9,7 +9,7 @@ function PopupWrapper({ isShow, setIsShow }) {
     }
     return (
         <>
-            {isShow && (<div className="book-popup-outer" >
+            {isShow===null? "": isShow && (<div className="book-popup-outer" >
                 <div className="book_now_form" style={{ backgroundImage: `url(${section_second_bg.src})` }}>
                     <div className="book_now_form_header">
                         <h1>Book A tour</h1>

@@ -1,16 +1,8 @@
 'use client'
 import React from 'react';
 
-import aboutone from '../../../assets/homepageAssets/tourist_view_1.jpg';
-import abouttwo from '../../../assets/homepageAssets/tourist_view_2.jpg';
-import calender from '../../../assets/homepageAssets/calendar.png';
-import medicine from '../../../assets/homepageAssets/medicine.png';
-import spy from '../../../assets/homepageAssets/spy.png';
-import flag from '../../../assets/homepageAssets/white-flag.png';
 import Image from 'next/image';
-
-
-
+import { aboutone, abouttwo, calender, flag, medicine, spy } from '@/app/assets/images';
 
 
 const AboutUs = () => {

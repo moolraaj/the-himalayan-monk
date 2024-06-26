@@ -2,8 +2,8 @@
 import { ALL_DESTINATIONS_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import empty from '../../assets/empty.jpg';
 import Paginations from '@/app/components/paginations/paginations';
+import { emptyImage } from '@/app/assets/images';
 
 function DPlaces() {
   let api = ExportAllApis();
@@ -36,7 +36,8 @@ function DPlaces() {
          reverAlldestinations===null?'No Desnations found': reverAlldestinations.map((place, index) => (
             <Link href={`/destinations/${place.city_id}`} key={index}>
               <div className="place">
-                <img src={place.image || empty.src} alt={place.name} />
+                <img src={place.image || emptyImage.src} alt={place.name} 
+                onError={(e) => e.target.src = emptyImage.src}/>
                 <div className="place-info">
                 <span className='package_count'>{place.package_count} Tours</span>
                   <span className="name_location">

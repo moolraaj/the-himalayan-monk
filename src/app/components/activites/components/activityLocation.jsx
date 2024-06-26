@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ExportAllApis } from '@/utils/apis/apis';
-import { leh } from '@/app/assets/images';
+import { emptyImage, leh } from '@/app/assets/images';
 
 // Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
@@ -41,12 +41,13 @@ function ActivityLocation({id}) {
       <main className="main">
         <div className="hero destination_hero_slider_wrapper">
           <Slider {...settings}>
-            {result?.map((image, index) => (
+            {result===null? emptyImage.src : result?.map((image, index) => (
               <div key={index} style={{ position: 'relative', width: '100%', height: '500px' }}>
                 <img
                   src={image.pdf_image || leh.src}
                   alt={image.pdf_image || leh.src}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  onError={(e) => e.target.src = emptyImage.src}
                 />
               </div>
             ))}

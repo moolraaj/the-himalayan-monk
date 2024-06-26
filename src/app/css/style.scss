@@ -1395,6 +1395,7 @@ button.call_a_button {
   width: 100%;
 }
 
+
 // search packages style start************
 .search-container {
   position: fixed;
@@ -1402,16 +1403,12 @@ button.call_a_button {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-
-
-
   display: none;
-
 }
 
 .search-container.show {
   display: block;
-  overflow: auto;
+  overflow: hidden;
   z-index: 99999;
   height: 100%;
   width: 100%;
@@ -1427,7 +1424,7 @@ button.call_a_button {
   margin: auto;
   padding: 36px;
   background: #fff;
-  margin-top: 188px;
+  margin-top: 150px;
   border-radius: 12px;
 }
 
@@ -1458,6 +1455,14 @@ button.call_a_button {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
   margin-top: 18px;
+  overflow: auto;
+  height: 90vh;
+  .search-wrapper{
+    margin-bottom: 400px;
+  }
+}
+.search-results::-webkit-scrollbar{
+  opacity: 0;
 }
 
 .search-result {
@@ -1466,12 +1471,20 @@ button.call_a_button {
   row-gap: 18px;
 }
 
+.no-results-message {
+  font-size: 20px;
+  font-family: "josefin";
+  color: $light_red;
+  font-weight: 600;
+  margin: 20px;
+}
+
 .search-wrapper h1 {
   margin: 0px;
   font-size: 30px;
   margin-bottom: 20px;
   font-family: "josefin";
-  color: #D65228;
+  color: $light_red;
 }
 
 .search-result a {
@@ -3820,6 +3833,7 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
+ 
   .tour_destination .tour_destination_info .tour_info_inner{
     grid-template-columns: 1fr;
   }
@@ -3896,7 +3910,9 @@ form input[type="submit"] {
   .search-results {
     height: 90vh;
     overflow: auto;
-
+    .search-wrapper{
+      margin-bottom: 0px;
+    }
     .search-wrapper:last-child {
       margin-bottom: 200px;
     }

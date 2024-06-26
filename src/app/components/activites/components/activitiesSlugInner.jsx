@@ -35,7 +35,7 @@ async function ActivitiesPackages({ id }) {
       <div className="container all_tour_packages">
         <h2 className="title">All Tour Packages</h2>
         <div className="tour-packages">
-          {result?.map((tour) => (
+          {result===null? 'no tour packages availble': result?.map((tour) => (
 
             <div key={tour.id} className="tour-package">
               <Link href={`/activites/${tour.city_id}/${tour.id}/${tour.key}`}>

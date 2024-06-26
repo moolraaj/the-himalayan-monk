@@ -9,6 +9,7 @@ import spy from '../../assets/homepageAssets/spy.png';
 import flag from '../../assets/homepageAssets/white-flag.png';
 
 import Image from 'next/image';
+import { emptyImage } from '@/app/assets/images';
 
 
 
@@ -21,8 +22,8 @@ const AboutTop = () => {
     <div className="aboutus-container" id="about">
       <div className="aboutus-content">
         <div className="aboutus-images">
-          <img className="one_image_c" src={aboutone.src} alt="About Us 1" style={{width:'100%'}}/>
-          <img className="two_image_c" src={abouttwo.src} alt="About Us 2" style={{width:'100%'}}/>
+          <img className="one_image_c" src={aboutone.src || emptyImage.src} alt="About Us 1" style={{width:'100%'}}/>
+          <img className="two_image_c" src={abouttwo.src || emptyImage.src} alt="About Us 2" style={{width:'100%'}}/>
         </div>
 
 
@@ -35,19 +36,19 @@ const AboutTop = () => {
           </p>
           <div className="aboutus-features">
             <div className="feature">
-              <img src={medicine.src} alt="Safety First Always" style={{width:'100%'}}/>
+              <img src={medicine.src || emptyImage.src} alt="Safety First Always" style={{width:'100%'}}/>
               <span>Safety First Always</span>
             </div>
             <div className="feature">
-              <img src={calender.src} alt="Trusted Travel Guide"style={{width:'100%'}} />
+              <img src={calender.src || emptyImage.src} alt="Trusted Travel Guide"style={{width:'100%'}} />
               <span>Trusted Travel Guide</span>
             </div>
             <div className="feature">
-              <img src={spy.src} alt="Time Stress Savings" style={{width:'100%'}}/>
+              <img src={spy.src || emptyImage.src} alt="Time Stress Savings" style={{width:'100%'}}/>
               <span>Time Stress Savings</span>
             </div>
             <div className="feature">
-              <img src={flag.src} alt="3.5K Tour Success" style={{width:'100%'}}/>
+              <img src={flag.src || emptyImage.src} alt="3.5K Tour Success" style={{width:'100%'}}/>
               <span>3.5K Tour Success</span>
             </div>
           </div>

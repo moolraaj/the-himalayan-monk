@@ -59,7 +59,7 @@ function Herosection() {
     for (let i = 0; i < destinations.length; i += 4) {
       groups.push(
         <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
-          {reverse.slice(i, i + 4).map((destination, index) => (
+          {reverse===null? '' : reverse.slice(i, i + 4).map((destination, index) => (
             <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>

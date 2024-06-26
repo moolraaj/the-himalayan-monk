@@ -44,56 +44,89 @@ import closeForm from '../assets/homepageAssets/close_form.png';
 import save_price from '../assets/homepageAssets/save_price.png';
 import search_icon from '../assets/headerAssets/saerch_icon.png';
 import previous_vector from '../assets/headerAssets/previous_vector.png';
-import next_vector from '../assets/headerAssets/next_vector.png'; 
+import next_vector from '../assets/headerAssets/next_vector.png';
 import heroimg from '../assets/herosection/hero_background.png';
+import iconone from '../assets/homepageAssets/abouteleven.png';
+import icontwo from '../assets/homepageAssets/aboutten.png';
+import iconthree from '../assets/homepageAssets/abouteight.png';
+import iconfour from '../assets/homepageAssets/aboutthree.png';
+import contactone from '../assets/homepageAssets/aboutsix.png';
+import contacttwo from '../assets/homepageAssets/aboutfive.png';
+import contactthreee from '../assets/homepageAssets/aboutfour.png';
+import contactfive from '../assets/homepageAssets/aboutseven.png';
+import contactfour from '../assets/homepageAssets/abouttwo.png';
+import contactlast from '../assets/homepageAssets/aboutone.png';
+import aboutone from '../assets/homepageAssets/tourist_view_1.jpg';
+import abouttwo from '../assets/homepageAssets/tourist_view_2.jpg';
+import calender from '../assets/homepageAssets/calendar.png';
+import medicine from '../assets/homepageAssets/medicine.png';
+import spy from '../assets/homepageAssets/spy.png';
+import flag from '../assets/homepageAssets/white-flag.png';
+
 
 export {
-    kulluTour,
-    manaliTour,
-    mandiTour,
-    shimlaTour,
-    spitiTour,
-    lahaulTour,
-    kangraTour,
-    bunjeeJumping,
-    airplane,
-    speedometer,
-    location,
-    emptyImage,
-    logo,
-    CloseMenu,
-    arrow,
-    search,
-    call,
-    tele,
-    call2,
-    window,
-    lining,
-    jumping,
-    rafting,
-    paragliding,
-    ski,
-    surfing,
-    adventure_tours,
-    cultural_tour,
-    group_tour,
-    historical_tour,
-    hnymoon_tour,
-    luxury_tour,
-    searchbar_icon,
-    clear_search,
-    leh,
-    activities_banner,
-    galleryleh,
-    ways_to_travel,
-    section_second_bg,
-    section_fourth_bg,
-    section_fifth_bg,
-    section_sixth_bg,
-    closeForm,
-    save_price,
-    search_icon,
-    previous_vector,
-    next_vector,
-    heroimg
-  };
+  kulluTour,
+  manaliTour,
+  mandiTour,
+  shimlaTour,
+  spitiTour,
+  lahaulTour,
+  kangraTour,
+  bunjeeJumping,
+  airplane,
+  speedometer,
+  location,
+  emptyImage,
+  logo,
+  CloseMenu,
+  arrow,
+  search,
+  call,
+  tele,
+  call2,
+  window,
+  lining,
+  jumping,
+  rafting,
+  paragliding,
+  ski,
+  surfing,
+  adventure_tours,
+  cultural_tour,
+  group_tour,
+  historical_tour,
+  hnymoon_tour,
+  luxury_tour,
+  searchbar_icon,
+  clear_search,
+  leh,
+  activities_banner,
+  galleryleh,
+  ways_to_travel,
+  section_second_bg,
+  section_fourth_bg,
+  section_fifth_bg,
+  section_sixth_bg,
+  closeForm,
+  save_price,
+  search_icon,
+  previous_vector,
+  next_vector,
+  heroimg,
+  iconone,
+  icontwo,
+  iconthree,
+  iconfour,
+  contactone,
+  contacttwo,
+  contactthreee,
+  contactfive,
+  contactfour,
+  contactlast,
+  aboutone,
+  abouttwo,
+  calender,
+  medicine,
+  spy,
+  flag,
+};

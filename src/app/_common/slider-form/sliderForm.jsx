@@ -40,15 +40,17 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
       <div className={`form-container ${isShow ? 'show' : ''}`} >
         <div className="container">
           <div className="header">
-            <img src={logo.src} alt="logo" />
+            <img src={logo.src ||emptyImage.src} alt="logo" 
+            onError={(e) => e.target.src = emptyImage.src}/>
             <button className="custom_close" onClick={closeRightMenu}>x</button>
           </div>
           <div className="slideform_content_outer">
             <h2 className="title">Tour Type</h2>
             <div className="tour-types">
-              {tourTypes.map((tourType, index) => (
+              {tourTypes===null? 'no tours availble': tourTypes.map((tourType, index) => (
                 <button key={index} className="tour-button">
-                  <span className='tour_type_icon_wrapper'><img src={tourType.icon} alt={tourType.icon} style={{ width: '60px', height: "60px" }} /></span>
+                  <span className='tour_type_icon_wrapper'><img src={tourType.icon || emptyImage.src} alt={tourType.icon} style={{ width: '60px', height: "60px" }} 
+                  onError={(e) => e.target.src = emptyImage.src}/></span>
                   <span>{tourType.name}</span>
                 </button>
               ))}
@@ -56,11 +58,12 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
             <h2 className="title">Our Destinations</h2>
             <div className="destinations">
               {
-                reverse?.slice(0, 2).map((ele, index) => {
+               reverse===null? 'no destination found' : reverse?.slice(0, 2).map((ele, index) => {
                   return (
                     <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                       <div className="destination">
-                        <img src={ele.image || emptyImage.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100} />
+                        <img src={ele.image || emptyImage.src} alt={`${ele.name}` || "Rajasthan"} width={150} height={100}
+                        onError={(e) => e.target.src = emptyImage.src} />
                         <div className="destination-text">
                           <h3><span>Travel to</span> {ele.name}</h3>
                         </div>
@@ -76,14 +79,16 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
             <div className="contact-info">
               <div className='two_name_email'>
                 <div className='more_enquiry'>
-                  <img src={call2.src} />
+                  <img src={call2.src || emptyImage.src}  
+                  onError={(e) => e.target.src = emptyImage.src}/>
                   <span>
                     <p>To More Inquiry</p>
                     <a href='tel:9816788165'>+98167 88165</a>
                   </span>
                 </div>
                 <div className='more_enquiry'>
-                  <img src={tele.src} />
+                  <img src={tele.src || emptyImage.src} 
+                  onError={(e) => e.target.src = emptyImage.src}/>
                   <span>
                     <p>Enquiry</p>
                     <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>

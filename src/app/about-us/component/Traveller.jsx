@@ -1,17 +1,5 @@
+import { iconone,icontwo,iconthree,iconfour,contactone,contacttwo,contactthreee,contactfive,contactfour,contactlast} from '@/app/assets/images';
 import React from 'react';
-import iconone from '../../assets/homepageAssets/abouteleven.png';
-import icontwo from '../../assets/homepageAssets/aboutten.png';
-import iconthree from '../../assets/homepageAssets/abouteight.png';
-import iconfour from '../../assets/homepageAssets/aboutthree.png';
-import contactone from '../../assets/homepageAssets/aboutsix.png'
-import contacttwo from '../../assets/homepageAssets/aboutfive.png'
-import contactthreee from '../../assets/homepageAssets/aboutfour.png'
-import contactfive from '../../assets/homepageAssets/aboutseven.png'
-import contactfour from '../../assets/homepageAssets/abouttwo.png'
-import contactlast from '../../assets/homepageAssets/aboutone.png'
-
-
-
 
 const Traveller = () => {
   return (
