@@ -45,6 +45,7 @@ import save_price from '../assets/homepageAssets/save_price.png';
 import search_icon from '../assets/headerAssets/saerch_icon.png';
 import previous_vector from '../assets/headerAssets/previous_vector.png';
 import next_vector from '../assets/headerAssets/next_vector.png'; 
+import heroimg from '../assets/herosection/hero_background.png';
 
 export {
     kulluTour,
@@ -94,5 +95,5 @@ export {
     search_icon,
     previous_vector,
     next_vector,
-    
+    heroimg
   };

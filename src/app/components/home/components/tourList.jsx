@@ -1,8 +1,9 @@
-'use client'
+'use client';
 import { ExportAllApis } from '@/utils/apis/apis';
 import React, { useEffect, useState } from 'react';
-import empty from '../../../assets/empty.jpg';
+
 import Link from 'next/link';
+import { emptyImage } from '@/app/assets/images';
 
 function TourList() {
   let api = ExportAllApis();
@@ -43,7 +44,11 @@ function TourList() {
                         </div>
                       </div>
                     </div>
-                    <img src={ele.image || empty.src} alt={ele.name} />
+                    <img
+                      src={ele.image}
+                      alt={ele.name}
+                      onError={(e) => e.target.src = emptyImage.src}
+                    />
                   </div>
                 </Link>
               </div>
