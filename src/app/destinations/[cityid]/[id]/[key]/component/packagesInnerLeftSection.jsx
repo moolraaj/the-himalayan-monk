@@ -53,7 +53,7 @@ function TravelPackage({ innerid, innerkey }) {
               <p className="description">{ele.description}</p>
               <h2>Included</h2>
               <ul className="included-excluded">
-                {ele.inc_meta.map((item, index) => {
+                {ele.inc_meta===null?'no data found':ele.inc_meta.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_inc}</li>
@@ -63,7 +63,7 @@ function TravelPackage({ innerid, innerkey }) {
               </ul>
               <h2>Excluded</h2>
               <ul className="included-excluded">
-                {ele.exc_meta.map((item, index) => {
+                {ele.exc_meta===null?'no data found':ele.exc_meta.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_exc}</li>
@@ -73,7 +73,7 @@ function TravelPackage({ innerid, innerkey }) {
               </ul>
               <h2>Itinerary</h2>
               <div className="itinerary">
-                {daywise_meta?.map((item, index) => (
+                {daywise_meta===null?'no data found':daywise_meta?.map((item, index) => (
                   <div key={index} className="day">
                     <div
                       className="day-header"

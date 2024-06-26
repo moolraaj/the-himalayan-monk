@@ -4,6 +4,7 @@ import heroimg from '@/app/assets/herosection/hero_background.png';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import PopupWrapper from '../../book-now/popupWrapper';
+import empty from '../../../assets/empty.jpg'
 
 function Herosection() {
   const api = ExportAllApis();
@@ -39,17 +40,17 @@ function Herosection() {
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
-
+  let reverse=[...destinations].reverse()
   const renderDestinationGroups = () => {
     const groups = [];
     for (let i = 0; i < destinations.length; i += 4) {
       groups.push(
         <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
-          {destinations.slice(i, i + 4).map((destination, index) => (
+          {reverse.slice(i, i + 4).map((destination, index) => (
             <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>
-                <img src={destination?.image} alt="destination"  />
+                <img src={destination?.image || empty.src} alt="destination"  />
               </div>
             </Link>
           ))}
@@ -73,6 +74,8 @@ function Herosection() {
     return dots;
   };
 
+
+  
   return (
     <>
     <PopupWrapper isShow={isShow} setIsShow={setIsShow}/>

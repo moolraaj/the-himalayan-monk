@@ -28,12 +28,12 @@ function DPlaces() {
     setLoading(true);
     loadAllDestinations(page);
   }, [page]);
-
+  let reverAlldestinations=[...result].reverse()
   return (
     <>
       <div className="places-container">
         {
-          result.map((place, index) => (
+         reverAlldestinations===null?'No Desnations found': reverAlldestinations.map((place, index) => (
             <Link href={`/destinations/${place.city_id}`} key={index}>
               <div className="place">
                 <img src={place.image || empty.src} alt={place.name} />

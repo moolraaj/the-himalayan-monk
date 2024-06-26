@@ -25,14 +25,16 @@ function TourList() {
     loadAllDestinations();
   }, []);
 
+  let reverAlldestinations=[...result].reverse()
+
   return (
     <div className="tourlist_outer_section">
       <div className="tourlist_inner">
         <div className={`tour_destination_wrapper ${loading ? 'loading' : ''}`}>
-          {loading || result.length === 0 ? (
+          {loading || reverAlldestinations.length === 0 ? (
             <EmptyComponent />
           ) : (
-            result.slice(0, 7).map((ele, index) => (
+            reverAlldestinations.slice(0, 7).map((ele, index) => (
               <div className="tour_destination" key={index}>
                 <Link href={`/destinations/${ele.city_id}`}>
                   <div className="tour_destination_inner">

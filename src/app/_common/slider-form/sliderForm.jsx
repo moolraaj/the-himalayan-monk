@@ -34,7 +34,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
     loadAllDestinations()
   }, [])
 
-
+  let reverse=[...result].reverse()
   return (
     <>
       <div className={`form-container ${isShow ? 'show' : ''}`} >
@@ -56,7 +56,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
             <h2 className="title">Our Destinations</h2>
             <div className="destinations">
               {
-                result?.slice(0, 2).map((ele, index) => {
+                reverse?.slice(0, 2).map((ele, index) => {
                   return (
                     <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                       <div className="destination">
