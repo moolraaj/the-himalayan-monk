@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import airplane from '../../../assets/homepageAssets/airplane.gif';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
-import { save_price } from '@/app/assets/images';
+import { emptyImage, save_price } from '@/app/assets/images';
 
 
 
@@ -42,7 +42,8 @@ function TourPackages({ id }) {
                   <p> save INR  {tour.starting_cost}</p>
                 </div>
                 <div className="tour-image">
-                  <img src={tour.pdf_image} alt='tour-image' />
+                  <img src={tour.pdf_image || emptyImage.src} alt='tour-image' 
+                  onError={(e) => e.target.src = emptyImage.src}/>
                 </div>
               </div>
               <div className="tour-content">
