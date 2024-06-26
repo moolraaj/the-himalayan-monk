@@ -3839,7 +3839,9 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
- 
+  .tour_destination .tour_destination_info .tour_info_inner .tour_info_right{
+    flex-direction: column;
+  }
   .tour_destination .tour_destination_info .tour_info_inner{
     grid-template-columns: 1fr;
   }

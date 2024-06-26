@@ -54,13 +54,13 @@ function TourPackages() {
                       <div className="tour_img_wrapper">
                         <img src={ele.pdf_image || emptyImage.src} alt={ele.package_name}  
                         onError={(e) => e.target.src = emptyImage.src} />
-                        <div className="tour_badge">{ele.days} Days</div>
+                        {/* <div className="tour_badge">{ele.days} Days</div> */}
                       </div>
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
                         <span>
                           <img src={location.src} style={{ width: '25px' }} alt={ele.name} />
-                          <p className="tour_location">{ele.tour_location || ele.package_name}</p>
+                          <p className="tour_location">{ele.tour_location || "not availble"}</p>
                         </span>
                       </div>
                       <div className='tour_b_c'>
@@ -107,7 +107,7 @@ function EmptyComponent() {
         <div className="tour_package empty" key={index}>
           <div className="tour_package_inner">
             <div className="tour_img_wrapper">
-              <div className="tour_badge">Loading...</div>
+              {/* <div className="tour_badge">Loading...</div> */}
             </div>
             <div className="tour_package_info">
               <h2>Loading...</h2>

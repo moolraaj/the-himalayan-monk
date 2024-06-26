@@ -42,7 +42,11 @@ function TourList() {
                     <div className="tour_destination_info">
                       <div className="tour_info_inner">
                         <div className="tour_info_left">
+                          <p>Travel to</p>
                           <h2>{ele.name}</h2>
+                        </div>
+                        <div className="tour_info_right ">
+                          <h4 className="tour_badge_top">{ele.package_count || 0} Tours</h4>
                         </div>
                       </div>
                     </div>
@@ -71,8 +75,12 @@ function EmptyComponent() {
             <div className="tour_destination_info">
               <div className="tour_info_inner">
                 <div className="tour_info_left">
+                  <p>loading...</p>
                   <h2>Loading...</h2>
                 </div>
+                <div className="tour_info_right ">
+                          <h4 className="tour_badge_top">loading...</h4>
+                        </div>
               </div>
             </div>
           </div>
