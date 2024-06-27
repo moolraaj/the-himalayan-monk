@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
-import { clear_search, searchbar_icon } from '@/app/assets/images';
+import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';
 
 function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -128,8 +128,12 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     filteredActivities.length === 0;
 
   return (
+    <>
+    
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
+      
       <div className="search-content">
+      
         <button className="close-search" onClick={closeSearch}>x</button>
         <div className="search-bar">
           <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ cursor: 'pointer' }} />
@@ -143,7 +147,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
             <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{ cursor: 'pointer' }} />
           )}
         </div>
-
+        <div className="searchbar_bg" style={{ backgroundImage: `url(${searchbar_bg.src})` }}>
         {noResultsFound ? (
           <div className="no-results-message">Results not found</div>
         ) : (
@@ -192,6 +196,8 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
         )}
       </div>
     </div>
+    </div>
+    </>
   );
 }
 

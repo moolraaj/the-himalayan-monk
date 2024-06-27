@@ -67,7 +67,7 @@ import destination_page_bg from './homepageAssets/destination_page_bg.png';
 import activities_page_bg from './homepageAssets/activities_page_bg.png';
 import ways_travel_page_bg from './homepageAssets/ways_travel_page_bg.png';
 import destination_inner_page_bg from './homepageAssets/destination_inner_page_bg.png'
-
+import searchbar_bg from './homepageAssets/destination_inner_page_bg.png';
 
 
 
@@ -142,5 +142,5 @@ export {
   activities_page_bg,
   ways_travel_page_bg,
   destination_inner_page_bg,
-  
+  searchbar_bg,
 };
