@@ -52,7 +52,7 @@ function BookNowForm() {
 
   const submitUserQuery = async() => {
     if (validateForm()) {
-      console.log('Form submitted', user);
+      
 
       let formData=new FormData()
       formData.append('name',user.name)
