@@ -132,7 +132,7 @@ function TourPackagesPage() {
                       <div className="tour_img_wrapper">
                         <img src={ele?.pdf_image || emptyImage.src} alt={ele.package_name || emptyImage.src} 
                         onError={(e) => e.target.src = emptyImage.src}/>
-                        <div className="tour_badge">{ele.days} Days</div>
+                        {/* <div className="tour_badge">{ele.days} Days</div> */}
                       </div>
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
