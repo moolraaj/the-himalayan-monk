@@ -52,9 +52,9 @@ function TourPackagesPage() {
 
     // Apply price filter
     if (priceFilter === 'low-to-high') {
-      filteredResult.sort((a, b) => a.starting_cost - b.starting_cost);
-    } else if (priceFilter === 'high-to-low') {
       filteredResult.sort((a, b) => b.starting_cost - a.starting_cost);
+    } else if (priceFilter === 'high-to-low') {
+      filteredResult.sort((a, b) => a.starting_cost - b.starting_cost);
     }
 
     setResult(filteredResult);
