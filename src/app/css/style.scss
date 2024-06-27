@@ -2956,7 +2956,9 @@ img.two_image_c {
   padding-bottom: 50px;
 }
 
-
+.waysvehicles_wrapper{
+  margin-top: 78px;
+}
 
 
 
@@ -3839,6 +3841,9 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
+  .waysvehicles_wrapper{
+    margin-top: 20px;
+  }
   .tour_destination .tour_destination_info .tour_info_inner .tour_info_right{
     flex-direction: column;
   }

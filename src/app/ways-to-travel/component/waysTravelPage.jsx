@@ -3,6 +3,7 @@ import WaystoTravel from '@/app/components/headertitlesection/waystotravelbanner
 
  import React from 'react'
 import WaysVehicles from './waysVehicles';
+import { ways_travel_page_bg } from '@/app/assets/images';
 
 function WaysTravelPage() {
   
@@ -76,6 +77,7 @@ function WaysTravelPage() {
             <div className="banner_section">
            <WaystoTravel/>
            </div>
+           <div className="ways_travel_page_bg" style={{ backgroundImage: `url(${ways_travel_page_bg.src})` }}>
             <div className="testi_inner_wapper">
               <h3>Ways To Travel</h3>
               <h2>Ways to Travel with Exodus </h2>
@@ -83,9 +85,10 @@ function WaysTravelPage() {
               <p>a private group service, creating bespoke trips and giving you total flexibility. Just as no two people are the same, no two holidays need be either. With so much of the world to explore and so many things to consider, the range of ways to travel with Exodus will ensure that your holiday is as unique as you are. Because for us, it’s pestarting_costonal</p>
               <p>In identifying the right holiday style for you, consider how you want to travel, and who with. In a group of like-minded travellestarting_cost, independently, or in your own private group with friends or family? And if you don’t see exactly what you want, let us know and we can help! See our private group adventures page for more information.</p>
             </div>
-            
+            <div className="waysvehicles_wrapper">
             <WaysVehicles vehicles={vehicles}/>
-           
+            </div>
+            </div>
           </div>
         </div>
       </div>

@@ -62,6 +62,14 @@ import calender from '../assets/homepageAssets/calendar.png';
 import medicine from '../assets/homepageAssets/medicine.png';
 import spy from '../assets/homepageAssets/spy.png';
 import flag from '../assets/homepageAssets/white-flag.png';
+import about_page_bg from './homepageAssets/about_page_bg.png';
+import destination_page_bg from './homepageAssets/destination_page_bg.png';
+import activities_page_bg from './homepageAssets/activities_page_bg.png';
+import ways_travel_page_bg from './homepageAssets/ways_travel_page_bg.png';
+import destination_inner_page_bg from './homepageAssets/destination_inner_page_bg.png'
+
+
+
 
 
 export {
@@ -129,4 +137,10 @@ export {
   medicine,
   spy,
   flag,
+  about_page_bg,
+  destination_page_bg,
+  activities_page_bg,
+  ways_travel_page_bg,
+  destination_inner_page_bg,
+  
 };

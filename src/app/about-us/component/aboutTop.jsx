@@ -9,7 +9,7 @@ import spy from '../../assets/homepageAssets/spy.png';
 import flag from '../../assets/homepageAssets/white-flag.png';
 
 import Image from 'next/image';
-import { emptyImage } from '@/app/assets/images';
+import { about_page_bg, emptyImage } from '@/app/assets/images';
 
 
 
@@ -18,7 +18,7 @@ import { emptyImage } from '@/app/assets/images';
 const AboutTop = () => {
   return (
 
-
+    <div className="about_page_bg_section" style={{ backgroundImage: `url(${about_page_bg.src})` }}>
     <div className="aboutus-container" id="about">
       <div className="aboutus-content">
         <div className="aboutus-images">
@@ -55,6 +55,7 @@ const AboutTop = () => {
           <button className="aboutus-button">More About</button>
         </div>
       </div>
+    </div>
     </div>
   );
 };
