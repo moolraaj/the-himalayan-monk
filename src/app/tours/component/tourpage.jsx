@@ -189,7 +189,7 @@ function EmptyComponent() {
         <div className="tour_package empty" key={index}>
           <div className="tour_package_inner">
             <div className="tour_img_wrapper">
-              <div className="tour_badge">Loading...</div>
+              {/* <div className="tour_badge">Loading...</div> */}
             </div>
             <div className="tour_package_info">
               <h2>Loading...</h2>
