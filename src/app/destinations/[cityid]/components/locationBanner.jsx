@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { emptyImage, leh } from '@/app/assets/images';
+import Link from 'next/link';
+
 
 // Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
@@ -60,7 +62,8 @@ function LocationBanner({ id }) {
                 <h1><span>{result[currentSlide].package_name}</span> Tour Packages</h1>
                 {/* <h4><span>Starting at INR 67.05 </span>INR 29,804</h4> */}
                 <br />
-                <button className="contactButton" style={{marginTop: '20px'}}>Contact Us</button>
+                <button className="contactButton" style={{marginTop: '20px'}}><Link href={`/contact-us`}>
+                Contact Us</Link></button>
                 <div className="ratings">
                   <div></div>
                   <div className='three_rating_with_icon'>

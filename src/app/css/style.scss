@@ -2425,6 +2425,7 @@ button.contactButton {
   background-color: $dark_yellow;
   color: $white;
   border: none;
+  cursor: pointer;
 }
 
 
@@ -2815,8 +2816,11 @@ span.custom_icon {
 button.contactButton:hover {
   background: black;
   pointer-events: all;
+  
 }
-
+button.contactButton:hover >a{
+  color: $white;
+}
 .overlay h4 {
   font-size: 28px;
 }
