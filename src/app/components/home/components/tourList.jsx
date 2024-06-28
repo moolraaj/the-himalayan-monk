@@ -51,7 +51,7 @@ function TourList() {
                       </div>
                     </div>
                     <img
-                      src={ele.image || kangraTour.src}
+                      src={ele.main_image || kangraTour.src}
                       alt={ele.name}
                       onError={(e) => e.target.src = kangraTour.src}
                     />
