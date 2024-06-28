@@ -51,27 +51,34 @@ function LocationBanner({ id }) {
               </div>
             ))}
           </Slider>
-          {result===null? 'no destinations availble' : result.length > 0 && (
-            <div className="overlay">
-              <h3>Get up to <span>20% OFF</span> on<br /></h3>
+          {result===null? 'no destinations availble' : result.slice(0,1).map((ele,ind)=>{
+            return(
+              <>
+              <div className="overlay">
+              <h3>Get up to <span>{ele?.discount || '0%'} OFF</span> on<br /></h3>
               <div className='overlay_banner_content'>
                 <h1><span>{result[currentSlide].package_name}</span> Tour Packages</h1>
-                <h4><span>Starting at INR 67.05 </span>INR 29,804</h4>
-                <button className="contactButton">Contact Us</button>
+                {/* <h4><span>Starting at INR 67.05 </span>INR 29,804</h4> */}
+                <br />
+                <button className="contactButton" style={{marginTop: '20px'}}>Contact Us</button>
                 <div className="ratings">
+                  <div></div>
                   <div className='three_rating_with_icon'>
-                    <span className='round_star custom_icon'>⭐</span> 4.0/5 <br />Review
+                    <span className='round_star custom_icon'>⭐</span> {ele?.rating} <br />Rating
                   </div>
-                  <div className='three_rating_with_icon'>
+                  <div></div>
+                  {/* <div className='three_rating_with_icon'>
                     <span className='google_map custom_icon'>⭐</span> 4.8/5 <br />Google
                   </div>
                   <div className='three_rating_with_icon'>
                     <span className='google_map custom_icon'>⭐</span> 3.9/5 <br />Facebook
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
-          )}
+              </>
+            )
+          })}
         </div>
       </main>
     </div>
