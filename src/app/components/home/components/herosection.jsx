@@ -8,6 +8,7 @@ import { activities_banner, emptyImage, heroimg, ways_to_travel } from '@/app/as
 import dynamic from 'next/dynamic';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+ 
 
 // Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
@@ -64,7 +65,7 @@ function Herosection() {
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>
                 <img
-                  src={destination?.image}
+                  src={destination?.main_image||emptyImage.src}
                   alt="destination"
                   onError={(e) => e.target.src = emptyImage.src}
                 />

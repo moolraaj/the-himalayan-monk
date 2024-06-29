@@ -88,7 +88,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
             })
             : filteredPackages===null? 'no filtered packages found': filteredPackages?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
-                <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
+                <Link href={`/destinations/${ele.id}`} onClick={goTodestinations}>
 
                   <div className="filter-desti-img">
                     <h1>{ele.package_name}</h1>

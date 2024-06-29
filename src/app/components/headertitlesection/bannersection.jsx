@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { activities_banner } from '@/app/assets/images';
 
-const DestinationBanner = ({innerid ,innerkey }) => {
+const DestinationBanner = ({innerid  }) => {
 
   let api=ExportAllApis()
 
@@ -13,7 +13,7 @@ const DestinationBanner = ({innerid ,innerkey }) => {
 
 
   const fetchBannerDetails=async()=>{
-    let resp=await api.fetchSingledestination(innerid ,innerkey)
+    let resp=await api.fetchSingledestination(innerid )
     setResult(resp || null)
   }
 

@@ -1,7 +1,7 @@
 
 import DestinationBanner from '@/app/components/headertitlesection/bannersection'
-import BookTourForm from '@/app/destinations/[cityid]/[id]/[key]/component/formRightSide'
-import TravelPackage from '@/app/destinations/[cityid]/[id]/[key]/component/packagesInnerLeftSection'
+import BookTourForm from '@/app/destinations/[cityid]/[id]/component/formRightSide'
+import TravelPackage from '@/app/destinations/[cityid]/[id]/component/packagesInnerLeftSection'
 import React from 'react'
 
 function page({ params }) {
@@ -10,10 +10,10 @@ function page({ params }) {
  
   return (
     <>
-      <DestinationBanner innerid={id} innerkey={key} />
+      <DestinationBanner innerid={id} />
       <div className='left_section_inner_package'>
 
-        <TravelPackage innerid={id} innerkey={key} />
+        <TravelPackage innerid={id}/>
         <BookTourForm />
       </div>
 
