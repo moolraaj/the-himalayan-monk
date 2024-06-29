@@ -34,9 +34,9 @@ function DPlaces() {
       <div className="places-container">
         {
          reverAlldestinations===null?'No Desnations found': reverAlldestinations.map((place, index) => (
-            <Link href={`/tourtype/${place.p_cat_id}`} key={index}>
+            <Link href={`/tourtype/${place?.packageCateslug}`} key={index}>
               <div className="place">
-                <img src={place.banner_images || emptyImage.src} alt={place.name} 
+                <img src={place.banner_images_main || emptyImage.src} alt={place.name} 
                 onError={(e) => e.target.src = emptyImage.src}/>
                 <div className="place-info">
                 {/* <span className='package_count'>{place.package_count} Tours</span> */}
