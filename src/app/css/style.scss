@@ -3029,10 +3029,10 @@ img.two_image_c {
   gap: 10px;
   margin-bottom: 20px;
 }
-
-span.tour_type_icon_wrapper img {
+.tour-button:hover > span.tour_type_icon_wrapper img {
   filter: invert(1);
 }
+
 
 .form-container .tour-button {
   background-color: #FFDEB8;
@@ -3052,11 +3052,6 @@ span.tour_type_icon_wrapper img {
   background-color: $dark_yellow;
   color: $white;
 }
-
-.tour-button:hover>span.tour_type_icon_wrapper img {
-  filter: none;
-}
-
 
 .form-container .destinations {
   display: grid;
