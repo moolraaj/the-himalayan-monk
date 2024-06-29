@@ -17,7 +17,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
     setIsShow(false)
   }
   const GoToTourTypePages = () => {
-    router.push('/tourtypes')
+    router.push('/tourtype')
     setIsShow(false)
   }
 
@@ -52,7 +52,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
             <h2 className="title">Tour Type</h2>
             <div className="tour-types">
               {reverseToursType===null? 'no tours availble': reverseToursType?.slice(0,6).map((ele, index) => (
-                <Link key={index} href={`/tourtypes/${ele.p_cat_id}`} className="tour-button">
+                <Link key={index} href={`/tourtype/${ele.p_cat_id}`} className="tour-button">
                   <span className='tour_type_icon_wrapper'><img src={ele.banner_images || emptyImage.src} alt={ele.package_cat_name} style={{ width: '60px', height: "60px" }} 
                   onError={(e) => e.target.src = emptyImage.src}/></span>
                   <span>{ele.package_cat_name||null}</span>

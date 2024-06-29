@@ -1,9 +1,12 @@
+import TourTypePage from "./component/tourBanner"
+import DPlaces from "./component/tourTypecard"
 
 
 function page() {
   return (
     <>
-    <h1>sadfasdf</h1>
+    <TourTypePage/>
+      <DPlaces/>
     </>
   )
 }

@@ -138,5 +138,6 @@ export const ExportAllApis = () => {
 
 export const ALL_TOUSR_PER_PAGE=12
 export const ALL_DESTINATIONS_PER_PAGE=12
-export const ALL_TOURTYPES_PER_PAGE=12
+export const ALL_TOURTYPES_PER_PAGE=6
 export const ALL_ACTIVITIES_PER_PAGE=3
+ 
