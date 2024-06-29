@@ -139,7 +139,7 @@ function TourPackagesPage() {
                         <span>
                           <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
                           onError={(e) => e.target.src = emptyImage.src}/>
-                          <p className="tour_location">{ele.tour_location || ele.package_name}</p>
+                          <p className="tour_location">{ele.city_name || ele.package_name}</p>
                         </span>
                       </div>
                       <div className='tour_b_c'>
