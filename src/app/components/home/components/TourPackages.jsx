@@ -49,7 +49,7 @@ function TourPackages() {
             ) : (
               reverAllPackages===null? <EmptyComponent/> : reverAllPackages.slice(0, 6).map((ele) => (
                 <div className="tour_package" key={ele.id}>
-                  <Link href={`/tours/${ele.id}/${ele.key}`}>
+                  <Link href={`/tours/${ele.id}`}>
                     <div className="tour_package_inner">
                       <div className="tour_img_wrapper">
                         <img src={ele.pdf_image || emptyImage.src} alt={ele.package_name}  

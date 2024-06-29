@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 // import leh from '../../../assets/homepageAssets/lehroad.png';
-import airplane from '../../../assets/homepageAssets/airplane.gif';
+
+ 
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
-import { emptyImage, save_price } from '@/app/assets/images';
+import { airplane, emptyImage, save_price } from '@/app/assets/images';
 
 
 
@@ -35,7 +36,7 @@ function TourPackages({ id }) {
         {result===null? 'no packages availble' : result?.map((tour) => (
 
           <div key={tour.id} className="tour-package">
-            <Link href={`/destinations/${id}/${tour.id}/${tour.key}`}>
+            <Link href={`/destinations/${id}/${tour.id}`}>
               <div className="ways_travel_image">
                 <div className="save_value">
                   <img src={save_price.src} alt={save_price.src} />

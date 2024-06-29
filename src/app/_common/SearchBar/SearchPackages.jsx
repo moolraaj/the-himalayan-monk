@@ -158,7 +158,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
                   <h1>Tours</h1>
                   <div className="search-result">
                     {searchResults.map((ele, index) => (
-                      <Link href={`/tours/${ele.id}/${ele.key}`} key={index} onClick={closeSearchPopup}>
+                      <Link href={`/tours/${ele.id}`} key={index} onClick={closeSearchPopup}>
                         {ele.package_name}
                       </Link>
                     ))}
@@ -184,7 +184,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
                   <h1>Activities</h1>
                   <div className="search-result">
                     {filteredActivities.map((ele, index) => (
-                      <Link href={`/activities/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
+                      <Link href={`/activities/${ele.id}`} key={index} onClick={closeSearchPopup}>
                         {ele.package_name}
                       </Link>
                     ))}

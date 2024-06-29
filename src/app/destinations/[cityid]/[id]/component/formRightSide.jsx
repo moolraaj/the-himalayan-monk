@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import airplane from '../../../../../assets/homepageAssets/airplane.gif';
+
 import { ExportAllApis } from '@/utils/apis/apis';
 import { toast } from 'sonner';
+import { airplane } from '@/app/assets/images';
 
 const BookTourForm = () => {
   let api=ExportAllApis()

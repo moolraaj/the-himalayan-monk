@@ -9,18 +9,15 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
   let router = useRouter()
   let api = ExportAllApis()
   let [result, setResult] = useState([])
-  let [tourTypes, setTourTypes] = useState([
-    { name: 'Adventure Tours', icon: adventure_tours.src },
-    { name: 'Cultural Tours', icon: cultural_tour.src },
-    { name: 'Group Tours', icon: group_tour.src },
-    { name: 'Historical Tours', icon: historical_tour.src },
-    { name: 'Honeymoon Tours', icon: hnymoon_tour.src },
-    { name: 'Luxury Tours', icon: luxury_tour.src },
-  ]);
+  let [tourTypes, setTourTypes] = useState([]);
 
 
   const GoToDestinatiosPages = () => {
     router.push('/destinations')
+    setIsShow(false)
+  }
+  const GoToTourTypePages = () => {
+    router.push('/tourtypes')
     setIsShow(false)
   }
 
@@ -30,11 +27,18 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
     setResult(resp?.data || [])
   }
 
+  let loadAllTourTypes = async () => {
+    let resp = await api.fetchAlltourTypes()
+    setTourTypes(resp?.data || [])
+  }
+
   useEffect(() => {
     loadAllDestinations()
+    loadAllTourTypes()
   }, [])
 
   let reverse=[...result].reverse()
+  let reverseToursType=[...tourTypes].reverse()
   return (
     <>
       <div className={`form-container ${isShow ? 'show' : ''}`} >
@@ -47,14 +51,17 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
           <div className="slideform_content_outer">
             <h2 className="title">Tour Type</h2>
             <div className="tour-types">
-              {tourTypes===null? 'no tours availble': tourTypes.map((tourType, index) => (
-                <button key={index} className="tour-button">
-                  <span className='tour_type_icon_wrapper'><img src={tourType.icon || emptyImage.src} alt={tourType.icon} style={{ width: '60px', height: "60px" }} 
+              {reverseToursType===null? 'no tours availble': reverseToursType?.slice(0,6).map((ele, index) => (
+                <Link key={index} href={`/tourtypes/${ele.p_cat_id}`} className="tour-button">
+                  <span className='tour_type_icon_wrapper'><img src={ele.banner_images || emptyImage.src} alt={ele.package_cat_name} style={{ width: '60px', height: "60px" }} 
                   onError={(e) => e.target.src = emptyImage.src}/></span>
-                  <span>{tourType.name}</span>
-                </button>
+                  <span>{ele.package_cat_name||null}</span>
+                </Link>
               ))}
             </div>
+            <button className={'view-all-button'} onClick={GoToTourTypePages}>
+              view all
+            </button>
             <h2 className="title">Our Destinations</h2>
             <div className="destinations">
               {

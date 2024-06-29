@@ -4,7 +4,7 @@ import { ExportAllApis } from "@/utils/apis/apis";
 import React, { useEffect, useState } from "react";
 
 
-function TravelPackage({ innerid, innerkey }) {
+function TravelPackage({ innerid }) {
   let api = ExportAllApis()
 
 
@@ -16,7 +16,7 @@ function TravelPackage({ innerid, innerkey }) {
   };
 
   const fetchSingleDestination = async () => {
-    let resp = await api.fetchSingledestination(innerid, innerkey);
+    let resp = await api.fetchSingledestination(innerid);
     setResult(resp || null);
   };
 

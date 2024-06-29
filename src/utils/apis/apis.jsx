@@ -23,6 +23,17 @@ export const ExportAllApis = () => {
         }
     }
 
+    const fetchAlltourTypes = async (ALL_TOURTYPES_PER_PAGE, page) => {
+        try {
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/category?limit=${ALL_TOURTYPES_PER_PAGE}&page=${page}`)
+            let resp = await result.json()
+            let {data,totalCount}=resp.data
+            return {data,totalCount}
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
 
     const fetchAllActivities = async (ALL_ACTIVITIES_PER_PAGE,page) => {
@@ -78,10 +89,10 @@ export const ExportAllApis = () => {
         }
     }
 
-    const fetchSingledestination = async (id, key) => {
+    const fetchSingledestination = async (id) => {
         try {
 
-            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/details/${id}/${key}`)
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/details/${id}`)
             let resp = await result.json()
             return resp.data
         } catch (error) {
@@ -114,6 +125,7 @@ export const ExportAllApis = () => {
     return {
         fetchTourPackages,
         fetchAlldestinations,
+        fetchAlltourTypes,
         fetchAllActivities,
         fetchCityBasedActivities,
         fetchSingleActivityDetails,
@@ -126,4 +138,5 @@ export const ExportAllApis = () => {
 
 export const ALL_TOUSR_PER_PAGE=12
 export const ALL_DESTINATIONS_PER_PAGE=12
+export const ALL_TOURTYPES_PER_PAGE=12
 export const ALL_ACTIVITIES_PER_PAGE=3

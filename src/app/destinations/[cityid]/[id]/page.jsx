@@ -6,7 +6,7 @@ import TravelPackage from './component/packagesInnerLeftSection';
 
 
 function Page({ params }) {
-  let { id, key } = params;
+  let { id } = params;
 
 
 
@@ -18,9 +18,9 @@ function Page({ params }) {
     <>
 
       <div className="destination_inner_page_wrapper">
-        <DestinationBanner innerid={id} innerkey={key} />
+        <DestinationBanner innerid={id}  />
         <div className='left_section_inner_package'>
-          <TravelPackage innerid={id} innerkey={key} />
+          <TravelPackage innerid={id}  />
           <BookTourForm />
         </div>
       </div>
