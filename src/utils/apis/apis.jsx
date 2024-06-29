@@ -34,6 +34,17 @@ export const ExportAllApis = () => {
         }
     }
 
+    const fetchRelativetourTypes = async (slug,ALL_TOURTYPES_PER_PAGE, page) => {
+        try {
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/categorybased?slug=${slug}&limit=${ALL_TOURTYPES_PER_PAGE}&page=${page}`)
+            let resp = await result.json()
+            let {data,totalCount}=resp.data
+            return {data,totalCount}
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
 
 
     const fetchAllActivities = async (ALL_ACTIVITIES_PER_PAGE,page) => {
@@ -126,6 +137,7 @@ export const ExportAllApis = () => {
         fetchTourPackages,
         fetchAlldestinations,
         fetchAlltourTypes,
+        fetchRelativetourTypes,
         fetchAllActivities,
         fetchCityBasedActivities,
         fetchSingleActivityDetails,
