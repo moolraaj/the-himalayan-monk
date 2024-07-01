@@ -3074,12 +3074,20 @@ img.two_image_c {
   box-shadow: inset -4px -18px 100px black;
 
 }
+.p_count{
+  color: $white;
+  padding: 4px 7px !important;
+  font-size: 14px !important;
+  font-weight: bold;
+  font-family: $josifin;
+}
 
-.destination-text p {
+.destination-text p,
+.p_count{
   position: absolute;
   top: 9px;
   right: 7px;
-  background: orange;
+  background: $dark_yellow;
   padding: 4px;
   font-size: 13px;
   border-radius: 5px;
