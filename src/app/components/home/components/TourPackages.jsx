@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import PopupWrapper from '../../book-now/popupWrapper';
 
-function TourPackages() {
+function TourPackages({id}) {
+  console.log(id)
   const router = useRouter();
   const api = ExportAllApis();
 
@@ -15,14 +16,14 @@ function TourPackages() {
   const [loading, setLoading] = useState(true);
 
   const popupAForm = (event) => {
-    event.preventDefault(); // Prevent default behavior
-    event.stopPropagation(); // Stop event from propagating to the Link
+    event.preventDefault(); 
+    event.stopPropagation(); 
     setIsShow(true);
   };
 
   const loadAllTourPackages = async () => {
     try {
-      const resp = await api.fetchTourPackages();
+      const resp = await api.fetchRelativetourTypes(id);
       setResult(resp?.data || []);
     } catch (error) {
       console.error('Failed to load tour packages:', error);

@@ -1,13 +1,20 @@
+'use client'
 import React from 'react'
-// import TourSlug from './component/tourSlug'
+
+import TourTypeSlug from './component/tourtypeSlug'
+
 
 function page({params}) {
-    let {slug}=params
+   
+  let {slug}=params
+
+   
+   
   return (
-     <>
-     {/* <TourSlug id={slug}/> */}
-     <h1>this is a page</h1>
-     </>
+    <>
+    <TourTypeSlug slug={slug}/>
+    
+    </>
   )
 }
 

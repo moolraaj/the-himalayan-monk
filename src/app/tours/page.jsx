@@ -6,8 +6,8 @@ import TourTopBanner from '../components/tour/tourTopbanner'
 function page() {
   return (
     <div>
-<TourTopBanner/>
-      <TourPackagesPage/>
+      <TourTopBanner />
+      <TourPackagesPage />
     </div>
   )
 }

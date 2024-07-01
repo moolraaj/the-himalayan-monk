@@ -9,22 +9,24 @@ import { emptyImage, leh } from '@/app/assets/images';
 import Link from 'next/link';
 
 
- 
+// Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
-function TourLocationBanner({ id }) {
+function TourTypeLocationBanner({ slug }) {
+    console.log(slug)
   let api = ExportAllApis();
   let [result, setResult] = useState([]);
   let [currentSlide, setCurrentSlide] = useState(0);
 
-  let loadDestinations = async () => {
-    let resp = await api.fetchFilterDestination(id);
+  let loadDestinations = async (slug) => {
+    let resp = await api.fetchRelativetourTypes(slug);
     setResult(resp?.data || null);
   };
 
   useEffect(() => {
-    loadDestinations();
+    loadDestinations(slug);
   }, []);
+  
 
   const settings = {
     dots: true,
@@ -88,4 +90,4 @@ function TourLocationBanner({ id }) {
   );
 }
 
-export default TourLocationBanner;
+export default TourTypeLocationBanner;

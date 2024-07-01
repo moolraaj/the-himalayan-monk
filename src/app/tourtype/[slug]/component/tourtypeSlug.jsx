@@ -1,11 +1,10 @@
 import React from 'react'
- 
-import TourPackages from './locationPackages'
 import { destination_inner_page_bg } from '@/app/assets/images'
-import TourLocationBanner from './tourtypeBanner'
+import TourTypePackages from './tourtypeLocationPackages'
+import TourTypeLocationBanner from './toutTypeLocationBanner'
 
 
-function TourSlug({id}) {
+function TourTypeSlug({slug}) {
  
 
  
@@ -15,12 +14,12 @@ function TourSlug({id}) {
     <>
     
         
-        <TourLocationBanner id={id}/>
+        <TourTypeLocationBanner slug={slug}/>
         <div className="destination_inner_page_bg" style={{ backgroundImage: `url(${destination_inner_page_bg.src})` }}>
-        <TourPackages id={id}/>
+        <TourTypePackages slug={slug}/>
         </div>
     </>
   )
 }
 
-export default TourSlug
+export default TourTypeSlug
