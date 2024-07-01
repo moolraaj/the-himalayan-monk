@@ -79,7 +79,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
                 <Link href={`/destinations/${ele.city_id}`} onClick={goTodestinations}>
                   <div className="filter-desti-img">
                     <h1>{ele.name}</h1>
-                    <img src={ele.image || emptyImage.src} alt='destinations' width={100} 
+                    <img src={ele.main_image || emptyImage.src} alt='destinations' width={100} 
                     onError={(e) => e.target.src = emptyImage.src}/>
                   </div>
                 </Link>
