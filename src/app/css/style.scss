@@ -3016,7 +3016,7 @@ img.two_image_c {
 }
 
 .form-container .title {
-  color: #FF6347;
+  color: #D65228;
   text-align: left;
   margin-top: 40px;
   font-size: 25px;
@@ -3035,9 +3035,12 @@ img.two_image_c {
 
 
 .form-container .tour-button {
+  font-size: 18px;
+  font-family: rubik;
   background-color: #FFDEB8;
   color: black;
   border: none;
+  font-weight: 500;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -3045,6 +3048,7 @@ img.two_image_c {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
 }
 

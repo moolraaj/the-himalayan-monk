@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { ExportAllApis } from '@/utils/apis/apis'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
-import { emptyImage, logo, call2, tele, adventure_tours, cultural_tour, group_tour, historical_tour, hnymoon_tour, luxury_tour } from '@/app/assets/images';
+import { emptyImage, logo, call2, tele, adventure_tours, cultural_tour, group_tour, historical_tour, hnymoon_tour, luxury_tour, slider_form_bg } from '@/app/assets/images';
 
 function SliderForm({ closeRightMenu, isShow, setIsShow }) {
   let router = useRouter()
@@ -45,7 +45,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
   let reverseToursType=[...tourTypes].reverse()
   return (
     <>
-      <div className={`form-container ${isShow ? 'show' : ''}`} >
+      <div className={`form-container ${isShow ? 'show' : ''}`}  style={{ backgroundImage: `url(${slider_form_bg.src})` }} >
         <div className="container">
           <div className="header">
             <img src={logo.src ||emptyImage.src} alt="logo" 
