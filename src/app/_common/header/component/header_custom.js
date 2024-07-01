@@ -70,7 +70,7 @@ function Headercustom() {
               <li><Link href='/'>Home</Link></li>
               <li><Link href='/about-us'>About Us</Link></li>
               <li><Link href='/destinations'>Destination</Link></li>
-              <li><Link href='/activites'>Activities</Link></li>
+              <li><Link href='/activities'>Activities</Link></li>
               <li><Link href='/ways-to-travel'>Ways to Travel</Link></li>
             </ul>
             <span className='filter_destinations'>
@@ -125,7 +125,7 @@ function Headercustom() {
                 <NavigationLink href='/destinations'>Destination</NavigationLink>
               </div>
               <div className="mobile_links">
-                <NavigationLink href='/activites'>Activities</NavigationLink>
+                <NavigationLink href='/activities'>Activities</NavigationLink>
               </div>
               <div className="mobile_links">
                 <NavigationLink href='/ways-to-travel'>Ways to Travel</NavigationLink>
