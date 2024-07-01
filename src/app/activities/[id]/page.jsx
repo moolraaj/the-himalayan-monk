@@ -5,7 +5,8 @@ import TravelPackage from '@/app/destinations/[cityid]/[id]/component/packagesIn
 import React from 'react'
 
 function page({ params }) {
-  let { id, key } = params
+  let { id } = params
+  
 
  
   return (

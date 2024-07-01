@@ -41,7 +41,7 @@ import { emptyImage } from '@/app/assets/images';
       {reverAllactivities===null? 'no activities data availble': reverAllactivities?.map(place => (
        
         <div key={place.id} className="place">
-          <Link href={`/activites/${place.id}`}>
+          <Link href={`/activities/${place.id}`}>
           <img src={place.pdf_image || emptyImage.src} alt={place.package_name} 
           onError={(e) => e.target.src = emptyImage.src}/>
           <div className="place-info">
