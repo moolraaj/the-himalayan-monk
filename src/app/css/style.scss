@@ -4,7 +4,9 @@
 
 @import '@fortawesome/fontawesome-svg-core/styles.css';
 
-
+.formGroup input, textarea {
+  outline: none;
+}
 p {
   font-size: $top_heading_desktop_p;
   margin: 0px;
