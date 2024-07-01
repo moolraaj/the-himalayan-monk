@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';
@@ -13,6 +13,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
   const [allPackages, setAllPackages] = useState([]);
   const [allDestinations, setAllDestinations] = useState([]);
   const [allActivities, setAllActivities] = useState([]);
+  const searchContentRef = useRef(null);
 
   const api = ExportAllApis();
 
@@ -87,9 +88,18 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     setSearchTerm('');
   };
 
-  const closeSearchPopup = () => {
-    setIsSearchVisible(false);
+  const handleClickOutside = (event) => {
+    if (searchContentRef.current && !searchContentRef.current.contains(event.target)) {
+      setIsSearchVisible(false);
+    }
   };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   // Typing animation logic
   const words = ['Destination', 'Packages', 'Activities'];
@@ -128,13 +138,8 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     filteredActivities.length === 0;
 
   return (
-    <>
-    
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
-      
-      <div className="search-content">
-      
-        <button className="close-search" onClick={closeSearch}>x</button>
+      <div className="search-content" ref={searchContentRef}>
         <div className="search-bar">
           <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ cursor: 'pointer' }} />
           <input
@@ -148,56 +153,55 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
           )}
         </div>
         <div className="searchbar_bg" style={{ backgroundImage: `url(${searchbar_bg.src})` }}>
-        {noResultsFound ? (
-          <div className="no-results-message">Results not found</div>
-        ) : (
-          searchTerm.trim() !== '' && (
-            <div className="search-results">
-              {searchResults.length > 0 && (
-                <div className="search-wrapper">
-                  <h1>Tours</h1>
-                  <div className="search-result">
-                    {searchResults.map((ele, index) => (
-                      <Link href={`/tours/${ele.id}`} key={index} onClick={closeSearchPopup}>
-                        {ele.package_name}
-                      </Link>
-                    ))}
+          {noResultsFound ? (
+            <div className="no-results-message">Results not found</div>
+          ) : (
+            searchTerm.trim() !== '' && (
+              <div className="search-results">
+                {searchResults.length > 0 && (
+                  <div className="search-wrapper">
+                    <h1>Tours</h1>
+                    <div className="search-result">
+                      {searchResults.map((ele, index) => (
+                        <Link href={`/tours/${ele.id}`} key={index} onClick={closeSearch}>
+                          {ele.package_name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {filteredDestinations.length > 0 && (
-                <div className="search-wrapper">
-                  <h1>Destinations</h1>
-                  <div className="search-result">
-                    {filteredDestinations.map((ele, index) => (
-                      <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearchPopup}>
-                        {ele.name}
-                      </Link>
-                    ))}
+                {filteredDestinations.length > 0 && (
+                  <div className="search-wrapper">
+                    <h1>Destinations</h1>
+                    <div className="search-result">
+                      {filteredDestinations.map((ele, index) => (
+                        <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearch}>
+                          {ele.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {filteredActivities.length > 0 && (
-                <div className="search-wrapper">
-                  <h1>Activities</h1>
-                  <div className="search-result">
-                    {filteredActivities.map((ele, index) => (
-                      <Link href={`/activities/${ele.id}`} key={index} onClick={closeSearchPopup}>
-                        {ele.package_name}
-                      </Link>
-                    ))}
+                {filteredActivities.length > 0 && (
+                  <div className="search-wrapper">
+                    <h1>Activities</h1>
+                    <div className="search-result">
+                      {filteredActivities.map((ele, index) => (
+                        <Link href={`/activities/${ele.id}`} key={index} onClick={closeSearch}>
+                          {ele.package_name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
-          )
-        )}
+                )}
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
-    </div>
-    </>
   );
 }
 
