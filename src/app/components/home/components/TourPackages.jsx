@@ -5,6 +5,7 @@ import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import PopupWrapper from '../../book-now/popupWrapper';
+import StarRating from './StarRating';
 
 function TourPackages({id}) {
   console.log(id)
@@ -68,7 +69,9 @@ function TourPackages({id}) {
                         <div className="tour_rating_duration_section">
                           <div className="tour_details">
                             <div className="tour_ratings">
-                              <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span>
+                              {/* <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span> */}
+                              
+                              <span> <StarRating rating={ele.rating} /> ({ele.rating})</span>
                             </div>
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  

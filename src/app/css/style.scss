@@ -1055,6 +1055,48 @@ span.package_count {
   width: 100%;
 }
 
+
+// star rating start*************
+
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  width: 16px; /* Adjust size as needed */
+  height: 16px;
+  margin-right: 5px; /* Adjust spacing as needed */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  border: 1px solid $greenc;
+  background-color: #80808038; 
+}
+
+.star.filled {
+  background-color: $greenc;
+}
+
+.star.half-filled {
+  background: linear-gradient(to right, $greenc 50%, #80808038 50%);
+}
+
+
+// star rating css end*************
+
+
+
+
 .rating img {
   max-width: 35px;
   position: absolute;

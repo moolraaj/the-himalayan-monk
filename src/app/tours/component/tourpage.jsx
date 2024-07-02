@@ -6,6 +6,7 @@ import { ALL_TOUSR_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import Paginations from '@/app/components/paginations/paginations';
 import PopupWrapper from '@/app/components/book-now/popupWrapper';
+import StarRating from '@/app/components/home/components/StarRating';
 
 function TourPackagesPage() {
   const api = ExportAllApis();
@@ -146,7 +147,8 @@ function TourPackagesPage() {
                         <div className="tour_rating_duration_section">
                           <div className="tour_details">
                             <div className="tour_ratings">
-                            <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span>
+                            {/* <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span> */}
+                            <span> <StarRating rating={ele.rating} /> ({ele.rating})</span>
                             </div>
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name} 
