@@ -3,7 +3,7 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import vector from '../../../assets/headerAssets/Vector.png'
-import { emptyImage } from '@/app/assets/images';
+import { emptyImage, header_car } from '@/app/assets/images';
 
 
 
@@ -21,7 +21,7 @@ function Topbar() {
           </div>
 
           <div className='top_bar_notifications'>
-            <span><p>New Launches</p>Jodhpur, Rishikesh, Jaipur, Mcleodganj & Mcleodganj & Amiritsa</span>
+            <span><p>New Launches</p>Jodhpur, Rishikesh, Jaipur, Mcleodganj & Mcleodganj & Amiritsa <img style={{marginLeft: '5px'}} src={header_car.src} alt={header_car.src} /></span>
           </div>
 
           <div className='top_bar_social_icons'>

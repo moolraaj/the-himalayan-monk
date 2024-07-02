@@ -68,7 +68,8 @@ import activities_page_bg from './homepageAssets/activities_page_bg.png';
 import ways_travel_page_bg from './homepageAssets/ways_travel_page_bg.png';
 import destination_inner_page_bg from './homepageAssets/destination_inner_page_bg.png'
 import searchbar_bg from './homepageAssets/destination_inner_page_bg.png';
-import slider_form_bg from './homepageAssets/slider_form_bg.png'
+import slider_form_bg from './homepageAssets/slider_form_bg.png';
+import header_car from './headerAssets/header_center_icon.png'
 
 
 
@@ -143,5 +144,7 @@ export {
   ways_travel_page_bg,
   destination_inner_page_bg,
   searchbar_bg,
-  slider_form_bg
+  slider_form_bg,
+  header_car,
+  
 };

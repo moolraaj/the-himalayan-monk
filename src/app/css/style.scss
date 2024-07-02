@@ -4,9 +4,11 @@
 
 @import '@fortawesome/fontawesome-svg-core/styles.css';
 
-.formGroup input, textarea {
+.formGroup input,
+textarea {
   outline: none;
 }
+
 p {
   font-size: $top_heading_desktop_p;
   margin: 0px;
@@ -345,27 +347,28 @@ body {
     transition: transform 0.5s ease;
     width: 100%;
   }
-  
+
   .dots_container {
     width: 100%;
     height: 50px;
-   display: flex;
-   justify-content: center;
-   margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
     span.dot {
-      display: inline-block; 
+      display: inline-block;
       width: 10px;
       height: 10px;
       margin: 0 5px;
       border-radius: 50%;
       background-color: $white;
     }
-  
+
     span.dot.active {
       background-color: $dark_yellow;
     }
   }
-  
+
 
   .hero_destination_outer img {
     width: 100%;
@@ -546,7 +549,7 @@ button.active-button {
     min-height: 220px;
     height: 100%;
     overflow: hidden;
-}
+  }
 
   .tour_image {
     width: 100%;
@@ -1486,11 +1489,13 @@ button.call_a_button {
   margin-top: 18px;
   overflow: auto;
   height: 90vh;
-  .search-wrapper{
+
+  .search-wrapper {
     margin-bottom: 400px;
   }
 }
-.search-results::-webkit-scrollbar{
+
+.search-results::-webkit-scrollbar {
   opacity: 0;
 }
 
@@ -1990,7 +1995,7 @@ a.tel_header_c {
   max-width: 1440px;
   margin: auto;
   display: grid;
-  grid-template-columns: 3fr 28%;
+  grid-template-columns: 3fr 40%;
   background: #d65228d6;
   margin-top: 50px;
 }
@@ -2845,11 +2850,13 @@ span.custom_icon {
 button.contactButton:hover {
   background: black;
   pointer-events: all;
-  
+
 }
-button.contactButton:hover >a{
+
+button.contactButton:hover>a {
   color: $white;
 }
+
 .overlay h4 {
   font-size: 28px;
 }
@@ -2913,7 +2920,7 @@ button.contactButton:hover >a{
 
 
 .call_r_sec {
-
+  position: relative;
   padding: 26px;
 }
 
@@ -2989,7 +2996,7 @@ img.two_image_c {
   padding-bottom: 50px;
 }
 
-.waysvehicles_wrapper{
+.waysvehicles_wrapper {
   margin-top: 78px;
 }
 
@@ -3050,7 +3057,8 @@ img.two_image_c {
   gap: 10px;
   margin-bottom: 20px;
 }
-.tour-button:hover > span.tour_type_icon_wrapper img {
+
+.tour-button:hover>span.tour_type_icon_wrapper img {
   filter: invert(1);
 }
 
@@ -3095,7 +3103,8 @@ img.two_image_c {
   box-shadow: inset -4px -18px 100px black;
 
 }
-.p_count{
+
+.p_count {
   color: $white;
   padding: 4px 7px !important;
   font-size: 14px !important;
@@ -3104,7 +3113,7 @@ img.two_image_c {
 }
 
 .destination-text p,
-.p_count{
+.p_count {
   position: absolute;
   top: 9px;
   right: 7px;
@@ -3119,10 +3128,12 @@ img.two_image_c {
   grid-template-columns: 1fr 1fr;
   text-align: left;
 }
-.two_name_email img{
+
+.two_name_email img {
   border-right: 3px solid #D9D9D9;
   padding-right: 20px;
 }
+
 .more_enquiry {
   display: flex;
   align-items: center;
@@ -3886,18 +3897,22 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:768px) {
-  .waysvehicles_wrapper{
+  .waysvehicles_wrapper {
     margin-top: 20px;
   }
-  .tour_destination .tour_destination_info .tour_info_inner .tour_info_right{
+
+  .tour_destination .tour_destination_info .tour_info_inner .tour_info_right {
     flex-direction: column;
   }
-  .tour_destination .tour_destination_info .tour_info_inner{
+
+  .tour_destination .tour_destination_info .tour_info_inner {
     grid-template-columns: 1fr;
   }
-  .tour_destination .tour_destination_info .tour_info_inner .tour_info_left h2{
+
+  .tour_destination .tour_destination_info .tour_info_inner .tour_info_left h2 {
     font-size: 16px;
   }
+
   .loading_spinner {
     padding: 150px 0px 80px 0px;
 
@@ -3968,9 +3983,11 @@ form input[type="submit"] {
   .search-results {
     height: 90vh;
     overflow: auto;
-    .search-wrapper{
+
+    .search-wrapper {
       margin-bottom: 0px;
     }
+
     .search-wrapper:last-child {
       margin-bottom: 200px;
     }
@@ -4376,10 +4393,12 @@ form input[type="submit"] {
   .hero_section_outer .hero_right_section {
     display: none;
   }
-  .search-wrapper h1{
+
+  .search-wrapper h1 {
     position: static;
     border: none;
   }
+
   .search-results {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
