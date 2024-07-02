@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import { ExportAllApis } from '@/utils/apis/apis';
@@ -8,9 +7,7 @@ import { activities_banner, emptyImage, heroimg, ways_to_travel } from '@/app/as
 import dynamic from 'next/dynamic';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
- 
 
-// Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
 
 function Herosection() {
@@ -18,7 +15,6 @@ function Herosection() {
   const [destinations, setDestinations] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isShow, setIsShow] = useState(false);
-  let [currentSlide, setCurrentSlide] = useState(0);
 
   const openPopup = () => {
     setIsShow(true);
@@ -45,7 +41,7 @@ function Herosection() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % Math.ceil(destinations.length / 6));
+      setCurrentIndex(prevIndex => (prevIndex + 1) % Math.ceil(destinations.length / 4));
     }, 2500);
 
     return () => clearInterval(interval);
@@ -54,18 +50,20 @@ function Herosection() {
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
-  let reverse=[...destinations].reverse()
+
+  let reverse = [...destinations].reverse();
+
   const renderDestinationGroups = () => {
     const groups = [];
     for (let i = 0; i < destinations.length; i += 4) {
       groups.push(
         <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
-          {reverse===null? '' : reverse.slice(i, i + 4).map((destination, index) => (
+          {reverse.slice(i, i + 4).map((destination, index) => (
             <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>
                 <img
-                  src={destination?.main_image||emptyImage.src}
+                  src={destination?.main_image || emptyImage.src}
                   alt="destination"
                   onError={(e) => e.target.src = emptyImage.src}
                 />
@@ -79,8 +77,11 @@ function Herosection() {
   };
 
   const renderDots = () => {
+    const totalGroups = Math.ceil(destinations.length / 4);
+    const numberOfDots = totalGroups > 3 ? 3 : totalGroups;
     const dots = [];
-    for (let i = 0; i < Math.ceil(destinations.length / 4); i++) {
+
+    for (let i = 0; i < numberOfDots; i++) {
       dots.push(
         <span
           key={i}
@@ -89,6 +90,7 @@ function Herosection() {
         ></span>
       );
     }
+
     return dots;
   };
 
@@ -108,7 +110,7 @@ function Herosection() {
       <div className="hero_section_outer">
         <div className="slider_wrapper">
           <Slider {...sliderSettings}>
-            {bannerImages===null?  heroimg.src : bannerImages.map((image, index) => (
+            {bannerImages.map((image, index) => (
               <div key={index}>
                 <img
                   src={image.img || emptyImage.src}

@@ -345,8 +345,27 @@ body {
     transition: transform 0.5s ease;
     width: 100%;
   }
-
-
+  
+  .dots_container {
+    width: 100%;
+    height: 50px;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+    span.dot {
+      display: inline-block; 
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  
+    span.dot.active {
+      background-color: $dark_yellow;
+    }
+  }
+  
 
   .hero_destination_outer img {
     width: 100%;
@@ -3100,7 +3119,10 @@ img.two_image_c {
   grid-template-columns: 1fr 1fr;
   text-align: left;
 }
-
+.two_name_email img{
+  border-right: 3px solid #D9D9D9;
+  padding-right: 20px;
+}
 .more_enquiry {
   display: flex;
   align-items: center;
