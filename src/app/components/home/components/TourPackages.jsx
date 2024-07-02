@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import { airplane, speedometer, location, emptyImage } from '@/app/assets/images';
+import { airplane, speedometer, location, emptyImage, rating } from '@/app/assets/images';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -68,7 +68,7 @@ function TourPackages({id}) {
                         <div className="tour_rating_duration_section">
                           <div className="tour_details">
                             <div className="tour_ratings">
-                              <span>{ele.rating} ★ ({ele.reviews} reviews)</span>
+                              <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span>
                             </div>
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  
