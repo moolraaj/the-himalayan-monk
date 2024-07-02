@@ -17,7 +17,7 @@ function PopupWrapper({ isShow, setIsShow }) {
                     </div>
                     <div className="book-popupo-inner">
                     <h2>Make an enquiry</h2>
-                            <BookNowForm />
+                            <BookNowForm setIsShow={setIsShow}/>
                     </div>
                 </div>
 

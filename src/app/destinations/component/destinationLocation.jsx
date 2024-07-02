@@ -14,6 +14,7 @@ function DPlaces() {
 
   let loadAllDestinations = async (page) => {
     try {
+      setLoading(true)
       let response = await api.fetchAlldestinations(ALL_DESTINATIONS_PER_PAGE, page);
       setResult(response?.data || null);
       setTotalItems(Math.ceil(response?.totalCount / ALL_DESTINATIONS_PER_PAGE || null));
@@ -29,6 +30,7 @@ function DPlaces() {
     loadAllDestinations(page);
   }, [page]);
   let reverAlldestinations=[...result].reverse()
+   
   return (
     <>
       <div className="places-container">
