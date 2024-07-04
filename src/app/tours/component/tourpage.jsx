@@ -142,6 +142,7 @@ function TourPackagesPage() {
                           onError={(e) => e.target.src = emptyImage.src}/>
                           <p className="tour_location">{ele.city_name || "not availble"}</p>
                         </span>
+                        <p className='tour_description'>Loream Ipsum and ahdjf adjh</p>
                       </div>
                       <div className='tour_b_c'>
                         <div className="tour_rating_duration_section">

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import triangle from '@/app/assets/homepageAssets/triangle.png' 
-import profile  from '../../../assets/homepageAssets/profile.png'
+import profile from '../../../assets/homepageAssets/profile.png'
 import Image from "next/image";
 const testimonials = [
   {
@@ -76,7 +76,7 @@ const Testimonials = () => {
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 15000000000);
+    }, 5000); // Changed to 5 seconds
 
     return () => {
       clearInterval(interval);
@@ -84,7 +84,15 @@ const Testimonials = () => {
     };
   }, []);
 
-  const displayedTestimonials = [...testimonials, ...testimonials].slice(
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  };
+
+  const displayedTestimonials = testimonials.slice(
     currentIndex,
     currentIndex + slidesToShow
   );
@@ -94,55 +102,50 @@ const Testimonials = () => {
       <div className="testimonials-container">
         <h2 className="section-title">Customer Reviews</h2>
         <div className="testimonials-slider">
-          {displayedTestimonials===null? 'no testimonials availble' : displayedTestimonials.map((testimonial, index) => (
-           
-            
-            <div key={index} className="testimonial">
-              <p className="review">{testimonial.review}</p>
-              <div className="reviewer-info">
-              
-                <div className="reviewer-details">
-                
-                
-                  <div className="review-meta">
-                    <span className="date">{testimonial.date}</span>
-                    <span className="time">{testimonial.time}</span>
+          <div className="slider-controls">
+            <button onClick={handlePrev} className="left-arrow">
+            <p>ddsfsa</p> 
+            </button>
+            <button onClick={handleNext} className="right-arrow">
+             <p>dsfa</p>
+            </button>
+          </div>
+          {displayedTestimonials.length === 0
+            ? 'No testimonials available'
+            : displayedTestimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial">
+                <p className="review">{testimonial.review}</p>
+                <div className="reviewer-info">
+                  <div className="reviewer-details">
+                    <div className="review-meta">
+                      <span className="date">{testimonial.date}</span>
+                      <span className="time">{testimonial.time}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="rating">
+                  {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+                </div>
+                <img 
+                  src={triangle.src}
+                  alt="image"
+                  className="triangle-testimonial-img"
+                />
+                <div className="user_infos">
+                  <div className="avtar_outer">
+                    <img
+                      src={profile.src}
+                      alt={testimonial.name}
+                      className="avatar"
+                    />
+                  </div>
+                  <div className="user_desc">
+                    <span className="name">{testimonial.name}</span>
+                    <span className="location">{testimonial.location}</span>
                   </div>
                 </div>
               </div>
-              <div className="rating">
-                {"★".repeat(testimonial.rating) +
-                  "☆".repeat(5 - testimonial.rating)}
-                  
-              </div>
-
-              <img 
-              src={triangle.src}
-               alt="image"
-               className="triangle-testimonial-img"
-               />
-             
-             
-
-              <div className="user_infos">
-                <div className="avtar_outer">
-
-              <img
-                  src={profile.src}
-                  alt={testimonial.name}
-                  className="avatar"
-                />
-                </div>
-                <div className="user_desc">
-
-                  <span className="name">{testimonial.name}</span>
-                  <span className="location">{testimonial.location}</span>
-                </div>
-              </div>
-            </div>
-       
-            
-          ))}
+            ))}
         </div>
       </div>
     </div>

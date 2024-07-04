@@ -46,7 +46,7 @@ function TourTypePackages({ slug }) {
                             <div className="ways_travel_image">
                                 <div className="save_value">
                                     <img src={save_price.src} alt={save_price.src} />
-                                    <p> save INR  {tour.starting_cost}</p>
+                                    <p> save INR  {tour.discount}</p>
                                 </div>
                                 <div className="tour-image">
                                     <img src={tour.pdf_image || emptyImage.src} alt='tour-image'
@@ -67,7 +67,7 @@ function TourTypePackages({ slug }) {
                                 <div className="tour-title">{tour.package_name}</div>
                                 <div className="tour-price">
                                     <span className="price">Rs {tour.starting_cost}</span>
-                                    <span className="price-details">INR - ${tour.starting_cost} Per Person</span>
+                                    <span className="price-details">INR - ${tour.pakage_discounted_cost} Per Person</span>
                                 </div>
                                 <button className="book-button">Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
                             </div>

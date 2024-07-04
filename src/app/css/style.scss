@@ -139,6 +139,26 @@ a {
   position: relative;
 }
 
+
+span.tour_type_icon_wrapper img {
+  object-fit: contain;
+  width: 45px !important;
+}
+
+
+.form-container-custom h2 {
+  text-align: center;
+}
+
+
+.react-datepicker-wrapper {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  width: 100%;
+}
+
+
 .book_now_form_header {
   display: flex;
   justify-content: space-between;
@@ -226,6 +246,28 @@ a {
     display: inline;
   }
 }
+
+
+p.tourdescription {
+  display: block;
+  width: 100%;
+  
+}
+
+p.tour_location {
+  width: 100%;
+}
+
+p.tourdescription {
+display: block;
+width: 100%;
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 22.19px;
+text-align: left;
+}
+
 
 
 .book-form_button {
@@ -519,9 +561,27 @@ body {
   margin-bottom: 40px;
 }
 
+.top_banner_Image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00000094;
+  position: absolute;
+}
+
+.top_banner_Image {
+  position: relative;
+}
+
+
+
+
+
 
 .desti_top_heading h1 {
   text-transform: capitalize;
+  font-size: 45px;
+  padding-top: 50px;
 }
 
 
@@ -1192,6 +1252,9 @@ img.triangle-testimonial-img {
   display: flex;
   justify-content: center;
   padding: 40px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 
 .TourPackages_inner {
@@ -1304,6 +1367,7 @@ p.tour_location {
   margin: 0 0 10px;
   color: #333;
   font-family: 'rubik';
+  text-transform: capitalize;
 
 }
 
@@ -2066,7 +2130,7 @@ a.tel_header_c {
   display: flex;
   max-width: 1440px;
   width: 100%;
-  gap: 40px;
+  gap: 15px;
 }
 
 .aboutus-text p {
@@ -2142,6 +2206,7 @@ a.tel_header_c {
 
 .feature span {
   font-weight: 600;
+  font-size: 20px;
 }
 
 .aboutus-button {
@@ -2267,14 +2332,16 @@ span.days_item {
   max-width: 1440px;
   margin: auto;
   padding: 40px 11px;
-  grid-template-columns: 41% 3fr;
+  grid-template-columns: 35% 3fr;
   column-gap: 30px;
 }
 
 .tabs-container.activities_home span {
   font-family: 'rubik';
-  font-weight: 600;
-  margin-top: 8px;
+    margin-top: 8px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.63px;
 }
 
 .tabs-container.activities_home .tab {
@@ -2330,8 +2397,20 @@ span.days_item {
 
 
 .tabs-container.activities_home .tab img {
-  width: 100px !important;
+  width: 100% !important;
+  object-fit: contain;
 }
+
+.activity_featured p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.19px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #757575;
+}
+
 
 .activities_new .tab img {
   height: 86px;
@@ -2397,19 +2476,37 @@ span.days_item {
   height: 130px;
 }
 
+.slider-controls {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 36%;
+  z-index: 999;
+  left: 95px;
+}
+
+.slider-controls button {
+  z-index: 999;
+  position: absolute !important;
+}
+
+button.right-arrow {
+  right: 0px;
+}
+
+
 .section-title {
-  margin-bottom: 20px;
   color: #ffffff;
   transform: rotate(-90deg);
   position: absolute;
   text-align: center;
   margin-bottom: 20px;
-  left: -82px;
   font-size: 30px;
   font-weight: 400;
   color: #d65228;
-  left: -85px;
-  top: 50%;
+  left: -83px;
+  top: 36%;
   font-family: "satisfy";
   transform: translateY(-50%) rotate(-90deg);
 }
@@ -2737,16 +2834,29 @@ span.days_item {
   padding-top: 34px;
 }
 
+
+.activity_featured ul li {
+  font-family: 'josefin';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+}
+
 .view-all-packages button {
   padding: 10px 48px;
   text-transform: capitalize;
-  background: orange;
+  background: none;
   border: unset;
   border-radius: 4px;
-  font-weight: 500;
+  font-size: 19px;
   cursor: pointer;
-  font-weight: 600;
-  color: #fff;
+  position: absolute;
+  right: 0;
+  color: #D65228;
+  transform: rotate(269deg);
+  bottom: 171px;
+  right: 32px;
 }
 
 .all_tour_packages .tour-image {
@@ -3788,7 +3898,7 @@ form input[type="submit"] {
   }
 
   .activities_new .tabs-container {
-    grid-template-columns: 45% 3fr;
+    grid-template-columns: 37% 3fr;
   }
 
   .activities_new .tab-content h2 {
@@ -4353,7 +4463,7 @@ form input[type="submit"] {
     display: block;
     max-width: 1440px;
     width: 100%;
-    gap: 40px;
+    gap: 15px;
   }
 
   .about_traveller .stats-section {
