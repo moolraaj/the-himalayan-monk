@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 
 
 function TravelPackage({ innerid }) {
+  console.log(innerid)
+   
   let api = ExportAllApis()
 
 
@@ -15,17 +17,18 @@ function TravelPackage({ innerid }) {
     setActiveDay(activeDay === index ? null : index);
   };
 
-  const fetchSingleDestination = async () => {
+  const loadSingleDestination = async () => {
     let resp = await api.fetchSingledestination(innerid);
     setResult(resp || null);
+     
   };
 
   useEffect(() => {
-    fetchSingleDestination()
+    loadSingleDestination()
   }, []);
  
 
-
+ 
 
   return (
     <>
@@ -37,8 +40,8 @@ function TravelPackage({ innerid }) {
             <div className="package-wrapper" key={ele.id}>
               <div className="price-section">
                 <span className="discounted-price">
-                  <b>Rs {ele.pakage_discounted_cost} </b>{" "}
-                  <span className="original-price">Rs {ele.starting_cost}</span>{" "}
+                  <b>Rs {ele.pakage_discounted_cost||0} </b>{" "}
+                  <span className="original-price">Rs {ele.starting_cost||0}</span>{" "}
                   / Per Person
                 </span>
               </div>
@@ -53,23 +56,23 @@ function TravelPackage({ innerid }) {
               <p className="description">{ele.description}</p>
               <h2>Included</h2>
               <ul className="included-excluded">
-                {ele.inc_meta===null?'no data found':ele.inc_meta.map((item, index) => {
+                {ele.inc_meta===null || ele.inc_meta===false?('no data found'):(ele.inc_meta.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_inc}</li>
                   </div>
                 }
-                )}
+                ))}
               </ul>
               <h2>Excluded</h2>
               <ul className="included-excluded">
-                {ele.exc_meta===null?'no data found':ele.exc_meta.map((item, index) => {
+                {ele.exc_meta===null || ele.exc_meta===false ?('no data found'):(ele.exc_meta?.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_exc}</li>
                   </div>
                 }
-                )}
+                ))}
               </ul>
               <h2>Itinerary</h2>
               <div className="itinerary">

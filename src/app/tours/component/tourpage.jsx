@@ -128,7 +128,7 @@ function TourPackagesPage() {
             ) : (
              reversePackages===null? <EmptyComponent/> : reversePackages.map((ele) => (
                 <div className="tour_package" key={ele.id}>
-                  <Link href={`/tours/${ele.id}`}>
+                  <Link href={`/destinations/${ele.city_name}/${ele.id}`}>
                     <div className="tour_package_inner">
                       <div className="tour_img_wrapper">
                         <img src={ele?.pdf_image || emptyImage.src} alt={ele.package_name || emptyImage.src} 
@@ -140,7 +140,7 @@ function TourPackagesPage() {
                         <span>
                           <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
                           onError={(e) => e.target.src = emptyImage.src}/>
-                          <p className="tour_location">{ele.city_name || "not availble"}</p>
+                          <p className="tour_location">{ele?.city_name || "not availble"}</p>
                         </span>
                       </div>
                       <div className='tour_b_c'>

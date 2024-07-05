@@ -39,7 +39,7 @@ function DPlaces() {
                 <img src={place.banner_images_main || emptyImage.src} alt={place.name} 
                 onError={(e) => e.target.src = emptyImage.src}/>
                 <div className="place-info">
-                {/* <span className='package_count'>{place.package_count} Tours</span> */}
+                <span className='package_count'>Tours {place?.del_status||0} </span>
                   <span className="name_location">
                     {/* <h2>{place.title}</h2> */}
                     <h1>{place.package_cat_name}</h1>

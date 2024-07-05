@@ -8,6 +8,7 @@ import PopupWrapper from '../../book-now/popupWrapper';
 import StarRating from './StarRating';
 
 function TourPackages({id}) {
+  
   console.log(id)
   const router = useRouter();
   const api = ExportAllApis();
@@ -51,7 +52,7 @@ function TourPackages({id}) {
             ) : (
               reverAllPackages===null? <EmptyComponent/> : reverAllPackages.slice(0, 6).map((ele) => (
                 <div className="tour_package" key={ele.id}>
-                  <Link href={`/tours/${ele.id}`}>
+                  <Link href={`/destinations/${ele.city_name}/${ele.id}`}>
                     <div className="tour_package_inner">
                       <div className="tour_img_wrapper">
                         <img src={ele.pdf_image || emptyImage.src} alt={ele.package_name}  
@@ -62,7 +63,7 @@ function TourPackages({id}) {
                         <h2>{ele.package_name}</h2>
                         <span>
                           <img src={location.src} style={{ width: '25px' }} alt={ele.name} />
-                          <p className="tour_location">{ele.tour_location || "not availble"}</p>
+                          <p className="tour_location">{ele.city_name || "not availble"}</p>
                         </span>
                       </div>
                       <div className='tour_b_c'>
@@ -71,7 +72,7 @@ function TourPackages({id}) {
                             <div className="tour_ratings">
                               {/* <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span> */}
                               
-                              <span> <StarRating rating={ele.rating} /> ({ele.rating})</span>
+                              <span> <StarRating rating={ele.rating} />  ({ele.rating}) </span>
                             </div>
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  
