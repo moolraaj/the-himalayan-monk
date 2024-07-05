@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import triangle from '@/app/assets/homepageAssets/triangle.png' 
 import profile from '../../../assets/homepageAssets/profile.png'
 import Image from "next/image";
+import arrowl from '../../../assets/homepageAssets/larr.gif'
+import arrowr from '../../../assets/homepageAssets/rarr.gif'
+import testback from '../../../assets/homepageAssets/testimonialbac.png'
+
 const testimonials = [
   {
     name: "Rakesh Sharma",
@@ -46,6 +50,16 @@ const testimonials = [
   },
   {
     name: "Alice Johnson",
+    location: "Canada",
+    review:
+      "The trip was fantastic! The scenery was breathtaking and the guides were knowledgeable and friendly.",
+    date: "May 5, 2024",
+    time: "10:30 AM",
+    rating: 4,
+    avatar: "/avatars/alice-johnson.jpg",
+  },
+  {
+    name: "Max Johnson",
     location: "Canada",
     review:
       "The trip was fantastic! The scenery was breathtaking and the guides were knowledgeable and friendly.",
@@ -98,16 +112,16 @@ const Testimonials = () => {
   );
 
   return (
-    <div className="testimonial_outer">
+    <div className="testimonial_outer" style={{ backgroundImage: `url(${testback.src})` }}>
       <div className="testimonials-container">
         <h2 className="section-title">Customer Reviews</h2>
         <div className="testimonials-slider">
           <div className="slider-controls">
             <button onClick={handlePrev} className="left-arrow">
-            <p>ddsfsa</p> 
+            <p><img src={arrowr.src}/></p> 
             </button>
             <button onClick={handleNext} className="right-arrow">
-             <p>dsfa</p>
+             <p><img src={arrowl.src}/></p>
             </button>
           </div>
           {displayedTestimonials.length === 0
@@ -124,6 +138,7 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div className="rating">
+                  <label>Rating</label>
                   {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
                 </div>
                 <img 
