@@ -141,6 +141,8 @@ a {
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
 
 }
 
@@ -479,7 +481,7 @@ body {
 
   .hero_section_inner {
     @extend %inner-section_max_width;
-    padding: 210px 15px 70px 15px;
+    padding: 220px 15px 80px 15px;
     z-index: 2;
 
     .hero_wrapper {
@@ -1395,7 +1397,8 @@ p.tour_location {
 }
 
 .tour_package_info h2 {
-  font-size: 25px;
+  font-size: 22px;
+  font-weight:500;
   margin: 0 0 10px;
   color: #333;
   font-family: 'rubik';
@@ -1449,8 +1452,8 @@ span.speedometer {
 }
 
 .book_button {
-  margin-top: 20px;
-  padding: 10px 15px;
+  margin-top: 10px;
+  padding: 8px 15px;
   background-color: orange;
   color: white;
   display: flex;
@@ -1989,7 +1992,7 @@ a.tel_header_c {
   position: fixed;
   width: 100%;
   z-index: 999;
-  top: 30px;
+  top: 28px;
 }
 
 .search_e {
@@ -2061,7 +2064,7 @@ a.tel_header_c {
 .footer_wrapper_second ul {
   margin: 0px;
   padding-left: 0px;
-  padding-top: 25px;
+  padding-top: 0px;
 }
 
 .footer_i {
@@ -2096,7 +2099,8 @@ a.tel_header_c {
 .footer_wrapper_second h4 {
   font-size: 25px;
   color: $white;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 
 .follow_name {
@@ -2104,6 +2108,7 @@ a.tel_header_c {
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   align-items: center;
+  margin: 30px 0px;
 }
 
 .footer_social_icons {
@@ -2126,6 +2131,20 @@ a.tel_header_c {
   font-size: 17px;
 }
 
+.journy-image-container::after {
+  content: "";position: 
+  absolute;top: -18px;left:
+   51px;width: 10px;
+   height: 239px;
+   transform: rotate(30deg);
+   clip-path: polygon(11% 0%, 100% 0, 100% 100%, 0% 100%);
+   object-fit: cover;
+   background: #EDB3A0;
+  }
+
+.journy-image-container {
+    position: relative;
+}
 
 .call_to_action {
   position: relative;
@@ -2134,8 +2153,8 @@ a.tel_header_c {
   margin: auto;
   display: grid;
   grid-template-columns: 3fr 40%;
-  background: #d65228d6;
   margin-top: 50px;
+  background: radial-gradient(circle, #ff9553 -5%, #DC794F 83%);
 }
 
 
@@ -2167,7 +2186,6 @@ a.tel_header_c {
 
 .aboutus-text p {
   font-size: 16px !important;
-  margin-bottom: 50px;
 }
 
 .aboutus-images {
@@ -2210,6 +2228,7 @@ a.tel_header_c {
   font-size: 1rem;
   margin-bottom: 0px;
   color: #757575;
+  line-height:30px;
 }
 
 .aboutus-features {
@@ -2248,7 +2267,7 @@ a.tel_header_c {
   border: none;
   border-radius: 36px;
   cursor: pointer;
-  max-width: 205px;
+  width: 205px;
   font-size: 18px;
   transition: background-color 0.3s ease;
   font-family: 'Inter';
@@ -2422,7 +2441,7 @@ span.days_item {
 .tour_destination_inner img {
   object-fit: cover;
   width: -webkit-fill-available;
-  height: 600px;
+  height: 100%;
   z-index: -1;
 }
 
@@ -2586,7 +2605,7 @@ button.right-arrow {
 }
 
 .slick-slide img {
-  height: 100vh !important;
+  // height: 100vh !important;
   filter: brightness(.5);
 }
 
@@ -4704,9 +4723,10 @@ form input[type="submit"] {
 
   .follow_name {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 10px;
-    align-items: initial;
+    align-items: center;
+    margin: 30px 0px;
   }
 
   .footer_wrapper_second h4 {
@@ -4825,7 +4845,7 @@ form input[type="submit"] {
   .footer_wrapper_second ul {
     margin: 0px;
     padding-left: 0px;
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .footer_social_icons {

@@ -91,7 +91,7 @@ function BookNowForm({ setIsShow }) {
       <div className="book-form-wrapper">
         <div className="book_fields_wrapper">
           <div className="book-form_fields">
-            <label htmlFor="firstname">Firstname</label>
+            <label htmlFor="firstname">FirstName</label>
             <input type="text" name="name" value={user.name} onChange={getUserDetails} />
             {errors.name && <span className="error">{errors.name}</span>}
           </div>

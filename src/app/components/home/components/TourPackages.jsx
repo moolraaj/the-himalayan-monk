@@ -79,7 +79,7 @@ function TourPackages({id}) {
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  
                                onError={(e) => e.target.src = emptyImage.src}/>
-                              {ele.days}days / {ele.night}nights
+                              {ele.days} Days / {ele.night} Nights
                             </span>
                           </div>
                         </div>

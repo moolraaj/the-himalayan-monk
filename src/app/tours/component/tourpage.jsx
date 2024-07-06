@@ -137,12 +137,14 @@ function TourPackagesPage() {
                       </div>
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
+                        
+                        <p className='tour_description'>Loream Ipsum and ahdjf adjh</p>
                         <span>
                           <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
                           onError={(e) => e.target.src = emptyImage.src}/>
                           <p className="tour_location">{ele.city_name || "not availble"}</p>
                         </span>
-                        <p className='tour_description'>Loream Ipsum and ahdjf adjh</p>
+                        
                       </div>
                       <div className='tour_b_c'>
                         <div className="tour_rating_duration_section">
@@ -154,7 +156,7 @@ function TourPackagesPage() {
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name} 
                               onError={(e) => e.target.src = emptyImage.src}/>
-                              {ele.days}days / {ele.night}nights
+                              {ele.days} Days / {ele.night} Nights
                             </span>
                           </div>
                         </div>

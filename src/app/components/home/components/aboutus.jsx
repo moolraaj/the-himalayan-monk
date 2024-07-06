@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-
+import AboutUsPage from '../../../about-us/page';
 import Image from 'next/image';
 import { aboutone, abouttwo, calender, flag, medicine, spy } from '@/app/assets/images';
 
@@ -37,7 +37,10 @@ const AboutUs = () => {
               <span>3.5K Tour Success</span>
             </div>
           </div>
-          <button className="aboutus-button">More About</button>
+         
+           
+          <a href="../about-us/"><button className="aboutus-button">More About </button> </a>
+        
         </div>
       </div>
     </div>
