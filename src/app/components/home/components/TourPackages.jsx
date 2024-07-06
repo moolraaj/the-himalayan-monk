@@ -25,7 +25,7 @@ function TourPackages({id}) {
 
   const loadAllTourPackages = async () => {
     try {
-      const resp = await api.fetchRelativetourTypes(id);
+      const resp = await api.fetchTourPackages(id);
       setResult(resp?.data || []);
     } catch (error) {
       console.error('Failed to load tour packages:', error);
