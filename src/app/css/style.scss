@@ -162,10 +162,6 @@ span.tour_type_icon_wrapper img {
   width: 30px;
 }
 
-.tour_price_book_section {
-  padding-right: 10px;
-}
-
 
 .react-datepicker-wrapper {
   display: inline-block;
@@ -226,11 +222,6 @@ text-align: left;
   display: flex;
   flex-direction: column;
 }
-
-button.aboutus-button {
-  display: none;
-}
-
 
 .book_fields_wrapper {
   display: grid;
@@ -603,11 +594,6 @@ body {
   margin-bottom: 40px;
 }
 
-.destinationfilter select {
-  padding: 10px 17px;
-  border-radius: 33px;
-  text-transform: capitalize;
-}
 .top_banner_Image:before {
   content: "";
   width: 100%;
@@ -621,28 +607,15 @@ body {
 }
 .pagination-buttons button {
   padding: 6px 14px !important;
-  cursor: pointer;
-  background: unset;
-  color: #DFDFE0;
-  border: unset;
-  border-radius: 2px;
-  font-weight: 600;
-  font-size: 28px;
-}
-.pagination-buttons img {
-  width: 50px;
+  margin-right: 10px;
   cursor: pointer;
 }
-.pagination-buttons .prev {
-  transform: rotateY(180deg);
-}
+
 button.active-button {
-  background: unset;
-  color: #636262;
-  border: unset;
+  background: #d75227;
+  color: white;
+  border: 1px solid #d75227;
   border-radius: 2px;
-  font-weight: 600;
-  font-size: 28px;
 }
 
 .tour_destination {
@@ -1161,7 +1134,7 @@ span.package_count {
   border-radius: 5px;
   width: 100%;
   object-fit: cover;
-  filter: brightness(0.7);
+  filter: brightness(0.6);
 }
 
 
@@ -1170,10 +1143,7 @@ span.package_count {
 .star-rating {
   display: flex;
   align-items: center;
-  color: red;
 }
-
-
 
 .star {
   width: 16px; /* Adjust size as needed */
@@ -1218,7 +1188,7 @@ span.package_count {
 img.triangle-testimonial-img {
   width: 40px;
   filter: invert(1);
-  top:6px;
+  top: 23px;
   position: relative;
   left:40%;
 }
@@ -1313,9 +1283,6 @@ img.triangle-testimonial-img {
 .TourPackages_inner {
   @extend %secondary_max_width;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 36px;
-  align-items: end;
 }
 
 
@@ -1344,7 +1311,6 @@ img.triangle-testimonial-img {
 .tour_package_inner {
   display: grid;
   grid-template-columns: 42% 58%;
-  column-gap: 12px;
 }
 
 p.tour_location {
@@ -1955,7 +1921,6 @@ button.call_a_button {
 .destinationfilter select {
   padding: 10px 17px;
   border-radius: 33px;
-  text-transform: capitalize;
 }
 
 
@@ -2332,7 +2297,6 @@ span.days_item {
 
 .day-header strong {
   color: $black;
-  font-weight: 500;
 }
 
 
@@ -2384,7 +2348,6 @@ span.days_item {
   position: absolute;
   left: 0;
   width: 100%;
-  object-fit: cover;
 }
 
 .destination img {
@@ -2466,7 +2429,6 @@ span.days_item {
   width: 191px;
   border-right: 20px solid #ffd9cd !important;
   border-left: 14px;
-  width: 95%;
   height: 178px;
   border-bottom: 7px solid #ffd9cd !important;
   overflow: hidden;
@@ -2561,22 +2523,12 @@ span.days_item {
 
 .testimonial p {
   font-size: 16px;
-  line-height: 30px;
+  line-height: 161%;
   height: 130px;
   font-family: 'rubik' !important;
   color: #757575;
 }
-.testimonial-review-rating {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-top: 30px;
-}
-.testimonial-review-rating .rating label {
-  color: #000;
-  font-family: 'josefin';
-  font-size: 18px;
-}
+
 button.left-arrow {
   transform: rotateY(180deg);
 }
@@ -2798,16 +2750,9 @@ span.discounted-price b {
 
 .original-price {
   text-decoration: line-through;
-  color: #fdc584;
-  font-size: 22px;
-  font-family: 'josefin';
+  color: #888;
 }
-.details span {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-}
+
 .details {
   display: flex;
   margin-bottom: 20px;
@@ -2842,6 +2787,14 @@ span.discounted-price b {
   line-height: 27px;
 }
 
+.package {
+  span span {
+    font-size: 18px;
+    font-family: 'josefin';
+    color: #636262;
+    line-height: 27px;
+  }
+}
 
 
 .banner_section {
@@ -2912,7 +2865,7 @@ ul.included-excluded li::marker {
 }
 
 .day {
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 }
 
 .day-header {
@@ -2937,7 +2890,7 @@ span.days_item {
 
 
 .day-header span {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .day-activity {
@@ -2956,6 +2909,7 @@ span.days_item {
 }
 
 .view-all-packages {
+  display: flex;
   justify-content: end;
   padding-top: 34px;
 }
@@ -2974,17 +2928,15 @@ span.days_item {
   text-transform: capitalize;
   background: none;
   border: unset;
- 
+  border-radius: 4px;
   font-size: 19px;
   cursor: pointer;
-  white-space: nowrap;
+  position: absolute;
   right: 0;
   color: #D65228;
   transform: rotate(269deg);
-  bottom: 80px;
-  position: relative;
-  right: 0px;
-  margin-left: -83px !important;
+  bottom: 171px;
+  right: 32px;
 }
 
 .all_tour_packages .tour-image {
@@ -3189,14 +3141,10 @@ button.contactButton:hover>a {
 }
 
 .review-meta {
-  color: #757575;
-  font-size: 14px;
-  font-family: 'josefin';
+  font-size: 0.8rem;
+  color: #aaa;
 }
-.review-meta span {
-  margin-bottom: 3px;
-  display: block;
-}
+
 .rating {
   font-size: 1rem;
   color: #ff9800;
@@ -3573,7 +3521,7 @@ button.custom_close {
   height: 50px;
   border-bottom-right-radius: 36px;
   border-bottom-left-radius: 39px;
-  left: 49%;
+  left: 45%;
 }
 
 .navbar_c_section span img {
@@ -3681,6 +3629,8 @@ span.name_location h1 {
     border-radius: 0px 5px 5px 0px;
 
     img {
+      width: 20px;
+      height: 20px;
       object-fit: contain;
     }
   }
@@ -3799,12 +3749,6 @@ form input[type="submit"] {
     font-size: 15px;
   }
 
-  
-
-.TourPackages_inner {
-  width: 90% !important;
-}
-
   .header_i_sec {
     padding: 10px 20px !important;
   }
@@ -3870,23 +3814,6 @@ form input[type="submit"] {
 
 }
 @media only screen and (max-width:1200px) {
-  .hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
-    line-height: 112%;
-    font-size: 4.313rem;
-    margin: 0px;
-    font-family: "rubik";
-    color: #fff;
-    margin-bottom: 10px;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
-
-.hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
-   
-  font-size: 4.313rem;
- 
-}
-
   .header_i_sec {
     display: flex;
     justify-content: space-between;
@@ -3897,21 +3824,9 @@ form input[type="submit"] {
       display: none;
     }
 
-
-    
-    .aboutus-content {
-      display: flex;
-      max-width: 1440px;
-      width: 95%;
-      gap: 15px;
-  }
-
-
     .mobile_toggler_menu {
       display: block;
     }
-
-   
   }
 
   .aboutus-features {
@@ -3957,7 +3872,6 @@ form input[type="submit"] {
     height: 250px;
     border-radius: 5px;
     width: 100%;
-    object-fit: cover;
   }
 
 
@@ -3986,7 +3900,6 @@ form input[type="submit"] {
   .all_tour_packages .tour-packages {
     grid-template-columns: repeat(3, 1fr);
   }
- 
 }
 
 /* Responsive Design Start */
@@ -3994,9 +3907,6 @@ form input[type="submit"] {
   .book_now_form {
     padding: 50px 0px;
   }
-  .activities_new .tabs-container {
-    grid-template-columns: 1fr !important;
-}
 
   .TourPackages_inner {
     display: flex;
@@ -4098,7 +4008,6 @@ form input[type="submit"] {
 
   .tour_package_inner {
     grid-template-columns: 45% 55%;
-    column-gap: 12px;
   }
 
   .tour_b_c {
@@ -4239,48 +4148,6 @@ form input[type="submit"] {
     margin-top: 20px;
   }
 
-  .view-all-packages {
-    justify-content: right;
-    margin-bottom: -65px;
-}
-.tour_packages_wrapper {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-.tabs-container.activities_home span {
-  font-family: "rubik";
-  margin-top: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 29.63px;
-}
-.activities_new .tab-content {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-  .hero_section_outer .slider_wrapper img {
-    height: 105vh !important;
-  }
-
-  .hero_section_outer .hero_section_inner .hero_wrapper {
-    grid-template-columns: 1fr;
-}
-.hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section p {
-  font-family: "inter";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #fff;
-  padding-bottom: 1px;
-  padding-top: 8px;
-}
-.hero_section_outer .hero_right_section {
-  margin-top: 40px;
-}
-
   .book-form_message_filed label{
     font-size: 18px;
   }
@@ -4368,7 +4235,7 @@ form input[type="submit"] {
 
   .activities_new .tab-content .images img {
     max-width: 200px;
-    width: 30%;
+    width: 100%;
     height: 120px;
   }
 
@@ -4510,7 +4377,6 @@ form input[type="submit"] {
 
   .hero_section_outer .hero_section_inner {
     padding-top: 170px;
-    height: 65vh !important;
   }
 
   .package {
