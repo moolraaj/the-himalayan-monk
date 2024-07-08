@@ -1,5 +1,5 @@
 import React from 'react'
-import image  from '../../assets/herosection/hero_background.jpg'
+import image  from '../../assets/herosection/destination-banner.png'
 
 function DestinationPageBanner() {
   return (
