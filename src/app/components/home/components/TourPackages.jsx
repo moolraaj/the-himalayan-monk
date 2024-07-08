@@ -62,7 +62,7 @@ function TourPackages({id}) {
                       </div>
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
-                        <p className="tourdescription">{ele.package_description.slice(0,25)||"Loream Ipsum and inadksl"}</p>
+                        <p className="tourdescription">{ele.package_description||"Loream Ipsum and inadksl"}</p>
                         <span>
                           <img src={location.src} style={{ width: '25px' }} alt={ele.name} />
                           <p className="tour_location">{ele.city_name || "not availble"}</p>
