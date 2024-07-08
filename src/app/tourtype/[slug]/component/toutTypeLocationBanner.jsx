@@ -5,8 +5,11 @@ import dynamic from 'next/dynamic';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ExportAllApis } from '@/utils/apis/apis';
-import { emptyImage, leh } from '@/app/assets/images';
+ 
 import Link from 'next/link';
+
+import emptyImage from '../../../assets/empty.jpg'
+import leh from '../../../assets/homepageAssets/lehroad.png'
 
 
 // Dynamically import react-slick

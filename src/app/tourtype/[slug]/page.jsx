@@ -1,7 +1,8 @@
 'use client'
 import React from 'react'
-
 import TourTypeSlug from './component/tourtypeSlug'
+
+ 
 
 
 function page({params}) {
@@ -12,8 +13,8 @@ function page({params}) {
    
   return (
     <>
-    <TourTypeSlug slug={slug}/>
     
+    <TourTypeSlug slug={slug}/>
     </>
   )
 }
