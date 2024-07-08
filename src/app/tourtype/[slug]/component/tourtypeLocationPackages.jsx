@@ -41,8 +41,7 @@ function TourTypePackages({ slug }) {
                                 <div className="ways_travel_image">
                                     <div className="save_value">
                                         <img src={save_price.src} alt="Save price" />
-                                        <p>Save INR {tour.discount}</p>
-                                    </div>
+                                        <p>Save INR {tour.starting_cost - tour.pakage_discounted_cost}</p></div>
                                     <div className="tour-image">
                                         <img
                                             src={tour.pdf_image || emptyImage.src}
