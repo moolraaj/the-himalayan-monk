@@ -2,8 +2,8 @@
 
 import { ExportAllApis } from "@/utils/apis/apis";
 import React, { useEffect, useState } from "react";
-import testing from '../../../../assets/herosection/img5.png'
-
+import spedometer from '../../../../assets/homepageAssets/speedometer.png'
+import people from '../../../../assets/homepageAssets/profile-max.png'
 
 function TravelPackage({ innerid }) {
   console.log(innerid)
@@ -45,13 +45,14 @@ function TravelPackage({ innerid }) {
                   <span className="original-price">Rs {ele.starting_cost||0}</span>{" "}
                   / Per Person
                 </span>
+
               </div>
               <div className="details">
                 <span>
-                  <strong>Duration:</strong> {ele.days} Days
+                 <img src ={spedometer.src} style={{ width: '60px' }} />  {ele.days} Days
                 </span>
                 <span>
-                  <strong>Max People:</strong> {ele.maxPeople}
+                  <img src={people.src} style={{ width: '37px' }} />  {ele.maxPeople}
                 </span>
               </div>
               <p className="description" dangerouslySetInnerHTML={{ __html: ele.overview }}></p>
@@ -83,7 +84,7 @@ function TravelPackage({ innerid }) {
                       className="day-header"
                       onClick={() => toggleDay(index)}>
                       <div className="desc_name">
-                        <span className="days_item">{item.tour_day} </span>
+                        <span className="days_item">Day {item.tour_day} </span>
                         <p>
                           <strong>{item.tour_name}</strong>
                         </p>

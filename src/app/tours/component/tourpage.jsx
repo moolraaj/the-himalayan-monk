@@ -138,7 +138,7 @@ function TourPackagesPage() {
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
                         
-                        <p className='tour_description'>Loream Ipsum and ahdjf adjh</p>
+                        <p className='tour_description'>{ele.package_description.slice(0,50) || "Loream Ipsum and ahdjf adjh"}</p>
                         <span>
                           <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
                           onError={(e) => e.target.src = emptyImage.src}/>
