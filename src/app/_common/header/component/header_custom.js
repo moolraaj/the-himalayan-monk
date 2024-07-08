@@ -7,6 +7,8 @@ import SliderForm from '../../slider-form/sliderForm';
 import { CloseMenu, logo, arrow, search, call, window, emptyImage } from '@/app/assets/images';
 import SearchPackages from '../../SearchBar/SearchPackages';
 
+
+
 function Headercustom() {
   const [isShow, setIsShow] = useState(false);
   const [ShowDestinations, setShowDestinations] = useState(false);

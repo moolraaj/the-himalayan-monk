@@ -12,12 +12,12 @@ import speedometer from '../assets/homepageAssets/speedometer.png';
 import location from '../assets/homepageAssets/location.gif';
 import emptyImage from '../assets/empty.jpg';
 import CloseMenu from '../assets/headerAssets/close_menu.png';
-import logo from '../assets/headerAssets/logo.png'
+import logo from '../assets/headerAssets/logo.png';
 import arrow from '../assets/headerAssets/megamenu.png.gif';
 import search from '../assets/headerAssets/search.png';
 import call from '../assets/headerAssets/call.png';
 import tele from '../assets/homepageAssets/tele.png';
-import call2 from '../assets/homepageAssets/call.png'
+import call2 from '../assets/homepageAssets/call.png';
 import window from '../assets/headerAssets/window.gif';
 import lining from '../assets/homepageAssets/lining.png';
 import jumping from '../assets/homepageAssets/Bungee_Jumping.png';
@@ -63,19 +63,18 @@ import calender from '../assets/homepageAssets/calendar.png';
 import medicine from '../assets/homepageAssets/medicine.png';
 import spy from '../assets/homepageAssets/spy.png';
 import flag from '../assets/homepageAssets/white-flag.png';
-import about_page_bg from './homepageAssets/about_page_bg.png';
-import destination_page_bg from './homepageAssets/destination_page_bg.png';
-import activities_page_bg from './homepageAssets/activities_page_bg.png';
-import ways_travel_page_bg from './homepageAssets/ways_travel_page_bg.png';
-import destination_inner_page_bg from './homepageAssets/destination_inner_page_bg.png'
-import searchbar_bg from './homepageAssets/destination_inner_page_bg.png';
-import slider_form_bg from './homepageAssets/slider_form_bg.png';
-import header_car from './headerAssets/header_center_icon.png';
-import rating from './homepageAssets/Star.png'
-
-
+import about_page_bg from '../assets/homepageAssets/about_page_bg.png';
+import destination_page_bg from '../assets/homepageAssets/destination_page_bg.png';
+import activities_page_bg from '../assets/homepageAssets/activities_page_bg.png';
+import ways_travel_page_bg from '../assets/homepageAssets/ways_travel_page_bg.png';
+import destination_inner_page_bg from '../assets/homepageAssets/destination_inner_page_bg.png';
+import searchbar_bg from '../assets/homepageAssets/destination_inner_page_bg.png';
+import slider_form_bg from '../assets/homepageAssets/slider_form_bg.png';
+import header_car from '../assets/headerAssets/header_center_icon.png';
+import rating from '../assets/homepageAssets/Star.png';
 
 export {
+  popup_bg,
   kulluTour,
   manaliTour,
   mandiTour,
@@ -83,13 +82,13 @@ export {
   spitiTour,
   lahaulTour,
   kangraTour,
-  bunjeeJumping,
   airplane,
+  bunjeeJumping,
   speedometer,
   location,
   emptyImage,
-  logo,
   CloseMenu,
+  logo,
   arrow,
   search,
   call,
@@ -115,7 +114,6 @@ export {
   galleryleh,
   ways_to_travel,
   section_second_bg,
-  popup_bg,
   section_fourth_bg,
   section_fifth_bg,
   section_sixth_bg,
@@ -150,5 +148,4 @@ export {
   slider_form_bg,
   header_car,
   rating,
-  
 };

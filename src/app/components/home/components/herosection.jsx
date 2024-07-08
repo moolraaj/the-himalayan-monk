@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useEffect, useState } from 'react';
 import { ExportAllApis } from '@/utils/apis/apis';
 import Link from 'next/link';
@@ -51,14 +52,12 @@ function Herosection() {
     setCurrentIndex(index);
   };
 
-  let reverse = [...destinations].reverse();
-
   const renderDestinationGroups = () => {
     const groups = [];
     for (let i = 0; i < destinations.length; i += 4) {
       groups.push(
         <div className={`link-group`} key={i} style={{ display: currentIndex === Math.floor(i / 4) ? 'grid' : 'none' }}>
-          {reverse.slice(i, i + 4).map((destination, index) => (
+          {destinations.slice(i, i + 4).map((destination, index) => (
             <Link href={`/destinations/${destination.city_id}`} key={destination.city_id || index}>
               <div className="hero_destination_outer">
                 <h1>{destination?.name}</h1>
@@ -78,10 +77,9 @@ function Herosection() {
 
   const renderDots = () => {
     const totalGroups = Math.ceil(destinations.length / 4);
-    const numberOfDots = totalGroups > 3 ? 3 : totalGroups;
     const dots = [];
 
-    for (let i = 0; i < numberOfDots; i++) {
+    for (let i = 0; i < totalGroups; i++) {
       dots.push(
         <span
           key={i}
