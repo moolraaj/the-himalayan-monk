@@ -629,7 +629,13 @@ body {
   font-weight: 600;
   font-size: 28px;
 }
-
+.pagination-buttons img {
+  width: 50px;
+  cursor: pointer;
+}
+.pagination-buttons .prev {
+  transform: rotateY(180deg);
+}
 button.active-button {
   background: unset;
   color: #636262;
