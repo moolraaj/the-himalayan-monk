@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import PopupWrapper from '../../book-now/popupWrapper';
 import StarRating from './StarRating';
+import backgrounds from '../../../assets/homepageAssets/moto.png'
 
 function TourPackages({id}) {
   
@@ -25,7 +26,7 @@ function TourPackages({id}) {
 
   const loadAllTourPackages = async () => {
     try {
-      const resp = await api.fetchRelativetourTypes(id);
+      const resp = await api.fetchTourPackages();
       setResult(resp?.data || []);
     } catch (error) {
       console.error('Failed to load tour packages:', error);
@@ -44,7 +45,7 @@ function TourPackages({id}) {
     <>
       <PopupWrapper setIsShow={setIsShow} isShow={isShow} />
 
-      <div className="TourPackages_outer_section">
+      <div className="TourPackages_outer_section" style={{ backgroundImage: `url(${backgrounds.src})` }}>
         <div className="TourPackages_inner">
           <div className={`tour_packages_wrapper ${loading ? 'loading' : ''}`}>
             {loading || reverAllPackages.length === 0 ? (
@@ -61,9 +62,11 @@ function TourPackages({id}) {
                       </div>
                       <div className="tour_package_info">
                         <h2>{ele.package_name}</h2>
+                        <p className="tourdescription">Loream Ipsum and inadksl</p>
                         <span>
                           <img src={location.src} style={{ width: '25px' }} alt={ele.name} />
                           <p className="tour_location">{ele.city_name || "not availble"}</p>
+                          
                         </span>
                       </div>
                       <div className='tour_b_c'>
@@ -82,7 +85,7 @@ function TourPackages({id}) {
                           </div>
                         </div>
                         <div className="tour_price_book_section">
-                          <span className='price_tour'><p>Price</p>₹{ele.starting_cost}</span>
+                          <span className='price_tour'><p>From</p>₹{ele.starting_cost}</span>
                           <button className="book_button" onClick={popupAForm}>
                             Book a Trip
                             <img src={airplane.src} alt={ele.name || emptyImage.src} style={{ width: '28px' }} 
@@ -97,7 +100,7 @@ function TourPackages({id}) {
             )}
           </div>
           <div className="view-all-packages">
-            <button onClick={() => router.push('/tours')}>explore all</button>
+            <button onClick={() => router.push('/tours')}>View All Packages</button>
           </div>
         </div>
       </div>

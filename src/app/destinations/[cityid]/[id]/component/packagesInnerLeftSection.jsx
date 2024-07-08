@@ -47,13 +47,13 @@ function TravelPackage({ innerid }) {
               </div>
               <div className="details">
                 <span>
-                  <strong>Duration:</strong> {ele.duration}
+                  <strong>Duration:</strong> {ele.days} Days
                 </span>
                 <span>
                   <strong>Max People:</strong> {ele.maxPeople}
                 </span>
               </div>
-              <p className="description">{ele.description}</p>
+              <p className="description" dangerouslySetInnerHTML={{ __html: ele.overview }}></p>
               <h2>Included</h2>
               <ul className="included-excluded">
                 {ele.inc_meta===null || ele.inc_meta===false?('no data found'):(ele.inc_meta.map((item, index) => {

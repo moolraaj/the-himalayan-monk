@@ -13,8 +13,8 @@ function TourList() {
 
   let loadAllDestinations = async () => {
     try {
-      let resp = await api.fetchAlldestinations();
-      setResult(resp?.data || []);
+      let resp = await api.fetchAllTredingdestinations();
+      setResult(resp || []);
     } catch (error) {
       console.error('Failed to load destinations:', error);
     } finally {
@@ -27,6 +27,8 @@ function TourList() {
   }, []);
 
   let reverAlldestinations = [...result].reverse()
+
+  console.log(result)
 
   return (
     <div className="tourlist_outer_section">

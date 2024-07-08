@@ -52,7 +52,7 @@ function DPlaces() {
           ))
         }
       </div>
-      <Paginations page={page} totalItems={totalItems} setPage={setPage} />
+      <Paginations page={page} totalItems={totalItems} setPage={setPage} ALL_DESTINATIONS_PER_PAGE={ALL_DESTINATIONS_PER_PAGE}/>
     </>
   );
 }

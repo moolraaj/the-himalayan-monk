@@ -22,6 +22,15 @@ export const ExportAllApis = () => {
             console.log(error)
         }
     }
+    const fetchAllTredingdestinations = async () => {
+        try {
+            let result = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/apis/packages/package_tranding`)
+            let resp = await result.json()
+            return resp.data
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     const fetchAlltourTypes = async (ALL_TOURTYPES_PER_PAGE, page) => {
         try {
@@ -136,6 +145,7 @@ export const ExportAllApis = () => {
     return {
         fetchTourPackages,
         fetchAlldestinations,
+        fetchAllTredingdestinations,
         fetchAlltourTypes,
         fetchRelativetourTypes,
         fetchAllActivities,
@@ -148,8 +158,8 @@ export const ExportAllApis = () => {
 
 }
 
-export const ALL_TOUSR_PER_PAGE=12
-export const ALL_DESTINATIONS_PER_PAGE=12
+export const ALL_TOUSR_PER_PAGE=9
+export const ALL_DESTINATIONS_PER_PAGE=8
 export const ALL_TOURTYPES_PER_PAGE=6
 export const ALL_ACTIVITIES_PER_PAGE=3
 export const ALL_TOURTYPES_RELATIVE_PER_PAGE=4
