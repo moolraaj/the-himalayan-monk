@@ -1134,7 +1134,7 @@ span.package_count {
   border-radius: 5px;
   width: 100%;
   object-fit: cover;
-  filter: brightness(0.6);
+  filter: brightness(0.7);
 }
 
 
@@ -1188,7 +1188,7 @@ span.package_count {
 img.triangle-testimonial-img {
   width: 40px;
   filter: invert(1);
-  top: 23px;
+  top: 16px;
   position: relative;
   left:40%;
 }
@@ -2297,6 +2297,7 @@ span.days_item {
 
 .day-header strong {
   color: $black;
+  font-weight: 500;
 }
 
 
@@ -2523,12 +2524,21 @@ span.days_item {
 
 .testimonial p {
   font-size: 16px;
-  line-height: 161%;
+  line-height: 30px;
   height: 130px;
   font-family: 'rubik' !important;
   color: #757575;
 }
-
+.testimonial-review-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonial-review-rating .rating label {
+  color: #000;
+  font-family: 'josefin';
+  font-size: 18px;
+}
 button.left-arrow {
   transform: rotateY(180deg);
 }
@@ -2590,12 +2600,13 @@ button.right-arrow {
 
 .user_desc span.location {
   color: #D65228 !important;
-  font-size:22px;
-  font-family: 'josefin';
+  font-size: 17px;
+  margin-top: 5px;
+  font-family: "josefin";
 }
 
 .user_desc span.name {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .user_desc {
@@ -2750,15 +2761,18 @@ span.discounted-price b {
 
 .original-price {
   text-decoration: line-through;
-  color: #888;
+  color: #fac78c;
 }
-
 .details {
   display: flex;
   margin-bottom: 20px;
   column-gap: 30px;
 }
-
+.details span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .description {
   margin-bottom: 20px;
 }
@@ -2785,15 +2799,7 @@ span.discounted-price b {
   font-family: 'josefin';
   color: #636262;
   line-height: 27px;
-}
 
-.package {
-  span span {
-    font-size: 18px;
-    font-family: 'josefin';
-    color: #636262;
-    line-height: 27px;
-  }
 }
 
 
@@ -2846,7 +2852,7 @@ ul.included-excluded li::marker {
   padding: 13px 20px;
   border-radius: 10px 0px 0px 10px;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'rubik';
 }
 
@@ -2890,7 +2896,7 @@ span.days_item {
 
 
 .day-header span {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .day-activity {
@@ -3141,10 +3147,20 @@ button.contactButton:hover>a {
 }
 
 .review-meta {
-  font-size: 0.8rem;
-  color: #aaa;
+  color: #757575;
+  font-size: 14px;
+  
 }
-
+.testimonial-review-rating {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.review-meta span {
+  margin-bottom: 3px;
+  display: block;
+}
 .rating {
   font-size: 1rem;
   color: #ff9800;
@@ -3222,19 +3238,17 @@ img.two_image_c {
   bottom: -52px;
 }
 
-
 .desti_inner {
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
-
 .waysvehicles_wrapper {
   margin-top: 78px;
 }
-
-
-
 /* Testimonials.css */
+.quote-img img {
+  width: 50px;
+}
 .testimonials-container {
   width: 100%;
   max-width: 1327px;
@@ -3629,8 +3643,6 @@ span.name_location h1 {
     border-radius: 0px 5px 5px 0px;
 
     img {
-      width: 20px;
-      height: 20px;
       object-fit: contain;
     }
   }
@@ -3907,7 +3919,9 @@ form input[type="submit"] {
   .book_now_form {
     padding: 50px 0px;
   }
-
+  .testimonial {
+    height: 265px;
+}
   .TourPackages_inner {
     display: flex;
     flex-direction: column-reverse;
@@ -3937,6 +3951,7 @@ form input[type="submit"] {
     width: 100%;
     max-width: 100%;
     padding: 0px;
+    padding-top: 20px;
   }
 
   .desti_top_heading {
