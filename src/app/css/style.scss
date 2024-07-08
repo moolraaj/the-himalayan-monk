@@ -3993,6 +3993,53 @@ form input[type="submit"] {
 
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
+  .who-feature {
+    width: 90%;
+}
+.about_traveller .who-we-are-section h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.about_traveller .feature-icon {
+  width: 80px;
+  height: 80px;
+}
+.about_traveller .feature-item {
+  padding: 20px 10px;
+  column-gap: 7px;
+}
+.feature-icon img {
+  width: 40px;
+}
+.who-we-are-section h4 {
+  margin-bottom: 15px;
+  font-size:20px;
+}
+  .about_traveller .stats-section {
+    width: 90%;
+    padding: 40px 0px !important;
+}
+  .aboutus-container {
+    width: 90%;
+    margin: auto;
+}
+  .about_page_bg_section {
+    margin-top: 50px;
+}
+  .activities_new .tab-content {
+    padding: 0px;
+  }
+button.right-arrow {
+  right: 26px;
+}
+button.left-arrow {
+  left: -37px;
+}
+.testimonial {
+  height: 280px;
+  flex: none;
+  width: 32%;
+}
   .TourPackages_outer_section {
     padding: 0px;
 }
@@ -4027,6 +4074,7 @@ form input[type="submit"] {
 
   .activities_new .tabs-container {
     grid-template-columns: 1fr !important;
+    padding-bottom: 10px;
 }
 
   .TourPackages_inner {
@@ -4168,10 +4216,9 @@ form input[type="submit"] {
   }
 
   .aboutus-container {
-    padding: 20px;
     padding-bottom: 50px;
     padding-top: 20px;
-    margin-top: 50px;
+    margin-top: 0px;
   }
 
   img.one_image_c {
@@ -4195,11 +4242,13 @@ form input[type="submit"] {
   }
 
   .testimonials-slider {
-    padding: 60px 10px 150px 10px;
+    padding: 60px 0px 150px 0px;
+    width: 92%;
   }
 
   .testimonial p {
     height: 150px;
+    line-height: 24px;
   }
 
   img.triangle-testimonial-img {
@@ -4215,16 +4264,10 @@ form input[type="submit"] {
     flex: 0 0 calc(50% - 20px);
     /* 2 slides for tablets with gap */
   }
-
-  .filter-destination-wrapper {
-    max-width: 130px;
-  }
-
   .popup-wrapper.slide-down {
     ul {
       column-gap: 10px;
       padding-left: 0;
-      justify-content: center;
     }
 
     top: 80px;
@@ -4262,6 +4305,12 @@ form input[type="submit"] {
   // homepage responsive end **********
 }
 @media only screen and (max-width:768px) {
+  button.aboutus-button {
+    margin-top: 30px;
+}
+.tab-content button {
+  margin-top: 20px;
+}
   .activities_new .tab-content h2 {
     font-size: 23px;
 }
@@ -4854,10 +4903,10 @@ button.right-arrow {
   }
 
   img.one_image_c {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     object-fit: cover;
-    max-width: 100% !important;
+    max-width: 90% !important;
     height: 270px;
   }
 
@@ -4895,6 +4944,20 @@ button.right-arrow {
 }
 
 @media (max-width: 600px) {
+  .stat-item img {
+    height: 45px;
+}
+  .about_traveller .features-section {
+    grid-template-columns: 1fr;
+  }
+  .activities_new .tab-content {
+    grid-template-columns: 1fr;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+  .activities_new .tab-content .images {
+    display: none;
+}
   .hero_section_outer .hero_right_section {
     display: none;
   }
