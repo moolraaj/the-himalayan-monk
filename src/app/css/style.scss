@@ -3005,6 +3005,7 @@ span.days_item {
   font-family: "rubik";
   padding-bottom: 12px;
   color: #636262;
+  text-transform: capitalize;
 }
 
 
@@ -3065,6 +3066,7 @@ span.days_item {
 .price-details {
   font-size: 0.9rem;
   color: #6c757d;
+  text-decoration: line-through;
 }
 
 .book-button {
