@@ -57,6 +57,10 @@ a {
 }
 
 
+
+
+
+
 .loading_spinner {
   padding: 200px 0px 100px 0px;
 }
@@ -131,12 +135,15 @@ a {
 .book_now_form {
   background: #fff;
   padding: 50px 100px;
-  border-radius: 10px;
-  max-width: 1240px;
+  max-width: 100%;
   width: 100%;
+  height: 100vh;
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 
 
@@ -148,6 +155,11 @@ span.tour_type_icon_wrapper img {
 
 .form-container-custom h2 {
   text-align: center;
+}
+
+
+.slider-controls img {
+  width: 30px;
 }
 
 
@@ -164,9 +176,14 @@ span.tour_type_icon_wrapper img {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  font-family: 'josefin';
+  
 
   h1 {
-    font-size: 50px;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 102px;
+    text-align: left;
     font-family: $josifin;
   }
 
@@ -177,10 +194,24 @@ span.tour_type_icon_wrapper img {
   }
 }
 
+
+
+.book-form_message_filed label {
+
+  font-family: 'josefin';
+font-size: 22px;
+font-weight: 400 !important;
+line-height: 26.4px;
+text-align: left;
+}
+
+
 .book_now_form h2 {
   font-size: 30px;
   margin: 0px 0px 40px;
   color: $dark_yellow;
+  font-family: 'rubik';
+  font-weight: 500;
 }
 
 .book-popupo-inner {
@@ -209,6 +240,8 @@ span.tour_type_icon_wrapper img {
   font-weight: bold;
   margin-bottom: 5px;
   font-family: $josifin;
+  font-weight: 400;
+  font-size: 22px;
 }
 
 .book-form_fields input {
@@ -448,7 +481,7 @@ body {
 
   .hero_section_inner {
     @extend %inner-section_max_width;
-    padding: 210px 15px 70px 15px;
+    padding: 220px 15px 80px 15px;
     z-index: 2;
 
     .hero_wrapper {
@@ -1168,6 +1201,7 @@ img.triangle-testimonial-img {
   filter: invert(1);
   top: 23px;
   position: relative;
+  left:40%;
 }
 
 .testimonial {
@@ -1363,7 +1397,8 @@ p.tour_location {
 }
 
 .tour_package_info h2 {
-  font-size: 25px;
+  font-size: 22px;
+  font-weight:500;
   margin: 0 0 10px;
   color: #333;
   font-family: 'rubik';
@@ -1417,8 +1452,8 @@ span.speedometer {
 }
 
 .book_button {
-  margin-top: 20px;
-  padding: 10px 15px;
+  margin-top: 10px;
+  padding: 8px 15px;
   background-color: orange;
   color: white;
   display: flex;
@@ -1957,7 +1992,7 @@ a.tel_header_c {
   position: fixed;
   width: 100%;
   z-index: 999;
-  top: 30px;
+  top: 28px;
 }
 
 .search_e {
@@ -2029,7 +2064,7 @@ a.tel_header_c {
 .footer_wrapper_second ul {
   margin: 0px;
   padding-left: 0px;
-  padding-top: 25px;
+  padding-top: 0px;
 }
 
 .footer_i {
@@ -2064,7 +2099,8 @@ a.tel_header_c {
 .footer_wrapper_second h4 {
   font-size: 25px;
   color: $white;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 
 .follow_name {
@@ -2072,6 +2108,7 @@ a.tel_header_c {
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   align-items: center;
+  margin: 30px 0px;
 }
 
 .footer_social_icons {
@@ -2094,6 +2131,20 @@ a.tel_header_c {
   font-size: 17px;
 }
 
+.journy-image-container::after {
+  content: "";position: 
+  absolute;top: -18px;left:
+   51px;width: 10px;
+   height: 239px;
+   transform: rotate(30deg);
+   clip-path: polygon(11% 0%, 100% 0, 100% 100%, 0% 100%);
+   object-fit: cover;
+   background: #EDB3A0;
+  }
+
+.journy-image-container {
+    position: relative;
+}
 
 .call_to_action {
   position: relative;
@@ -2102,8 +2153,8 @@ a.tel_header_c {
   margin: auto;
   display: grid;
   grid-template-columns: 3fr 40%;
-  background: #d65228d6;
   margin-top: 50px;
+  background: radial-gradient(circle, #ff9553 -5%, #DC794F 83%);
 }
 
 
@@ -2135,7 +2186,6 @@ a.tel_header_c {
 
 .aboutus-text p {
   font-size: 16px !important;
-  margin-bottom: 50px;
 }
 
 .aboutus-images {
@@ -2178,6 +2228,7 @@ a.tel_header_c {
   font-size: 1rem;
   margin-bottom: 0px;
   color: #757575;
+  line-height:30px;
 }
 
 .aboutus-features {
@@ -2216,7 +2267,7 @@ a.tel_header_c {
   border: none;
   border-radius: 36px;
   cursor: pointer;
-  max-width: 205px;
+  width: 205px;
   font-size: 18px;
   transition: background-color 0.3s ease;
   font-family: 'Inter';
@@ -2390,7 +2441,7 @@ span.days_item {
 .tour_destination_inner img {
   object-fit: cover;
   width: -webkit-fill-available;
-  height: 600px;
+  height: 100%;
   z-index: -1;
 }
 
@@ -2472,9 +2523,16 @@ span.days_item {
 
 .testimonial p {
   font-size: 16px;
-  line-height: 163%;
+  line-height: 161%;
   height: 130px;
+  font-family: 'rubik' !important;
+  color: #757575;
 }
+
+button.left-arrow {
+  transform: rotateY(180deg);
+}
+
 
 .slider-controls {
   width: 100%;
@@ -2483,12 +2541,16 @@ span.days_item {
   justify-content: space-between;
   top: 36%;
   z-index: 999;
-  left: 95px;
+  left: 33px;
+  max-width: 1400px;
 }
 
 .slider-controls button {
   z-index: 999;
   position: absolute !important;
+  background: transparent;
+  border: none;
+
 }
 
 button.right-arrow {
@@ -2515,7 +2577,25 @@ button.right-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 
+}
+
+
+.slider-controls img {
+  width: 30px;
+}
+
+
+
+.user_desc span.location {
+  color: #D65228 !important;
+  font-size:22px;
+  font-family: 'josefin';
+}
+
+.user_desc span.name {
+  font-size: 22px;
 }
 
 .user_desc {
@@ -2525,7 +2605,7 @@ button.right-arrow {
 }
 
 .slick-slide img {
-  height: 100vh !important;
+  // height: 100vh !important;
   filter: brightness(.5);
 }
 
@@ -3157,9 +3237,8 @@ img.two_image_c {
 /* Testimonials.css */
 .testimonials-container {
   width: 100%;
-  max-width: 1197px;
+  max-width: 1327px;
   margin: 0 auto;
-  overflow: hidden;
   padding: 0px 60px;
 }
 
@@ -3174,6 +3253,10 @@ img.two_image_c {
   justify-content: space-between;
   gap: 20px;
   padding: 60px 0px 150px 0px;
+  max-width: 1400px;
+  margin: auto;
+  margin-left: 20px;
+
 }
 
 .testimonial {
@@ -3795,6 +3878,27 @@ form input[type="submit"] {
     padding: 50px 0px;
   }
 
+  .TourPackages_inner {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.view-all-packages button {
+  padding: 10px 48px;
+  text-transform: capitalize;
+  background: none;
+  border: unset;
+  border-radius: 4px;
+  font-size: 19px;
+  cursor: pointer;
+  position: relative;
+  right: 0;
+  color: #D65228;
+  transform: none;
+  bottom: 0px;
+  right: 0px;
+}
+
   .activity_page_banner_heading h1 {
     font-size: 40px;
   }
@@ -3889,7 +3993,7 @@ form input[type="submit"] {
   }
 
   .view-all-packages {
-    justify-content: center;
+    justify-content: right;
   }
 
 
@@ -4052,6 +4156,18 @@ form input[type="submit"] {
   .waysvehicles_wrapper {
     margin-top: 20px;
   }
+
+  .book-form_message_filed label{
+    font-size: 18px;
+  }
+
+  .book_now_form_header h1 {
+       font-size: 36px;   
+}
+
+.book-form_fields label {
+  font-size: 18px;  
+}
 
   .tour_destination .tour_destination_info .tour_info_inner .tour_info_right {
     flex-direction: column;
@@ -4607,9 +4723,10 @@ form input[type="submit"] {
 
   .follow_name {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 10px;
-    align-items: initial;
+    align-items: center;
+    margin: 30px 0px;
   }
 
   .footer_wrapper_second h4 {
@@ -4728,7 +4845,7 @@ form input[type="submit"] {
   .footer_wrapper_second ul {
     margin: 0px;
     padding-left: 0px;
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .footer_social_icons {

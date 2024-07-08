@@ -1,7 +1,7 @@
-
-'use client'
+'use client';
 import React, { useState } from 'react';
 import { lining, jumping, rafting, paragliding, ski, surfing, kulluTour, manaliTour, mandiTour, shimlaTour, spitiTour, lahaulTour, kangraTour } from '@/app/assets/images';
+import PopupWrapper from '@/app/components/book-now/popupWrapper';
 
 const activities = [
   {
@@ -86,48 +86,56 @@ const activities = [
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isShow, setIsShow] = useState(false); // Define the state for popup visibility
 
   const handleTabClick = (index) => {
     setActiveTab(index);
   };
 
   return (
-    <div className='activities_new'>
-      <div className="tabs-container activities_home">
-        <div className="tabs">
-          {activities===null? 'no activities data found' :  activities.map((activity, index) => (
-            <div
-              key={index}
-              className={`tab ${index === activeTab ? 'active' : ''}`}
-              onClick={() => handleTabClick(index)}
-            >
-              <img src={activity.icon.src} alt={`${activity.name} icon`} style={{ width: '100%' }} />
-              <span>{activity.name}</span>
-            </div>
-          ))}
-        </div>
-        <div className="tab_content_wrapp">
-          <div className={`tab-content ${activeTab === 0 ? '' : 'active'}`}>
-            <div className='activity_featured'>
-              <h2 className='name_tab'>{activities[activeTab].name}</h2>
-              <h2>{activities[activeTab].title}</h2>
-              <p>{activities[activeTab].description}</p>
-              <ul>
-                {activities===null? '' : activities[activeTab].features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+    <>
+      <PopupWrapper setIsShow={setIsShow} isShow={isShow} />
+      <div className='activities_new'>
+        <div className="tabs-container activities_home">
+          <div className="tabs">
+            {activities === null ? 'No activities data found' : activities.map((activity, index) => (
+              <div
+                key={index}
+                className={`tab ${index === activeTab ? 'active' : ''}`}
+                onClick={() => handleTabClick(index)}
+              >
+                <img src={activity.icon.src} alt={`${activity.name} icon`} style={{ width: '100%' }} />
+                <span>{activity.name}</span>
+              </div>
+            ))}
+          </div>
+          <div className="tab_content_wrapp">
+            <div className={`tab-content ${activeTab === 0 ? '' : 'active'}`}>
+              <div className='activity_featured'>
+                <h2 className='name_tab'>{activities[activeTab].name}</h2>
+                <h2>{activities[activeTab].title}</h2>
+                <p>{activities[activeTab].description}</p>
+                <ul>
+                  {activities === null ? '' : activities[activeTab].features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+                <button className="book_button" onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  setIsShow(true);
+                }}> Check Availability</button>
+              </div>
+              <div className="images">
+                {Object.values(activities[activeTab].tab_activity_images).map((imgSrc, index) => (
+                  <img key={index} src={imgSrc} alt={`Additional ${activities[activeTab].name} ${index + 1}`} />
                 ))}
-              </ul>
-              <button>Check Availability</button>
-            </div>
-            <div className="images">
-              {Object.values(activities[activeTab].tab_activity_images).map((imgSrc, index) => (
-                <img key={index} src={imgSrc} alt={`Additional ${activities[activeTab].name} ${index + 1}`} />
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

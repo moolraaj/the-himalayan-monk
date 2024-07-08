@@ -1,3 +1,4 @@
+import popup_bg from '../assets/homepageAssets/popup_bg.png';
 import kulluTour from '../assets/homepageAssets/kullu_tour.jpg';
 import manaliTour from '../assets/homepageAssets/manali_tour.jpg';
 import mandiTour from '../assets/homepageAssets/mandi_tour.jpg';
@@ -114,6 +115,7 @@ export {
   galleryleh,
   ways_to_travel,
   section_second_bg,
+  popup_bg,
   section_fourth_bg,
   section_fifth_bg,
   section_sixth_bg,

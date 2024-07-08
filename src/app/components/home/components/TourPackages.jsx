@@ -26,7 +26,11 @@ function TourPackages({id}) {
 
   const loadAllTourPackages = async () => {
     try {
+<<<<<<< HEAD
       const resp = await api.fetchTourPackages();
+=======
+      const resp = await api.fetchTourPackages(id);
+>>>>>>> a906ab332bab9663dcec23bbce3bd0193736339f
       setResult(resp?.data || []);
     } catch (error) {
       console.error('Failed to load tour packages:', error);
@@ -80,7 +84,7 @@ function TourPackages({id}) {
                             <span className='speedometer'>
                               <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}  
                                onError={(e) => e.target.src = emptyImage.src}/>
-                              {ele.days}days / {ele.night}nights
+                              {ele.days} Days / {ele.night} Nights
                             </span>
                           </div>
                         </div>
