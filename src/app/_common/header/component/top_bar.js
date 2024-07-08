@@ -21,7 +21,7 @@ function Topbar() {
           </div>
 
           <div className='top_bar_notifications'>
-            <span><p>New Launches</p>Jodhpur, Rishikesh, Jaipur, Mcleodganj & Mcleodganj & Amiritsar <img style={{marginLeft: '5px'}} src={header_car.src} alt={header_car.src} /></span>
+            <span><p>New Launches</p>Jodhpur, Rishikesh, Jaipur, Mcleodganj & Mcleodganj & Amiritsar <img style={{marginLeft: '5px'}} src={header_car} alt={header_car} /></span>
           </div>
 
           <div className='top_bar_social_icons'>
