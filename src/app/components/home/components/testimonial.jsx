@@ -6,6 +6,7 @@ import Image from "next/image";
 import arrowl from '../../../assets/homepageAssets/larr.gif'
 import arrowr from '../../../assets/homepageAssets/rarr.gif'
 import testback from '../../../assets/homepageAssets/testimonialbac.png'
+import quote from '../../../assets/homepageAssets/quote.png'
 
 const testimonials = [
   {
@@ -134,6 +135,9 @@ const Testimonials = () => {
                 <div className="rating">
                   <div><label>Rating</label></div>
                   {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+                </div>
+                <div class="quote-img">
+                  <img src={quote.src}/>
                 </div>
                 <div className="reviewer-info">
                   <div className="reviewer-details">

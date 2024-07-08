@@ -52,7 +52,7 @@ function TravelPackage({ innerid }) {
                  <img src ={spedometer.src} style={{ width: '60px' }} />  {ele.days} Days
                 </span>
                 <span>
-                  <img src={people.src} style={{ width: '37px' }} />  {ele.maxPeople}
+                  <img src={people.src} style={{ width: '35px' }} />  {ele.maxPeople}
                 </span>
               </div>
               <p className="description" dangerouslySetInnerHTML={{ __html: ele.overview }}></p>
