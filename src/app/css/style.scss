@@ -1293,6 +1293,10 @@ img.triangle-testimonial-img {
 .TourPackages_inner {
   @extend %secondary_max_width;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 36px;
+  align-items: end;
+
 }
 
 
@@ -1516,7 +1520,7 @@ ul.social_icons_t li:nth-child(2) {
 }
 
 ul.social_icons_t li:nth-child(3) {
-  padding: 2px 4px;
+  padding: 2px 5px;
 }
 
 ul.social_icons_t li:nth-child(4) {
@@ -1940,9 +1944,13 @@ button.call_a_button {
 .destinationfilter select {
   padding: 10px 17px;
   border-radius: 33px;
+  font-size: 18px;
   text-transform: capitalize;
 }
 
+button.book_button:hover {
+  background: black;
+}
 
 .destinationfilter label {
   color: #d65228;
@@ -2449,7 +2457,7 @@ span.days_item {
 .tour_img_wrapper {
   position: relative;
   border: 9px solid #FFD9CD;
-  width: 191px;
+  width: auto;
   border-right: 20px solid #ffd9cd !important;
   border-left: 14px;
   height: 178px;
@@ -3520,10 +3528,18 @@ button.custom_close {
   width: 100%;
   object-fit: cover;
 }
+.desti_top_heading h1 {
+  font-size: 70px;
+  padding-top: 20px !important;  
+  
+}
+
+
+
 
 .desti_top_heading {
   position: absolute;
-  top: 35%;
+  top: 40%;
   width: 100%;
   text-align: center;
   color: white;
@@ -3557,7 +3573,7 @@ button.custom_close {
   height: 50px;
   border-bottom-right-radius: 36px;
   border-bottom-left-radius: 39px;
-  left: 45%;
+  left: 49%;
 }
 
 .navbar_c_section span img {
@@ -3776,6 +3792,33 @@ form input[type="submit"] {
 .aboutus-content::before {
   content: "About Us";
 }
+
+@media only screen and (max-width:1600px){
+  .TourPackages_inner {
+    width: 87% !important;
+}
+ 
+.tourlist_inner {
+  padding-top: 70px;
+  max-width: 87%;
+}
+
+.activities_new .tabs-container {
+  width: 87% !important;
+}
+.aboutus-container {
+   width: 87%;
+   margin: auto;
+}
+
+.testimonials-slider {
+ margin: auto;
+  width: 87%;
+}
+
+}
+
+
 @media only screen and (max-width:1500px) {
 
   .feature span {
@@ -3847,6 +3890,11 @@ form input[type="submit"] {
 
 
 }
+
+
+
+
+
 @media only screen and (max-width:1200px) {
   .header_i_sec {
     display: flex;
@@ -3911,7 +3959,7 @@ form input[type="submit"] {
 
 
   .desti_top_heading h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .destinationfilter {
@@ -4046,7 +4094,7 @@ form input[type="submit"] {
   }
 
   .tour_img_wrapper {
-    width: 130px;
+    width: auto;
     height: 130px;
   }
 
@@ -4206,7 +4254,7 @@ form input[type="submit"] {
 }
 
   .tour_img_wrapper {
-    width: 164px;
+    width: auto;
     height: 130px;
 }
 
