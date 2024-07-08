@@ -103,7 +103,6 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
                   <img src={call2.src || emptyImage.src} onError={(e) => (e.target.src = emptyImage.src)} />
                   <span>
                     <p>To More Inquiry</p>
-                  
                     <a href="tel:9816788165">+98167 88165</a>
                   </span>
                 </div>
