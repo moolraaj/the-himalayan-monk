@@ -136,9 +136,9 @@ function TourPackagesPage() {
                         {/* <div className="tour_badge">{ele.days} Days</div> */}
                       </div>
                       <div className="tour_package_info">
-                        <h2>{ele.package_name}</h2>
+                        <h2>{ele.package_name.slice(0,25)}</h2>
                         
-                        <p className='tour_description'>{ele.package_description.slice(0,50) || "Loream Ipsum and ahdjf adjh"}</p>
+                        <p className='tour_description'>{ele.package_description.slice(0,40) || "Loream Ipsum and ahdjf adjh"}</p>
                         <span>
                           <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
                           onError={(e) => e.target.src = emptyImage.src}/>
