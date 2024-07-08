@@ -125,12 +125,12 @@ const BookTourForm = () => {
         </div>
         <div className="form-group">
           <label>Email Id</label>
-          <input type="text" name="email" value={user.email} onChange={handleChange} />
+          <input type="email" name="email" value={user.email} onChange={handleChange} />
           {error.email && <span className="error">{error.email}</span>}
         </div>
         <div className="form-group">
           <label>Phone Number</label>
-          <input type="text" name="mobile" value={user.mobile} onChange={handleChange} />
+          <input type="number" name="mobile" value={user.mobile} onChange={handleChange} />
           {error.mobile && <span className="error">{error.mobile}</span>}
         </div>
         <div className="form-group">
@@ -140,7 +140,7 @@ const BookTourForm = () => {
         </div>
         <div className="form-group">
           <label>The Number Of Travelers</label>
-          <input type="text" name="total_no_travelers" value={user.total_no_travelers} onChange={handleChange} />
+          <input type="number" name="total_no_travelers" value={user.total_no_travelers} onChange={handleChange} />
           {error.total_no_travelers && <span className="error">{error.total_no_travelers}</span>}
         </div>
 
@@ -151,6 +151,7 @@ const BookTourForm = () => {
             onChange={(date) => handleDateChange(date, 'departuredate')}
             dateFormat="yyyy-MM-dd"
             placeholderText="Select Departure Date"
+            minDate={new Date()}
           />
           {error.departuredate && <span className="error">{error.departuredate}</span>}
         </div>
@@ -161,6 +162,7 @@ const BookTourForm = () => {
             onChange={(date) => handleDateChange(date, 'returndate')}
             dateFormat="yyyy-MM-dd"
             placeholderText="Select Return Date"
+            minDate={new Date()}
           />
           {error.returndate && <span className="error">{error.returndate}</span>}
         </div>

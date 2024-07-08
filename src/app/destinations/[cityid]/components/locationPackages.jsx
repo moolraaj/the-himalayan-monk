@@ -40,7 +40,7 @@ function TourPackages({ id }) {
               <div className="ways_travel_image">
                 <div className="save_value">
                   <img src={save_price.src} alt={save_price.src} />
-                  <p> save INR  {tour.discount}</p>
+                  <p> save INR  {tour.starting_cost-tour.discount || null}</p>
                 </div>
                 <div className="tour-image">
                   <img src={tour.pdf_image || emptyImage.src} alt='tour-image' 

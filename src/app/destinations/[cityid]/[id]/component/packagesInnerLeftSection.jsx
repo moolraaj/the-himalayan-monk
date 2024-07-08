@@ -4,6 +4,7 @@ import { ExportAllApis } from "@/utils/apis/apis";
 import React, { useEffect, useState } from "react";
 import spedometer from '../../../../assets/homepageAssets/speedometer.png'
 import people from '../../../../assets/homepageAssets/profile-max.png'
+import testing from '../../../../assets/homepageAssets/abouteleven.png'
 
 function TravelPackage({ innerid }) {
   console.log(innerid)
