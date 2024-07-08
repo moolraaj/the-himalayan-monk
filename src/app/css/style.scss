@@ -607,15 +607,25 @@ body {
 }
 .pagination-buttons button {
   padding: 6px 14px !important;
-  margin-right: 10px;
+  margin-right: 0px;
+  cursor: pointer;
+  border: unset;
+  background: unset;
+  font-size: 32px;
+  color: #DFDFE0;
+  font-weight: 600;
+}
+.pagination-buttons img {
+  width: 52px;
   cursor: pointer;
 }
 
 button.active-button {
-  background: #d75227;
-  color: white;
-  border: 1px solid #d75227;
+  background: unset;
+  color: #636262;
+  border: unset;
   border-radius: 2px;
+  font-weight: 600;
 }
 
 .tour_destination {
@@ -1319,9 +1329,18 @@ p.tour_location {
 }
 
 
+a.call_a_button {
+  padding: 11px 41px;
+  background: #f69625;
+  border-radius: 26px;
+  color: white;
+}
+
+
 
 .tour_package_info p {
   font-size: 16px;
+  text-transform: capitalize;
 }
 
 .tour_image_wrapper {
@@ -2138,10 +2157,12 @@ a.tel_header_c {
   font-size: 17px;
 }
 
-.journy-image-container::after {
-  content: "";position: 
-  absolute;top: -18px;left:
-   51px;width: 10px;
+.journy-image-container::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left:51px;
+  width: 10px;
    height: 239px;
    transform: rotate(30deg);
    clip-path: polygon(11% 0%, 100% 0, 100% 100%, 0% 100%);
@@ -3919,9 +3940,20 @@ form input[type="submit"] {
   .book_now_form {
     padding: 50px 0px;
   }
-  .testimonial {
-    height: 265px;
+
+  .mobile_menu .mobile_menu_links {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    flex-grow: 1;
+    box-shadow: 2px 14px 12px #00000036;
 }
+  
+
+  .activities_new .tabs-container {
+    grid-template-columns: 1fr !important;
+}
+
   .TourPackages_inner {
     display: flex;
     flex-direction: column-reverse;
@@ -4162,6 +4194,66 @@ form input[type="submit"] {
   .waysvehicles_wrapper {
     margin-top: 20px;
   }
+
+  .desti_top_heading h1 {
+    text-transform: capitalize;
+    font-size: 45px;
+    padding-top: 0px;
+    font-size: 29px !important;
+    width: 80%;
+    margin: auto;
+}
+
+  .tour_img_wrapper {
+    width: 164px;
+    height: 130px;
+}
+
+p.tourdescription {
+  display: none !important;
+}
+
+  .view-all-packages {
+    justify-content: right;
+    margin-bottom: -65px;
+}
+.tour_packages_wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.tabs-container.activities_home span {
+  font-family: "rubik";
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 29.63px;
+}
+.activities_new .tab-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+  .hero_section_outer .slider_wrapper img {
+    height: 105vh !important;
+  }
+
+  .hero_section_outer .hero_section_inner .hero_wrapper {
+    grid-template-columns: 1fr;
+}
+.hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section p {
+  font-family: "inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  padding-bottom: 1px;
+  padding-top: 8px;
+}
+.hero_section_outer .hero_right_section {
+  margin-top: 40px;
+}
 
   .book-form_message_filed label{
     font-size: 18px;
