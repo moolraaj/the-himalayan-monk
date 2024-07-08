@@ -607,15 +607,25 @@ body {
 }
 .pagination-buttons button {
   padding: 6px 14px !important;
-  margin-right: 10px;
+  margin-right: 0px;
+  cursor: pointer;
+  border: unset;
+  background: unset;
+  font-size: 32px;
+  color: #DFDFE0;
+  font-weight: 600;
+}
+.pagination-buttons img {
+  width: 52px;
   cursor: pointer;
 }
 
 button.active-button {
-  background: #d75227;
-  color: white;
-  border: 1px solid #d75227;
+  background: unset;
+  color: #636262;
+  border: unset;
   border-radius: 2px;
+  font-weight: 600;
 }
 
 .tour_destination {
