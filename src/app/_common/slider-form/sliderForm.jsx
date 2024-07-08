@@ -83,7 +83,7 @@ function SliderForm({ closeRightMenu, isShow, setIsShow }) {
                       <Link href={`/destinations/${ele.city_id}`} key={index} onClick={GoToDestinatiosPages}>
                         <div className="destination">
                           <div className="p_count">{`${ele.package_count} Tours` || ''}</div>
-                          <img src={ele.image || emptyImage.src} alt={`${ele.name}` || 'Rajasthan'} width={150} height={100} onError={(e) => (e.target.src = emptyImage.src)} />
+                          <img src={ele.main_image || emptyImage.src} alt={`${ele.name}` || 'Rajasthan'} width={150} height={100} onError={(e) => (e.target.src = emptyImage.src)} />
                           <div className="destination-text">
                             <h3>
                               <span>Travel to</span> {ele.name}
