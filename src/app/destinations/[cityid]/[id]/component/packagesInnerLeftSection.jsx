@@ -8,7 +8,7 @@ import testing from '../../../../assets/homepageAssets/abouteleven.png'
 
 function TravelPackage({ innerid }) {
   console.log(innerid)
-   
+
   let api = ExportAllApis()
 
 
@@ -22,35 +22,35 @@ function TravelPackage({ innerid }) {
   const loadSingleDestination = async () => {
     let resp = await api.fetchSingledestination(innerid);
     setResult(resp || null);
-     
+
   };
 
   useEffect(() => {
     loadSingleDestination()
   }, []);
- 
 
- 
+
+
 
   return (
     <>
       <div className="package">
         {result?.map((ele) => {
-         
-         
+
+
           return (
             <div className="package-wrapper" key={ele.id}>
               <div className="price-section">
                 <span className="discounted-price">
-                  <b>Rs {ele.pakage_discounted_cost||0} </b>{" "}
-                  <span className="original-price">Rs {ele.starting_cost||0}</span>{" "}
+                  <b>Rs {ele.pakage_discounted_cost || 0} </b>{" "}
+                  <span className="original-price">Rs {ele.starting_cost || 0}</span>{" "}
                   / Per Person
                 </span>
 
               </div>
               <div className="details">
                 <span>
-                 <img src ={spedometer.src} style={{ width: '60px' }} />  {ele.days} Days
+                  <img src={spedometer.src} style={{ width: '60px' }} />  {ele.days} Days
                 </span>
                 <span>
                   <img src={people.src} style={{ width: '35px' }} />  {ele.maxPeople}
@@ -59,7 +59,7 @@ function TravelPackage({ innerid }) {
               <p className="description" dangerouslySetInnerHTML={{ __html: ele.overview }}></p>
               <h2>Included</h2>
               <ul className="included-excluded">
-                {ele.inc_meta===null || ele.inc_meta===false?('no data found'):(ele.inc_meta.map((item, index) => {
+                {ele.inc_meta === null || ele.inc_meta === false ? ('no data found') : (ele.inc_meta.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_inc}</li>
@@ -69,7 +69,7 @@ function TravelPackage({ innerid }) {
               </ul>
               <h2>Excluded</h2>
               <ul className="included-excluded">
-                {ele.exc_meta===null || ele.exc_meta===false ?('no data found'):(ele.exc_meta?.map((item, index) => {
+                {ele.exc_meta === null || ele.exc_meta === false ? ('no data found') : (ele.exc_meta?.map((item, index) => {
 
                   return <div key={index} className="inc-excl-wrapper">
                     <li>{item.tour_exc}</li>
@@ -79,7 +79,7 @@ function TravelPackage({ innerid }) {
               </ul>
               <h2>Itinerary</h2>
               <div className="itinerary">
-                {ele?.daywise_meta===null?'no data found':ele?.daywise_meta?.map((item, index) => (
+                {ele?.daywise_meta === null ? 'no data found' : ele?.daywise_meta?.map((item, index) => (
                   <div key={index} className="day">
                     <div
                       className="day-header"
@@ -94,8 +94,15 @@ function TravelPackage({ innerid }) {
                     </div>
                     {activeDay === index && (
                       <div className="day-activity">
-                        <span dangerouslySetInnerHTML={{__html:item.tour_des}}></span>
-                        <div class="tour-container"><div class="tour-image"><img src={testing.src}/></div><div class="tour-content"><div class="tour-title">Kasol Tour: A Himalayan Escape</div><div class="tour-description">Embark on a captivating tour of Kasol, a serene village nestled in the Parvati Valley of Himachal Pradesh. Known for its scenic beauty and vibrant culture, Kasol is the perfect destination for nature lovers, adventure seekers, and those looking to relax amidst tranquil surroundings. Experience the enchanting charm of Kasol, where natural beauty, adventure, and cultural richness come together to create an unforgettable Himalayan escape.</div></div></div>
+                        {item.hot_des === null || item.hot_des === undefined || item.hot_des.length === 0 ? ('no results found') : (
+                          item.hot_des.map((e, index) => {
+                            return <div className="day_wise_wrapper" key={index}>
+                              <span>{e.hot_des || 'no title found'}</span>
+                              <div class="tour-container"><div class="tour-image"><img src={e.attractionimage || testing.src} /></div><div class="tour-content"><div class="tour-title">{e.description || 'no description found'}</div></div></div>
+                            </div>
+
+                          })
+                        )}
 
                       </div>
                     )}
