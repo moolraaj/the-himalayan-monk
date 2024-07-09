@@ -223,6 +223,10 @@ text-align: left;
   flex-direction: column;
 }
 
+.three_rating_with_icon br {
+  display: none !important;
+}
+
 .book_fields_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2018,6 +2022,7 @@ a.tel_header_c {
 .enquiry_s_number {
   display: flex;
   justify-content: space-between;
+  column-gap: 25px;
 }
 
 .header_number {
@@ -2389,6 +2394,7 @@ span.days_item {
 .destination img {
   height: 200px;
   z-index: -1;
+  object-fit: cover;
 }
 
 .destination-text h3 span {
@@ -2706,7 +2712,7 @@ button.right-arrow {
 
 .ratings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   max-width: 60%;
   margin: auto;
   margin-top: 36px;
@@ -3596,7 +3602,7 @@ button.custom_close {
   column-gap: 40px;
   row-gap: 40px;
   margin-top: 80px;
-  margin-bottom: 86px;
+  margin-bottom: 30px;
 }
 
 .places-container .place {
@@ -3987,12 +3993,78 @@ form input[type="submit"] {
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
   .all_tour_packages .tour-packages {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
+  .who-feature {
+    width: 90%;
+}
+.about_traveller .who-we-are-section h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.about_traveller .feature-icon {
+  width: 80px;
+  height: 80px;
+}
+.about_traveller .feature-item {
+  padding: 20px 10px;
+  column-gap: 7px;
+}
+.feature-icon img {
+  width: 40px;
+}
+.who-we-are-section h4 {
+  margin-bottom: 15px;
+  font-size:20px;
+}
+  .about_traveller .stats-section {
+    width: 90%;
+    padding: 40px 0px !important;
+}
+  .aboutus-container {
+    width: 90%;
+    margin: auto;
+}
+  .about_page_bg_section {
+    margin-top: 50px;
+}
+  .activities_new .tab-content {
+    padding: 0px;
+  }
+button.right-arrow {
+  right: 26px;
+}
+button.left-arrow {
+  left: -37px;
+}
+.testimonial {
+  height: 280px;
+  flex: none;
+  width: 32%;
+}
+  .TourPackages_outer_section {
+    padding: 0px;
+}
+  .tour_packages_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .journy-image-container::before {
+    display: none;
+  }
+  .tour_packages_wrapper {
+    gap: 30px;
+    margin-top:30px;
+}
+.call_r_sec h3 {
+  margin-top:0px;
+}
+.call_r_sec p {
+  margin-bottom: 27px;
+}
   .book_now_form {
     padding: 50px 0px;
   }
@@ -4008,6 +4080,7 @@ form input[type="submit"] {
 
   .activities_new .tabs-container {
     grid-template-columns: 1fr !important;
+    padding-bottom: 10px;
 }
 
   .TourPackages_inner {
@@ -4149,9 +4222,9 @@ form input[type="submit"] {
   }
 
   .aboutus-container {
-    padding: 20px;
     padding-bottom: 50px;
     padding-top: 20px;
+    margin-top: 0px;
   }
 
   img.one_image_c {
@@ -4175,11 +4248,13 @@ form input[type="submit"] {
   }
 
   .testimonials-slider {
-    padding: 60px 10px 150px 10px;
+    padding: 60px 0px 150px 0px;
+    width: 92%;
   }
 
   .testimonial p {
     height: 150px;
+    line-height: 24px;
   }
 
   img.triangle-testimonial-img {
@@ -4191,27 +4266,14 @@ form input[type="submit"] {
   .aboutus-text h2 {
     font-size: 30px;
   }
-
-
-  .tour_packages_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .testimonial {
     flex: 0 0 calc(50% - 20px);
     /* 2 slides for tablets with gap */
   }
-
-  .filter-destination-wrapper {
-    max-width: 130px;
-  }
-
   .popup-wrapper.slide-down {
     ul {
       column-gap: 10px;
       padding-left: 0;
-      justify-content: center;
     }
 
     top: 80px;
@@ -4229,7 +4291,9 @@ form input[type="submit"] {
 @media (min-width: 769px) and (max-width:1024px) {
   .activities_new .tab-content {
     grid-template-columns: 1fr;
+    margin-top: 50px;
   }
+  
 
   .tourlist_inner::before,
   .tour_packages_wrapper::before,
@@ -4247,9 +4311,67 @@ form input[type="submit"] {
   // homepage responsive end **********
 }
 @media only screen and (max-width:768px) {
+  button.aboutus-button {
+    margin-top: 30px;
+}
+.tab-content button {
+  margin-top: 20px;
+}
+  .activities_new .tab-content h2 {
+    font-size: 23px;
+}
+
+.logo_r_section img {
+  width: 80%;
+}
+
+  .footer_first_section {
+    row-gap: 20px;
+    margin-bottom: 20px;
+}
+  
   .waysvehicles_wrapper {
     margin-top: 20px;
   }
+  .tab-content ul {
+    display: flex;
+    column-gap: 34px;
+    flex-wrap: wrap;
+}
+.footer_wrapper_second ul {
+  margin-top: 10px;
+}
+.footer_wrapper_second h4 {
+  font-size: 22px !important;
+  font-family: 'Inter';
+  color: #f69625;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding: 10px 0px;
+}
+
+  .follow_name {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    column-gap: 10px;
+    align-items: center;
+    margin: 30px 0px;
+}
+
+  .footer_social_icons {
+    display: block;
+   
+}
+ul.social_icons_t {
+   column-gap: 13px;
+}
+
+.footer_social_icons ul li a {
+   width: 16px;
+  height: 19px !important;
+ 
+}
+
 
   .desti_top_heading h1 {
     text-transform: capitalize;
@@ -4276,19 +4398,38 @@ p.tourdescription {
 .tour_packages_wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 100%;
+}
+.activity_featured p {
+  padding: 0px;
+  padding-bottom: 5px;
+}
+.activities_new .tab-content ul li {
+  margin-bottom: 10px;
+}
+.testimonial {
+  height: 265px;
+}
+button.left-arrow {
+  left: -38px;
+}
+button.right-arrow {
+  right: 29px;
+}
+.testimonials-slider {
+  justify-content: center;
 }
 .tabs-container.activities_home span {
   font-family: "rubik";
   margin-top: 8px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 29.63px;
+  line-height: 20px;
 }
 .activities_new .tab-content {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  margin-top: 30px;
 }
 
   .hero_section_outer .slider_wrapper img {
@@ -4513,10 +4654,10 @@ p.tourdescription {
   }
 
   .ratings {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     margin-top: 36px;
     gap: 20px;
-    place-items: baseline;
+    place-items: center;
   }
 
   .all_tour_packages {
@@ -4630,7 +4771,7 @@ p.tourdescription {
 
 
   .footer_i::before {
-    top: 48px;
+    display: none;
   }
 
 
@@ -4773,10 +4914,10 @@ p.tourdescription {
   }
 
   img.one_image_c {
-    width: 100%;
+    width: 90%;
     border-radius: 8px;
     object-fit: cover;
-    max-width: 100% !important;
+    max-width: 90% !important;
     height: 270px;
   }
 
@@ -4796,6 +4937,8 @@ p.tourdescription {
 
   .footer_i {
     display: block;
+    border-bottom: none;
+    padding-bottom: 0px;
   }
 
   .top_bar_notifications span {
@@ -4812,6 +4955,20 @@ p.tourdescription {
 }
 
 @media (max-width: 600px) {
+  .stat-item img {
+    height: 45px;
+}
+  .about_traveller .features-section {
+    grid-template-columns: 1fr;
+  }
+  .activities_new .tab-content {
+    grid-template-columns: 1fr;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+  .activities_new .tab-content .images {
+    display: none;
+}
   .hero_section_outer .hero_right_section {
     display: none;
   }
@@ -4827,7 +4984,7 @@ p.tourdescription {
   }
 
   .all_tour_packages .tour-packages {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .book_now_form_header h1 {
@@ -4880,13 +5037,13 @@ p.tourdescription {
     grid-template-columns: 1fr 1fr;
     column-gap: 10px;
     align-items: center;
-    margin: 30px 0px;
+    margin: 10px 0px;
   }
 
   .footer_wrapper_second h4 {
     font-size: 25px;
     color: #fff;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
   }
 
 
@@ -4930,8 +5087,8 @@ p.tourdescription {
   }
 
   .logo_r_section img {
-    max-width: 126px;
-    height: 48px;
+    max-width: 80%;
+    height: auto;
   }
 
   .header_number {
@@ -4945,10 +5102,6 @@ p.tourdescription {
     font-size: 16px;
   }
 }
-
-
-
-
 @media only screen and (max-width:468px) {
   .hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
     font-size: 30px;
