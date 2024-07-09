@@ -10,12 +10,15 @@ function ActivitesPage() {
       <div className="desti_outer">
         <div className="desti_inner">
           <div className="desti_wrapper">
+            <div class="banner_wrapper">
             <div className="banner_section">
            <img src={activities_banner.src} alt={activities_banner.src} />
+           </div>
            <div className="activity_page_banner_heading">
             <h1>Activites</h1>
            </div>
            </div>
+          
            <div className="activities_page_bg" style={{ backgroundImage: `url(${activities_page_bg.src})` }}>
             <div className="testi_inner_wapper">
               <h3>Our Latest Activites</h3>

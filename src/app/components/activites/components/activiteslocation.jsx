@@ -41,16 +41,21 @@ import { emptyImage } from '@/app/assets/images';
       {reverAllactivities===null? 'no activities data availble': reverAllactivities?.map(place => (
        
         <div key={place.id} className="place">
-          <Link href={`/activities/${place.id}`}>
+          
           <img src={place.pdf_image || emptyImage.src} alt={place.package_name} 
           onError={(e) => e.target.src = emptyImage.src}/>
           <div className="place-info">
-            <p>{place.tour_location} Tour {place.tour_location > 1 ? 's' : ''}</p>
+            <div className='view-more-activity'> 
+              <Link href={`/activities/${place.id}`}>
+                <button className='book-now-activity'> View More</button>
+              </Link>
+            </div>
+            {/* <p>{place.tour_location} Tour {place.tour_location > 1 ? 's' : ''}</p> */}
              <span className='name_location'>
             <h3>{place.package_name}</h3>
             </span>
           </div>
-          </Link>
+          
         </div>
  
         
