@@ -4195,9 +4195,8 @@ ul.social_icons_t li {
     border-bottom-right-radius: 36px;
     border-bottom-left-radius: 39px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 92%);
+       left: 0px;
+   
 }
   .package {
     padding: 0px;
@@ -4283,6 +4282,7 @@ button.left-arrow {
   .activities_new .tabs-container {
     grid-template-columns: 1fr !important;
     padding-bottom: 10px;
+    row-gap: 20px;
 }
 
   .TourPackages_inner {
@@ -4537,9 +4537,7 @@ button.left-arrow {
   .places-container .place {
     text-align: center;
   }
-  .navbar_c_section span {
-    transform: translate(-50%, 77%);
-}
+ 
 
   button.aboutus-button {
     margin-top: 30px;
@@ -4652,6 +4650,7 @@ p.tourdescription {
 }
 .hero_section_outer .hero_right_section {
   margin-top: 40px;
+  display: none;
 }
 
   .book-form_message_filed label{
@@ -5132,6 +5131,10 @@ p.tourdescription {
     height: 45px;
 }
 
+.tab-content ul {
+  flex-wrap: wrap;
+}
+
 
   .about_traveller .features-section {
     grid-template-columns: 1fr;
@@ -5218,8 +5221,8 @@ p.tourdescription {
 
 
   .footer_wrapper_second h4 {
-    font-size: 25px;
-    color: #fff;
+    font-size: 22px;
+    color: #f69625;
     margin-bottom: 22px;
   }
   .desti_top_banner img {
