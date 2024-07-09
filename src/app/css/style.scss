@@ -921,7 +921,8 @@ button.active-button {
 
 .filter-destination-wrapper img {
   height: 85px;
-  width: 150px;
+  max-width: 150px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -2001,6 +2002,8 @@ button.call_a_button {
   align-items: center;
   column-gap: 12px;
   padding-right: 80px;
+  width: 75%;
+  margin: auto;
 }
 
 .three_rating_with_icon br {
@@ -4495,6 +4498,36 @@ button.left-arrow {
   button.aboutus-button {
     margin-top: 30px;
 }
+
+.footer_wrapper_second h4 {
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 22px;
+  color: #f69625;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.footer_i::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 0px;
+  background: rgba(255, 255, 255, 0.41);
+  z-index: 99;
+  top: 50px;
+}
+
+.follow_name {
+   grid-template-columns: 1fr;
+}
+.footer_i {
+  border-bottom: 0px solid rgba(255, 255, 255, 0.41);
+
+}
+
+
+
 .tab-content button {
   margin-top: 20px;
 }
@@ -5131,17 +5164,14 @@ p.tourdescription {
 
   .follow_name {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 10px;
     align-items: center;
     margin: 30px 0px;
   }
 
-  .footer_wrapper_second h4 {
-    font-size: 25px;
-    color: #fff;
-    margin-bottom: 22px;
-  }
+ 
+
 
 
 
