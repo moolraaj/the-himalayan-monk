@@ -385,6 +385,9 @@ span.error {
   background-position: center;
 }
 
+.banner_wrapper {
+  position: relative;
+}
 
 
 
@@ -470,6 +473,52 @@ body {
   }
 
 
+  .day_wise_wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.tour-container span {
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #F69625;
+}
+
+
+
+
+.tour-content {
+    padding-top: 10px;
+}
+.day_wise_wrapper:not(:last-child) {
+    border-bottom: 1px solid #80808042;
+}
+.tour-image img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(246 150 37);
+}
+
+.slideform_content_outer{
+  padding-right:10px;
+}
+
+.slideform_content_outer::-webkit-scrollbar {
+  width: 5px;
+}
 
 
 
@@ -485,7 +534,7 @@ body {
 
   .hero_section_inner {
     @extend %inner-section_max_width;
-    padding: 220px 15px 80px 15px;
+    padding: 120px 15px 50px 15px;
     z-index: 2;
 
     .hero_wrapper {
@@ -607,7 +656,7 @@ body {
 
 .top_banner_Image {
   position: relative;
-  top: 22px;
+  top: 0px;
 }
 .pagination-buttons button {
   padding: 6px 14px !important;
@@ -864,7 +913,7 @@ button.active-button {
 
 .filter-destination-wrapper img {
   height: 85px;
-  width: 100%;
+  width: 150px;
   object-fit: cover;
 }
 
@@ -1597,7 +1646,7 @@ button.call_a_button {
 
 .popup-wrapper.slide-down {
   max-width: 1200px;
-  padding: 30px;
+  padding: 0px;
   width: 100%;
 }
 
@@ -1974,7 +2023,8 @@ button.book_button:hover {
   display: flex;
   column-gap: 30px;
   flex-wrap: wrap;
-  padding-left: 10px;
+  justify-content: center;
+  padding: 0px !important;
 }
 
 .popup-wrapper.slide-down ul {
@@ -2328,6 +2378,11 @@ span.days_item {
   background: #D65228;
 }
 
+.margin_custom {
+  height: 127px;
+}
+
+
 
 .day-header span {
   display: flex;
@@ -2663,7 +2718,7 @@ button.right-arrow {
 
 
 .slider_plus_details .slick-slider.slick-initialized {
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 
@@ -2848,28 +2903,32 @@ span.discounted-price b {
   position: relative;
 }
 
-.activity_page_banner_heading {
-  position: absolute;
-  top: 57%;
-  width: 100%;
-  text-align: center;
-  color: $white;
-
-  h1 {
-    font-size: $top_heading_desktop_h1;
+.activity_page_banner_heading h1 {
+  
+   font-size: $top_heading_desktop_h1;
     margin: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 999;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:0px;
   }
 
-}
+
 
 
 .banner_section,
 .activity_inner_page_banner {
-  margin-top: 100px;
+  margin-top: 0px;
 
   img {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
   }
 }
@@ -3537,7 +3596,7 @@ button.custom_close {
 }
 
 .desti_top_banner img {
-  height: 396px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }
@@ -3550,13 +3609,17 @@ button.custom_close {
 
 
 
-.desti_top_heading {
+.desti_top_heading h1 {
   position: absolute;
-  top: 40%;
   width: 100%;
-  text-align: center;
+  top: 0px !important;
+  margin: 0px;
   color: white;
-  font-family: 'rubik';
+  padding-top: 0px !important;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-transform: capitalize;
 }
 
@@ -3719,8 +3782,8 @@ span.name_location h1 {
   right: 0;
 }
 .slideform_content_outer {
-  overflow-y: scroll;
-  height: 700px;
+  overflow-y: auto;
+  height: 820px;
 }
 form {
   display: flex;
@@ -4002,6 +4065,15 @@ form input[type="submit"] {
   .who-feature {
     width: 90%;
 }
+
+.margin_custom {
+    height: 122px;
+}
+
+.destinationfilter {
+  padding-left: 30px;
+}
+
 .about_traveller .who-we-are-section h2 {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -4285,6 +4357,7 @@ button.left-arrow {
 
   .popup-wrapper.slide-down {
     padding: 30px 0px 10px 20px;
+    padding-left: 0px !important;
   }
 }
 
@@ -4313,6 +4386,15 @@ button.left-arrow {
 @media only screen and (max-width:768px) {
   button.aboutus-button {
     margin-top: 30px;
+}
+
+.margin_custom {
+    height: 108px;
+}
+
+.desti_top_banner img {
+  height: 180px !important;
+ 
 }
 .tab-content button {
   margin-top: 20px;
@@ -4378,7 +4460,7 @@ ul.social_icons_t {
     font-size: 45px;
     padding-top: 0px;
     font-size: 29px !important;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -4629,7 +4711,7 @@ button.right-arrow {
 
   // destination inner page responsive ***************
   .slider_plus_details .slick-slider.slick-initialized {
-    margin-top: 75px;
+    margin-top: 0px;
   }
 
   .hero .overlay {
@@ -4680,7 +4762,7 @@ button.right-arrow {
 
 
   .hero_section_outer .hero_section_inner {
-    padding-top: 170px;
+    padding-top: 50px;
   }
 
   .package {
@@ -4795,13 +4877,7 @@ button.right-arrow {
       width: 100%;
     }
 
-    .desti_top_heading {
-      position: absolute;
-      top: 52%;
-      width: 100%;
-      text-align: center;
-      color: white;
-    }
+    
 
 
     .mobile_close_menu {
@@ -5025,7 +5101,8 @@ button.right-arrow {
   .filter_outer_desti {
     height: 480px;
     overflow: auto;
-    width: 92%;
+    width: 100%;
+    padding-right: 0px !important;
   }
 
   .filter_outer_desti::-webkit-scrollbar {
@@ -5049,7 +5126,7 @@ button.right-arrow {
 
 
   .desti_top_banner img {
-    height: 300px;
+    height: 150px;
     width: 100%;
   }
 
@@ -5108,7 +5185,7 @@ button.right-arrow {
     margin: 0;
     padding: 0;
   }
-
+     
   .search-results {
     grid-template-columns: 1fr;
   }
@@ -5122,9 +5199,7 @@ button.right-arrow {
     grid-template-columns: 1fr;
   }
 
-  .destination_page_wrapper .desti_top_heading {
-    top: 30%;
-  }
+ 
 
   .activities_page_wrapper .activity_page_banner_heading {
     top: 37%;
@@ -5145,7 +5220,7 @@ button.right-arrow {
   .desti_top_banner img,
   .banner_section img,
   .activity_inner_page_banner img {
-    height: 300px;
+    height: 150px;
     width: 100%;
   }
 
@@ -5170,7 +5245,7 @@ button.right-arrow {
 
 
   .desti_top_banner img {
-    height: 300px !important;
+    height: 150px !important;
     width: 100%;
     object-fit: cover;
   }
@@ -5218,6 +5293,15 @@ button.right-arrow {
     position: relative;
     width: 84%;
   }
+ 
 
+
+}
+
+
+@media only screen and (max-width:378px) {
+   .margin_custom {
+        height: 96px;
+    }
 
 }

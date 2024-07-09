@@ -27,6 +27,7 @@ function TourList() {
   }, []);
 
   let reverAlldestinations = [...result].reverse()
+  console.log(reverAlldestinations)
 
   console.log(result)
 
