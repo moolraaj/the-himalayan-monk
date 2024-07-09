@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import logo from '../../../assets/headerAssets/logo.png';
-import handshake from '../../../assets/headerAssets/handshake.png';
+import handshake from '../../../assets/headerAssets/handshake.gif';
 import himachal from '../../../assets/headerAssets/himachal.png';
 
 
@@ -65,8 +65,8 @@ function FooterPage() {
                                 <h4>Contact Us</h4>
                                 <ul className='footer_client_section'>
                                     <li><a href="mailto:thehimalayanmonks@gmail.com">thehimalayanmonks@gmail.com</a></li>
-                                    <li><a href="tel:+9999999999">+91 9999999999</a></li>
-                                    <li><a href="tel:+9999999999">+91 9999999999</a></li>
+                                    <li><a href="tel:+91 98167 88165">+91 98167 88165</a></li>
+                                    {/* <li><a href="tel:+9999999999">+91 9999999999</a></li> */}
                                 </ul>
                             </div>
 
