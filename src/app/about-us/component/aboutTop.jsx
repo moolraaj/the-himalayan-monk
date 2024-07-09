@@ -52,7 +52,7 @@ const AboutTop = () => {
               <span>3.5K Tour Success</span>
             </div>
           </div>
-          <button className="aboutus-button">More About</button>
+          
         </div>
       </div>
     </div>
