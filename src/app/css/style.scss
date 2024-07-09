@@ -5131,6 +5131,11 @@ p.tourdescription {
     height: 45px;
 }
 
+.destination img {
+  z-index: -1;
+  object-fit: cover;
+}
+
 .tab-content ul {
   flex-wrap: wrap;
 }
@@ -5274,6 +5279,18 @@ p.tourdescription {
     padding: 0;
   }
 
+  .more_enquiry a {
+    color: #F69625;
+    font-size: 13px;
+    font-weight: 600;
+}
+.header img {
+  width: 137px;
+}
+.form-container .title {
+  margin-top: 10px;
+}
+
   .navbar_c_section span img {
     max-width: 84px;
     height: 23px;
@@ -5359,6 +5376,7 @@ p.tourdescription {
 
   .form-container .tour-types {
     grid-template-columns: 1fr 1fr;
+    width: 90%;
   }
 
   .about_traveller .stat-label {
