@@ -1547,6 +1547,8 @@ span.speedometer {
   background-color: darkorange;
 }
 
+
+
 // tour package section css ends *********
 
 
@@ -1574,7 +1576,7 @@ ul.social_icons_t {
 
 
 ul.social_icons_t li:nth-child(1) {
-  padding: 2px 3px;
+  padding: 2px 5px;
 }
 
 ul.social_icons_t li:nth-child(2) {
@@ -2415,7 +2417,7 @@ a.tel_header_c {
 }
 
 .aboutus-button:hover {
-  background-color: #ff5722;
+  background-color: #000;
 }
 
 span.days_item {
@@ -2997,7 +2999,10 @@ ul.included-excluded li::marker {
   border-radius: 10px 0px 0px 10px;
   color: white;
   font-size: 18px;
-  font-family: 'rubik';
+  font-family: "rubik";
+  height: 100%;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
 }
 
@@ -3026,6 +3031,7 @@ ul.included-excluded li::marker {
   padding: 0px 10px 0px 0px;
   cursor: pointer;
   border-radius:10px 0px 0px 10px;
+  overflow: hidden;
 }
 
 
@@ -3117,6 +3123,7 @@ span.days_item {
   padding-bottom: 12px;
   color: #636262;
   text-transform: capitalize;
+  font-weight: 500;
 }
 
 
@@ -3200,7 +3207,6 @@ span.days_item {
 .container.slider_plus_details {
   width: 100%;
   overflow: hidden;
-  margin-top: -28px;
 }
 
 .book-button:hover {
@@ -3232,6 +3238,7 @@ span.custom_icon {
 .ratings span.custom_icon {
   font-family: 'rubik';
   font-weight: 700 !important;
+  padding: 5px 7px;
 }
 
 button.contactButton:hover {
@@ -3647,19 +3654,17 @@ button.custom_close {
   width: 100%;
   object-fit: cover;
 }
-.desti_top_heading h1 {
-  font-size: 70px;
-  padding-top: 20px !important;  
-  
-}
+
 
 .desti_top_heading h1 {
+  font-size: 60px;
+  text-align: center;
   position: absolute;
   width: 100%;
   top: 0px !important;
   margin: 0px;
   color: white;
-  padding-top: 0px !important;
+  padding-top: 20px;
   height: 93%;
   display: flex;
   justify-content: center;
@@ -3671,6 +3676,8 @@ button.custom_close {
   max-width: 1440px;
   margin: auto;
   padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .testi_inner_wapper h3 {
@@ -3712,6 +3719,7 @@ button.custom_close {
   row-gap: 40px;
   margin-top: 80px;
   margin-bottom: 86px;
+  padding: 0px 20px;
 }
 
 .places-container .place {
@@ -3938,16 +3946,16 @@ form input[type="submit"] {
 .ways_travel_image .save_value p {
   font-size: 12px;
 }
-.vehicles .price-details {
+ .price-details {
   text-decoration: none;
 }
-.vehicles .price-details span.cut-txt {
+ .price-details span.cut-txt {
   text-decoration: line-through;
   color: #000000bf;
   font-size: 12px;
   font-weight: 600;
 }
-.vehicles .price-details span.without-cut-txt {
+.price-details span.without-cut-txt {
   font-size: 14px;
   font-family: 'josefin';
   margin-left: 8px;
@@ -3967,6 +3975,12 @@ form input[type="submit"] {
 }
 .footer_inner .footer_hand-shake img {
   width: 40px;
+}
+button.book_button:hover img {
+  filter: invert(1);
+}
+.destination_inner_page_bg .tour-packages .tour-title {
+  height: 34px;
 }
 /************ Responsive Design Start ************/
 
@@ -3995,6 +4009,9 @@ form input[type="submit"] {
 }
 
 @media only screen and (max-width:1500px) {
+  .desti_top_heading h1 {
+    font-size: 50px;
+  }
   .about_traveller .stats-section {
     width: 87%;
     margin: 0 auto;
@@ -4059,10 +4076,14 @@ form input[type="submit"] {
     right: 2px;
     bottom: -52px;
   }
-
-
+  .navbar_c_section a {
+    font-size: 16px;
 }
-
+a.tel_header_c {
+  font-size: 16px;
+  white-space: nowrap;
+}
+}
 @media only screen and (max-width:1200px) {
   .header_i_sec {
     display: flex;
@@ -4145,7 +4166,7 @@ form input[type="submit"] {
 
 
   .desti_top_heading h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .destinationfilter {
@@ -4397,9 +4418,13 @@ button.left-arrow {
   .book_button {
     margin-top: 4px;
     padding: 5px;
+    margin-right: 10px;
     font-size: 15px;
   }
-
+  .tab-content p {
+  
+    padding: 0px;
+}
   .view-all-packages {
     justify-content: right;
   }
@@ -4411,11 +4436,14 @@ button.left-arrow {
 
 
   .activities_new .tab-content h2 {
-    margin-top: 0;
+    margin-top: 20px;
     font-size: 30px;
     width: 100%;
+    margin-bottom: 10px;
   }
-
+  .activities_new .tab-content ul {
+    margin: 20px 0px;
+}
   .aboutus-images img.two_image_c {
     display: none;
   }
@@ -4424,7 +4452,6 @@ button.left-arrow {
     padding: 20px;
     padding-bottom: 50px;
     padding-top: 20px;
-    margin-top: 0px;
   }
 
   img.one_image_c {
@@ -4438,7 +4465,7 @@ button.left-arrow {
   .aboutus-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 30px;
+    padding-top: 0px;
     margin-bottom: 20px;
     gap: 10px;
   }
@@ -4453,6 +4480,7 @@ button.left-arrow {
 
   .testimonial p {
     height: 150px;
+    overflow: hidden;
   }
 
   img.triangle-testimonial-img {
@@ -4501,6 +4529,12 @@ button.left-arrow {
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
+  .call_r_sec a.call_a_button {
+    margin-top: 30px;
+    display: flex;
+    width: 60px;
+    justify-content: center;
+}
   .activities_new .tab-content {
     grid-template-columns: 1fr;
   }
@@ -4528,6 +4562,9 @@ button.left-arrow {
 }
 
 @media only screen and (max-width:768px) {
+  .aboutus-images {
+    margin-top: 20px;
+}
   span.package_count {
     padding: 6px 12px;
     font-size: 10px;
@@ -4617,6 +4654,7 @@ p.tourdescription {
 .tour_packages_wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  width: 100%;
 }
 .tabs-container.activities_home span {
   font-family: "rubik";
@@ -4804,18 +4842,21 @@ p.tourdescription {
     font-size: 20px;
     position: relative;
     left: 0px;
-    top: -20px;
+    top: 0px;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
   }
-
+  .tourlist_inner {
+    padding-top: 40px;
+}
   .section-title {
     font-size: 20px;
     position: relative;
     writing-mode: horizontal-tb;
     transform: rotate(0deg);
     text-align: left;
-    left: 12px;
+    left: 0px;
+    padding-left: 50px;
   }
 
   .testimonials-slider {
@@ -5017,6 +5058,7 @@ p.tourdescription {
   .tour_destination_wrapper {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    margin-top: 20px;
 
     .tour_destination {
       height: 200px !important;
@@ -5127,6 +5169,9 @@ p.tourdescription {
 }
 
 @media (max-width: 600px) {
+  .activities_new .tab-content ul li {
+    margin-top: 10px;
+}
   .stat-item img {
     height: 45px;
 }
@@ -5193,9 +5238,10 @@ p.tourdescription {
   }
 
   .testimonial {
-    flex: 0 0 calc(100% - 20px);
-    /* 1 slide for mobile with gap */
-  }
+    flex: none;
+    width: 90%;
+    margin: 0 auto;
+}
 
   .popup-wrapper.slide-down {
     padding: 21px 10px 10px 12px;
@@ -5218,13 +5264,7 @@ p.tourdescription {
     column-gap: 10px;
     align-items: center;
     margin: 30px 0px;
-  }
-
- 
-
-
-
-
+  
   .footer_wrapper_second h4 {
     font-size: 22px;
     color: #f69625;
@@ -5261,7 +5301,7 @@ p.tourdescription {
     display: none;
   }
 }
-
+}
 @media (min-width: 469px) and (max-width:768px) {
 
   .tour_package_info h2 {

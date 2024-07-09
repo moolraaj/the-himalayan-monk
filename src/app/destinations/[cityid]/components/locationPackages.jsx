@@ -54,14 +54,14 @@ function TourPackages({ id }) {
                     <span className="tour-nights">{tour.night}Nights</span>
                   </div>
                   <div className="tour-rating">
-                    <span className="rating">{tour.rating}</span>
+                    <span className="rating"> ★ {tour.rating}</span>
                     {/* <span className="reviews">{tour.reviews}</span> */}
                   </div>
                 </div>
                 <div className="tour-title">{tour.package_name}</div>
                 <div className="tour-price">
                   <span className="price">Rs {tour.starting_cost}</span>
-                  <span className="price-details">Rs {tour.discount} Per Person</span>
+                  <span className="price-details"> <span className="cut-txt"> Rs {tour.discount} </span> <span className="without-cut-txt"> Per Person </span> </span>
                 </div>
                 <button className="book-button">Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
               </div>

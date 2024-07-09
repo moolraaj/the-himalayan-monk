@@ -95,7 +95,7 @@ function TravelPackage({ innerid }) {
                     {activeDay === index && (
                       <div className="day-activity">
                         <p dangerouslySetInnerHTML={{__html:item.tour_des||'no description found'}}></p>
-                        {item.hot_des === null || item.hot_des === undefined || item.hot_des.length === 0 ? ('no results found') : (
+                        {item.hot_des === null || item.hot_des === undefined || item.hot_des.length === 0 ? ('') : (
                           item.hot_des.map((e, index) => {
                             return <div className="day_wise_wrapper" key={index}>
 
@@ -119,6 +119,9 @@ function TravelPackage({ innerid }) {
           );
         })}
       </div>
+
+
+      
 
 
     </>
