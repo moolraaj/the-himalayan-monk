@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import triangle from '@/app/assets/homepageAssets/triangle.png' 
-import profile from '../../../assets/homepageAssets/profile.png'
+import triangle from '@/app/assets/homepageAssets/triangle.png';
+import profile from '../../../assets/homepageAssets/profile.png';
 import Image from "next/image";
-import arrowl from '../../../assets/homepageAssets/larr.gif'
-import arrowr from '../../../assets/homepageAssets/rarr.gif'
-import testback from '../../../assets/homepageAssets/testimonialbac.png'
-import quote from '../../../assets/homepageAssets/quote.png'
+import arrowl from '../../../assets/homepageAssets/larr.gif';
+import arrowr from '../../../assets/homepageAssets/rarr.gif';
+import testback from '../../../assets/homepageAssets/testimonialbac.png';
+import quote from '../../../assets/homepageAssets/quote.png';
 
 const testimonials = [
   {
@@ -90,14 +90,14 @@ const Testimonials = () => {
     window.addEventListener("resize", updateSlidesToShow);
 
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+      handleNext();
     }, 5000); // Changed to 5 seconds
 
     return () => {
       clearInterval(interval);
       window.removeEventListener("resize", updateSlidesToShow);
     };
-  }, []);
+  }, [slidesToShow]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
@@ -107,10 +107,11 @@ const Testimonials = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
-  const displayedTestimonials = testimonials.slice(
-    currentIndex,
-    currentIndex + slidesToShow
-  );
+  const displayedTestimonials = [];
+  for (let i = 0; i < slidesToShow; i++) {
+    const index = (currentIndex + i) % testimonials.length;
+    displayedTestimonials.push(testimonials[index]);
+  }
 
   return (
     <div className="testimonial_outer" style={{ backgroundImage: `url(${testback.src})` }}>
@@ -119,10 +120,10 @@ const Testimonials = () => {
         <div className="testimonials-slider">
           <div className="slider-controls">
             <button onClick={handlePrev} className="left-arrow">
-            <p><img src={arrowr.src}/></p> 
+              <p><img src={arrowr.src} alt="Previous" /></p>
             </button>
             <button onClick={handleNext} className="right-arrow">
-             <p><img src={arrowl.src}/></p>
+              <p><img src={arrowl.src} alt="Next" /></p>
             </button>
           </div>
           {displayedTestimonials.length === 0
@@ -130,28 +131,26 @@ const Testimonials = () => {
             : displayedTestimonials.map((testimonial, index) => (
               <div key={index} className="testimonial">
                 <p className="review">{testimonial.review}</p>
-                
-              <div className="testimonial-review-rating">
-                <div className="rating">
-                  <div><label>Rating</label></div>
-                  {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
-                </div>
-                <div class="quote-img">
-                  <img src={quote.src}/>
-                </div>
-                <div className="reviewer-info">
-                  <div className="reviewer-details">
-                    <div className="review-meta">
-                    <div> <span className="date">{testimonial.date}</span> </div>
-                    <span className="time">{testimonial.time}</span>
+                <div className="testimonial-review-rating">
+                  <div className="rating">
+                    <div><label>Rating</label></div>
+                    {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+                  </div>
+                  <div className="quote-img">
+                    <img src={quote.src} alt="Quote" />
+                  </div>
+                  <div className="reviewer-info">
+                    <div className="reviewer-details">
+                      <div className="review-meta">
+                        <div> <span className="date">{testimonial.date}</span> </div>
+                        <span className="time">{testimonial.time}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-               
                 <img 
                   src={triangle.src}
-                  alt="image"
+                  alt="Triangle"
                   className="triangle-testimonial-img"
                 />
                 <div className="user_infos">

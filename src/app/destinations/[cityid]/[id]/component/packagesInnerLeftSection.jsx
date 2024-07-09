@@ -36,7 +36,7 @@ function TravelPackage({ innerid }) {
     <>
       <div className="package">
         {result?.map((ele) => {
-          let daywise_meta = JSON.parse(ele.daywise_meta)
+         
          
           return (
             <div className="package-wrapper" key={ele.id}>
@@ -79,7 +79,7 @@ function TravelPackage({ innerid }) {
               </ul>
               <h2>Itinerary</h2>
               <div className="itinerary">
-                {daywise_meta===null?'no data found':daywise_meta?.map((item, index) => (
+                {ele?.daywise_meta===null?'no data found':ele?.daywise_meta?.map((item, index) => (
                   <div key={index} className="day">
                     <div
                       className="day-header"
