@@ -1,7 +1,13 @@
 import WaystoTravel from '@/app/components/headertitlesection/waystotravelbanner'
- 
-
- import React from 'react'
+import star from '../../assets/homepageAssets/Star.png'
+import travelone from '../../assets/homepageAssets/travel-1.png'
+import travelthree from '../../assets/homepageAssets/travel-three.png'
+import travelfour from '../../assets/homepageAssets/travel-four.png'
+import travelfive from '../../assets/homepageAssets/travel-five.png'
+import traveltwo from '../../assets/homepageAssets/travel-two.png'
+import travelxuv from '../../assets/homepageAssets/xuv-travel.png'
+import trvler from '../../assets/homepageAssets/travler.png'
+import React from 'react'
 import WaysVehicles from './waysVehicles';
 import { ways_travel_page_bg } from '@/app/assets/images';
 
@@ -10,64 +16,88 @@ function WaysTravelPage() {
   const vehicles = [
     {
       id: 1,
-      name: 'Car',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'Bus',
+      travel_by: 'Transport Delhi to Manali',
+      image: travelone.src,
+      starting_cost: '27.05',
+      saving_cost:'6.57',
+      days:'04',
+      night: '03',
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 2,
-      name: 'Motorcycle',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'Car',
+      travel_by: 'Delhi to Shimla',
+      image: travelthree.src,
+      starting_cost: '50.05',
+      saving_cost:'6.057',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 3,
-      name: 'Jeep',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'Bus',
+      travel_by: ' Shimla to Dharmshala',
+      image: travelfour.src,
+      starting_cost: '20.05',
+      saving_cost:'3,43',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 4,
-      name: 'SUV',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'Car',
+      travel_by: 'Spiti to Leh',
+      image: travelfive.src,
+      starting_cost: '90.00',
+      saving_cost:'5,43',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 5,
-      name: 'Truck',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'Bus',
+      travel_by: 'Shimla to Chandigarh',
+      image: traveltwo.src,
+      starting_cost: '10.00',
+      saving_cost:'1.00',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 6,
-      name: 'Convertible',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'car',
+      travel_by: 'Delhi to Spiti',
+      image: travelxuv.src,
+      starting_cost: '60.00',
+      saving_cost:'2.70',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
     {
       id: 7,
-      name: 'Van',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
+      name: 'trvler',
+      travel_by: 'Spiti to Leh',
+      image: trvler.src,
+      starting_cost: '70.00',
+      saving_cost:'3.30',
+      days:'02',
+      night: '', // This is intentionally left empty to demonstrate conditional rendering
+      rating: '5.0',
+      reviews: '(0.6k)'
     },
-    {
-      id: 8,
-      name: 'Coupe',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
-    },
-    {
-      id: 9,
-      name: 'Hatchback',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
-    },
-    {
-      id: 10,
-      name: 'Minivan',
-      image: 'https://imgd.aeplcdn.com/370x208/n/cw/ec/156405/xuv-3xo-exterior-right-front-three-quarter-31.jpeg?isig=0&q=80',
-      starting_cost: '300'
-    }
   ];
   return (
     <>

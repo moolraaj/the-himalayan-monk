@@ -131,23 +131,25 @@ const Testimonials = () => {
             : displayedTestimonials.map((testimonial, index) => (
               <div key={index} className="testimonial">
                 <p className="review">{testimonial.review}</p>
-                <div className="testimonial-review-rating">
-                  <div className="rating">
-                    <div><label>Rating</label></div>
-                    {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
-                  </div>
-                  <div className="quote-img">
-                    <img src={quote.src} alt="Quote" />
-                  </div>
-                  <div className="reviewer-info">
-                    <div className="reviewer-details">
-                      <div className="review-meta">
-                        <div> <span className="date">{testimonial.date}</span> </div>
-                        <span className="time">{testimonial.time}</span>
-                      </div>
+                
+              <div className="testimonial-review-rating">
+                <div className="rating">
+                  <div><label>Rating</label></div>
+                  {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+                </div>
+                <div className="quote-img">
+                  <img src={quote.src}/>
+                </div>
+                <div className="reviewer-info">
+                  <div className="reviewer-details">
+                    <div className="review-meta">
+                    <div> <span className="date">{testimonial.date}</span> </div>
+                    <span className="time">{testimonial.time}</span>
                     </div>
                   </div>
                 </div>
+              </div>
+               
                 <img 
                   src={triangle.src}
                   alt="Triangle"

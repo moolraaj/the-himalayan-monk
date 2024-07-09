@@ -1,7 +1,7 @@
 'use client'
 import { airplane, save_price } from '@/app/assets/images'
 import PopupWrapper from '@/app/components/book-now/popupWrapper';
- 
+import aeroplan from '../../assets/homepageAssets/airplane.gif'
 import React, { useState } from 'react'
 
 function WaysVehicles({ vehicles }) {
@@ -24,7 +24,7 @@ function WaysVehicles({ vehicles }) {
                                         <div className="ways_travel_image">
                                         <div className="save_value">
                                                 <img src={save_price.src} alt={save_price.src} />
-                                                <p> save INR  {ele.starting_cost}</p>
+                                                <p> Save INR  {ele.saving_cost}</p>
                                             </div>
                                             <div className="tour-image">
                                             
@@ -33,23 +33,23 @@ function WaysVehicles({ vehicles }) {
                                             </div>
                                             <div className="tour-content">
                                                 <div className="tour-details">
-                                                    <div className='tour_nights_days'>
-                                                        <span className="tour-days">{ele.days} Days / </span>
-                                                        <span className="tour-nights">{ele.night}Nights</span>
+                                                    {/* <div className='tour_nights_days'>
+                                                        <span className="tour-days">{ele.days} Days  </span>
+                                                        <span className="tour-nights">{ele.night} Nights </span>
                                                     </div>
                                                     <div className="tour-rating">
-                                                        <span className="rating">{ele.rating}</span>
+                                                        <span className="rating">★{ele.rating}</span>
                                                         <span className="reviews">{ele.reviews}</span>
-                                                    </div>
+                                                    </div> */}
                                                 </div>
                                                 <div className="travel_by">
-                                                <p>Travel by {ele.name}</p>
+                                                <p>Travel {ele.travel_by}</p>
                                                 </div>
-                                                <div className="tour-title">{ele.package_name}</div>
+                                              
                                                 
                                                 <div className="tour-price">
                                                     <span className="price">Rs {ele.starting_cost}</span>
-                                                    <span className="price-details">INR - ${ele.starting_cost} Per Person</span>
+                                                    <span className="price-details"> <span class="cut-txt">INR ${ele.starting_cost} </span>  <span class="without-cut-txt">\  Per Person </span></span>
                                                 </div>
                                                 <button className="book-button" onClick={popupTourBook}>Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
                                             </div>

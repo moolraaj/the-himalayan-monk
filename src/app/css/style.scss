@@ -58,9 +58,6 @@ a {
 
 
 
-
-
-
 .loading_spinner {
   padding: 200px 0px 100px 0px;
 }
@@ -2954,6 +2951,7 @@ ul.included-excluded li::marker {
   color: white;
   font-size: 18px;
   font-family: 'rubik';
+  white-space: nowrap;
 }
 
 .day-header span:nth-child(2) {
@@ -2980,7 +2978,7 @@ ul.included-excluded li::marker {
   background-color: #f69625c7;
   padding: 0px 10px 0px 0px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius:10px 0px 0px 10px;
 }
 
 
@@ -3606,9 +3604,6 @@ button.custom_close {
   
 }
 
-
-
-
 .desti_top_heading h1 {
   position: absolute;
   width: 100%;
@@ -3698,22 +3693,42 @@ span.name_location {
   position: absolute;
   left: 17px;
 }
-
+.place:hover .view-more-activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 99%;
+  background: #63626285;
+  border-radius: 5px;
+}
+button.book-now-activity {
+  display: none;
+  background: #F69625;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  width: 200px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  height: 50px;
+}
+.place:hover button.book-now-activity {
+  display: block;
+}
+.place:hover span.name_location h3 {
+  color: #bbb5b5;
+}
 span.name_location h3 {
-  font-family: 'josefin';
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
   margin: 0px;
   position: relative;
   top: -40px;
-}
-
-span.name_location h2 {
-  font-family: 'josefin';
-  font-size: 20px;
-  color: #fff;
-  margin: 0px;
-  position: relative;
+  font-weight: 600;
+  font-family: 'rubik';
+  letter-spacing: 0.3px;
 }
 
 span.name_location h1 {
@@ -3869,6 +3884,38 @@ form input[type="submit"] {
   content: "About Us";
 }
 
+.ways_travel_image .save_value p {
+  font-size: 12px;
+}
+.vehicles .price-details {
+  text-decoration: none;
+}
+.vehicles .price-details span.cut-txt {
+  text-decoration: line-through;
+  color: #000000bf;
+  font-size: 12px;
+  font-weight: 600;
+}
+.vehicles .price-details span.without-cut-txt {
+  font-size: 14px;
+  font-family: 'josefin';
+  margin-left: 8px;
+}
+.all_tour_packages .tour-package .travel_by p {
+  color: #636262;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'rubik';
+  margin: 15px 0px;
+}
+.all_tour_packages .tour-package .tour-price {
+  margin-bottom: 20px;
+}
+.all_tour_packages .tour-package span.rating {
+  color: #f69625;
+}
+/************ Responsive Design Start ************/
+
 @media only screen and (max-width:1600px){
   .TourPackages_inner {
     width: 87% !important;
@@ -3894,7 +3941,6 @@ form input[type="submit"] {
 
 }
 
-
 @media only screen and (max-width:1500px) {
 
   .feature span {
@@ -3915,12 +3961,6 @@ form input[type="submit"] {
   .left_section_inner_package {
     padding: 0px 20px;
   }
-
-
-  
-
-
-
 
   .top_bar_details_inner_s {
     padding: 0px 15px;
@@ -3966,10 +4006,6 @@ form input[type="submit"] {
 
 
 }
-
-
-
-
 
 @media only screen and (max-width:1200px) {
   .header_i_sec {
@@ -4054,14 +4090,45 @@ form input[type="submit"] {
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  .all_tour_packages .tour-packages {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Responsive Design Start */
 @media only screen and (max-width: 1024px) {
+  .footer_wrapper_second h4 {
+    font-size: 20px;
+}
+.footer_outer p {
+  font-size: 14px;
+}
+ul.social_icons_t {
+  column-gap: 0px;
+}
+ul.social_icons_t li {
+  margin-right: 11px;
+}
+.footer_outer a {
+  font-size: 16px;
+}
+  span.name_location h3 {
+    font-size: 18px;
+  }
+  .testi_inner_wapper {
+    padding-top: 20px;
+}
+  span.package_count {
+    right: 15px;
+    top:15px;
+  }
+  .navbar_c_section span {
+    height: 50px;
+    border-bottom-right-radius: 36px;
+    border-bottom-left-radius: 39px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 92%);
+}
+  .package {
+    padding: 0px;
+    padding-bottom: 20px;
+}
   .who-feature {
     width: 90%;
 }
@@ -4383,7 +4450,27 @@ button.left-arrow {
 
   // homepage responsive end **********
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .all_tour_packages .tour-packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media only screen and (max-width:768px) {
+  span.package_count {
+    padding: 6px 12px;
+    font-size: 10px;
+    top:15px;
+    right: 20px;
+  }
+  .places-container .place {
+    text-align: center;
+  }
+  .navbar_c_section span {
+    transform: translate(-50%, 77%);
+}
+
   button.aboutus-button {
     margin-top: 30px;
 }
@@ -4596,12 +4683,6 @@ button.right-arrow {
       font-size: 15px;
     }
   }
-
-  span.package_count {
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-
   span.name_location {
     h1 {
       font-size: 20px;
@@ -4773,10 +4854,6 @@ button.right-arrow {
     margin-bottom: 30px;
   }
 
-
-
-
-
   span.discounted-price b {
     font-size: 22px;
     color: #F69625;
@@ -4788,7 +4865,7 @@ button.right-arrow {
   }
 
   .left_section_inner_package {
-    margin-top: 29px;
+    margin-top: 50px;
   }
 
   .slideform_content_outer {
@@ -4797,7 +4874,9 @@ button.right-arrow {
     width: 100%;
     padding-left: 6px;
   }
-
+  ul.included-excluded li {
+    font-size: 16px;
+  }
   .slideform_content_outer::-webkit-scrollbar {
     opacity: 0;
   }
@@ -4840,6 +4919,7 @@ button.right-arrow {
     padding: 0px 25px;
     column-gap: 20px;
     row-gap: 20px;
+    margin-top:50px;
   }
 
   .place img {
@@ -4869,9 +4949,6 @@ button.right-arrow {
       content: "";
       top: 39px;
     }
-
-
-
     .desti_top_banner img {
       height: 320px;
       width: 100%;
@@ -4941,11 +5018,6 @@ button.right-arrow {
     right: -140%;
     width: 90%;
   }
-
-
-  // homepage responsive end**********
-
-
   .aboutus-content {
     display: block;
     max-width: 1440px;
@@ -4988,7 +5060,6 @@ button.right-arrow {
     background: rgba(246, 148, 37, 0.3803921569);
     border-radius: 85px;
   }
-
   img.one_image_c {
     width: 90%;
     border-radius: 8px;
@@ -4996,7 +5067,6 @@ button.right-arrow {
     max-width: 90% !important;
     height: 270px;
   }
-
 
   .about_traveller .feature-item {
     background-color: #ffffff;
@@ -5009,8 +5079,6 @@ button.right-arrow {
     align-items: center;
     grid-template-columns: 1fr 2fr;
   }
-
-
   .footer_i {
     display: block;
     border-bottom: none;
@@ -5020,8 +5088,6 @@ button.right-arrow {
   .top_bar_notifications span {
     display: none;
   }
-
-
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
@@ -5031,6 +5097,9 @@ button.right-arrow {
 }
 
 @media (max-width: 600px) {
+  span.package_count {
+    right: 15px;
+  }
   .stat-item img {
     height: 45px;
 }
@@ -5140,16 +5209,7 @@ button.right-arrow {
     width: 100%;
   }
 
-  .navbar_c_section span {
-    position: absolute;
-    bottom: -49px;
-    width: 75px;
-    height: 50px;
-    margin-left: -3%;
-    border-bottom-right-radius: 36px;
-    border-bottom-left-radius: 39px;
-    left: 40%;
-  }
+ 
 
 
 
@@ -5255,8 +5315,6 @@ button.right-arrow {
 
 }
 
-
-
 @media only screen and (max-width:420px) {
   .about_traveller .features-section {
     display: grid;
@@ -5304,4 +5362,10 @@ button.right-arrow {
         height: 96px;
     }
 
+}
+
+@media only screen and (max-width:370px) {
+  .navbar_c_section span {
+    transform: translate(-50%, 62%);
+}
 }
