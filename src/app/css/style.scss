@@ -9,6 +9,20 @@ textarea {
   outline: none;
 }
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(246 150 37);
+}
+
+
+
+
 p {
   font-size: $top_heading_desktop_p;
   margin: 0px;
@@ -135,6 +149,7 @@ a {
   max-width: 100%;
   width: 100%;
   height: 100vh;
+  overflow-y: auto;
   margin: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -527,7 +542,7 @@ body {
 
   .hero_section_inner {
     @extend %inner-section_max_width;
-    padding: 120px 15px 50px 15px;
+    padding: 100px 15px 50px 15px;
     z-index: 2;
 
     .hero_wrapper {
@@ -1592,6 +1607,7 @@ ul.social_icons_t li {
 
 .footer_outer {
   background: $black_c;
+  overflow: hidden;
 
 }
 
@@ -2096,6 +2112,7 @@ a.tel_header_c {
 .enquiry_s_number {
   display: flex;
   justify-content: space-between;
+  column-gap: 20px;
 }
 
 .header_number {
@@ -2106,10 +2123,11 @@ a.tel_header_c {
 
 
 .header_custom_main {
-  position: fixed;
+  position: sticky;
   width: 100%;
   z-index: 999;
   top: 28px;
+  margin-bottom: 28px;
 }
 
 .search_e {
@@ -2403,6 +2421,7 @@ span.days_item {
 
 .margin_custom {
   height: 127px;
+  display: none;
 }
 
 
@@ -3039,7 +3058,7 @@ span.days_item {
 
 .view-all-packages {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   padding-top: 34px;
 }
 
@@ -3053,19 +3072,20 @@ span.days_item {
 }
 
 .view-all-packages button {
-  padding: 10px 48px;
+  padding: 10px 52px;
   text-transform: capitalize;
   background: none;
   border: unset;
   border-radius: 4px;
   font-size: 19px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   right: 0;
   color: #D65228;
   transform: rotate(269deg);
-  bottom: 171px;
-  right: 32px;
+  bottom: 159px;
+  right: -11px;
+  white-space: nowrap;
 }
 
 .all_tour_packages .tour-image {
@@ -3177,6 +3197,7 @@ span.days_item {
 .container.slider_plus_details {
   width: 100%;
   overflow: hidden;
+  margin-top: -28px;
 }
 
 .book-button:hover {
@@ -3228,7 +3249,7 @@ button.contactButton:hover>a {
 .slider_plus_details .slick-list {
   height: 100vh;
   width: 100%;
-  margin-top: 28px !important;
+  margin-top: 0px !important;
 }
 
 .testimonial {
@@ -3665,15 +3686,17 @@ button.custom_close {
 .navbar_c_section span {
   position: absolute;
   bottom: -49px;
-  width: 75px;
+  width: 100%;
   height: 50px;
   border-bottom-right-radius: 36px;
   border-bottom-left-radius: 39px;
-  left: 49%;
+  left:0px;
+
 }
 
 .navbar_c_section span img {
-  width: 83px;
+  max-width: 100px;
+  height: 35px;
 }
 
 
@@ -4047,6 +4070,24 @@ form input[type="submit"] {
       display: block;
     }
   }
+
+  .tour_packages_wrapper {
+      grid-template-columns: repeat(2, 1fr);  
+}
+.hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
+
+  font-size: 50px;
+ 
+}
+
+.hero_section_outer .hero_section_inner .hero_wrapper {
+  grid-template-columns: 65% 1fr; 
+}
+
+.tabs-container.activities_home span {
+  font-size: 22px; 
+}
+
 
   .aboutus-features {
     display: flex;
@@ -5011,6 +5052,8 @@ p.tourdescription {
   .stat-item img {
     height: 45px;
 }
+
+
   .about_traveller .features-section {
     grid-template-columns: 1fr;
   }
@@ -5133,7 +5176,7 @@ p.tourdescription {
 
   .logo_r_section img {
     max-width: 126px;
-    height: 48px;
+    height: 100% !important;
   }
 
   .header_number {
@@ -5157,6 +5200,11 @@ p.tourdescription {
     margin: 0;
     padding: 0;
   }
+
+  .navbar_c_section span img {
+    max-width: 84px;
+    height: 23px;
+}
      
   .search-results {
     grid-template-columns: 1fr;
@@ -5276,8 +5324,3 @@ p.tourdescription {
 
 }
 
-@media only screen and (max-width:370px) {
-  .navbar_c_section span {
-    transform: translate(-50%, 62%);
-}
-}
