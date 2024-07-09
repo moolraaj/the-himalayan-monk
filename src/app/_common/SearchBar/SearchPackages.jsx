@@ -101,7 +101,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     };
   }, []);
 
-  // Typing animation logic
+   
   const words = ['Destination', 'Packages', 'Activities'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
@@ -137,6 +137,10 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     filteredDestinations.length === 0 &&
     filteredActivities.length === 0;
 
+    const clearSearchGostory=()=>{
+      setSearchTerm('')
+    }
+
   return (
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
       <div className="search-content" ref={searchContentRef}>
@@ -163,7 +167,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
                     <h1>Tours</h1>
                     <div className="search-result">
                       {searchResults.map((ele, index) => (
-                        <Link href={`/tours/${ele.id}`} key={index} onClick={closeSearch}>
+                        <Link href={`/tours/${ele.id}`} key={index} onClick={()=>{closeSearch(),clearSearchGostory();}}>
                           {ele.package_name}
                         </Link>
                       ))}
@@ -176,7 +180,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
                     <h1>Destinations</h1>
                     <div className="search-result">
                       {filteredDestinations.map((ele, index) => (
-                        <Link href={`/destinations/${ele.city_id}`} key={index} onClick={closeSearch}>
+                        <Link href={`/destinations/${ele.city_id}`} key={index} onClick={()=>{closeSearch(),clearSearchGostory();}}>
                           {ele.name}
                         </Link>
                       ))}
@@ -189,7 +193,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
                     <h1>Activities</h1>
                     <div className="search-result">
                       {filteredActivities.map((ele, index) => (
-                        <Link href={`/activities/${ele.id}`} key={index} onClick={closeSearch}>
+                        <Link href={`/activities/${ele.id}`} key={index} onClick={()=>{closeSearch(),clearSearchGostory();}}>
                           {ele.package_name}
                         </Link>
                       ))}
