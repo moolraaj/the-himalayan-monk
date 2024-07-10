@@ -40,7 +40,7 @@ function TourPackages({ id }) {
               <div className="ways_travel_image">
                 <div className="save_value">
                   <img src={save_price.src} alt={save_price.src} />
-                  <p> save INR  {tour.starting_cost-tour.discount || null}</p>
+                  <p> Save INR  {tour.starting_cost-tour.discount || null}</p>
                 </div>
                 <div className="tour-image">
                   <img src={tour.pdf_image || emptyImage.src} alt='tour-image' 
@@ -51,7 +51,7 @@ function TourPackages({ id }) {
                 <div className="tour-details">
                   <div className='tour_nights_days'>
                     <span className="tour-days">{tour.days} Days / </span>
-                    <span className="tour-nights">{tour.night}Nights</span>
+                    <span className="tour-nights">{tour.night} Nights</span>
                   </div>
                   <div className="tour-rating">
                     <span className="rating"> ★ {tour.rating}</span>
