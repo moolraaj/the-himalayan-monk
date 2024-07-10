@@ -24,6 +24,7 @@
     "react-dom": "^18",
     "react-js-pagination": "^3.0.3",
     "react-loader-spinner": "^6.1.6",
+    "react-modal": "^3.16.1",
     "react-paginate": "^8.2.0",
     "react-rating-stars-component": "^2.2.0",
     "react-slick": "^0.30.2",

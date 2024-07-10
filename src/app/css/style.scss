@@ -77,6 +77,106 @@ a {
 }
 
 
+
+//gallery popup
+
+
+/* components/ImageModal.module.css */
+
+.main-gallery-section {
+  max-width: 1440px;
+  margin: auto;
+  padding-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gallery_all_img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+}
+.gallery_all_img img:hover {
+  filter: brightness(0.5);
+}
+.gallery_inner {
+  background: #fff;
+  padding: 30px;
+  padding-bottom: 0px;
+  box-shadow: 1px 2px 11px 12px #d9d9d940;
+}
+.gallery_all_img img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 500px;
+  min-height: 236px;
+  height: 100%;
+}
+
+.gallery_all_img img:first-child {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 3;
+  height: -webkit-fill-available;
+}
+
+.gallery_all_img img:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.gallery_all_img img:nth-child(3) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.gallery_all_img img:nth-child(4) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.gallery_all_img img:nth-child(5) {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+.image-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  outline: none;
+  padding-top: 0px;
+}
+
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.image-modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-modal-content button {
+  color: #F69625;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 50px;
+  float: right;
+  padding: 0px;
+}
 // not found 404 page *********
 .page_top {
   max-width: 1520px;
@@ -2934,7 +3034,7 @@ span.discounted-price b {
   max-width: 1440px;
   column-gap: 30px;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .package p {
@@ -4566,6 +4666,17 @@ button.left-arrow {
   .header_number {
     display: none;
   }
+  .gallery_all_img img {
+    max-height: 300px;
+    min-height: 135px;
+}
+.gallery_inner {
+  padding: 20px;
+  padding-bottom: 10px;
+}
+.gallery_all_img {
+  gap: 20px;
+}
   .aboutus-images {
     margin-top: 20px;
 }
@@ -5317,6 +5428,15 @@ p.tourdescription {
 
 
 @media only screen and (max-width:468px) {
+  .gallery_all_img {
+    display: block;
+  }
+  .gallery_all_img img {
+    max-height: 200px;
+    min-height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
   .hero_section_outer .hero_section_inner .hero_wrapper .hero_left_section h1 {
     font-size: 30px;
     margin: 0;

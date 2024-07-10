@@ -1,7 +1,7 @@
 'use client'
 import { airplane, save_price } from '@/app/assets/images'
 import PopupWrapper from '@/app/components/book-now/popupWrapper';
-import aeroplan from '../../assets/homepageAssets/airplane.gif'
+import car from '../../assets/homepageAssets/car.gif'
 import React, { useState } from 'react'
 
 function WaysVehicles({ vehicles }) {
@@ -51,7 +51,7 @@ function WaysVehicles({ vehicles }) {
                                                     <span className="price">Rs {ele.starting_cost}</span>
                                                     <span className="price-details"> <span className="cut-txt">INR ${ele.starting_cost} </span>  <span className="without-cut-txt">\  Per Person </span></span>
                                                 </div>
-                                                <button className="book-button" onClick={popupTourBook}>Book A Tour<img src={airplane.src} alt="demo" style={{ width: '28px' }} /></button>
+                                                <button className="book-button" onClick={popupTourBook}>Book A Tour<img src={car.src} alt="demo" style={{ width: '33px' }} /></button>
                                             </div>
                                         </div>
                                     </div>
