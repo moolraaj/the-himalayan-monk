@@ -2374,9 +2374,8 @@ a.tel_header_c {
 }
 
 .follow_name {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 10px;
+  display: flex;
+  column-gap: 15px;
   align-items: center;
   margin: 30px 0px;
 }
@@ -4685,7 +4684,9 @@ button.left-arrow {
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
-
+  .follow_name {
+    white-space: nowrap;
+}
   .TourPackages_outer_section.tour_page_in .TourPackages_inner {
     flex-direction:column
 }
@@ -4723,6 +4724,9 @@ button.left-arrow {
 }
 
 @media only screen and (max-width:768px) {
+  .footer_social_icons {
+    display: block;
+}
   .header_number {
     display: none;
   }
@@ -4798,14 +4802,16 @@ button.left-arrow {
 }
 
 .follow_name {
-   grid-template-columns: 1fr;
+  display: block;
 }
 .footer_i {
   border-bottom: 0px solid rgba(255, 255, 255, 0.41);
 
 }
-
-
+.footer_wrapper_second ul {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
 .tab-content button {
   margin-top: 20px;
@@ -5357,6 +5363,7 @@ p.tourdescription {
   }
   .footer_i {
     display: block;
+    padding-bottom: 0px;
   }
 
   .top_bar_notifications span {
