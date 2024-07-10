@@ -120,8 +120,8 @@ function TourPackagesPage() {
         </div>
       </div>
 
-      <div className="TourPackages_outer_section">
-        <div className="TourPackages_inner">
+      <div className="TourPackages_outer_section tour_page_in">
+        <div className="TourPackages_inner ">
           <div className="tour_packages_wrapper">
             {reversePackages.length === 0 ? (
               <EmptyComponent />

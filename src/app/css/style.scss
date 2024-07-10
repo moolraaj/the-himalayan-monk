@@ -651,8 +651,9 @@ body {
 }
 
 .slideform_content_outer::-webkit-scrollbar {
-  width: 5px;
+  width: 3px !important;
 }
+
 
 
 
@@ -1396,6 +1397,12 @@ img.triangle-testimonial-img {
 }
 
 
+.select_option_wrapper {
+  display: flex;
+}
+
+
+
 // tour package section css starts *********
 
 
@@ -1408,18 +1415,14 @@ img.triangle-testimonial-img {
   .filter_section_inner {
     max-width: 1520px;
     margin: auto;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px 20px 20px;
-    flex-wrap: wrap;
-    gap: 20px;
+     gap: 20px;
 
-    .select_option_wrapper {
-      width: 80%;
-
-    }
+   
 
     .select_option_wrapper select {
       padding: 20px 40px;
@@ -4139,6 +4142,15 @@ button.book_button:hover img {
   .desti_top_heading h1 {
     font-size: 50px;
   }
+
+  .filter_section .filter_section_inner .select_option_wrapper select {
+    padding: 17px 14px;
+    font-size: 18px;
+    font-family: "josefin";
+    max-width: 173px;
+    width: 100%;
+}
+
   .about_traveller .stats-section {
     width: 87%;
     margin: 0 auto;
@@ -4315,6 +4327,18 @@ a.tel_header_c {
 @media only screen and (max-width: 1024px) {
   .footer_wrapper_second h4 {
     font-size: 20px;
+}
+
+.filter_section .filter_section_inner .select_option_wrapper select {
+  padding: 15px 20px;
+  font-size: 22px;
+  font-family: "josefin";
+  max-width: 180px;
+  width: 100%;
+}
+
+.TourPackages_outer_section.tour_page_in .TourPackages_inner {
+  flex-direction:column
 }
 .footer_outer p {
   font-size: 14px;
@@ -4656,6 +4680,11 @@ button.left-arrow {
 }
 
 @media (min-width: 769px) and (max-width:1024px) {
+
+  .TourPackages_outer_section.tour_page_in .TourPackages_inner {
+    flex-direction:column
+}
+
   .call_r_sec a.call_a_button {
     margin-top: 30px;
     display: flex;
@@ -4692,6 +4721,16 @@ button.left-arrow {
   .header_number {
     display: none;
   }
+
+  .tour_package_info {
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 10px;
+}
+
+  .tour_package_info h2 {
+    font-size: 18px;
+}
 
   .image-modal {
        width: 80%;
@@ -4797,7 +4836,7 @@ button.left-arrow {
 
   .tour_img_wrapper {
     width: auto;
-    height: 130px;
+    height: 100px;
 }
 
 p.tourdescription {
@@ -4900,6 +4939,7 @@ p.tourdescription {
     .search_btn_wrapper button {
       padding: 12px 20px;
       font-size: 14px;
+      white-space: nowrap;
     }
   }
 
@@ -5329,6 +5369,10 @@ p.tourdescription {
   .activities_new .tab-content ul li {
     margin-top: 10px;
 }
+
+.filter_section .filter_section_inner {
+  flex-wrap: wrap;
+}
   .stat-item img {
     height: 45px;
 }
@@ -5473,6 +5517,22 @@ p.tourdescription {
   .gallery_all_img {
     display: block;
   }
+
+  span.speedometer {
+      font-size: 14px;
+}
+
+  .tour_package_info h2 {
+    font-size: 16px;
+}
+
+
+  p.tour_description {
+    display: none;
+}
+
+
+
   .gallery_all_img img {
     max-height: 200px;
     min-height: 100px;
