@@ -4328,6 +4328,10 @@ a.tel_header_c {
   .footer_wrapper_second h4 {
     font-size: 20px;
 }
+.hero.destination_hero_slider_wrapper .slick-slide img {
+  display: block;
+  height: 100vh !important;
+}
 
 .filter_section .filter_section_inner .select_option_wrapper select {
   padding: 15px 20px;
@@ -5066,7 +5070,7 @@ p.tourdescription {
   }
 
   .hero .overlay {
-    padding: 80px 20px 20px;
+    padding: 50px 20px 20px;
   }
 
   .hero .overlay h3 {
@@ -5087,10 +5091,10 @@ p.tourdescription {
   }
 
   .ratings {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 36px;
+    grid-template-columns: 1fr;
+    margin-top: 15px;
     gap: 20px;
-    place-items: baseline;
+    place-items: center;
   }
 
   .all_tour_packages {

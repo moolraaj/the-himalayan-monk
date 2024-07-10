@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -7,7 +6,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { emptyImage, leh } from '@/app/assets/images';
 import Link from 'next/link';
-
 
 // Dynamically import react-slick
 const Slider = dynamic(() => import('react-slick'), { ssr: false });
@@ -35,6 +33,32 @@ function LocationBanner({ id }) {
     autoplay: true,
     autoplaySpeed: 3000,
     afterChange: (current) => setCurrentSlide(current),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
   return (
@@ -60,7 +84,6 @@ function LocationBanner({ id }) {
               <h3>Get up to <span>{ele?.discount || '0%'} OFF</span> on<br /></h3>
               <div className='overlay_banner_content'>
                 <h1><span>{result[currentSlide].package_name}</span> Tour Packages</h1>
-                {/* <h4><span>Starting at INR 67.05 </span>INR 29,804</h4> */}
                 <br />
                 <button className="contactButton" style={{marginTop: '20px'}}><Link href={`/contact-us`}>
                 Contact Us</Link></button>
@@ -70,12 +93,6 @@ function LocationBanner({ id }) {
                     <span className='round_star custom_icon'>⭐</span> {ele?.rating} <br />Rating
                   </div>
                   <div></div>
-                  {/* <div className='three_rating_with_icon'>
-                    <span className='google_map custom_icon'>⭐</span> 4.8/5 <br />Google
-                  </div>
-                  <div className='three_rating_with_icon'>
-                    <span className='google_map custom_icon'>⭐</span> 3.9/5 <br />Facebook
-                  </div> */}
                 </div>
               </div>
             </div>
