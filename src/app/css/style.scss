@@ -93,6 +93,11 @@ a {
   min-height: 236px;
   height: 100%;
 }
+
+
+
+
+
 .attraction_container.info-track {
   display: flex;
   height: auto !important;
@@ -275,6 +280,10 @@ a {
 
 }
 
+
+.day span {
+  font-family: 'Inter' !important;
+}
 
 span.tour_type_icon_wrapper img {
   object-fit: contain;
@@ -3778,9 +3787,9 @@ button.custom_close {
   font-size: 60px;
   text-align: center;
   position: absolute;
-  width: 100%;
+  width: 96%;
   top: 0px !important;
-  margin: 0px;
+  margin: auto;
   color: white;
   padding-top: 20px;
   height: 93%;
@@ -4683,6 +4692,19 @@ button.left-arrow {
   .header_number {
     display: none;
   }
+
+  .image-modal {
+       width: 80%;
+  }
+
+  .day_wrap {
+    display: flex;
+    column-gap: 18px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+
   .gallery_all_img img {
     max-height: 300px;
     min-height: 135px;
@@ -4766,9 +4788,12 @@ button.left-arrow {
     font-size: 45px;
     padding-top: 0px;
     font-size: 29px !important;
-    width: 100%;
+    width: 96%;
     margin: auto;
 }
+
+
+
 
   .tour_img_wrapper {
     width: auto;

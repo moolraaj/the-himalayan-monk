@@ -33,9 +33,9 @@ function Page({ params }) {
         <div className='main-gallery-section'>
           <div className="gallery_inner">
             <div className="gallery_all_img">
-              {galleryImages.map((image, index) => (
-                <img key={index} src={image} alt={`Gallery image ${index + 1}`} onClick={() => openModal(image)} style={{ cursor: 'pointer' }} />
-              ))}
+              {galleryImages===null||galleryImages.length===0||galleryImages===undefined?('no gallery found'):(galleryImages.map((image, index) => (
+                <img key={index} src={image} alt={`${index + 1}`} onClick={() => openModal(image)} style={{ cursor: 'pointer' }} />
+              )))}
             </div>
           </div>
         </div>

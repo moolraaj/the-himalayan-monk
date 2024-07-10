@@ -7,7 +7,6 @@ import ImageModal from './imageModal'; // Import the modal component
 import { ExportAllApis } from "@/utils/apis/apis";
 
 function TravelPackage({ innerid, setGalleryImages }) {
-  console.log(innerid);
 
   let api = ExportAllApis();
 
@@ -116,8 +115,6 @@ function TravelPackage({ innerid, setGalleryImages }) {
                   </div>
                 ))}
               </div>
-
-           
             </div>
           );
         })}
