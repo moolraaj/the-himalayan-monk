@@ -49,7 +49,8 @@ function TourList() {
                           <h2>{ele.name}</h2>
                         </div>
                         <div className="tour_info_right ">
-                          <h4 className="tour_badge_top">{ele.package_count || 0} Tours</h4>
+                          <h4 className="tour_badge_top">{ele.headr_show || 0} Tours</h4>
+                          {ele.package_count}
                         </div>
                       </div>
                     </div>

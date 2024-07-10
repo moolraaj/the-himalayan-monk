@@ -1526,7 +1526,7 @@ span.speedometer {
 }
 
 .book_button {
-  margin-top: 10px;
+  margin-top:20px;
   padding: 8px 15px;
   background-color: orange;
   color: white;
@@ -2603,6 +2603,7 @@ span.days_item {
   letter-spacing: 0.02em;
   text-align: left;
   color: #757575;
+  padding-top: 0px;
 }
 
 
@@ -4312,7 +4313,7 @@ button.left-arrow {
 }
 
 .view-all-packages button {
-  padding: 10px 48px;
+  padding: 10px 5px;
   text-transform: capitalize;
   background: none;
   border: unset;
@@ -4562,6 +4563,9 @@ button.left-arrow {
 }
 
 @media only screen and (max-width:768px) {
+  .header_number {
+    display: none;
+  }
   .aboutus-images {
     margin-top: 20px;
 }
