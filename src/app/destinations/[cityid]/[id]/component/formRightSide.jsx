@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ExportAllApis } from '@/utils/apis/apis';
+import { EMAIL_VALIDATORS, ExportAllApis } from '@/utils/apis/apis';
 import { toast } from 'sonner';
 import { airplane } from '@/app/assets/images';
 import DatePicker from 'react-datepicker';
@@ -32,6 +32,9 @@ const BookTourForm = () => {
     if (!email) {
       valid = false;
       errorFields.email = 'Email is required';
+    }else if(!EMAIL_VALIDATORS.test(email)){
+      valid = false;
+      errorFields.email = 'please enter a  valid email';
     }
     if (mobile.length !== 10) {
       valid = false;

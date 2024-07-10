@@ -1,6 +1,6 @@
 'use client'
 import { airplane } from '@/app/assets/images';
-import { ExportAllApis } from '@/utils/apis/apis';
+import { EMAIL_VALIDATORS, ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -32,11 +32,11 @@ function BookNowForm({ setIsShow }) {
       fieldErrors.name = 'Name is required';
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     
     if (!email) {
       valid = false;
       fieldErrors.email = 'Email is required';
-    } else if (!emailRegex.test(email)) {
+    } else if (!EMAIL_VALIDATORS.test(email)) {
       valid = false;
       fieldErrors.email = 'Please enter a valid email address';
     }

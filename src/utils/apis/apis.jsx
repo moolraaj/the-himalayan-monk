@@ -163,4 +163,5 @@ export const ALL_DESTINATIONS_PER_PAGE=8
 export const ALL_TOURTYPES_PER_PAGE=6
 export const ALL_ACTIVITIES_PER_PAGE=3
 export const ALL_TOURTYPES_RELATIVE_PER_PAGE=4
+export const EMAIL_VALIDATORS = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  

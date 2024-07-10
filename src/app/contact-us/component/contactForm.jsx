@@ -1,5 +1,5 @@
 'use client'
-import { ExportAllApis } from '@/utils/apis/apis';
+import { EMAIL_VALIDATORS, ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 
@@ -34,10 +34,16 @@ const EnquiryForm = () => {
         if(!mobile){
             valid=false
             errorFields.mobile='phone number is required'
+        }else if(mobile.length!==10){
+            valid=false
+            errorFields.mobile='max length required is 10' 
         }
         if(!email){
             valid=false
             errorFields.email='email is required'
+        }else if(!EMAIL_VALIDATORS.test(email)){
+            valid=false
+            errorFields.email='enter valid email' 
         }
         
         setErrors(errorFields)
@@ -92,12 +98,12 @@ const EnquiryForm = () => {
             <div className='both_middle_form'>
                 <div className="formGroup">
                     <label htmlFor="phoneNumber">Phone Number</label>
-                    <input type="text" id="phoneNumber" name="mobile" value={user.mobile} onChange={getUserDetails} className="inputField" />
+                    <input type="number" id="phoneNumber" name="mobile" value={user.mobile} onChange={getUserDetails} className="inputField" />
                     {erros.mobile&& <span className='error'>{erros.mobile}</span>}
                 </div>
                 <div className="formGroup">
                     <label htmlFor="email">Email</label>
-                    <input type="text" id="email" name="email" value={user.email} onChange={getUserDetails} className="inputField" />
+                    <input type="email" id="email" name="email" value={user.email} onChange={getUserDetails} className="inputField" />
                     {erros.email&& <span className='error'>{erros.email}</span>}
                 </div>
             </div>
