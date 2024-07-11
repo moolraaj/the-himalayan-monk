@@ -5,6 +5,8 @@ import { EMAIL_VALIDATORS, ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 
+ 
+
 function BookNowForm({ setIsShow }) {
   let api = ExportAllApis();
   let [user, setUser] = useState({

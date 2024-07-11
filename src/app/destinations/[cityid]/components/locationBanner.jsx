@@ -61,6 +61,8 @@ function LocationBanner({ id }) {
     ]
   };
 
+  console.log(result)
+
   return (
     <div className="container slider_plus_details">
       <main className="main">
@@ -77,11 +79,12 @@ function LocationBanner({ id }) {
               </div>
             ))}
           </Slider>
+
           {result===null? 'no destinations availble' : result.slice(0,1).map((ele,ind)=>{
             return(
               <>
               <div className="overlay">
-              <h3>Get up to <span>{ele?.discount || '0%'} OFF</span> on<br /></h3>
+              <h3>Get up to <span>{result[currentSlide].starting_cost-result[currentSlide].discount || '0%'} OFF</span> on<br /></h3>
               <div className='overlay_banner_content'>
                 <h1><span>{result[currentSlide].package_name}</span> Tour Packages</h1>
                 <br />
