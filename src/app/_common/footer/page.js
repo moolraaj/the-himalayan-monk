@@ -1,4 +1,4 @@
-const { default: FooterPage } = require("./component/footerPage");
+import FooterPage from  "./component/footerPage"
 
  
 
