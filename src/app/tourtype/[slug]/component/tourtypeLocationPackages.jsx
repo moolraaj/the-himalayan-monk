@@ -7,8 +7,8 @@ import { ALL_TOURTYPES_RELATIVE_PER_PAGE, ExportAllApis, SET_LIMIT_FOR_PAGINATIO
 import Paginations from '@/app/components/paginations/paginations';
 import airplane from '../../../assets/homepageAssets/airplane.gif'
 import save_price from '../../../assets/homepageAssets/save_price.png'
-import emptyImage from '../../../assets/empty.jpg' 
- 
+import emptyImage from '../../../assets/empty.jpg'
+
 
 function TourTypePackages({ slug }) {
     const api = ExportAllApis();
@@ -24,9 +24,9 @@ function TourTypePackages({ slug }) {
 
     useEffect(() => {
         loadSingleDestination(slug, page);
-    }, [slug,page]);
+    }, [slug, page]);
 
-     
+
 
     return (
         <div className="container all_tour_packages">
@@ -76,9 +76,11 @@ function TourTypePackages({ slug }) {
                 )}
             </div>
             {
-                totalItems>SET_LIMIT_FOR_PAGINATION? (null): (<Paginations page={page} totalItems={totalItems} setPage={setPage} />)
+                totalItems > SET_LIMIT_FOR_PAGINATION && (
+                    <Paginations page={page} totalItems={totalItems} setPage={setPage} />
+                )
             }
-           
+
         </div>
     );
 }

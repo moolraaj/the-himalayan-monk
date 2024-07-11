@@ -1,4 +1,5 @@
 'use client'
+import Thankyou from '@/app/_common/thankyou/thankyou';
 import { EMAIL_VALIDATORS, ExportAllApis } from '@/utils/apis/apis';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
@@ -63,7 +64,7 @@ const EnquiryForm = () => {
             let resp=await api.SubmitDestinmationsformData(formData)
 
             if(resp.status){
-                toast.success(resp.msg)
+                toast.success(<Thankyou name={user.name}/>)
                 setUser({
                     name: '',
                     mobile: '',

@@ -6,6 +6,7 @@ import { airplane } from '@/app/assets/images';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Itnerayimage from '../../../../assets/homepageAssets/itneray-img.png'
+import Thankyou from '@/app/_common/thankyou/thankyou';
 
 const BookTourForm = () => {
   let api = ExportAllApis();
@@ -97,7 +98,7 @@ const BookTourForm = () => {
       try {
         const resp = await api.SubmitDestinmationsformData(formData);
         if (resp.status) {
-          toast.success(resp.msg);
+          toast.success(<Thankyou name={user.name}/>);
           setUser({
             name: '',
             email: '',
