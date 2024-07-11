@@ -1,5 +1,9 @@
 // components/ContactDetails.js
 import React from 'react';
+import phonegif from '../../assets/contact/phone-gif.gif'
+import mailgif from '../../assets/contact/mail-gif.gif'
+import locationgif from '../../assets/contact/location-gif.gif'
+import timegif from '../../assets/contact/time-gif.gif'
 
 
 
@@ -10,22 +14,22 @@ const ContactDetails = () => {
             <div className="detailItem">
             
                 <label>Phone</label>
-                <span className="icon">📞</span>
-                <span className="text"><a href='tel:918593408930'>+918593408930</a></span>
+                <span className="icon"><img src={phonegif.src}/> </span>
+                <span className="text"><a href='tel:082195 39025'>082195 39025</a></span>
             </div>
             <div className="detailItem">
                 <label>Email Now</label>
-                <span className="icon">📧</span>
+                <span className="icon"><img src={mailgif.src}/></span>
                 <span className="text"><a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a></span>
             </div>
             <div className="detailItem">
             <label>Location</label>
-                <span className="icon">📍</span>
-                <span className="text">2nd Floor Heaven House Vikasnagar</span>
+                <span className="icon"> <img src={locationgif.src}/> </span>
+                <span className="text">Kanyal Rd, Simsa, Simsa Village, Manali, Nasogi, Himachal Pradesh 175131</span>
             </div>
             <div className="detailItem">
             <label>Opening Time</label>
-                <span className="icon">⏰</span>
+                <span className="icon"> <img src={timegif.src}/></span>
                 <span className="text">9:00 AM - 5:00 PM</span>
             </div>
         </div>

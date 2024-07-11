@@ -54,7 +54,7 @@ function TourTypePackages({ slug }) {
                                     <div className="tour-details">
                                         <div className="tour_nights_days">
                                             <span className="tour-days">{tour.days} Days / </span>
-                                            <span className="tour-nights">{tour.night} Nights</span>
+                                            <span className="tour-nights">{tour.night} Nights </span>
                                         </div>
                                         <div className="tour-rating">
                                             <span className="rating">{tour.rating}</span>
@@ -63,7 +63,7 @@ function TourTypePackages({ slug }) {
                                     <div className="tour-title">{tour.package_name}</div>
                                     <div className="tour-price">
                                         <span className="price">Rs {tour.starting_cost}</span>
-                                        <span className="price-details"> INR - ${tour.pakage_discounted_cost}  Per Person</span>
+                                        <span className="price-details"> <span className="cut-txt">INR {tour.pakage_discounted_cost} </span>  <span className="without-cut-txt"> / Per Person</span> </span>
                                     </div>
                                     <button className="book-button">
                                         Book A Tour

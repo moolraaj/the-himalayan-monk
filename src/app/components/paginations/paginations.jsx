@@ -1,5 +1,6 @@
 import React from 'react'
 import paginationbutton from '../../../../src/app/assets/pagination.png'
+import paginationgif from '../../assets/nextgif.gif'
 function Paginations({ page, totalItems, setPage }) {
   const handelPage = (page) => {
     if (page > 0 && page <= totalItems) {
@@ -37,7 +38,7 @@ function Paginations({ page, totalItems, setPage }) {
           )
         })}
       
-       <img src={paginationbutton.src} alt="icon" onClick={handleNext} disabled={page === totalItems} className='next-prev-icons next'/> 
+       <img src={paginationgif.src} alt="icon" onClick={handleNext} disabled={page === totalItems} className='next-prev-icons next'/> 
        
       </div>
     </>

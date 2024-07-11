@@ -1,8 +1,7 @@
 'use client'
 import React from 'react';
 
-import aboutone from '../../assets/homepageAssets/tourist_view_1.jpg';
-import abouttwo from '../../assets/homepageAssets/tourist_view_2.jpg';
+import about from '../../assets/homepageAssets/aboutimg.png'
 import calender from '../../assets/homepageAssets/calendar.png';
 import medicine from '../../assets/homepageAssets/medicine.png';
 import spy from '../../assets/homepageAssets/spy.png';
@@ -22,8 +21,7 @@ const AboutTop = () => {
     <div className="aboutus-container" id="about">
       <div className="aboutus-content">
         <div className="aboutus-images">
-          <img className="one_image_c" src={aboutone.src || emptyImage.src} alt="About Us 1" style={{width:'100%'}}/>
-          <img className="two_image_c" src={abouttwo.src || emptyImage.src} alt="About Us 2" style={{width:'100%'}}/>
+          <img className="one_image_c" src={about.src || emptyImage.src} alt="About Us 1" style={{width:'100%'}}/>
         </div>
 
 

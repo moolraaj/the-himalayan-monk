@@ -49,7 +49,7 @@ function WaysVehicles({ vehicles }) {
                                                 
                                                 <div className="tour-price">
                                                     <span className="price">Rs {ele.starting_cost}</span>
-                                                    <span className="price-details"> <span className="cut-txt">INR ${ele.starting_cost} </span>  <span className="without-cut-txt">\  Per Person </span></span>
+                                                    <span className="price-details"> <span className="cut-txt">INR {ele.cut_text} </span>  <span className="without-cut-txt">\  Per Person </span></span>
                                                 </div>
                                                 <button className="book-button" onClick={popupTourBook}>Book A Tour<img src={car.src} alt="demo" style={{ width: '33px' }} /></button>
                                             </div>

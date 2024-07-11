@@ -85,9 +85,15 @@ a {
 .loading_spinner {
   padding: 200px 0px 100px 0px;
 }
-
-
-
+.day_wise_wrapper .tour-title {
+  font-size: 16px;
+  font-family: "Inter";
+  color: #636262;
+  line-height: 28px;
+}
+a.call_a_button:hover {
+  background: #000;
+}
 //gallery popup
 
 
@@ -386,6 +392,7 @@ text-align: left;
 
 .book-popupo-inner {
   padding: 0px 20px;
+  padding-bottom: 100px;
 }
 
 .book-form-wrapper {
@@ -517,9 +524,11 @@ span.error {
 }
 
 .book-form_button button:hover {
-  background-color: #e67e00;
+  background-color: #000;
 }
-
+.book-form_button button:hover span img {
+  filter: invert(1);
+}
 .book-form_title {
   text-align: center;
   font-size: 24px;
@@ -838,6 +847,7 @@ body {
 .pagination-buttons img {
   width: 52px;
   cursor: pointer;
+  transform: rotate3d(1, 16, 0, 188deg);
 }
 
 button.active-button {
@@ -1010,17 +1020,15 @@ button.active-button {
 .textareaField {
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  height: 35px;
 }
 
 .contactuspage .textareaField {
   height: 100px;
 }
 
-.detailItem span.text a {
-  font-size: 20px;
-}
+
 
 .about_traveller .stats-section {
   display: flex;
@@ -1163,11 +1171,13 @@ button.active-button {
   text-decoration: underline;
   text-underline-position: under;
 }
-
+.feature-item:hover .feature-icon img {
+  filter: invert(1);
+}
 .about_traveller .feature-icon {
   font-size: 36px;
   margin-bottom: 10px;
-  width: 113px;
+  width: 108px;
   height: 108px;
   display: flex;
   align-items: center;
@@ -1199,7 +1209,9 @@ button.active-button {
   display: flex;
 }
 
-
+.contactuspage .submitButton:hover {
+  background: #000;
+}
 
 .contactuspage .submitButton {
   padding: 16px 40px;
@@ -1212,6 +1224,7 @@ button.active-button {
   float: right;
   font-family: 'inter';
   font-weight: 700;
+  margin-top: 30px;
 }
 
 .contactuspage .contactDetails {
@@ -1224,14 +1237,24 @@ button.active-button {
   align-items: center;
   gap: 10px;
   margin-bottom: 50px;
+  display: flex;
+  border: 1px solid #75757582;
+  padding: 6px 19px;
+  border-radius: 14px;
+  position: relative;
 }
-
+.contactuspage .detailItem img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
 .contactuspage .icon {
   font-size: 1.5em;
 }
 
 .contactuspage .text {
-  font-size: 1em;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .contactuspage .container {
@@ -1281,9 +1304,9 @@ form.enquiryForm input {
 
 
 form.enquiryForm label {
-  color: orange;
+  color: #F69625;
   font-family: 'inter';
-  font-size: 25px;
+  font-size: 22px;
   margin-top: 10px;
 }
 
@@ -1296,6 +1319,8 @@ form.enquiryForm label {
   background: white;
   padding: 0px 14px;
   font-family: 'rubik';
+  font-weight: 500;
+  color: #636262;
 }
 
 .contact_both_sections h4 {
@@ -1310,12 +1335,6 @@ form.enquiryForm label {
   width: 100% !important;
   font-family: 'rubik';
   font-weight: 500;
-}
-
-.detailItem {
-  border: 1px solid #757575;
-  padding: 17px 19px;
-  border-radius: 14px;
 }
 
 .detailItem label {
@@ -1325,10 +1344,6 @@ form.enquiryForm label {
   background: white;
   padding: 0px 14px;
   font-family: 'rubik';
-}
-
-.detailItem {
-  position: relative;
 }
 
 
@@ -1874,7 +1889,7 @@ button.call_a_button {
 .search-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   padding: 6px 20px;
   border-radius: 30px;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1490196078);
@@ -2540,7 +2555,7 @@ a.tel_header_c {
 .aboutus-features {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+ gap: 30px;
   margin-bottom: 40px;
   padding-top: 30px;
 }
@@ -2550,8 +2565,8 @@ a.tel_header_c {
   align-items: center;
   gap: 10px;
   background-color: #fff;
-  padding: 10px;
-  width: 44%;
+  padding: 5px;
+  width: 43%;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -2866,6 +2881,7 @@ button.left-arrow {
   position: absolute !important;
   background: transparent;
   border: none;
+  cursor: pointer;
 
 }
 
@@ -3496,7 +3512,9 @@ button.contactButton:hover>a {
 
 .tab-content ul {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 34px;
+  row-gap: 7px;
 }
 
 .tab-content ul li {
@@ -3543,13 +3561,15 @@ h2.name_tab {
   text-underline-position: under;
 }
 
-
+.about_page_bg_section {
+  background-repeat: no-repeat;
+}
 img.one_image_c {
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
-  max-width: 300px;
-  height: 500px;
+  max-width: 590px;
+  height: 530px;
 }
 
 img.two_image_c {
@@ -3825,7 +3845,7 @@ button.custom_close {
   font-size: 60px;
   text-align: center;
   position: absolute;
-  width: 96%;
+  width: 100%;
   top: 0px !important;
   margin: auto;
   color: white;
@@ -3916,6 +3936,7 @@ span.name_location {
   bottom: 0;
   position: absolute;
   left: 17px;
+  text-align: left;
 }
 .place:hover .view-more-activity {
   display: flex;
@@ -4195,8 +4216,8 @@ button.book_button:hover img {
     margin: 0 auto;
   }
   .feature span {
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 16px;
   }
 
   .header_i_sec {
@@ -4723,7 +4744,7 @@ button.right-arrow {
   .aboutus-features {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 0px;
+    padding-top: 15px;
     margin-bottom: 20px;
     gap: 10px;
   }
@@ -4827,6 +4848,13 @@ button.right-arrow {
 }
 
 @media only screen and (max-width:768px) {
+  .search-bar {
+    width: 85%;
+    margin: 0 auto;
+}
+  .tour_packages_wrapper .tour_price_book_section {
+    margin-top: 10px;
+}
   .footer_social_icons {
     display: block;
 }
@@ -5752,6 +5780,10 @@ p.tourdescription {
 }
 
 @media only screen and (max-width:420px) {
+  .contactuspage .detailItem img {
+    width: 35px;
+    height: 40px;
+  }
   .about_traveller .features-section {
     display: grid;
     flex-wrap: wrap;
@@ -5778,6 +5810,7 @@ p.tourdescription {
 
   .detailItem span.text a {
     font-size: 16px;
+    font-weight: 600;
   }
 
   .detailItem span.text {
@@ -5798,6 +5831,12 @@ p.tourdescription {
    .margin_custom {
         height: 96px;
     }
-
+    .contactuspage .detailItem {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  
 }
 
