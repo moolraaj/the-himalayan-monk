@@ -9,6 +9,8 @@ export default function Destinationsmenu({ setShowDestinations }) {
   const [selectedCity, setSelectedCity] = useState('');
   const [filteredPackages, setFilteredPackages] = useState([]);
   const [showAllPackages, setShowAllPackages] = useState(true);
+  console.log(`filteredPackages`)
+  console.log(filteredPackages)
 
   useEffect(() => {
     const fetchDestinations = async () => {
@@ -88,7 +90,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
             })
             : filteredPackages===null? 'no filtered packages found': filteredPackages?.map((ele, index) => {
               return <div className='filter-destination-wrapper' key={index}>
-                <Link href={`/destinations/${ele.id}`} onClick={goTodestinations}>
+                <Link href={`/destinations/${ele.citySlug}`} onClick={goTodestinations}>
 
                   <div className="filter-desti-img">
                     <h1>{ele.package_name}</h1>

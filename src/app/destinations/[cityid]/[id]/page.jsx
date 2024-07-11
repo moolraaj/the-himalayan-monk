@@ -3,7 +3,7 @@ import DestinationBanner from '@/app/components/headertitlesection/bannersection
 import React, { useState } from 'react';
 import BookTourForm from './component/formRightSide';
 import TravelPackage from './component/packagesInnerLeftSection';
-import ImageModal from './component/imageModal'; // Import the modal component
+import ImageModal from './component/imageModal'; 
 
 function Page({ params }) {
   let { id } = params;
