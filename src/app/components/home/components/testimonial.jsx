@@ -117,8 +117,9 @@ const Testimonials = () => {
     <div className="testimonial_outer" style={{ backgroundImage: `url(${testback.src})` }}>
       <div className="testimonials-container">
         <h2 className="section-title">Customer Reviews</h2>
-        <div className="testimonials-slider">
-          <div className="slider-controls">
+
+        <div className="slider-controls">
+           <div className="buttons_sliderc">
             <button onClick={handlePrev} className="left-arrow">
               <p><img src={arrowr.src} alt="Previous" /></p>
             </button>
@@ -126,6 +127,9 @@ const Testimonials = () => {
               <p><img src={arrowl.src} alt="Next" /></p>
             </button>
           </div>
+          </div>
+        <div className="testimonials-slider">
+         
           {displayedTestimonials.length === 0
             ? 'No testimonials available'
             : displayedTestimonials.map((testimonial, index) => (

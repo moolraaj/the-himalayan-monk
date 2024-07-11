@@ -8,9 +8,13 @@ import testing from '../../../../assets/homepageAssets/abouteleven.png'
 import { ExportAllApis } from "@/utils/apis/apis";
 import Galleries from "./galleries";
 
-function TravelPackage({ innerid }) {
-  const api = ExportAllApis();
-  const [result, setResult] = useState([]);
+
+
+function TravelPackage({ innerid, setGalleryImages }) {
+
+  let api = ExportAllApis();
+
+  let [result, setResult] = useState([]);
   const [activeDay, setActiveDay] = useState(null);
 
   const [gallery, setGallery] = useState([]);

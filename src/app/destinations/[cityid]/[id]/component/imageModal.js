@@ -10,11 +10,10 @@ const ImageModal = ({ isOpen, onRequestClose, image }) => {
             onRequestClose={onRequestClose}
             contentLabel="Image Preview"
             className="image-modal"
-            overlayClassName="image-modal-overlay"
-        >
+            overlayClassName="image-modal-overlay">
             <div className="image-modal-content">
                 <button onClick={onRequestClose}>x</button>
-                <img src={image} alt="Preview" />
+                <img src={image} alt="Preview"/>
                 
             </div>
         </Modal>
