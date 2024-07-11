@@ -71,7 +71,7 @@ function LocationBanner({ id }) {
             {result===null? emptyImage.src : result?.map((image, index) => (
               <div key={index} style={{ position: 'relative', width: '100%', height: '500px' }}>
                 <img
-                  src={image.relative_desti_img || leh.src}
+                  src={image.pdf_image || leh.src}
                   alt={image.pdf_image || leh.src}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => e.target.src = emptyImage.src}
