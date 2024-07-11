@@ -1,10 +1,10 @@
- 
+
 'use client'
 import React, { useEffect, useState } from "react";
 import spedometer from '../../../../assets/homepageAssets/speedometer.png'
 import people from '../../../../assets/homepageAssets/profile-max.png'
 import testing from '../../../../assets/homepageAssets/abouteleven.png'
- 
+
 import { ExportAllApis } from "@/utils/apis/apis";
 import Galleries from "./galleries";
 
@@ -12,7 +12,7 @@ function TravelPackage({ innerid }) {
   const api = ExportAllApis();
   const [result, setResult] = useState([]);
   const [activeDay, setActiveDay] = useState(null);
- 
+
   const [gallery, setGallery] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -25,14 +25,8 @@ function TravelPackage({ innerid }) {
     try {
       const resp = await api.fetchSingledestination(innerid);
       setResult(resp || []);
-      
-     
       const galleryImages = resp?.flatMap(ele => ele.gallery_images) || [];
-      if (galleryImages !== null && galleryImages.length > 0) {
-        setGallery(galleryImages);
-      } else {
-        setGallery([]);
-      }
+      setGallery(galleryImages);
     } catch (error) {
       setError(error.message || 'Failed to fetch data');
     } finally {
@@ -44,10 +38,14 @@ function TravelPackage({ innerid }) {
     loadSingleDestination();
   }, [innerid]);
 
-  
+
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+
+  let loaded=gallery===null?'no record':gallery.map((e)=>e)
+  console.log(`loaded`)
+  console.log(loaded)
 
   return (
     <>
@@ -121,7 +119,7 @@ function TravelPackage({ innerid }) {
         ))}
       </div>
 
-       {gallery===null?"":<Galleries image={gallery}/>}
+      {gallery===null?null:<Galleries image={gallery} />}
     </>
   );
 }
