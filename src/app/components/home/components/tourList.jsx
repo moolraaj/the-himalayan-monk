@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 import { emptyImage, kangraTour } from '@/app/assets/images';
+ 
 
 function TourList() {
   let api = ExportAllApis();
@@ -15,6 +16,7 @@ function TourList() {
     try {
       let resp = await api.fetchAllTredingdestinations();
       setResult(resp || []);
+     
     } catch (error) {
       console.error('Failed to load destinations:', error);
     } finally {

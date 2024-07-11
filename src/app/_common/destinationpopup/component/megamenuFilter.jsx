@@ -9,8 +9,7 @@ export default function Destinationsmenu({ setShowDestinations }) {
   const [selectedCity, setSelectedCity] = useState('');
   const [filteredPackages, setFilteredPackages] = useState([]);
   const [showAllPackages, setShowAllPackages] = useState(true);
-  console.log(`filteredPackages`)
-  console.log(filteredPackages)
+  
 
   useEffect(() => {
     const fetchDestinations = async () => {
@@ -54,6 +53,9 @@ export default function Destinationsmenu({ setShowDestinations }) {
 
   const goTodestinations = () => {
     setShowDestinations(false)
+    setSelectedCity('')
+    setFilteredPackages(null)
+    setResult(resp?.data);
   }
 
   return (
