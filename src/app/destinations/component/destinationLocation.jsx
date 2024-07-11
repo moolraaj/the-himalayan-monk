@@ -1,5 +1,5 @@
 'use client';
-import { ALL_DESTINATIONS_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
+import { ALL_DESTINATIONS_PER_PAGE, ExportAllApis, SET_LIMIT_FOR_PAGINATION } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Paginations from '@/app/components/paginations/paginations';
@@ -52,7 +52,8 @@ function DPlaces() {
           ))
         }
       </div>
-      <Paginations page={page} totalItems={totalItems} setPage={setPage} ALL_DESTINATIONS_PER_PAGE={ALL_DESTINATIONS_PER_PAGE}/>
+      {totalItems.length>SET_LIMIT_FOR_PAGINATION?(null):(<Paginations page={page} totalItems={totalItems} setPage={setPage} ALL_DESTINATIONS_PER_PAGE={ALL_DESTINATIONS_PER_PAGE}/>)}
+      
     </>
   );
 }

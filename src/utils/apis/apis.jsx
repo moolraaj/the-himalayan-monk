@@ -158,10 +158,12 @@ export const ExportAllApis = () => {
 
 }
 
-export const ALL_TOUSR_PER_PAGE=9
-export const ALL_DESTINATIONS_PER_PAGE=8
-export const ALL_TOURTYPES_PER_PAGE=6
-export const ALL_ACTIVITIES_PER_PAGE=3
-export const ALL_TOURTYPES_RELATIVE_PER_PAGE=4
+export const ALL_TOUSR_PER_PAGE=12
+export const ALL_DESTINATIONS_PER_PAGE=12
+export const ALL_TOURTYPES_PER_PAGE=12
+export const ALL_ACTIVITIES_PER_PAGE=12
+export const ALL_TOURTYPES_RELATIVE_PER_PAGE=12
+export const SET_LIMIT_FOR_PAGINATION=12
 export const EMAIL_VALIDATORS = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
  

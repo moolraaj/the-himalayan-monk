@@ -67,7 +67,7 @@ function TourPackagesPage() {
     applyFilters();
   };
 
-  let  reversePackages=[...result].reverse()
+  let reversePackages = [...result].reverse()
 
   return (
     <>
@@ -126,36 +126,36 @@ function TourPackagesPage() {
             {reversePackages.length === 0 ? (
               <EmptyComponent />
             ) : (
-             reversePackages===null? <EmptyComponent/> : reversePackages.map((ele) => (
+              reversePackages === null ? <EmptyComponent /> : reversePackages.map((ele) => (
                 <div className="tour_package" key={ele.id}>
                   <Link href={`/destinations/${ele.city_name}/${ele.id}`}>
                     <div className="tour_package_inner">
                       <div className="tour_img_wrapper">
-                        <img src={ele?.pdf_image || emptyImage.src} alt={ele.package_name || emptyImage.src} 
-                        onError={(e) => e.target.src = emptyImage.src}/>
+                        <img src={ele?.pdf_image || emptyImage.src} alt={ele.package_name || emptyImage.src}
+                          onError={(e) => e.target.src = emptyImage.src} />
                         {/* <div className="tour_badge">{ele.days} Days</div> */}
                       </div>
                       <div className="tour_package_info">
-                        <h2>{ele.package_name.slice(0,25)}</h2>
-                        
-                        <p className='tour_description'>{ele.package_description.slice(0,40) || "Loream Ipsum and ahdjf adjh"}</p>
+                        <h2>{ele.package_name.slice(0, 25)}</h2>
+
+                        <p className='tour_description'>{ele.package_description.slice(0, 40) || "Loream Ipsum and ahdjf adjh"}</p>
                         <span>
-                          <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name} 
-                          onError={(e) => e.target.src = emptyImage.src}/>
+                          <img src={location.src || emptyImage.src} style={{ width: '25px' }} alt={ele.name}
+                            onError={(e) => e.target.src = emptyImage.src} />
                           <p className="tour_location">{ele?.city_name || "not availble"}</p>
                         </span>
-                        
+
                       </div>
                       <div className='tour_b_c'>
                         <div className="tour_rating_duration_section">
                           <div className="tour_details">
                             <div className="tour_ratings">
-                            {/* <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span> */}
-                            <span> <StarRating rating={ele.rating} /> ({ele.rating})</span>
+                              {/* <span> <img src={rating.src} alt={rating.src} style={{marginRight: '10px'}} />({ele.rating})</span> */}
+                              <span> <StarRating rating={ele.rating} /> ({ele.rating})</span>
                             </div>
                             <span className='speedometer'>
-                              <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name} 
-                              onError={(e) => e.target.src = emptyImage.src}/>
+                              <img style={{ width: '35px' }} src={speedometer.src || emptyImage.src} alt={ele.name}
+                                onError={(e) => e.target.src = emptyImage.src} />
                               {ele.days} Days / {ele.night} Nights
                             </span>
                           </div>
@@ -168,8 +168,8 @@ function TourPackagesPage() {
                             setIsShow(true);
                           }}>
                             Book a Trip
-                            <img src={airplane.src ||emptyImage.src} alt={ele.name} style={{ width: '28px' }}
-                            onError={(e) => e.target.src = emptyImage.src} />
+                            <img src={airplane.src || emptyImage.src} alt={ele.name} style={{ width: '28px' }}
+                              onError={(e) => e.target.src = emptyImage.src} />
                           </button>
                         </div>
                       </div>
@@ -179,8 +179,10 @@ function TourPackagesPage() {
               ))
             )}
           </div>
+          {
+            reversePackages.length === 1 ? ('') : (<Paginations page={page} totalItems={totalItems} setPage={setPage} />)
+          }
 
-          <Paginations page={page} totalItems={totalItems} setPage={setPage} />
         </div>
       </div>
     </>

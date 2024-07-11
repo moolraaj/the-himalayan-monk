@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ALL_TOURTYPES_RELATIVE_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
+import { ALL_TOURTYPES_RELATIVE_PER_PAGE, ExportAllApis, SET_LIMIT_FOR_PAGINATION } from '@/utils/apis/apis';
 
 import Paginations from '@/app/components/paginations/paginations';
 import airplane from '../../../assets/homepageAssets/airplane.gif'
@@ -75,7 +75,10 @@ function TourTypePackages({ slug }) {
                     ))
                 )}
             </div>
-            <Paginations page={page} totalItems={totalItems} setPage={setPage} />
+            {
+                totalItems>SET_LIMIT_FOR_PAGINATION? (null): (<Paginations page={page} totalItems={totalItems} setPage={setPage} />)
+            }
+           
         </div>
     );
 }

@@ -1,5 +1,5 @@
 'use client';
-import {  ALL_TOURTYPES_PER_PAGE, ExportAllApis } from '@/utils/apis/apis';
+import {  ALL_TOURTYPES_PER_PAGE, ExportAllApis, SET_LIMIT_FOR_PAGINATION } from '@/utils/apis/apis';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Paginations from '@/app/components/paginations/paginations';
@@ -50,7 +50,11 @@ function DPlaces() {
           ))
         }
       </div>
-      <Paginations page={page} totalItems={totalItems} setPage={setPage} />
+      {
+        totalItems>SET_LIMIT_FOR_PAGINATION&&(
+          <Paginations page={page} totalItems={totalItems} setPage={setPage} />
+        )
+      }
     </>
   );
 }
