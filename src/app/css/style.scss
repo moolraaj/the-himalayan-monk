@@ -4434,6 +4434,9 @@ a.tel_header_c {
 }
 
 @media only screen and (max-width: 1024px) {
+  .main-gallery-section {
+    grid-column-end: auto;
+  }
   .footer_wrapper_second h4 {
     font-size: 20px;
 }
@@ -5273,7 +5276,7 @@ p.tourdescription {
 
   .package p {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 25px;
   }
 
   .left_section_inner_package {
