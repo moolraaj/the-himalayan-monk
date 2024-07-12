@@ -90,7 +90,7 @@ function FooterPage() {
                                 <h4>Other Links</h4>
                                 <ul className='footer_client_section'>
                                     <li><Link href="/about-us">about</Link> </li>
-                                    <li><Link href="/">services</Link> </li>
+                                    {/* <li><Link href="/">services</Link> </li> */}
                                     <li><Link href="/">terms and conditions</Link> </li>
                                     <li><Link href="/contact-us">contact us</Link> </li>
 

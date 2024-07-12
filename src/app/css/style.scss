@@ -81,6 +81,13 @@ a {
 }
 
 
+.form-container ::-webkit-scrollbar {
+  width:3px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #f5f1f1ed
+}
 
 .loading_spinner {
   padding: 200px 0px 100px 0px;
@@ -692,7 +699,7 @@ body {
 }
 
 .slideform_content_outer::-webkit-scrollbar {
-  width: 3px !important;
+  width: 3px;
 }
 
 
@@ -4172,6 +4179,8 @@ button.book_button:hover img {
 .destination_inner_page_bg .tour-packages .tour-title {
   height: 34px;
 }
+
+
 /************ Responsive Design Start ************/
 
 @media only screen and (max-width:1600px){
@@ -5797,7 +5806,7 @@ p.tourdescription {
 
   .form-container .tour-types {
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    width: 100%;
   }
 
   .about_traveller .stat-label {
