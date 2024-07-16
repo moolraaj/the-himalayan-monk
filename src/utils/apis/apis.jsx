@@ -166,4 +166,5 @@ export const ALL_TOURTYPES_RELATIVE_PER_PAGE=12
 export const SET_LIMIT_FOR_PAGINATION=12
 export const EMAIL_VALIDATORS = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+
  
