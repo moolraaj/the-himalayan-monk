@@ -1156,7 +1156,8 @@ button.active-button {
   column-gap: 20px;
   border: 1px solid #D9D9D9;
   align-items: center;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
+  min-height: 400px;
 }
 
 .who-feature {
@@ -5521,6 +5522,10 @@ p.tourdescription {
 }
 
 @media (max-width: 600px) {
+  .about_traveller .feature-item {
+    min-height: auto;
+    height: auto;
+  }
   .activities_new .tab-content ul li {
     margin-top: 10px;
 }

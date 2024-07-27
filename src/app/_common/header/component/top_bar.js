@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import vector from '../../../assets/headerAssets/Vector.png'
 import { emptyImage, header_car } from '@/app/assets/images';
+import Link from 'next/link';
 
 
 
@@ -17,7 +18,7 @@ function Topbar() {
           <div className='top_bar_mail'>
             <img src={vector.src ||emptyImage.src} alt='demo' width={20}
             onError={(e) => e.target.src = emptyImage.src}/>
-            <a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a>
+            <a href='mailto:thmholidays@gmail.com'>thmholidays@gmail.com</a>
           </div>
 
           <div className='top_bar_notifications'>
@@ -28,7 +29,7 @@ function Topbar() {
             <ul className='social_icons_t'>
               <li> <FontAwesomeIcon icon={faFacebook} /></li>
               <li> <FontAwesomeIcon icon={faTwitter} /></li>
-              <li> <FontAwesomeIcon icon={faInstagram} /></li>
+              <li><Link href={`https://www.instagram.com/thm_holidays`} target='_blank'><FontAwesomeIcon icon={faInstagram} /></Link></li>
               <li> <FontAwesomeIcon icon={faLinkedin} /></li>
             </ul>
           </div>

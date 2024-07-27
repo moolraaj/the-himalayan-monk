@@ -64,8 +64,8 @@ function FooterPage() {
                             <div className="footer_second_section">
                                 <h4>Contact Us</h4>
                                 <ul className='footer_client_section'>
-                                    <li><a href="mailto:thehimalayanmonks@gmail.com">thehimalayanmonks@gmail.com</a></li>
-                                    <li><a href="tel:+91 98167 88165">+91 98167 88165</a></li>
+                                    <li><a href="mailto:thmholidays@gmail.com">thmholidays@gmail.com</a></li>
+                                    <li><a href="tel:+91 82195-39025">+91 82195-39025</a></li>
                                     {/* <li><a href="tel:+9999999999">+91 9999999999</a></li> */}
                                 </ul>
                             </div>
@@ -105,7 +105,7 @@ function FooterPage() {
                                 <ul className='social_icons_t'>
                                     <li><Link href='/'><FontAwesomeIcon icon={faFacebook} /></Link></li>
                                     <li><Link href='/'><FontAwesomeIcon icon={faTwitter} /></Link></li>
-                                    <li><Link href='/'><FontAwesomeIcon icon={faInstagram} /></Link></li>
+                                    <li><Link href={`https://www.instagram.com/thm_holidays`} target='_blank'><FontAwesomeIcon icon={faInstagram} /></Link></li>
                                     <li><Link href='/'><FontAwesomeIcon icon={faLinkedin} /></Link></li>
                                 </ul>
                             </div>
