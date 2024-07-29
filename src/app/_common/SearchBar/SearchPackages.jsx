@@ -313,7 +313,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]);
 
   const words = ['Destination', 'Packages', 'Activities'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -342,7 +342,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
 
     const typingInterval = setInterval(handleTyping, typingSpeed);
     return () => clearInterval(typingInterval);
-  }, [currentText, isDeleting, typingSpeed, currentWordIndex]);
+  }, [words,currentText, isDeleting, typingSpeed, currentWordIndex]);
 
   const noResultsFound =
     searchTerm.trim() !== '' &&
