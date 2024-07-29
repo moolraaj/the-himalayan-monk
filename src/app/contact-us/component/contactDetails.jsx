@@ -20,7 +20,7 @@ const ContactDetails = () => {
             <div className="detailItem">
                 <label>Email Now</label>
                 <span className="icon"><img src={mailgif.src}/></span>
-                <span className="text"><a href='mailto:thehimalayanmonks@gmail.com'>thehimalayanmonks@gmail.com</a></span>
+                <span className="text"><a href='mailto:thmholidays@gmail.com'>thmholidays@gmail.com</a></span>
             </div>
             <div className="detailItem">
             <label>Location</label>
@@ -30,7 +30,7 @@ const ContactDetails = () => {
             <div className="detailItem">
             <label>Opening Time</label>
                 <span className="icon"> <img src={timegif.src}/></span>
-                <span className="text">9:00 AM - 5:00 PM</span>
+                <span className="text">10:00 AM - 06:00 PM</span>
             </div>
         </div>
     );

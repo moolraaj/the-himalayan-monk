@@ -67,6 +67,7 @@ function FooterPage() {
                                     <li><a href="mailto:thmholidays@gmail.com">thmholidays@gmail.com</a></li>
                                     <li><a href="tel:+91 82195-39025">+91 82195-39025</a></li>
                                     <li><a href="tel:+91 98164-93839">+91 98164-93839</a></li>
+                                    <li><a href="mailto:thmholidays@gmail.com" style={{lineHeight:'30px'}}>Kanyal Rd, Simsa, Simsa Village, Manali, Nasogi, <br /> Himachal Pradesh 175131</a></li>
                                 </ul>
                             </div>
 

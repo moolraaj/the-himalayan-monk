@@ -1157,8 +1157,33 @@ button.active-button {
   border: 1px solid #D9D9D9;
   align-items: center;
   grid-template-columns: 1fr;
-  min-height: 400px;
+  
 }
+
+
+.feature-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Show only 2 lines */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.feature-description.expanded {
+  -webkit-line-clamp: unset; /* Show full text */
+  overflow: visible;
+}
+
+.read-more-btn {
+  cursor: pointer;
+  color: $light_red; 
+  position: relative;
+  display: block;
+  text-align: end;
+  text-transform: lowercase;
+}
+
 
 .who-feature {
   max-width: 1440px;
@@ -1175,7 +1200,7 @@ button.active-button {
 .who-we-are-section h4 {
   font-size: 30px;
   font-family: satisfy;
-  color: #D65228;
+  color: $light_red;
   text-decoration: underline;
   text-underline-position: under;
 }
