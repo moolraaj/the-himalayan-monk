@@ -211,13 +211,10 @@
 
 // export default SearchPackages;
 
-
-
-
 'use client';
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import debounce from 'lodash.debounce';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';
 
@@ -233,86 +230,80 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
 
   const api = ExportAllApis();
 
-  const fetchAllPackages = async () => {
+  // Fetch data for packages, destinations, and activities
+  const fetchAllData = async () => {
     try {
-      const resp = await api.fetchTourPackages();
-      setAllPackages(resp?.data || []);
+      const [packages, destinations, activities] = await Promise.all([
+        api.fetchTourPackages(),
+        api.fetchAlldestinations(),
+        api.fetchAllActivities(),
+      ]);
+      setAllPackages(packages?.data || []);
+      setAllDestinations(destinations?.data || []);
+      setAllActivities(activities?.data || []);
     } catch (error) {
-      console.error('Error fetching all packages:', error);
-    }
-  };
-
-  const loadAllDestinations = async () => {
-    try {
-      const resp = await api.fetchAlldestinations();
-      setAllDestinations(resp?.data || []);
-    } catch (error) {
-      console.error('Error fetching all destinations:', error);
-    }
-  };
-
-  const loadAllActivities = async () => {
-    try {
-      const resp = await api.fetchAllActivities();
-      setAllActivities(resp?.data || []);
-    } catch (error) {
-      console.error('Error fetching all activities:', error);
+      console.error('Error fetching data:', error);
     }
   };
 
   useEffect(() => {
-    fetchAllPackages();
-    loadAllDestinations();
-    loadAllActivities();
+    fetchAllData();
   }, []);
 
+  // Debounced search handler
+  const debouncedSearch = useCallback(
+    debounce((term) => {
+      if (term.trim() === '') {
+        setSearchResults([]);
+        setFilteredDestinations([]);
+        setFilteredActivities([]);
+      } else {
+        const packageResults = allPackages.filter((pkg) =>
+          pkg.package_name.toLowerCase().includes(term.toLowerCase())
+        );
+        setSearchResults(packageResults);
+
+        const destinationResults = allDestinations.filter((dest) =>
+          dest.name.toLowerCase().includes(term.toLowerCase())
+        );
+        setFilteredDestinations(destinationResults);
+
+        const activityResults = allActivities.filter((act) =>
+          act.package_name.toLowerCase().includes(term.toLowerCase())
+        );
+        setFilteredActivities(activityResults);
+      }
+    }, 300),
+    [allPackages, allDestinations, allActivities]
+  );
+
   useEffect(() => {
-    if (searchTerm.trim() === '') {
-      setSearchResults([]);
-      setFilteredDestinations([]);
-      setFilteredActivities([]);
-    } else {
-      const filteredPackageResults = allPackages.filter((pkg) =>
-        pkg.package_name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setSearchResults(filteredPackageResults);
+    debouncedSearch(searchTerm);
+  }, [searchTerm, debouncedSearch]);
 
-      const filteredDestinationResults = allDestinations.filter((dest) =>
-        dest.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredDestinations(filteredDestinationResults);
-
-      const filteredActivitiesResults = allActivities.filter((act) =>
-        act.package_name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredActivities(filteredActivitiesResults);
-    }
-  }, [searchTerm, allPackages, allDestinations, allActivities]);
-
+  // Handle input change
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
+  // Clear search input
   const handleClearSearch = () => {
     setSearchTerm('');
   };
 
-  const handleClickOutside = (event) => {
-    if (searchContentRef.current && !searchContentRef.current.contains(event.target)) {
-      setIsSearchVisible(false);
-    }
-  };
-
+  // Handle clicks outside to close search
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchContentRef.current && !searchContentRef.current.contains(event.target)) {
+        setIsSearchVisible(false);
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
-
-  const clearSearchGostory = () => {
-    setSearchTerm('');
-  };
+  }, [setIsSearchVisible]);
 
   const noResultsFound =
     searchTerm.trim() !== '' &&
@@ -345,34 +336,32 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
                   <div className="search-wrapper">
                     <h1>Tours</h1>
                     <div className="search-result">
-                      {searchResults.map((ele, index) => (
-                        <Link href={`/tours/${ele.id}`} key={index} onClick={() => { closeSearch(); clearSearchGostory(); }}>
+                      {searchResults.map((ele) => (
+                        <Link href={`/tours/${ele.id}`} key={ele.id} onClick={() => { closeSearch(); handleClearSearch(); }}>
                           {ele.package_name}
                         </Link>
                       ))}
                     </div>
                   </div>
                 )}
-
                 {filteredDestinations.length > 0 && (
                   <div className="search-wrapper">
                     <h1>Destinations</h1>
                     <div className="search-result">
-                      {filteredDestinations.map((ele, index) => (
-                        <Link href={`/destinations/${ele.city_id}`} key={index} onClick={() => { closeSearch(); clearSearchGostory(); }}>
+                      {filteredDestinations.map((ele) => (
+                        <Link href={`/destinations/${ele.city_id}`} key={ele.city_id} onClick={() => { closeSearch(); handleClearSearch(); }}>
                           {ele.name}
                         </Link>
                       ))}
                     </div>
                   </div>
                 )}
-
                 {filteredActivities.length > 0 && (
                   <div className="search-wrapper">
                     <h1>Activities</h1>
                     <div className="search-result">
-                      {filteredActivities.map((ele, index) => (
-                        <Link href={`/activities/${ele.id}`} key={index} onClick={() => { closeSearch(); clearSearchGostory(); }}>
+                      {filteredActivities.map((ele) => (
+                        <Link href={`/activities/${ele.id}`} key={ele.id} onClick={() => { closeSearch(); handleClearSearch(); }}>
                           {ele.package_name}
                         </Link>
                       ))}
