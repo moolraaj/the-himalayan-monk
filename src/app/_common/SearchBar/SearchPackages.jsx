@@ -248,7 +248,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
 
   useEffect(() => {
     fetchAllData();
-  }, [fetchAllData]); // Correctly include fetchAllData as a dependency
+  }, [fetchAllData]); // Ensure fetchAllData is included in the dependency array
 
   // Debounced search handler
   const debouncedSearch = useCallback(
@@ -272,12 +272,12 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
         setFilteredActivities(activityResults);
       }
     }, 300),
-    [allPackages, allDestinations, allActivities] // Correctly include dependencies
+    [allPackages, allDestinations, allActivities] // Ensure all dependencies are included
   );
 
   useEffect(() => {
     debouncedSearch(searchTerm);
-  }, [searchTerm, debouncedSearch]); // Correctly include debouncedSearch and searchTerm
+  }, [searchTerm, debouncedSearch]); // Ensure debouncedSearch is included
 
   // Handle input change
   const handleInputChange = (e) => {
@@ -301,7 +301,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [setIsSearchVisible]); // Correctly include setIsSearchVisible as a dependency
+  }, [setIsSearchVisible]); // Ensure setIsSearchVisible is included
 
   const noResultsFound =
     searchTerm.trim() !== '' &&
