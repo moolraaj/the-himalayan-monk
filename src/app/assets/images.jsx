@@ -72,7 +72,7 @@ import searchbar_bg from '../assets/homepageAssets/destination_inner_page_bg.png
 import slider_form_bg from '../assets/homepageAssets/slider_form_bg.png';
 import header_car from '../assets/headerAssets/header_center_icon.png';
 import rating from '../assets/homepageAssets/Star.png';
-
+import biking from '../assets/homepageAssets/biking.png'
 export {
   popup_bg,
   kulluTour,
@@ -148,4 +148,5 @@ export {
   slider_form_bg,
   header_car,
   rating,
+  biking
 };

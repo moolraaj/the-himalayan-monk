@@ -102,7 +102,7 @@ function Headercustom() {
               </div>
               <div className='more_enquiery'>
                 <p>For More Inquiry</p>
-                <a className='tel_header_c' href='tel:+91 98164-93839'>+91 98164-93839</a>
+                <a className='tel_header_c' href='tel:+91 82195-39025'> +91 82195-39025</a>
               </div>
             </div>
           </div>

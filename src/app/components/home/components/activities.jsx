@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { lining, jumping, rafting, paragliding, ski, surfing, kulluTour, manaliTour, mandiTour, shimlaTour, spitiTour, lahaulTour, kangraTour } from '@/app/assets/images';
+import { lining, jumping, rafting, paragliding, ski, biking, kulluTour, manaliTour, mandiTour, shimlaTour, spitiTour, lahaulTour, kangraTour } from '@/app/assets/images';
 import PopupWrapper from '@/app/components/book-now/popupWrapper';
 
 const activities = [
@@ -70,12 +70,12 @@ const activities = [
     }
   },
   {
-    name: 'Surfing',
-    icon: surfing,
+    name: 'Biking',
+    icon: biking,
     title: 'Ride the Waves: The Surfing Adventure',
     description: 'Catch the perfect wave and enjoy the ultimate surfing experience. Ideal for both beginners and seasoned surfers looking to ride the waves.',
     features: ['Perfect Waves', 'Surfing Lessons', 'Safety Measures'],
-    image: surfing.src,
+    image: biking.src,
     tab_activity_images: {
       tabImg1: shimlaTour.src,
       tabImg2: spitiTour.src,

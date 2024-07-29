@@ -66,7 +66,7 @@ function FooterPage() {
                                 <ul className='footer_client_section'>
                                     <li><a href="mailto:thmholidays@gmail.com">thmholidays@gmail.com</a></li>
                                     <li><a href="tel:+91 82195-39025">+91 82195-39025</a></li>
-                                    {/* <li><a href="tel:+9999999999">+91 9999999999</a></li> */}
+                                    <li><a href="tel:+91 98164-93839">+91 98164-93839</a></li>
                                 </ul>
                             </div>
 
