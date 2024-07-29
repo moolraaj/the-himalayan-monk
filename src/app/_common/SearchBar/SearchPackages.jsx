@@ -244,7 +244,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-  }, [api]);
+  }, []);
 
   useEffect(() => {
     fetchAllData();
