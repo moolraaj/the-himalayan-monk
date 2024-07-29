@@ -208,7 +208,6 @@ const Traveller = () => {
                   <div className="feature-title">{item.title}</div>
                   <div className={`feature-description ${expandedIndex === index ? 'expanded' : ''}`}>
                     {item.description}
-                    
                   </div>
                   <span
                     className="read-more-btn"

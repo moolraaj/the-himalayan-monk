@@ -1177,13 +1177,17 @@ button.active-button {
 
 .read-more-btn {
   cursor: pointer;
-  color: $light_red; 
-  position: relative;
-  display: block;
-  text-align: end;
-  text-transform: lowercase;
+  background-color: $light_red; 
+  color: $white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 8px;
+  float: right;
+  width: fit-content;
 }
-
+.read-more-btn:hover{
+  background-color:$black ;
+}
 
 .who-feature {
   max-width: 1440px;
