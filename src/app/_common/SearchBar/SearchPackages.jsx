@@ -231,7 +231,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
   const api = ExportAllApis();
 
   // Fetch data for packages, destinations, and activities
-  const fetchAllData = async () => {
+  const fetchAllData = useCallback(async () => {
     try {
       const [packages, destinations, activities] = await Promise.all([
         api.fetchTourPackages(),
@@ -244,11 +244,11 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-  };
+  }, [api]);
 
   useEffect(() => {
     fetchAllData();
-  }, []);
+  }, [fetchAllData]);
 
   // Debounced search handler
   const debouncedSearch = useCallback(
