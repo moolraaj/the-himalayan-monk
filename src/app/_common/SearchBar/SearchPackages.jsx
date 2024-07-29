@@ -214,7 +214,7 @@
 
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { ExportAllApis } from '@/utils/apis/apis';
 import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';
@@ -302,11 +302,11 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     setSearchTerm('');
   };
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside = useCallback((event) => {
     if (searchContentRef.current && !searchContentRef.current.contains(event.target)) {
       setIsSearchVisible(false);
     }
-  };
+  }, [setIsSearchVisible]);
 
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
@@ -315,7 +315,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     };
   }, [handleClickOutside]);
 
-  const words = ['Destination', 'Packages', 'Activities'];
+  const words = useMemo(() => ['Destination', 'Packages', 'Activities'], []);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -342,7 +342,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
 
     const typingInterval = setInterval(handleTyping, typingSpeed);
     return () => clearInterval(typingInterval);
-  }, [words,currentText, isDeleting, typingSpeed, currentWordIndex]);
+  }, [words, currentText, isDeleting, typingSpeed, currentWordIndex]);
 
   const noResultsFound =
     searchTerm.trim() !== '' &&
@@ -423,3 +423,4 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
 }
 
 export default SearchPackages;
+
