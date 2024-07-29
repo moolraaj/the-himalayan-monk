@@ -145,7 +145,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     <div className={`search-container ${isSearchVisible ? 'show' : ''}`}>
       <div className="search-content" ref={searchContentRef}>
         <div className="search-bar">
-          <img src={searchbar_icon.src} alt="search" className="search-icon" style={{ cursor: 'pointer' }} />
+          <img src={searchbar_icon.src} alt="search_icon" className="search-icon" style={{ cursor: 'pointer' }} />
           <input
             type="text"
             placeholder={`Search Your ${currentText}`}
@@ -153,7 +153,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
             onChange={handleInputChange}
           />
           {searchTerm.trim() !== '' && (
-            <img onClick={handleClearSearch} src={clear_search.src} alt="clear" style={{ cursor: 'pointer' }} />
+            <img onClick={handleClearSearch} src={clear_search.src} alt="clear_icon" style={{ cursor: 'pointer' }} />
           )}
         </div>
         <div className="searchbar_bg" style={{ backgroundImage: `url(${searchbar_bg.src})` }}>
