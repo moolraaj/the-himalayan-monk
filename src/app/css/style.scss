@@ -1177,7 +1177,8 @@ button.active-button {
 
 .read-more-btn {
   cursor: pointer;
-  background-color: $light_red; 
+  background-color: rgba(246, 148, 37, 0.3803921569); 
+  color: #000 !important;
   color: $white;
   padding: 5px 10px;
   border-radius: 5px;
@@ -1187,6 +1188,7 @@ button.active-button {
 }
 .read-more-btn:hover{
   background-color:$black ;
+  color: $white !important;
 }
 
 .who-feature {
