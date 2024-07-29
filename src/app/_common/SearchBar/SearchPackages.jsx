@@ -272,12 +272,12 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
         setFilteredActivities(activityResults);
       }
     }, 300),
-    [allPackages, allDestinations, allActivities] // Add dependencies here
+    [allPackages, allDestinations, allActivities] // Ensure dependencies are included
   );
 
   useEffect(() => {
     debouncedSearch(searchTerm);
-  }, [searchTerm, debouncedSearch]);
+  }, [searchTerm, debouncedSearch]); // Ensure debouncedSearch is a dependency
 
   // Handle input change
   const handleInputChange = (e) => {
