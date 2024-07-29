@@ -261,16 +261,14 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
         const packageResults = allPackages.filter((pkg) =>
           pkg.package_name.toLowerCase().includes(term.toLowerCase())
         );
-        setSearchResults(packageResults);
-
         const destinationResults = allDestinations.filter((dest) =>
           dest.name.toLowerCase().includes(term.toLowerCase())
         );
-        setFilteredDestinations(destinationResults);
-
         const activityResults = allActivities.filter((act) =>
           act.package_name.toLowerCase().includes(term.toLowerCase())
         );
+        setSearchResults(packageResults);
+        setFilteredDestinations(destinationResults);
         setFilteredActivities(activityResults);
       }
     }, 300),
