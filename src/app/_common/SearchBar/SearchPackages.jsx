@@ -274,7 +274,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
         setFilteredActivities(activityResults);
       }
     }, 300),
-    [allPackages, allDestinations, allActivities]
+    [allPackages, allDestinations, allActivities] // Add dependencies here
   );
 
   useEffect(() => {
