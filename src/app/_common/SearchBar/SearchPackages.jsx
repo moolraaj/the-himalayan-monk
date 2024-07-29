@@ -48,7 +48,7 @@ function SearchPackages({ closeSearch, isSearchVisible, setIsSearchVisible }) {
     fetchAllPackages();
     loadAllDestinations();
     loadAllActivities();
-  }, [fetchAllPackages, loadAllDestinations, loadAllActivities]);
+  }, []);
 
   useEffect(() => {
     const fetchSearchResults = () => {

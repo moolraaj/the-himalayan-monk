@@ -50,7 +50,7 @@ const Traveller = () => {
           <div className="feature-icon"><img src={contactone.src}/></div>
           <div className='both-w-c'>
           <div className="feature-title">Worldwide Coverage</div>
-          <div className="feature-description">Travel opens your heart, expands your horizons, and fills your life with unforgettable stories and lifelong friendships. Journey with people from all around the world and seize the moments life has to offer. We provide opportunities to connect with others, so whether you're traveling solo, with a friend, or a partner, you'll soon discover companions for life. Grab your tickets and start your adventure!</div>
+          <div className="feature-description">Travel opens your heart, expands your horizons, and fills your life with unforgettable stories and lifelong friendships. Journey with people from all around the world and seize the moments life has to offer. We provide opportunities to connect with others, so whether you are traveling solo, with a friend, or a partner, you will soon discover companions for life. Grab your tickets and start your adventure!</div>
           </div>
         </div>
         </div>
@@ -59,7 +59,7 @@ const Traveller = () => {
           <div className="feature-icon"><img src={contacttwo.src}/></div>
           <div className='both-w-c'>
           <div className="feature-title">Competitive Pricing</div>
-          <div className="feature-description"> At thmholidays, we believe that travel should be accessible to everyone. Our competitive pricing ensures that you receive the best value for your adventures without compromising on quality. We constantly analyze market trends and adjust our rates to offer you the most affordable options.Whether you're planning a weekend getaway or a dream vacation, our transparent pricing model includes no hidden fees, allowing you to budget effectively. With exclusive deals and packages tailored to your needs, we make it easier for you to explore the world. Choose us for your travel needs and enjoy exceptional experiences at unbeatable prices!
+          <div className="feature-description"> At thmholidays, we believe that travel should be accessible to everyone. Our competitive pricing ensures that you receive the best value for your adventures without compromising on quality. We constantly analyze market trends and adjust our rates to offer you the most affordable options.Whether you are planning a weekend getaway or a dream vacation, our transparent pricing model includes no hidden fees, allowing you to budget effectively. With exclusive deals and packages tailored to your needs, we make it easier for you to explore the world. Choose us for your travel needs and enjoy exceptional experiences at unbeatable prices!
             </div>
           </div> 
         </div>
@@ -70,7 +70,7 @@ const Traveller = () => {
           <div className="feature-icon"><img src={contactthreee.src}/></div>
           <div className='both-w-c'>
           <div className="feature-title">Fast Booking</div>
-          <div className="feature-description">At thmholidays, we understand that time is precious. That's why we offer a fast and seamless booking process designed to get you on your way in no time. Our user-friendly platform allows you to search, compare, and book flights, hotels, and activities with just a few clicks. With real-time availability and instant confirmations, planning your next adventure has never been easier. Plus, our dedicated support team is always ready to assist you, ensuring a hassle-free experience from start to finish. Experience the convenience of fast booking and start your journey today!</div>
+          <div className="feature-description">At thmholidays, we understand that time is precious. That is why we offer a fast and seamless booking process designed to get you on your way in no time. Our user-friendly platform allows you to search, compare, and book flights, hotels, and activities with just a few clicks. With real-time availability and instant confirmations, planning your next adventure has never been easier. Plus, our dedicated support team is always ready to assist you, ensuring a hassle-free experience from start to finish. Experience the convenience of fast booking and start your journey today!</div>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ const Traveller = () => {
           <div className="feature-icon"><img src={contactfive.src}/></div>
           <div className='both-w-c'>
           <div className="feature-title">Guided Tours</div>
-          <div className="feature-description">Discover the world with confidence through our guided tours at thmholidays. Our expert guides are passionate about sharing their knowledge and insights, ensuring you experience the rich culture, history, and hidden gems of each destination. Whether you're exploring ancient ruins, vibrant cities, or breathtaking landscapes, our curated itineraries provide a perfect blend of adventure and relaxation.Join us for a guided tour and embark on an extraordinary journey today!</div>
+          <div className="feature-description">Discover the world with confidence through our guided tours at thmholidays. Our expert guides are passionate about sharing their knowledge and insights, ensuring you experience the rich culture, history, and hidden gems of each destination. Whether you are exploring ancient ruins, vibrant cities, or breathtaking landscapes, our curated itineraries provide a perfect blend of adventure and relaxation.Join us for a guided tour and embark on an extraordinary journey today!</div>
           </div>
         </div>
         </div>
@@ -89,7 +89,7 @@ const Traveller = () => {
           <div className="feature-icon"><img src={contactfour.src}/></div>
           <div className='both-w-c'>
           <div className="feature-title">Best Support 24/7</div>
-          <div className="feature-description">we prioritize your peace of mind with our round-the-clock support. Whether you're booking your trip or traveling abroad, our dedicated team is available 24/7 to assist you with any questions or concerns.From last-minute changes to emergency assistance, we're here to ensure your travel experience is smooth and enjoyable. With us, you can travel confidently, knowing that help is just a call or click away.</div>
+          <div className="feature-description">we prioritize your peace of mind with our round-the-clock support. Whether you are booking your trip or traveling abroad, our dedicated team is available 24/7 to assist you with any questions or concerns.From last-minute changes to emergency assistance, we are here to ensure your travel experience is smooth and enjoyable. With us, you can travel confidently, knowing that help is just a call or click away.</div>
         </div>
         </div>
         </div>
