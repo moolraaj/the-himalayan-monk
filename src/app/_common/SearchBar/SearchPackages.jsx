@@ -215,8 +215,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import debounce from 'lodash.debounce';
-import { ExportAllApis } from '@/utils/apis/apis';
-import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';
+import { ExportAllApis } from '@/utils/apis/apis';  // Adjust the import based on your file structure
+import { clear_search, searchbar_bg, searchbar_icon } from '@/app/assets/images';  // Adjust the import based on your file structure
 
 const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -244,11 +244,11 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
     } catch (error) {
       console.error('Error fetching data:', error);
     }
-  }, []);
+  }, [api]);
 
   useEffect(() => {
     fetchAllData();
-  }, [fetchAllData]);
+  }, [fetchAllData]); // Correctly include fetchAllData as a dependency
 
   // Debounced search handler
   const debouncedSearch = useCallback(
@@ -272,12 +272,12 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
         setFilteredActivities(activityResults);
       }
     }, 300),
-    [allPackages, allDestinations, allActivities] // Ensure dependencies are included
+    [allPackages, allDestinations, allActivities] // Correctly include dependencies
   );
 
   useEffect(() => {
     debouncedSearch(searchTerm);
-  }, [searchTerm, debouncedSearch]); // Ensure debouncedSearch is a dependency
+  }, [searchTerm, debouncedSearch]); // Correctly include debouncedSearch and searchTerm
 
   // Handle input change
   const handleInputChange = (e) => {
@@ -301,7 +301,7 @@ const SearchPackages = ({ closeSearch, isSearchVisible, setIsSearchVisible }) =>
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [setIsSearchVisible]);
+  }, [setIsSearchVisible]); // Correctly include setIsSearchVisible as a dependency
 
   const noResultsFound =
     searchTerm.trim() !== '' &&
